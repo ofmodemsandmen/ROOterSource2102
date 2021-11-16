@@ -1,0 +1,296 @@
+Source-Makefile: package/boot/at91bootstrap/Makefile
+
+Package: at91bootstrap-at91sam9x5eknf_uboot
+Default: y if (TARGET_at91_sam9x_Default || TARGET_at91_sam9x_DEVICE_atmel_at91sam9x25ek || TARGET_at91_sam9x_DEVICE_atmel_at91sam9x35ek || TARGET_DEVICE_at91_sam9x_DEVICE_atmel_at91sam9x25ek || TARGET_DEVICE_at91_sam9x_DEVICE_atmel_at91sam9x35ek)
+Version: v3.9.3-2
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @!IN_SDK @TARGET_at91_sam9x
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Variant: at91sam9x5eknf_uboot
+Section: boot
+Category: Boot Loaders
+Title: .AT91Bootstrap for AT91SAM9X5-EK board (NandFlash)
+Maintainer: 
+Source: at91bootstrap-v3.9.3.tar.xz
+Type: bin
+Hidden: 1
+Description: .AT91Bootstrap for AT91SAM9X5-EK board (NandFlash)
+https://www.at91.com/linux4sam/bin/view/Linux4SAM/AT91Bootstrap
+
+@@
+
+
+Package: at91bootstrap-at91sam9x5eksd_uboot
+Default: y if (TARGET_at91_sam9x_Default || TARGET_at91_sam9x_DEVICE_atmel_at91sam9x25ek || TARGET_at91_sam9x_DEVICE_atmel_at91sam9x35ek || TARGET_DEVICE_at91_sam9x_DEVICE_atmel_at91sam9x25ek || TARGET_DEVICE_at91_sam9x_DEVICE_atmel_at91sam9x35ek)
+Version: v3.9.3-2
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @!IN_SDK @TARGET_at91_sam9x
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Variant: at91sam9x5eksd_uboot
+Section: boot
+Category: Boot Loaders
+Title: .AT91Bootstrap for AT91SAM9X5-EK board (SDcard)
+Maintainer: 
+Source: at91bootstrap-v3.9.3.tar.xz
+Type: bin
+Hidden: 1
+Description: .AT91Bootstrap for AT91SAM9X5-EK board (SDcard)
+https://www.at91.com/linux4sam/bin/view/Linux4SAM/AT91Bootstrap
+
+@@
+
+
+Package: at91bootstrap-sama5d2_xplaineddf_uboot
+Default: y if (TARGET_at91_sama5_Default || TARGET_at91_sama5_DEVICE_microchip_sama5d2-xplained || TARGET_DEVICE_at91_sama5_DEVICE_microchip_sama5d2-xplained)
+Version: v3.9.3-2
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @!IN_SDK @TARGET_at91_sama5
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Variant: sama5d2_xplaineddf_uboot
+Section: boot
+Category: Boot Loaders
+Title: .
+Maintainer: 
+Source: at91bootstrap-v3.9.3.tar.xz
+Type: bin
+Hidden: 1
+Description: .
+https://www.at91.com/linux4sam/bin/view/Linux4SAM/AT91Bootstrap
+
+@@
+
+
+Package: at91bootstrap-sama5d2_xplaineddf_qspi_uboot
+Default: y if (TARGET_at91_sama5_Default || TARGET_at91_sama5_DEVICE_microchip_sama5d2-xplained || TARGET_DEVICE_at91_sama5_DEVICE_microchip_sama5d2-xplained)
+Version: v3.9.3-2
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @!IN_SDK @TARGET_at91_sama5
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Variant: sama5d2_xplaineddf_qspi_uboot
+Section: boot
+Category: Boot Loaders
+Title: .
+Maintainer: 
+Source: at91bootstrap-v3.9.3.tar.xz
+Type: bin
+Hidden: 1
+Description: .
+https://www.at91.com/linux4sam/bin/view/Linux4SAM/AT91Bootstrap
+
+@@
+
+
+Package: at91bootstrap-sama5d2_xplainedsd_uboot
+Default: y if (TARGET_at91_sama5_Default || TARGET_at91_sama5_DEVICE_microchip_sama5d2-xplained || TARGET_DEVICE_at91_sama5_DEVICE_microchip_sama5d2-xplained)
+Version: v3.9.3-2
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @!IN_SDK @TARGET_at91_sama5
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Variant: sama5d2_xplainedsd_uboot
+Section: boot
+Category: Boot Loaders
+Title: .
+Maintainer: 
+Source: at91bootstrap-v3.9.3.tar.xz
+Type: bin
+Hidden: 1
+Description: .
+https://www.at91.com/linux4sam/bin/view/Linux4SAM/AT91Bootstrap
+
+@@
+
+
+Package: at91bootstrap-sama5d3_xplainednf_uboot
+Default: y if (TARGET_at91_sama5_Default || TARGET_at91_sama5_DEVICE_microchip_sama5d3-xplained || TARGET_DEVICE_at91_sama5_DEVICE_microchip_sama5d3-xplained)
+Version: v3.9.3-2
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @!IN_SDK @TARGET_at91_sama5
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Variant: sama5d3_xplainednf_uboot
+Section: boot
+Category: Boot Loaders
+Title: .
+Maintainer: 
+Source: at91bootstrap-v3.9.3.tar.xz
+Type: bin
+Hidden: 1
+Description: .
+https://www.at91.com/linux4sam/bin/view/Linux4SAM/AT91Bootstrap
+
+@@
+
+
+Package: at91bootstrap-sama5d3_xplainedsd_uboot
+Default: y if (TARGET_at91_sama5_Default || TARGET_at91_sama5_DEVICE_microchip_sama5d3-xplained || TARGET_DEVICE_at91_sama5_DEVICE_microchip_sama5d3-xplained)
+Version: v3.9.3-2
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @!IN_SDK @TARGET_at91_sama5
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Variant: sama5d3_xplainedsd_uboot
+Section: boot
+Category: Boot Loaders
+Title: .
+Maintainer: 
+Source: at91bootstrap-v3.9.3.tar.xz
+Type: bin
+Hidden: 1
+Description: .
+https://www.at91.com/linux4sam/bin/view/Linux4SAM/AT91Bootstrap
+
+@@
+
+
+Package: at91bootstrap-sama5d4_xplainednf_uboot_secure
+Default: y if (TARGET_at91_sama5_Default || TARGET_at91_sama5_DEVICE_microchip_sama5d4-xplained || TARGET_DEVICE_at91_sama5_DEVICE_microchip_sama5d4-xplained)
+Version: v3.9.3-2
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @!IN_SDK @TARGET_at91_sama5
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Variant: sama5d4_xplainednf_uboot_secure
+Section: boot
+Category: Boot Loaders
+Title: .
+Maintainer: 
+Source: at91bootstrap-v3.9.3.tar.xz
+Type: bin
+Hidden: 1
+Description: .
+https://www.at91.com/linux4sam/bin/view/Linux4SAM/AT91Bootstrap
+
+@@
+
+
+Package: at91bootstrap-sama5d4_xplaineddf_uboot_secure
+Default: y if (TARGET_at91_sama5_Default || TARGET_at91_sama5_DEVICE_microchip_sama5d4-xplained || TARGET_DEVICE_at91_sama5_DEVICE_microchip_sama5d4-xplained)
+Version: v3.9.3-2
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @!IN_SDK @TARGET_at91_sama5
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Variant: sama5d4_xplaineddf_uboot_secure
+Section: boot
+Category: Boot Loaders
+Title: .
+Maintainer: 
+Source: at91bootstrap-v3.9.3.tar.xz
+Type: bin
+Hidden: 1
+Description: .
+https://www.at91.com/linux4sam/bin/view/Linux4SAM/AT91Bootstrap
+
+@@
+
+
+Package: at91bootstrap-sama5d4_xplainedsd_uboot_secure
+Default: y if (TARGET_at91_sama5_Default || TARGET_at91_sama5_DEVICE_microchip_sama5d4-xplained || TARGET_DEVICE_at91_sama5_DEVICE_microchip_sama5d4-xplained)
+Version: v3.9.3-2
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @!IN_SDK @TARGET_at91_sama5
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Variant: sama5d4_xplainedsd_uboot_secure
+Section: boot
+Category: Boot Loaders
+Title: .
+Maintainer: 
+Source: at91bootstrap-v3.9.3.tar.xz
+Type: bin
+Hidden: 1
+Description: .
+https://www.at91.com/linux4sam/bin/view/Linux4SAM/AT91Bootstrap
+
+@@
+
+
+Package: at91bootstrap-sama5d27_som1_eksd1_uboot
+Default: y if (TARGET_at91_sama5_Default || TARGET_at91_sama5_DEVICE_microchip_sama5d27-som1-ek || TARGET_DEVICE_at91_sama5_DEVICE_microchip_sama5d27-som1-ek)
+Version: v3.9.3-2
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @!IN_SDK @TARGET_at91_sama5
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Variant: sama5d27_som1_eksd1_uboot
+Section: boot
+Category: Boot Loaders
+Title: .
+Maintainer: 
+Source: at91bootstrap-v3.9.3.tar.xz
+Type: bin
+Hidden: 1
+Description: .
+https://www.at91.com/linux4sam/bin/view/Linux4SAM/AT91Bootstrap
+
+@@
+
+
+Package: at91bootstrap-sama5d27_som1_ekqspi_uboot
+Default: y if (TARGET_at91_sama5_Default || TARGET_at91_sama5_DEVICE_microchip_sama5d27-som1-ek || TARGET_DEVICE_at91_sama5_DEVICE_microchip_sama5d27-som1-ek)
+Version: v3.9.3-2
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @!IN_SDK @TARGET_at91_sama5
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Variant: sama5d27_som1_ekqspi_uboot
+Section: boot
+Category: Boot Loaders
+Title: .
+Maintainer: 
+Source: at91bootstrap-v3.9.3.tar.xz
+Type: bin
+Hidden: 1
+Description: .
+https://www.at91.com/linux4sam/bin/view/Linux4SAM/AT91Bootstrap
+
+@@
+
+
+Package: at91bootstrap-sama5d2_ptc_eknf_uboot
+Default: y if (TARGET_at91_sama5_Default || TARGET_at91_sama5_DEVICE_microchip_sama5d2-ptc-ek || TARGET_DEVICE_at91_sama5_DEVICE_microchip_sama5d2-ptc-ek)
+Version: v3.9.3-2
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @!IN_SDK @TARGET_at91_sama5
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Variant: sama5d2_ptc_eknf_uboot
+Section: boot
+Category: Boot Loaders
+Title: .
+Maintainer: 
+Source: at91bootstrap-v3.9.3.tar.xz
+Type: bin
+Hidden: 1
+Description: .
+https://www.at91.com/linux4sam/bin/view/Linux4SAM/AT91Bootstrap
+
+@@
+
+
+Package: at91bootstrap-sama5d2_ptc_eksd_uboot
+Default: y if (TARGET_at91_sama5_Default || TARGET_at91_sama5_DEVICE_microchip_sama5d2-ptc-ek || TARGET_DEVICE_at91_sama5_DEVICE_microchip_sama5d2-ptc-ek)
+Version: v3.9.3-2
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @!IN_SDK @TARGET_at91_sama5
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Variant: sama5d2_ptc_eksd_uboot
+Section: boot
+Category: Boot Loaders
+Title: .
+Maintainer: 
+Source: at91bootstrap-v3.9.3.tar.xz
+Type: bin
+Hidden: 1
+Description: .
+https://www.at91.com/linux4sam/bin/view/Linux4SAM/AT91Bootstrap
+
+@@
+
+

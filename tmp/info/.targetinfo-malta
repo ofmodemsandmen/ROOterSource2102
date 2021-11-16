@@ -1,0 +1,86 @@
+Source-Makefile: target/linux/malta/Makefile
+Target: malta
+Target-Board: malta
+Target-Name: MIPS Malta CoreLV board (qemu)
+Target-Arch: 
+Target-Arch-Packages: 
+Target-Features: cpiogz dt ext4 pci ramdisk rtc squashfs targz usb
+Target-Depends: 
+Target-Optimization: -Os -pipe
+CPU-Type: 
+Linux-Version: 5.4.143
+Linux-Release: 1
+Linux-Kernel-Arch: arm64
+Target-Description:
+
+@@
+Default-Packages: base-files ca-bundle dropbear fstools libc libgcc libustream-wolfssl logd mtd netifd opkg uci uclient-fetch urandom-seed urngd busybox procd dnsmasq firewall ip6tables iptables kmod-ipt-offload odhcp6c odhcpd-ipv6only ppp ppp-mod-pppoe wpad-basic-wolfssl kmod-mac80211-hwsim kmod-pcnet32 mkf2fs e2fsprogs iwinfo
+Target: malta/le
+Target-Board: malta
+Target-Name: Little Endian
+Target-Arch: mipsel
+Target-Arch-Packages: mipsel_24kc
+Target-Features: cpiogz dt ext4 mips16 pci ramdisk rtc source-only squashfs targz usb
+Target-Depends: 
+Target-Optimization: -Os -pipe -mno-branch-likely -mips32r2 -mtune=24kc
+CPU-Type: 24kc
+Linux-Version: 5.4.143
+Linux-Release: 1
+Linux-Kernel-Arch: mips
+Target-Description:
+	Build LE firmware images for MIPS Malta CoreLV board running in
+	little-endian mode
+@@
+Default-Packages: base-files ca-bundle dropbear fstools libc libgcc libustream-wolfssl logd mtd netifd opkg uci uclient-fetch urandom-seed urngd busybox procd dnsmasq firewall ip6tables iptables kmod-ipt-offload odhcp6c odhcpd-ipv6only ppp ppp-mod-pppoe wpad-basic-wolfssl kmod-mac80211-hwsim kmod-pcnet32 mkf2fs e2fsprogs iwinfo
+Target: malta/be
+Target-Board: malta
+Target-Name: Big Endian
+Target-Arch: mips
+Target-Arch-Packages: mips_24kc
+Target-Features: cpiogz dt ext4 mips16 pci ramdisk rtc squashfs targz usb
+Target-Depends: 
+Target-Optimization: -Os -pipe -mno-branch-likely -mips32r2 -mtune=24kc
+CPU-Type: 24kc
+Linux-Version: 5.4.143
+Linux-Release: 1
+Linux-Kernel-Arch: mips
+Target-Description:
+	Build BE firmware images for MIPS Malta CoreLV board running in
+	big-endian mode
+@@
+Default-Packages: base-files ca-bundle dropbear fstools libc libgcc libustream-wolfssl logd mtd netifd opkg uci uclient-fetch urandom-seed urngd busybox procd dnsmasq firewall ip6tables iptables kmod-ipt-offload odhcp6c odhcpd-ipv6only ppp ppp-mod-pppoe wpad-basic-wolfssl kmod-mac80211-hwsim kmod-pcnet32 mkf2fs e2fsprogs iwinfo
+Target: malta/le64
+Target-Board: malta
+Target-Name: Little Endian (64-bits)
+Target-Arch: mips64el
+Target-Arch-Packages: mips64el_mips64r2
+Target-Features: cpiogz dt ext4 pci ramdisk rtc source-only squashfs targz usb
+Target-Depends: 
+Target-Optimization: -Os -pipe -mno-branch-likely -mips64r2 -mtune=mips64r2 -mabi=64
+CPU-Type: mips64r2
+Linux-Version: 5.4.143
+Linux-Release: 1
+Linux-Kernel-Arch: mips
+Target-Description:
+	Build LE firmware images for MIPS Malta CoreLV board running in
+	little-endian and 64-bits mode
+@@
+Default-Packages: base-files ca-bundle dropbear fstools libc libgcc libustream-wolfssl logd mtd netifd opkg uci uclient-fetch urandom-seed urngd busybox procd dnsmasq firewall ip6tables iptables kmod-ipt-offload odhcp6c odhcpd-ipv6only ppp ppp-mod-pppoe wpad-basic-wolfssl kmod-mac80211-hwsim kmod-pcnet32 mkf2fs e2fsprogs iwinfo
+Target: malta/be64
+Target-Board: malta
+Target-Name: Big Endian (64-bits)
+Target-Arch: mips64
+Target-Arch-Packages: mips64_mips64r2
+Target-Features: cpiogz dt ext4 pci ramdisk rtc source-only squashfs targz usb
+Target-Depends: 
+Target-Optimization: -Os -pipe -mno-branch-likely -mips64r2 -mtune=mips64r2 -mabi=64
+CPU-Type: mips64r2
+Linux-Version: 5.4.143
+Linux-Release: 1
+Linux-Kernel-Arch: mips
+Target-Description:
+	Build BE firmware images for MIPS Malta CoreLV board running in
+	big-endian and 64-bits mode
+@@
+Default-Packages: base-files ca-bundle dropbear fstools libc libgcc libustream-wolfssl logd mtd netifd opkg uci uclient-fetch urandom-seed urngd busybox procd dnsmasq firewall ip6tables iptables kmod-ipt-offload odhcp6c odhcpd-ipv6only ppp ppp-mod-pppoe wpad-basic-wolfssl kmod-mac80211-hwsim kmod-pcnet32 mkf2fs e2fsprogs iwinfo
+

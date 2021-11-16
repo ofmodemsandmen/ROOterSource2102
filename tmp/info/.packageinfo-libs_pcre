@@ -1,0 +1,87 @@
+Source-Makefile: package/libs/pcre/Makefile
+Build-Types: host
+
+Package: libpcre
+Version: 8.44-3
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: libs
+Category: Libraries
+Repository: base
+Title: A Perl Compatible Regular Expression library
+Maintainer: Thomas Heil <heil@terminal-consulting.de>
+Source: pcre-8.44.tar.bz2
+License: BSD-3-Clause
+LicenseFiles: LICENCE
+Type: ipkg
+Description: A Perl Compatible Regular Expression library
+https://www.pcre.org/
+Thomas Heil <heil@terminal-consulting.de>
+@@
+Config:
+  source "package/libs/pcre/Config.in"
+@@
+
+Package: libpcre16
+Version: 8.44-3
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: libs
+Category: Libraries
+Repository: base
+Title: A Perl Compatible Regular Expression library (16bit support)
+Maintainer: Thomas Heil <heil@terminal-consulting.de>
+Source: pcre-8.44.tar.bz2
+License: BSD-3-Clause
+LicenseFiles: LICENCE
+Type: ipkg
+Description: A Perl Compatible Regular Expression library (16bit support)
+https://www.pcre.org/
+Thomas Heil <heil@terminal-consulting.de>
+@@
+
+Package: libpcre32
+Version: 8.44-3
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: libs
+Category: Libraries
+Repository: base
+Title: A Perl Compatible Regular Expression library (32bit support)
+Maintainer: Thomas Heil <heil@terminal-consulting.de>
+Source: pcre-8.44.tar.bz2
+License: BSD-3-Clause
+LicenseFiles: LICENCE
+Type: ipkg
+Description: A Perl Compatible Regular Expression library (32bit support)
+https://www.pcre.org/
+Thomas Heil <heil@terminal-consulting.de>
+@@
+
+Package: libpcrecpp
+Version: 8.44-3
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libpcre +USE_UCLIBCXX:uclibcxx +USE_LIBSTDCXX:libstdcpp
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: libs
+Category: Libraries
+Repository: base
+Title: C++ wrapper for Perl Compatible Regular Expression library
+Maintainer: Thomas Heil <heil@terminal-consulting.de>
+Source: pcre-8.44.tar.bz2
+License: BSD-3-Clause
+LicenseFiles: LICENCE
+Type: ipkg
+Description: C++ wrapper for Perl Compatible Regular Expression library
+https://www.pcre.org/
+Thomas Heil <heil@terminal-consulting.de>
+@@
+
+

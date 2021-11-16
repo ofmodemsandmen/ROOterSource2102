@@ -1,0 +1,22 @@
+Source-Makefile: package/boot/arm-trusted-firmware-rockchip/Makefile
+
+Package: arm-trusted-firmware-rockchip
+Version: 2.3-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_rockchip_armv8
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: boot
+Category: Boot Loaders
+Repository: base
+Title: ARM Trusted Firmware for Rockchip
+Maintainer: Tobias Maedel <openwrt@tbspace.de>
+Source: atf-v2.3.tar.gz
+License: BSD-3-Clause
+LicenseFiles: license.md
+Type: ipkg
+Description: ARM Trusted Firmware for Rockchip
+Tobias Maedel <openwrt@tbspace.de>
+@@
+
+

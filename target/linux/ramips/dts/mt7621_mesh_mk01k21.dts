@@ -1,0 +1,17 @@
+// SPDX-License-Identifier: BSD-3-Clause
+/*
+ *  Copyright(c) 2017 Kristian Evensen <kristian.evensen@gmail.com>.
+ *  Copyright(c) 2017 Piotr Dymacz <pepe2k@gmail.com>.
+ *  All rights reserved.
+ */
+
+#include "mt7621_mesh_mk01k21.dtsi"
+
+/ {
+	compatible = "mesh,mk01k21", "mesh,mk01k21", "mediatek,mt7621-soc";
+	model = "Mesh MK01K21";
+};
+
+&firmware {
+	reg = <0x50000 0xfb0000>;
+};

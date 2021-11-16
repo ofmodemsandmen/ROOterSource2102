@@ -1,0 +1,170 @@
+Source-Makefile: package/boot/arm-trusted-firmware-mediatek/Makefile
+
+Package: trusted-firmware-a-mt7622-nor-1ddr
+Version: 2020-11-09-03017334ccd8c0fac12e7db36749b95b9a7d745f-0
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @!IN_SDK @TARGET_mediatek_mt7622
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Variant: mt7622-nor-1ddr
+Section: boot
+Category: Boot Loaders
+Title: Trusted-Firmware-A for MediaTek MT7622 (SPI-NOR, 1x DDR3)
+Maintainer: Daniel Golle <daniel@makrotopia.org>
+Source: arm-trusted-firmware-mediatek-2020-11-09-03017334ccd8c0fac12e7db36749b95b9a7d745f.tar.xz
+License: BSD-3-Clause proprietary
+LicenseFiles: docs/license.rst
+Type: bin
+Description: Trusted-Firmware-A for MediaTek MT7622 (SPI-NOR, 1x DDR3)
+https://www.trustedfirmware.org/projects/tf-a/
+Daniel Golle <daniel@makrotopia.org>
+@@
+
+
+Package: trusted-firmware-a-mt7622-nor-2ddr
+Version: 2020-11-09-03017334ccd8c0fac12e7db36749b95b9a7d745f-0
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @!IN_SDK @TARGET_mediatek_mt7622
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Variant: mt7622-nor-2ddr
+Section: boot
+Category: Boot Loaders
+Title: Trusted-Firmware-A for MediaTek MT7622 (SPI-NOR, 2x DDR3)
+Maintainer: Daniel Golle <daniel@makrotopia.org>
+Source: arm-trusted-firmware-mediatek-2020-11-09-03017334ccd8c0fac12e7db36749b95b9a7d745f.tar.xz
+License: BSD-3-Clause proprietary
+LicenseFiles: docs/license.rst
+Type: bin
+Description: Trusted-Firmware-A for MediaTek MT7622 (SPI-NOR, 2x DDR3)
+https://www.trustedfirmware.org/projects/tf-a/
+Daniel Golle <daniel@makrotopia.org>
+@@
+
+
+Package: trusted-firmware-a-mt7622-snand-1ddr
+Version: 2020-11-09-03017334ccd8c0fac12e7db36749b95b9a7d745f-0
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @!IN_SDK @TARGET_mediatek_mt7622
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Variant: mt7622-snand-1ddr
+Section: boot
+Category: Boot Loaders
+Title: Trusted-Firmware-A for MediaTek MT7622 (SPI-NAND, 1x DDR3)
+Maintainer: Daniel Golle <daniel@makrotopia.org>
+Source: arm-trusted-firmware-mediatek-2020-11-09-03017334ccd8c0fac12e7db36749b95b9a7d745f.tar.xz
+License: BSD-3-Clause proprietary
+LicenseFiles: docs/license.rst
+Type: bin
+Description: Trusted-Firmware-A for MediaTek MT7622 (SPI-NAND, 1x DDR3)
+https://www.trustedfirmware.org/projects/tf-a/
+Daniel Golle <daniel@makrotopia.org>
+@@
+
+
+Package: trusted-firmware-a-mt7622-snand-2ddr
+Version: 2020-11-09-03017334ccd8c0fac12e7db36749b95b9a7d745f-0
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @!IN_SDK @TARGET_mediatek_mt7622
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Variant: mt7622-snand-2ddr
+Section: boot
+Category: Boot Loaders
+Title: Trusted-Firmware-A for MediaTek MT7622 (SPI-SNAND, 2x DDR3)
+Maintainer: Daniel Golle <daniel@makrotopia.org>
+Source: arm-trusted-firmware-mediatek-2020-11-09-03017334ccd8c0fac12e7db36749b95b9a7d745f.tar.xz
+License: BSD-3-Clause proprietary
+LicenseFiles: docs/license.rst
+Type: bin
+Description: Trusted-Firmware-A for MediaTek MT7622 (SPI-SNAND, 2x DDR3)
+https://www.trustedfirmware.org/projects/tf-a/
+Daniel Golle <daniel@makrotopia.org>
+@@
+
+
+Package: trusted-firmware-a-mt7622-emmc-1ddr
+Version: 2020-11-09-03017334ccd8c0fac12e7db36749b95b9a7d745f-0
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @!IN_SDK @TARGET_mediatek_mt7622
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Variant: mt7622-emmc-1ddr
+Section: boot
+Category: Boot Loaders
+Title: Trusted-Firmware-A for MediaTek MT7622 (eMMC, 1x DDR3)
+Maintainer: Daniel Golle <daniel@makrotopia.org>
+Source: arm-trusted-firmware-mediatek-2020-11-09-03017334ccd8c0fac12e7db36749b95b9a7d745f.tar.xz
+License: BSD-3-Clause proprietary
+LicenseFiles: docs/license.rst
+Type: bin
+Description: Trusted-Firmware-A for MediaTek MT7622 (eMMC, 1x DDR3)
+https://www.trustedfirmware.org/projects/tf-a/
+Daniel Golle <daniel@makrotopia.org>
+@@
+
+
+Package: trusted-firmware-a-mt7622-emmc-2ddr
+Version: 2020-11-09-03017334ccd8c0fac12e7db36749b95b9a7d745f-0
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @!IN_SDK @TARGET_mediatek_mt7622
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Variant: mt7622-emmc-2ddr
+Section: boot
+Category: Boot Loaders
+Title: Trusted-Firmware-A for MediaTek MT7622 (eMMC, 2x DDR3)
+Maintainer: Daniel Golle <daniel@makrotopia.org>
+Source: arm-trusted-firmware-mediatek-2020-11-09-03017334ccd8c0fac12e7db36749b95b9a7d745f.tar.xz
+License: BSD-3-Clause proprietary
+LicenseFiles: docs/license.rst
+Type: bin
+Description: Trusted-Firmware-A for MediaTek MT7622 (eMMC, 2x DDR3)
+https://www.trustedfirmware.org/projects/tf-a/
+Daniel Golle <daniel@makrotopia.org>
+@@
+
+
+Package: trusted-firmware-a-mt7622-sdmmc-1ddr
+Version: 2020-11-09-03017334ccd8c0fac12e7db36749b95b9a7d745f-0
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @!IN_SDK @TARGET_mediatek_mt7622
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Variant: mt7622-sdmmc-1ddr
+Section: boot
+Category: Boot Loaders
+Title: Trusted-Firmware-A for MediaTek MT7622 (SDcard, 1x DDR3)
+Maintainer: Daniel Golle <daniel@makrotopia.org>
+Source: arm-trusted-firmware-mediatek-2020-11-09-03017334ccd8c0fac12e7db36749b95b9a7d745f.tar.xz
+License: BSD-3-Clause proprietary
+LicenseFiles: docs/license.rst
+Type: bin
+Description: Trusted-Firmware-A for MediaTek MT7622 (SDcard, 1x DDR3)
+https://www.trustedfirmware.org/projects/tf-a/
+Daniel Golle <daniel@makrotopia.org>
+@@
+
+
+Package: trusted-firmware-a-mt7622-sdmmc-2ddr
+Version: 2020-11-09-03017334ccd8c0fac12e7db36749b95b9a7d745f-0
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @!IN_SDK @TARGET_mediatek_mt7622
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Variant: mt7622-sdmmc-2ddr
+Section: boot
+Category: Boot Loaders
+Title: Trusted-Firmware-A for MediaTek MT7622 (SDcard, 2x DDR3)
+Maintainer: Daniel Golle <daniel@makrotopia.org>
+Source: arm-trusted-firmware-mediatek-2020-11-09-03017334ccd8c0fac12e7db36749b95b9a7d745f.tar.xz
+License: BSD-3-Clause proprietary
+LicenseFiles: docs/license.rst
+Type: bin
+Description: Trusted-Firmware-A for MediaTek MT7622 (SDcard, 2x DDR3)
+https://www.trustedfirmware.org/projects/tf-a/
+Daniel Golle <daniel@makrotopia.org>
+@@
+
+

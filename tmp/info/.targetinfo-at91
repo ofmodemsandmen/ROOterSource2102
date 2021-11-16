@@ -1,0 +1,388 @@
+Source-Makefile: target/linux/at91/Makefile
+Target: at91
+Target-Board: at91
+Target-Name: Microchip (Atmel AT91)
+Target-Arch: arm
+Target-Arch-Packages: arm_xscale
+Target-Features: ext4 squashfs targz ubifs usb usbgadget
+Target-Depends: 
+Target-Optimization: -Os -pipe
+CPU-Type: xscale
+Linux-Version: 5.4.143
+Linux-Release: 1
+Linux-Kernel-Arch: arm
+Target-Description:
+
+@@
+Default-Packages: base-files ca-bundle dropbear fstools libc libgcc libustream-wolfssl logd mtd netifd opkg uci uclient-fetch urandom-seed urngd busybox procd dnsmasq firewall ip6tables iptables kmod-ipt-offload odhcp6c odhcpd-ipv6only ppp ppp-mod-pppoe kmod-usb-ohci kmod-at91-udc kmod-usb-gadget-eth 
+Target: at91/sama5
+Target-Board: at91
+Target-Name: SAMA5 boards(Cortex-A5)
+Target-Arch: arm
+Target-Arch-Packages: arm_cortex-a5_vfpv4
+Target-Features: arm_v7 display dt ext4 fpu gpio rtc squashfs targz ubifs usb usbgadget
+Target-Depends: 
+Target-Optimization: -Os -pipe
+CPU-Type: cortex-a5+vfpv4
+Linux-Version: 5.4.143
+Linux-Release: 1
+Linux-Kernel-Arch: arm
+Target-Description:
+	Build generic firmware for Microchip(Atmel AT91) SAMA5D2,
+	SAMA5D3 and SAMA5D4 MPU's using the ARMv7 instruction set.
+@@
+Default-Packages: base-files ca-bundle dropbear fstools libc libgcc libustream-wolfssl logd mtd netifd opkg uci uclient-fetch urandom-seed urngd busybox procd kmod-usb2 dnsmasq firewall ip6tables iptables kmod-ipt-offload odhcp6c odhcpd-ipv6only ppp ppp-mod-pppoe kmod-usb-ohci kmod-at91-udc kmod-usb-gadget-eth 
+Target-Profile: DEVICE_microchip_sama5d2-xplained
+Target-Profile-Name: Microchip SAMA5D2 Xplained
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: atmel,sama5d2-xplained
+
+
+Target-Profile-Description:
+Build firmware images for Microchip SAMA5D2 Xplained
+
+
+
+@@
+
+Target-Profile: DEVICE_microchip_sama5d27-som1-ek
+Target-Profile-Name: Microchip SAMA5D27 SOM1 Ek
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: atmel,sama5d27-som1-ek
+
+
+Target-Profile-Description:
+Build firmware images for Microchip SAMA5D27 SOM1 Ek
+
+
+
+@@
+
+Target-Profile: DEVICE_microchip_sama5d2-ptc-ek
+Target-Profile-Name: Microchip SAMA5D2 PTC Ek
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: atmel,sama5d2-ptc_ek
+
+
+Target-Profile-Description:
+Build firmware images for Microchip SAMA5D2 PTC Ek
+
+
+
+@@
+
+Target-Profile: DEVICE_microchip_sama5d3-xplained
+Target-Profile-Name: Microchip SAMA5D3 Xplained
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: atmel,sama5d3-xplained
+
+
+Target-Profile-Description:
+Build firmware images for Microchip SAMA5D3 Xplained
+
+
+
+@@
+
+Target-Profile: DEVICE_microchip_sama5d4-xplained
+Target-Profile-Name: Microchip SAMA5D4 Xplained
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: atmel,sama5d4-xplained
+
+
+Target-Profile-Description:
+Build firmware images for Microchip SAMA5D4 Xplained
+
+
+
+@@
+
+Target: at91/sam9x
+Target-Board: at91
+Target-Name: SAM9X Boards (ARMv5)
+Target-Arch: arm
+Target-Arch-Packages: arm_arm926ej-s
+Target-Features: dt ext4 squashfs targz ubifs usb usbgadget
+Target-Depends: 
+Target-Optimization: -Os -pipe
+CPU-Type: arm926ej-s
+Linux-Version: 5.4.143
+Linux-Release: 1
+Linux-Kernel-Arch: arm
+Target-Description:
+	Build generic firmware for Microchip AT91 SAM9x platforms
+	using the ARMv5 instruction set.
+@@
+Default-Packages: base-files ca-bundle dropbear fstools libc libgcc libustream-wolfssl logd mtd netifd opkg uci uclient-fetch urandom-seed urngd busybox procd dnsmasq firewall ip6tables iptables kmod-ipt-offload odhcp6c odhcpd-ipv6only ppp ppp-mod-pppoe kmod-usb-ohci kmod-at91-udc kmod-usb-gadget-eth 
+Target-Profile: DEVICE_atmel_at91sam9263ek
+Target-Profile-Name: Atmel AT91SAM9263-EK
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: atmel,at91sam9263ek
+
+
+Target-Profile-Description:
+Build firmware images for Atmel AT91SAM9263-EK
+
+
+
+@@
+
+Target-Profile: DEVICE_atmel_at91sam9g15ek
+Target-Profile-Name: Atmel AT91SAM9G15-EK
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: atmel,at91sam9g15ek
+
+
+Target-Profile-Description:
+Build firmware images for Atmel AT91SAM9G15-EK
+
+
+
+@@
+
+Target-Profile: DEVICE_atmel_at91sam9g20ek
+Target-Profile-Name: Atmel AT91SAM9G20-EK
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: atmel,at91sam9g20ek
+
+
+Target-Profile-Description:
+Build firmware images for Atmel AT91SAM9G20-EK
+
+
+
+@@
+
+Target-Profile: DEVICE_atmel_at91sam9g20ek-2mmc
+Target-Profile-Name: Atmel AT91SAM9G20-EK 2MMC
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: atmel,at91sam9g20ek_2mmc
+
+
+Target-Profile-Description:
+Build firmware images for Atmel AT91SAM9G20-EK 2MMC
+
+
+
+@@
+
+Target-Profile: DEVICE_atmel_at91sam9g25ek
+Target-Profile-Name: Atmel AT91SAM9G25-EK
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: atmel,at91sam9g25ek
+
+
+Target-Profile-Description:
+Build firmware images for Atmel AT91SAM9G25-EK
+
+
+
+@@
+
+Target-Profile: DEVICE_atmel_at91sam9g35ek
+Target-Profile-Name: Atmel AT91SAM9G35-EK
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: atmel,at91sam9g35ek
+
+
+Target-Profile-Description:
+Build firmware images for Atmel AT91SAM9G35-EK
+
+
+
+@@
+
+Target-Profile: DEVICE_atmel_at91sam9m10g45ek
+Target-Profile-Name: Atmel AT91SAM9M10G45-EK
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: atmel,at91sam9m10g45ek
+
+
+Target-Profile-Description:
+Build firmware images for Atmel AT91SAM9M10G45-EK
+
+
+
+@@
+
+Target-Profile: DEVICE_atmel_at91sam9x25ek
+Target-Profile-Name: Atmel AT91SAM9X25-EK
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: atmel,at91sam9x25ek
+
+
+Target-Profile-Description:
+Build firmware images for Atmel AT91SAM9X25-EK
+
+
+
+@@
+
+Target-Profile: DEVICE_atmel_at91sam9x35ek
+Target-Profile-Name: Atmel AT91SAM9X35-EK
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: atmel,at91sam9x35ek
+
+
+Target-Profile-Description:
+Build firmware images for Atmel AT91SAM9X35-EK
+
+
+
+@@
+
+Target-Profile: DEVICE_calamp_lmu5000
+Target-Profile-Name: CalAmp LMU5000
+Target-Profile-Packages: kmod-rtc-pcf2123 kmod-usb-acm kmod-usb-serial-option kmod-usb-serial-sierrawireless kmod-gpio-mcp23s08 
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: calamp,lmu5000
+
+
+Target-Profile-Description:
+Build firmware images for CalAmp LMU5000
+
+
+
+@@
+
+Target-Profile: DEVICE_calao_tny-a9260
+Target-Profile-Name: Calao TNY A9260
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: calao,tny-a9260
+
+
+Target-Profile-Description:
+Build firmware images for Calao TNY A9260
+
+
+
+@@
+
+Target-Profile: DEVICE_calao_tny-a9263
+Target-Profile-Name: Calao TNY A9263
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: atmel,tny-a9263
+
+
+Target-Profile-Description:
+Build firmware images for Calao TNY A9263
+
+
+
+@@
+
+Target-Profile: DEVICE_calao_tny-a9g20
+Target-Profile-Name: Calao TNY A9G20
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: calao,tny-a9g20
+
+
+Target-Profile-Description:
+Build firmware images for Calao TNY A9G20
+
+
+
+@@
+
+Target-Profile: DEVICE_calao_usb-a9260
+Target-Profile-Name: Calao USB A9260
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: calao,usb-a9260
+
+
+Target-Profile-Description:
+Build firmware images for Calao USB A9260
+
+
+
+@@
+
+Target-Profile: DEVICE_calao_usb-a9263
+Target-Profile-Name: Calao USB A9263
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: atmel,usb-a9263
+
+
+Target-Profile-Description:
+Build firmware images for Calao USB A9263
+
+
+
+@@
+
+Target-Profile: DEVICE_calao_usb-a9g20
+Target-Profile-Name: Calao USB A9G20
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: calao,usb-a9g20
+
+
+Target-Profile-Description:
+Build firmware images for Calao USB A9G20
+
+
+
+@@
+
+Target-Profile: DEVICE_egnite_ethernut5
+Target-Profile-Name: egnite Ethernut 5
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: egnite,ethernut5
+
+
+Target-Profile-Description:
+Build firmware images for egnite Ethernut 5
+
+
+
+@@
+
+Target-Profile: DEVICE_exegin_q5xr5
+Target-Profile-Name: Exegin Q5x rev5
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: exegin,q5xr5
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for Exegin Q5x rev5
+
+
+
+@@
+
+Target-Profile: DEVICE_laird_wb45n
+Target-Profile-Name: Laird WB45N
+Target-Profile-Packages: kmod-mmc-at91 kmod-ath6kl-sdio ath6k-firmware kmod-usb-storage kmod-fs-vfat kmod-fs-msdos kmod-leds-gpio 
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: laird,wb45n
+
+
+Target-Profile-Description:
+Build firmware images for Laird WB45N
+
+
+
+@@
+
+

@@ -1,0 +1,22 @@
+Source-Makefile: package/firmware/layerscape/ls-ddr-phy/Makefile
+Build-Depends: tfa-layerscape/host
+
+Package: layerscape-ddr-phy
+Version: LSDK-20.04-update-290520-0
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_layerscape
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Title: NXP Layerscape DDR PHY firmware
+Maintainer: 
+Source: ls-ddr-phy-LSDK-20.04-update-290520.tar.xz
+License: EULA
+LicenseFiles: NXP-Binary-EULA.txt
+Type: ipkg
+Description: NXP Layerscape DDR PHY firmware
+
+@@
+
+

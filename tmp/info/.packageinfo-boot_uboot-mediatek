@@ -1,0 +1,94 @@
+Source-Makefile: package/boot/uboot-mediatek/Makefile
+Build-Types: host
+
+Package: u-boot-mt7629
+Default: y
+Version: 2020.10
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @!IN_SDK @TARGET_mediatek_mt7629
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Variant: mt7629
+Section: boot
+Category: Boot Loaders
+Title: U-Boot for MT7629
+Maintainer: 
+Source: u-boot-2020.10.tar.bz2
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: Licenses/README
+Type: bin
+Description: U-Boot for MT7629
+http://www.denx.de/wiki/U-Boot
+
+@@
+
+Build-Types: host
+
+Package: u-boot-mt7622
+Default: y
+Version: 2020.10
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @!IN_SDK @TARGET_mediatek_mt7622
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Variant: mt7622
+Section: boot
+Category: Boot Loaders
+Title: U-Boot for MT7622
+Maintainer: 
+Source: u-boot-2020.10.tar.bz2
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: Licenses/README
+Type: bin
+Description: U-Boot for MT7622
+http://www.denx.de/wiki/U-Boot
+
+@@
+
+Build-Types: host
+
+Package: u-boot-mt7623n_bpir2
+Default: y
+Version: 2020.10
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @!IN_SDK @TARGET_mediatek_mt7623
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Variant: mt7623n_bpir2
+Section: boot
+Category: Boot Loaders
+Title: U-Boot for Banana Pi R2 (mt7623)
+Maintainer: 
+Source: u-boot-2020.10.tar.bz2
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: Licenses/README
+Type: bin
+Description: U-Boot for Banana Pi R2 (mt7623)
+http://www.denx.de/wiki/U-Boot
+
+@@
+
+Build-Types: host
+
+Package: u-boot-mt7623a_unielec_u7623
+Default: y
+Version: 2020.10
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @!IN_SDK @TARGET_mediatek_mt7623
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Variant: mt7623a_unielec_u7623
+Section: boot
+Category: Boot Loaders
+Title: U-Boot for UniElec U7623 (mt7623)
+Maintainer: 
+Source: u-boot-2020.10.tar.bz2
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: Licenses/README
+Type: bin
+Description: U-Boot for UniElec U7623 (mt7623)
+http://www.denx.de/wiki/U-Boot
+
+@@
+
+

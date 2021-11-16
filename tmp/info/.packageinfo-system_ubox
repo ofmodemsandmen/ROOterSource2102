@@ -1,0 +1,58 @@
+Source-Makefile: package/system/ubox/Makefile
+
+Package: ubox
+Version: 2020-10-25-9ef886819dd48303d8ced4cdbc9afbf32682535c-2
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libubox +ubusd +ubus +libubus +libuci
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: base
+Category: Base system
+Repository: base
+Title: OpenWrt system helper toolbox
+Maintainer: John Crispin <john@phrozen.org>
+Source: ubox-2020-10-25-9ef886819dd48303d8ced4cdbc9afbf32682535c.tar.xz
+License: GPL-2.0
+Type: ipkg
+Description: OpenWrt system helper toolbox
+John Crispin <john@phrozen.org>
+@@
+
+Package: getrandom
+Version: 2020-10-25-9ef886819dd48303d8ced4cdbc9afbf32682535c-2
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: base
+Category: Base system
+Repository: base
+Title: OpenWrt getrandom system helper
+Maintainer: John Crispin <john@phrozen.org>
+Source: ubox-2020-10-25-9ef886819dd48303d8ced4cdbc9afbf32682535c.tar.xz
+License: GPL-2.0
+Type: ipkg
+Description: OpenWrt getrandom system helper
+John Crispin <john@phrozen.org>
+@@
+
+Package: logd
+Version: 2020-10-25-9ef886819dd48303d8ced4cdbc9afbf32682535c-2
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libubox +libubus +libblobmsg-json
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: base
+Category: Base system
+Repository: base
+Title: OpenWrt system log implementation
+Maintainer: John Crispin <john@phrozen.org>
+Require-User: logd=514:logd=514
+Source: ubox-2020-10-25-9ef886819dd48303d8ced4cdbc9afbf32682535c.tar.xz
+License: GPL-2.0
+Type: ipkg
+Description: OpenWrt system log implementation
+John Crispin <john@phrozen.org>
+@@
+
+

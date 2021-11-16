@@ -1,0 +1,30 @@
+Source-Makefile: package/utils/secilc/Makefile
+Build-Depends: !BUILD_NLS:libiconv !BUILD_NLS:gettext
+Build-Depends/host: libsepol/host
+Build-Types: host
+
+Package: secilc
+Version: 3.2-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libsepol
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Repository: base
+Title: SELinux Common Intermediate Language (CIL) Compiler
+Maintainer: Dominick Grift <dominick.grift@defensec.nl>
+Source: secilc-3.2.tar.gz
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Type: ipkg
+Description: 	The SELinux CIL Compiler is a compiler that converts the CIL language as
+	described on the CIL design wiki into a kernel binary policy file.
+	Please see the CIL Design Wiki at:
+	http://github.com/SELinuxProject/cil/wiki/
+	for more information about the goals and features on the CIL language.
+http://selinuxproject.org/page/Main_Page
+Dominick Grift <dominick.grift@defensec.nl>
+@@
+
+

@@ -1,0 +1,41 @@
+Source-Makefile: package/libs/libsepol/Makefile
+Build-Types: host
+
+Package: libsepol
+Version: 3.2-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: libs
+Category: Libraries
+Repository: base
+Title: SELinux binary policy manipulation library
+Maintainer: Thomas Petazzoni <thomas.petazzoni@bootlin.com>
+Source: libsepol-3.2.tar.gz
+Type: ipkg
+Description: 	Libsepol is the binary policy manipulation library. It doesn't
+	depend upon or use any of the other SELinux components.
+http://selinuxproject.org/page/Main_Page
+Thomas Petazzoni <thomas.petazzoni@bootlin.com>
+@@
+
+Package: chkcon
+Version: 3.2-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libsepol
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Repository: base
+Title: libsepol chkcon security context validation tool
+Maintainer: Thomas Petazzoni <thomas.petazzoni@bootlin.com>
+Source: libsepol-3.2.tar.gz
+Type: ipkg
+Description: 	chkcon - determine if a security context is valid for a given binary policy
+http://selinuxproject.org/page/Main_Page
+Thomas Petazzoni <thomas.petazzoni@bootlin.com>
+@@
+
+

@@ -1,0 +1,19 @@
+Source-Makefile: package/firmware/layerscape/ls-mc/Makefile
+
+Package: layerscape-mc
+Version: LSDK-20.04-0
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_layerscape
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: firmware
+Category: Firmware
+Title: NXP MC firmware
+Maintainer: 
+Source: ls-mc-LSDK-20.04.tar.xz
+Type: ipkg
+Description: NXP MC firmware
+
+@@
+
+

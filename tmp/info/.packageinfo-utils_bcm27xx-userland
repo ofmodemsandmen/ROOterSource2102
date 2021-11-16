@@ -1,0 +1,42 @@
+Source-Makefile: package/utils/bcm27xx-userland/Makefile
+
+Package: bcm27xx-userland
+Default: y if TARGET_bcm27xx
+Version: 97bc8180ad682b004ea224d1db7b8e108eda4397-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_bcm27xx
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: BCM27xx userland tools
+Maintainer: Álvaro Fernández Rojas <noltari@gmail.com>
+Source: bcm27xx-userland-97bc8180ad682b004ea224d1db7b8e108eda4397.tar.gz
+License: BSD-3-Clause
+LicenseFiles: LICENCE
+Type: ipkg
+Description:   BCM27xx userland tools including vcgencmd and tvservice.
+Álvaro Fernández Rojas <noltari@gmail.com>
+@@
+
+Package: bcm27xx-userland-dev
+Submenu: Libraries
+Version: 97bc8180ad682b004ea224d1db7b8e108eda4397-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_bcm27xx +bcm27xx-userland
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: devel
+Category: Development
+Title: Development files of BCM27xx userland tools
+Maintainer: Álvaro Fernández Rojas <noltari@gmail.com>
+Source: bcm27xx-userland-97bc8180ad682b004ea224d1db7b8e108eda4397.tar.gz
+License: BSD-3-Clause
+LicenseFiles: LICENCE
+Type: ipkg
+Description:   This package contains the header and static libraries of
+  the BCM27xx userland tools.
+Álvaro Fernández Rojas <noltari@gmail.com>
+@@
+
+

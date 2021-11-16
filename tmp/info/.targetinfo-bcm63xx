@@ -1,0 +1,3189 @@
+Source-Makefile: target/linux/bcm63xx/Makefile
+Target: bcm63xx
+Target-Board: bcm63xx
+Target-Name: Broadcom BCM63xx
+Target-Arch: mips
+Target-Arch-Packages: mips_mips32
+Target-Features: atm dt gpio pci pcie pcmcia squashfs usb usbgadget
+Target-Depends: 
+Target-Optimization: -Os -pipe -mno-branch-likely -mips32 -mtune=mips32
+CPU-Type: mips32
+Linux-Version: 5.4.143
+Linux-Release: 1
+Linux-Kernel-Arch: mips
+Target-Description:
+	Build firmware images for Broadcom based xDSL/routers
+	currently supports BCM6338, BCM6348 and BCM6358 based devices.
+	(e.g. Inventel Livebox, Siemens SE515, Neufbox 4)
+@@
+Default-Packages: base-files ca-bundle dropbear fstools libc libgcc libustream-wolfssl logd mtd netifd opkg uci uclient-fetch urandom-seed urngd busybox procd dnsmasq firewall ip6tables iptables kmod-ipt-offload odhcp6c odhcpd-ipv6only ppp ppp-mod-pppoe swconfig kmod-gpio-button-hotplug 
+Target-Profile: Default
+Target-Profile-Priority: 1
+Target-Profile-Name: Default Profile
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-Description:
+
+@@
+
+Target: bcm63xx/generic
+Target-Board: bcm63xx
+Target-Name: generic
+Target-Arch: mips
+Target-Arch-Packages: mips_mips32
+Target-Features: atm dt gpio pci pcie pcmcia squashfs usb usbgadget
+Target-Depends: 
+Target-Optimization: -Os -pipe -mno-branch-likely -mips32 -mtune=mips32
+CPU-Type: mips32
+Linux-Version: 5.4.143
+Linux-Release: 1
+Linux-Kernel-Arch: mips
+Target-Description:
+	Build firmware images for BCM63XX boards without SMP support.
+@@
+Default-Packages: base-files ca-bundle dropbear fstools libc libgcc libustream-wolfssl logd mtd netifd opkg uci uclient-fetch urandom-seed urngd busybox procd dnsmasq firewall ip6tables iptables kmod-ipt-offload odhcp6c odhcpd-ipv6only ppp ppp-mod-pppoe swconfig kmod-gpio-button-hotplug 
+Target-Profile: Default
+Target-Profile-Priority: 1
+Target-Profile-Name: Default Profile
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-Description:
+
+@@
+
+Target-Profile: DEVICE_brcm_bcm963281tan
+Target-Profile-Name: Generic 963281TAN
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: brcm,bcm963281tan
+
+
+Target-Profile-Description:
+Build firmware images for Generic 963281TAN
+
+
+
+@@
+
+Target-Profile: DEVICE_brcm_bcm96328avng
+Target-Profile-Name: Generic 96328avng
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: brcm,bcm96328avng
+
+
+Target-Profile-Description:
+Build firmware images for Generic 96328avng
+
+
+
+@@
+
+Target-Profile: DEVICE_brcm_bcm96338gw
+Target-Profile-Name: Generic 96338GW
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: brcm,bcm96338gw
+
+
+Target-Profile-Description:
+Build firmware images for Generic 96338GW
+
+
+
+@@
+
+Target-Profile: DEVICE_brcm_bcm96338w
+Target-Profile-Name: Generic 96338W
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: brcm,bcm96338w
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for Generic 96338W
+
+
+
+@@
+
+Target-Profile: DEVICE_brcm_bcm96345gw2
+Target-Profile-Name: Generic 96345GW2
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: brcm,bcm96345gw2
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for Generic 96345GW2
+
+
+
+@@
+
+Target-Profile: DEVICE_brcm_bcm96348gw
+Target-Profile-Name: Generic 96348GW
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: brcm,bcm96348gw
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for Generic 96348GW
+
+
+
+@@
+
+Target-Profile: DEVICE_brcm_bcm96348gw-10
+Target-Profile-Name: Generic 96348GW-10
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: brcm,bcm96348gw-10
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for Generic 96348GW-10
+
+
+
+@@
+
+Target-Profile: DEVICE_brcm_bcm96348gw-11
+Target-Profile-Name: Generic 96348GW-11
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: brcm,bcm96348gw-11
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for Generic 96348GW-11
+
+
+
+@@
+
+Target-Profile: DEVICE_brcm_bcm96348r
+Target-Profile-Name: Generic 96348R
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: brcm,bcm96348r
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for Generic 96348R
+
+
+
+@@
+
+Target-Profile: DEVICE_brcm_bcm96358vw
+Target-Profile-Name: Generic 96358VW
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: brcm,bcm96358vw
+
+
+Target-Profile-Description:
+Build firmware images for Generic 96358VW
+
+
+
+@@
+
+Target-Profile: DEVICE_brcm_bcm96358vw2
+Target-Profile-Name: Generic 96358VW2
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: brcm,bcm96358vw2
+
+
+Target-Profile-Description:
+Build firmware images for Generic 96358VW2
+
+
+
+@@
+
+Target-Profile: DEVICE_brcm_bcm96368mvngr
+Target-Profile-Name: Generic 96368MVNgr
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: brcm,bcm96368mvngr
+
+
+Target-Profile-Description:
+Build firmware images for Generic 96368MVNgr
+
+
+
+@@
+
+Target-Profile: DEVICE_brcm_bcm96368mvwg
+Target-Profile-Name: Generic 96368MVWG
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: brcm,bcm96368mvwg
+
+
+Target-Profile-Description:
+Build firmware images for Generic 96368MVWG
+
+
+
+@@
+
+Target-Profile: DEVICE_actiontec_r1000h
+Target-Profile-Name: Actiontec R1000H
+Target-Profile-Packages: kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport kmod-brcm-wl nas wlc iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: actiontec,r1000h
+
+
+Target-Profile-Description:
+Build firmware images for Actiontec R1000H
+
+
+
+@@
+
+Target-Profile: DEVICE_adb_a4001n
+Target-Profile-Name: ADB P.DG A4001N
+Target-Profile-Packages: kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: adb,a4001n
+
+
+Target-Profile-Description:
+Build firmware images for ADB P.DG A4001N
+
+
+
+@@
+
+Target-Profile: DEVICE_adb_a4001n1
+Target-Profile-Name: ADB P.DG A4001N1
+Target-Profile-Packages: kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: adb,a4001n1
+
+
+Target-Profile-Description:
+Build firmware images for ADB P.DG A4001N1
+
+
+
+@@
+
+Target-Profile: DEVICE_adb_pdg-a4001n-a-000-1a1-ax
+Target-Profile-Name: ADB P.DG A4001N A-000-1A1-AX
+Target-Profile-Packages: kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: adb,pdg-a4001n-a-000-1a1-ax
+
+
+Target-Profile-Description:
+Build firmware images for ADB P.DG A4001N A-000-1A1-AX
+
+
+
+@@
+
+Target-Profile: DEVICE_adb_pdg-a4101n-a-000-1a1-ae
+Target-Profile-Name: ADB P.DG A4101N A-000-1A1-AE
+Target-Profile-Packages: kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: adb,pdg-a4101n-a-000-1a1-ae
+
+
+Target-Profile-Description:
+Build firmware images for ADB P.DG A4101N A-000-1A1-AE
+
+
+
+@@
+
+Target-Profile: DEVICE_adb_av4202n
+Target-Profile-Name: ADB P.DG AV4202N
+Target-Profile-Packages: kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: adb,av4202n
+
+
+Target-Profile-Description:
+Build firmware images for ADB P.DG AV4202N
+
+
+
+@@
+
+Target-Profile: DEVICE_alcatel_rg100a
+Target-Profile-Name: Alcatel RG100A
+Target-Profile-Packages: kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: alcatel,rg100a
+
+
+Target-Profile-Description:
+Build firmware images for Alcatel RG100A
+
+
+
+@@
+
+Target-Profile: DEVICE_asmax_ar-1004g
+Target-Profile-Name: Asmax AR 1004g
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: asmax,ar-1004g
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for Asmax AR 1004g
+
+
+
+@@
+
+Target-Profile: DEVICE_belkin_f5d7633
+Target-Profile-Name: Belkin F5D7633
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: belkin,f5d7633
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for Belkin F5D7633
+
+
+
+@@
+
+Target-Profile: DEVICE_brcm_bcm96318ref
+Target-Profile-Name: Broadcom BCM96318REF reference board
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport kmod-bcm63xx-udc iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: brcm,bcm96318ref
+
+
+Target-Profile-Description:
+Build firmware images for Broadcom BCM96318REF reference board
+
+
+
+@@
+
+Target-Profile: DEVICE_brcm_bcm96318ref-p300
+Target-Profile-Name: Broadcom BCM96318REF_P300 reference board
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport kmod-bcm63xx-udc iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: brcm,bcm96318ref-p300
+
+
+Target-Profile-Description:
+Build firmware images for Broadcom BCM96318REF_P300 reference board
+
+
+
+@@
+
+Target-Profile: DEVICE_brcm_bcm963268bu-p300
+Target-Profile-Name: Broadcom BCM963268BU_P300 reference board
+Target-Profile-Packages: kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport kmod-bcm63xx-udc 
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: brcm,bcm963268bu-p300
+
+
+Target-Profile-Description:
+Build firmware images for Broadcom BCM963268BU_P300 reference board
+
+
+
+@@
+
+Target-Profile: DEVICE_brcm_bcm963269bhr
+Target-Profile-Name: Broadcom BCM963269BHR reference board
+Target-Profile-Packages: kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport kmod-bcm63xx-udc 
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: brcm,bcm963269bhr
+
+
+Target-Profile-Description:
+Build firmware images for Broadcom BCM963269BHR reference board
+
+
+
+@@
+
+Target-Profile: DEVICE_bt_home-hub-2-a
+Target-Profile-Name: BT Home Hub 2.0 A
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: bt,home-hub-2-a
+
+
+Target-Profile-Description:
+Build firmware images for BT Home Hub 2.0 A
+
+
+
+@@
+
+Target-Profile: DEVICE_bt_voyager-2110
+Target-Profile-Name: BT Voyager 2110
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: bt,voyager-2110
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for BT Voyager 2110
+
+
+
+@@
+
+Target-Profile: DEVICE_bt_voyager-2500v-bb
+Target-Profile-Name: BT Voyager 2500V
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: bt,voyager-2500v-bb
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for BT Voyager 2500V
+
+
+
+@@
+
+Target-Profile: DEVICE_comtrend_ar-5315u
+Target-Profile-Name: Comtrend AR-5315u
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: comtrend,ar-5315u
+
+
+Target-Profile-Description:
+Build firmware images for Comtrend AR-5315u
+
+
+
+@@
+
+Target-Profile: DEVICE_comtrend_ar-5381u
+Target-Profile-Name: Comtrend AR-5381u
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: comtrend,ar-5381u
+
+
+Target-Profile-Description:
+Build firmware images for Comtrend AR-5381u
+
+
+
+@@
+
+Target-Profile: DEVICE_comtrend_ar-5387un
+Target-Profile-Name: Comtrend AR-5387un
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: comtrend,ar-5387un
+
+
+Target-Profile-Description:
+Build firmware images for Comtrend AR-5387un
+
+
+
+@@
+
+Target-Profile: DEVICE_comtrend_ct-536plus
+Target-Profile-Name: Comtrend CT-5621 (Comtrend CT-536+)
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: comtrend,ct-536plus
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for Comtrend CT-536+
+Alternative device titles:
+- Comtrend CT-5621
+
+
+@@
+
+Target-Profile: DEVICE_comtrend_ct-536plus
+Target-Profile-Name: Comtrend CT-536+
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: comtrend,ct-536plus
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for Comtrend CT-536+
+Alternative device titles:
+- Comtrend CT-5621
+
+
+@@
+
+Target-Profile: DEVICE_comtrend_ct-5365
+Target-Profile-Name: Comtrend CT-5365
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: comtrend,ct-5365
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for Comtrend CT-5365
+
+
+
+@@
+
+Target-Profile: DEVICE_comtrend_ct-6373
+Target-Profile-Name: Comtrend CT-6373
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: comtrend,ct-6373
+
+
+Target-Profile-Description:
+Build firmware images for Comtrend CT-6373
+
+
+
+@@
+
+Target-Profile: DEVICE_comtrend_vr-3025u
+Target-Profile-Name: Comtrend VR-3025u
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: comtrend,vr-3025u
+
+
+Target-Profile-Description:
+Build firmware images for Comtrend VR-3025u
+
+
+
+@@
+
+Target-Profile: DEVICE_comtrend_vr-3025un
+Target-Profile-Name: Comtrend VR-3025un
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: comtrend,vr-3025un
+
+
+Target-Profile-Description:
+Build firmware images for Comtrend VR-3025un
+
+
+
+@@
+
+Target-Profile: DEVICE_comtrend_vr-3026e
+Target-Profile-Name: Comtrend VR-3026e
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: comtrend,vr-3026e
+
+
+Target-Profile-Description:
+Build firmware images for Comtrend VR-3026e
+
+
+
+@@
+
+Target-Profile: DEVICE_comtrend_wap-5813n
+Target-Profile-Name: Comtrend WAP-5813n
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: comtrend,wap-5813n
+
+
+Target-Profile-Description:
+Build firmware images for Comtrend WAP-5813n
+
+
+
+@@
+
+Target-Profile: DEVICE_d-link_dsl-2640b-b
+Target-Profile-Name: D-Link DSL-2640B B2
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: d-link,dsl-2640b-b
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for D-Link DSL-2640B B2
+
+
+
+@@
+
+Target-Profile: DEVICE_d-link_dsl-2640u
+Target-Profile-Name: D-Link DSL-2640U/BRU/C (D-Link DSL-2640U C1)
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: d-link,dsl-2640u
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for D-Link DSL-2640U C1
+Alternative device titles:
+- D-Link DSL-2640U/BRU/C
+
+
+@@
+
+Target-Profile: DEVICE_d-link_dsl-2640u
+Target-Profile-Name: D-Link DSL-2640U C1
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: d-link,dsl-2640u
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for D-Link DSL-2640U C1
+Alternative device titles:
+- D-Link DSL-2640U/BRU/C
+
+
+@@
+
+Target-Profile: DEVICE_d-link_dsl-2650u
+Target-Profile-Name: D-Link DSL-2650U
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: d-link,dsl-2650u
+
+
+Target-Profile-Description:
+Build firmware images for D-Link DSL-2650U
+
+
+
+@@
+
+Target-Profile: DEVICE_d-link_dsl-274xb-c2
+Target-Profile-Name: D-Link DSL-2741B C2 (D-Link DSL-2740B C2)
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: d-link,dsl-274xb-c2
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for D-Link DSL-2740B C2
+Alternative device titles:
+- D-Link DSL-2741B C2
+
+
+@@
+
+Target-Profile: DEVICE_d-link_dsl-274xb-c2
+Target-Profile-Name: D-Link DSL-2740B C2
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: d-link,dsl-274xb-c2
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for D-Link DSL-2740B C2
+Alternative device titles:
+- D-Link DSL-2741B C2
+
+
+@@
+
+Target-Profile: DEVICE_d-link_dsl-274xb-c3
+Target-Profile-Name: D-Link DSL-2741B C3 (D-Link DSL-2740B C3)
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: d-link,dsl-274xb-c3
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for D-Link DSL-2740B C3
+Alternative device titles:
+- D-Link DSL-2741B C3
+
+
+@@
+
+Target-Profile: DEVICE_d-link_dsl-274xb-c3
+Target-Profile-Name: D-Link DSL-2740B C3
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: d-link,dsl-274xb-c3
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for D-Link DSL-2740B C3
+Alternative device titles:
+- D-Link DSL-2741B C3
+
+
+@@
+
+Target-Profile: DEVICE_d-link_dsl-274xb-f1
+Target-Profile-Name: D-Link DSL-2741B F1 (D-Link DSL-2740B F1)
+Target-Profile-Packages: kmod-ath9k wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: d-link,dsl-274xb-f1
+
+
+Target-Profile-Description:
+Build firmware images for D-Link DSL-2740B F1
+Alternative device titles:
+- D-Link DSL-2741B F1
+
+
+@@
+
+Target-Profile: DEVICE_d-link_dsl-274xb-f1
+Target-Profile-Name: D-Link DSL-2740B F1
+Target-Profile-Packages: kmod-ath9k wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: d-link,dsl-274xb-f1
+
+
+Target-Profile-Description:
+Build firmware images for D-Link DSL-2740B F1
+Alternative device titles:
+- D-Link DSL-2741B F1
+
+
+@@
+
+Target-Profile: DEVICE_d-link_dsl-2750u-c1
+Target-Profile-Name: D-Link DSL-2750U C1
+Target-Profile-Packages: kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: d-link,dsl-2750u-c1
+
+
+Target-Profile-Description:
+Build firmware images for D-Link DSL-2750U C1
+
+
+
+@@
+
+Target-Profile: DEVICE_d-link_dsl-275xb-d1
+Target-Profile-Name: D-Link DSL-2751 D1 (D-Link DSL-2750B D1)
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: d-link,dsl-275xb-d1
+
+
+Target-Profile-Description:
+Build firmware images for D-Link DSL-2750B D1
+Alternative device titles:
+- D-Link DSL-2751 D1
+
+
+@@
+
+Target-Profile: DEVICE_d-link_dsl-275xb-d1
+Target-Profile-Name: D-Link DSL-2750B D1
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: d-link,dsl-275xb-d1
+
+
+Target-Profile-Description:
+Build firmware images for D-Link DSL-2750B D1
+Alternative device titles:
+- D-Link DSL-2751 D1
+
+
+@@
+
+Target-Profile: DEVICE_d-link_dva-g3810bn-tl
+Target-Profile-Name: D-Link DVA-G3810BN/TL
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: d-link,dva-g3810bn-tl
+
+
+Target-Profile-Description:
+Build firmware images for D-Link DVA-G3810BN/TL
+
+
+
+@@
+
+Target-Profile: DEVICE_davolink_dv-201amr
+Target-Profile-Name: Davolink DV-201AMR
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: davolink,dv-201amr
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for Davolink DV-201AMR
+
+
+
+@@
+
+Target-Profile: DEVICE_dynalink_rta770bw
+Target-Profile-Name: Siemens SE515 (Dynalink RTA770BW)
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: dynalink,rta770bw
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for Dynalink RTA770BW
+Alternative device titles:
+- Siemens SE515
+
+
+@@
+
+Target-Profile: DEVICE_dynalink_rta770bw
+Target-Profile-Name: Dynalink RTA770BW
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: dynalink,rta770bw
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for Dynalink RTA770BW
+Alternative device titles:
+- Siemens SE515
+
+
+@@
+
+Target-Profile: DEVICE_dynalink_rta770w
+Target-Profile-Name: Dynalink RTA770W
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: dynalink,rta770w
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for Dynalink RTA770W
+
+
+
+@@
+
+Target-Profile: DEVICE_dynalink_rta1025w
+Target-Profile-Name: Dynalink RTA1025W
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: dynalink,rta1025w
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for Dynalink RTA1025W
+
+
+
+@@
+
+Target-Profile: DEVICE_dynalink_rta1320
+Target-Profile-Name: Dynalink RTA1320
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: dynalink,rta1320
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for Dynalink RTA1320
+
+
+
+@@
+
+Target-Profile: DEVICE_huawei_echolife-hg520v
+Target-Profile-Name: Huawei EchoLife HG520v
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: huawei,echolife-hg520v
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for Huawei EchoLife HG520v
+
+
+
+@@
+
+Target-Profile: DEVICE_huawei_echolife-hg553
+Target-Profile-Name: Huawei EchoLife HG553
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: huawei,echolife-hg553
+
+
+Target-Profile-Description:
+Build firmware images for Huawei EchoLife HG553
+
+
+
+@@
+
+Target-Profile: DEVICE_huawei_echolife-hg556a-a
+Target-Profile-Name: Huawei EchoLife HG556a A
+Target-Profile-Packages: kmod-ath9k wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: huawei,echolife-hg556a-a
+
+
+Target-Profile-Description:
+Build firmware images for Huawei HG556a version A (Atheros)
+
+
+
+@@
+
+Target-Profile: DEVICE_huawei_echolife-hg556a-b
+Target-Profile-Name: Huawei EchoLife HG556a B
+Target-Profile-Packages: kmod-ath9k wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: huawei,echolife-hg556a-b
+
+
+Target-Profile-Description:
+Build firmware images for Huawei HG556a version B (Atheros)
+
+
+
+@@
+
+Target-Profile: DEVICE_huawei_echolife-hg556a-c
+Target-Profile-Name: Huawei EchoLife HG556a C
+Target-Profile-Packages: kmod-rt2800-pci wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: huawei,echolife-hg556a-c
+
+
+Target-Profile-Description:
+Build firmware images for Huawei HG556a version C (Ralink)
+
+
+
+@@
+
+Target-Profile: DEVICE_huawei_echolife-hg622
+Target-Profile-Name: Huawei EchoLife HG622
+Target-Profile-Packages: kmod-rt2800-pci wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: huawei,echolife-hg622
+
+
+Target-Profile-Description:
+Build firmware images for Huawei EchoLife HG622
+
+
+
+@@
+
+Target-Profile: DEVICE_huawei_echolife-hg655b
+Target-Profile-Name: Huawei EchoLife HG655b
+Target-Profile-Packages: kmod-rt2800-pci wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: huawei,echolife-hg655b
+
+
+Target-Profile-Description:
+Build firmware images for Huawei EchoLife HG655b
+
+
+
+@@
+
+Target-Profile: DEVICE_innacomm_w3400v6
+Target-Profile-Name: Innacomm W3400V6
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: innacomm,w3400v6
+
+
+Target-Profile-Description:
+Build firmware images for Innacomm W3400V6
+
+
+
+@@
+
+Target-Profile: DEVICE_inteno_vg50
+Target-Profile-Name: Inteno VG50 Multi-WAN CPE
+Target-Profile-Packages: kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport 
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: inteno,vg50
+
+
+Target-Profile-Description:
+Build firmware images for Inteno VG50 Multi-WAN CPE
+
+
+
+@@
+
+Target-Profile: DEVICE_inventel_livebox-1
+Target-Profile-Name: Inventel Livebox 1
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: inventel,livebox-1
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for Inventel Livebox 1
+
+
+
+@@
+
+Target-Profile: DEVICE_netgear_cvg834g
+Target-Profile-Name: NETGEAR CVG834G
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: netgear,cvg834g
+
+
+Target-Profile-Description:
+Build firmware images for NETGEAR CVG834G
+
+
+
+@@
+
+Target-Profile: DEVICE_netgear_dg834gt-pn
+Target-Profile-Name: NETGEAR DG834PN (NETGEAR DG834GT)
+Target-Profile-Packages: kmod-ath5k wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: netgear,dg834gt-pn
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for NETGEAR DG834GT
+Alternative device titles:
+- NETGEAR DG834PN
+
+
+@@
+
+Target-Profile: DEVICE_netgear_dg834gt-pn
+Target-Profile-Name: NETGEAR DG834GT
+Target-Profile-Packages: kmod-ath5k wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: netgear,dg834gt-pn
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for NETGEAR DG834GT
+Alternative device titles:
+- NETGEAR DG834PN
+
+
+@@
+
+Target-Profile: DEVICE_netgear_dg834g-v4
+Target-Profile-Name: NETGEAR DG834G v4
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: netgear,dg834g-v4
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for NETGEAR DG834G v4
+
+
+
+@@
+
+Target-Profile: DEVICE_netgear_dgnd3700-v1
+Target-Profile-Name: NETGEAR DGND3700 v1
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: netgear,dgnd3700-v1
+
+
+Target-Profile-Description:
+Build firmware images for NETGEAR DGND3700 v1
+
+
+
+@@
+
+Target-Profile: DEVICE_netgear_dgnd3800b
+Target-Profile-Name: NETGEAR DGND3800B
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: netgear,dgnd3800b
+
+
+Target-Profile-Description:
+Build firmware images for NETGEAR DGND3800B
+
+
+
+@@
+
+Target-Profile: DEVICE_netgear_evg2000
+Target-Profile-Name: NETGEAR EVG2000
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: netgear,evg2000
+
+
+Target-Profile-Description:
+Build firmware images for NETGEAR EVG2000
+
+
+
+@@
+
+Target-Profile: DEVICE_nucom_r5010un-v2
+Target-Profile-Name: NuCom R5010UN v2
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: nucom,r5010un-v2
+
+
+Target-Profile-Description:
+Build firmware images for NuCom R5010UN v2
+
+
+
+@@
+
+Target-Profile: DEVICE_observa_vh4032n
+Target-Profile-Name: Observa VH4032N
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: observa,vh4032n
+
+
+Target-Profile-Description:
+Build firmware images for Observa VH4032N
+
+
+
+@@
+
+Target-Profile: DEVICE_pirelli_a226g
+Target-Profile-Name: Pirelli A226G
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: pirelli,a226g
+
+
+Target-Profile-Description:
+Build firmware images for Pirelli A226G
+
+
+
+@@
+
+Target-Profile: DEVICE_pirelli_a226m
+Target-Profile-Name: Pirelli A226M
+Target-Profile-Packages: kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport 
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: pirelli,a226m
+
+
+Target-Profile-Description:
+Build firmware images for Pirelli A226M
+
+
+
+@@
+
+Target-Profile: DEVICE_pirelli_a226m-fwb
+Target-Profile-Name: Pirelli A226M-FWB
+Target-Profile-Packages: kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport 
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: pirelli,a226m-fwb
+
+
+Target-Profile-Description:
+Build firmware images for Pirelli A226M-FWB
+
+
+
+@@
+
+Target-Profile: DEVICE_pirelli_agpf-s0
+Target-Profile-Name: Pirelli Alice Gate VoIP 2 Plus Wi-Fi AGPF-S0
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: pirelli,agpf-s0
+
+
+Target-Profile-Description:
+Build firmware images for Pirelli Alice Gate VoIP 2 Plus Wi-Fi AGPF-S0
+
+
+
+@@
+
+Target-Profile: DEVICE_sagem_fast-2404
+Target-Profile-Name: Sagemcom F@st 2404
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: sagem,fast-2404
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for Sagemcom F@st 2404
+
+
+
+@@
+
+Target-Profile: DEVICE_sagem_fast-2504n
+Target-Profile-Name: Sagemcom F@st 2504N
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: sagem,fast-2504n
+
+
+Target-Profile-Description:
+Build firmware images for Sagemcom F@st 2504N
+
+
+
+@@
+
+Target-Profile: DEVICE_sagem_fast-2604
+Target-Profile-Name: Sagemcom F@st 2604
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: sagem,fast-2604
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for Sagemcom F@st 2604
+
+
+
+@@
+
+Target-Profile: DEVICE_sagem_fast-2704n
+Target-Profile-Name: Sagemcom F@st 2704N
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: sagem,fast-2704n
+
+
+Target-Profile-Description:
+Build firmware images for Sagemcom F@st 2704N
+
+
+
+@@
+
+Target-Profile: DEVICE_sagem_fast-2704-v2
+Target-Profile-Name: Sagemcom F@st 2704 V2
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: sagem,fast-2704-v2
+
+
+Target-Profile-Description:
+Build firmware images for Sagemcom F@st 2704 V2
+
+
+
+@@
+
+Target-Profile: DEVICE_sercomm_ad1018-nor
+Target-Profile-Name: Sercomm AD1018 SPI flash mod
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: sercomm,ad1018-nor
+
+
+Target-Profile-Description:
+Build firmware images for Sercomm AD1018 SPI flash mod
+
+
+
+@@
+
+Target-Profile: DEVICE_sfr_neufbox-4-sercomm-r0
+Target-Profile-Name: SFR Neufbox 4 Sercomm
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: sfr,neufbox-4-sercomm-r0
+
+
+Target-Profile-Description:
+Build firmware images for SFR Neufbox 4 Sercomm
+
+
+
+@@
+
+Target-Profile: DEVICE_sfr_neufbox-4-foxconn-r1
+Target-Profile-Name: SFR Neufbox 4 Foxconn
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: sfr,neufbox-4-foxconn-r1
+
+
+Target-Profile-Description:
+Build firmware images for SFR Neufbox 4 Foxconn
+
+
+
+@@
+
+Target-Profile: DEVICE_sfr_neufbox-6-sercomm-r0
+Target-Profile-Name: SFR Neufbox 6
+Target-Profile-Packages: kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport 
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: sfr,neufbox-6-sercomm-r0
+
+
+Target-Profile-Description:
+Build firmware images for SFR Neufbox 6
+
+
+
+@@
+
+Target-Profile: DEVICE_sky_sr102
+Target-Profile-Name: SKY SR102
+Target-Profile-Packages: kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport 
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: sky,sr102
+
+
+Target-Profile-Description:
+Build firmware images for SKY SR102
+
+
+
+@@
+
+Target-Profile: DEVICE_t-com_speedport-w-303v
+Target-Profile-Name: T-Com Speedport W 303V
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: t-com,speedport-w-303v
+
+
+Target-Profile-Description:
+Build firmware images for T-Com Speedport W 303V
+
+
+
+@@
+
+Target-Profile: DEVICE_t-com_speedport-w-500v
+Target-Profile-Name: T-Com Speedport W 500V
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: t-com,speedport-w-500v
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for T-Com Speedport W 500V
+
+
+
+@@
+
+Target-Profile: DEVICE_technicolor_tg582n
+Target-Profile-Name: Technicolor TG582n
+Target-Profile-Packages: kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: technicolor,tg582n
+
+
+Target-Profile-Description:
+Build firmware images for Technicolor TG582n
+
+
+
+@@
+
+Target-Profile: DEVICE_technicolor_tg582n-telecom-italia
+Target-Profile-Name: Technicolor TG582n Telecom Italia
+Target-Profile-Packages: kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: technicolor,tg582n-telecom-italia
+
+
+Target-Profile-Description:
+Build firmware images for Technicolor TG582n Telecom Italia
+
+
+
+@@
+
+Target-Profile: DEVICE_tecom_gw6000
+Target-Profile-Name: Tecom GW6000
+Target-Profile-Packages: kmod-brcm-wl nas wlc kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: tecom,gw6000
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for Tecom GW6000
+
+
+
+@@
+
+Target-Profile: DEVICE_tecom_gw6200
+Target-Profile-Name: Tecom GW6200
+Target-Profile-Packages: kmod-brcm-wl nas wlc kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: tecom,gw6200
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for Tecom GW6200
+
+
+
+@@
+
+Target-Profile: DEVICE_telsey_cpva502plus
+Target-Profile-Name: Telsey CPVA502+
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: telsey,cpva502plus
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for Telsey CPVA502+
+
+
+
+@@
+
+Target-Profile: DEVICE_telsey_cpva642
+Target-Profile-Name: Telsey CPVA642-type (CPA-ZNTE60T)
+Target-Profile-Packages: kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport 
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: telsey,cpva642
+
+
+Target-Profile-Description:
+Build firmware images for Telsey CPVA642-type (CPA-ZNTE60T)
+
+
+
+@@
+
+Target-Profile: DEVICE_telsey_magic
+Target-Profile-Name: Telsey MAGIC (Alice W-Gate)
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: telsey,magic
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for Alice W-Gate
+Alternative device titles:
+- Telsey MAGIC
+
+
+@@
+
+Target-Profile: DEVICE_telsey_magic
+Target-Profile-Name: Alice W-Gate
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: telsey,magic
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for Alice W-Gate
+Alternative device titles:
+- Telsey MAGIC
+
+
+@@
+
+Target-Profile: DEVICE_tp-link_td-w8900gb
+Target-Profile-Name: TP-Link TD-W8900GB
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: tp-link,td-w8900gb
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for TP-Link TD-W8900GB
+
+
+
+@@
+
+Target-Profile: DEVICE_usrobotics_usr9108
+Target-Profile-Name: USRobotics USR9108
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: usrobotics,usr9108
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for USRobotics USR9108
+
+
+
+@@
+
+Target-Profile: DEVICE_zyxel_p870hw-51a-v2
+Target-Profile-Name: ZyXEL P870HW-51a v2
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: zyxel,p870hw-51a-v2
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for ZyXEL P870HW-51a v2
+
+
+
+@@
+
+Target: bcm63xx/smp
+Target-Board: bcm63xx
+Target-Name: smp
+Target-Arch: mips
+Target-Arch-Packages: mips_mips32
+Target-Features: atm dt gpio nand pci pcie pcmcia squashfs usb usbgadget
+Target-Depends: 
+Target-Optimization: -Os -pipe -mno-branch-likely -mips32 -mtune=mips32
+CPU-Type: mips32
+Linux-Version: 5.4.143
+Linux-Release: 1
+Linux-Kernel-Arch: mips
+Target-Description:
+  Build firmware images for BCM63XX boards with SMP and NAND support.
+  SoCs with 2 cores:
+    - BCM6328 (some boards only have 1 core)
+    - BCM6358 (SMP unsupported due to shared TLB)
+    - BCM6362
+    - BCM6368
+    - BCM63268
+  SoCs with NAND controller:
+    - BCM6328 (v2.2)
+    - BCM6362 (v2.2)
+    - BCM6368 (v2.1)
+    - BCM63268 (v4.0)
+@@
+Default-Packages: base-files ca-bundle dropbear fstools libc libgcc libustream-wolfssl logd mtd netifd opkg uci uclient-fetch urandom-seed urngd busybox procd dnsmasq firewall ip6tables iptables kmod-ipt-offload odhcp6c odhcpd-ipv6only ppp ppp-mod-pppoe swconfig kmod-gpio-button-hotplug 
+Target-Profile: Default
+Target-Profile-Priority: 1
+Target-Profile-Name: Default Profile
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-Description:
+
+@@
+
+Target-Profile: DEVICE_brcm_bcm963281tan
+Target-Profile-Name: Generic 963281TAN
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: brcm,bcm963281tan
+
+
+Target-Profile-Description:
+Build firmware images for Generic 963281TAN
+
+
+
+@@
+
+Target-Profile: DEVICE_brcm_bcm96328avng
+Target-Profile-Name: Generic 96328avng
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: brcm,bcm96328avng
+
+
+Target-Profile-Description:
+Build firmware images for Generic 96328avng
+
+
+
+@@
+
+Target-Profile: DEVICE_brcm_bcm96338gw
+Target-Profile-Name: Generic 96338GW
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: brcm,bcm96338gw
+
+
+Target-Profile-Description:
+Build firmware images for Generic 96338GW
+
+
+
+@@
+
+Target-Profile: DEVICE_brcm_bcm96338w
+Target-Profile-Name: Generic 96338W
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: brcm,bcm96338w
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for Generic 96338W
+
+
+
+@@
+
+Target-Profile: DEVICE_brcm_bcm96345gw2
+Target-Profile-Name: Generic 96345GW2
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: brcm,bcm96345gw2
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for Generic 96345GW2
+
+
+
+@@
+
+Target-Profile: DEVICE_brcm_bcm96348gw
+Target-Profile-Name: Generic 96348GW
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: brcm,bcm96348gw
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for Generic 96348GW
+
+
+
+@@
+
+Target-Profile: DEVICE_brcm_bcm96348gw-10
+Target-Profile-Name: Generic 96348GW-10
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: brcm,bcm96348gw-10
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for Generic 96348GW-10
+
+
+
+@@
+
+Target-Profile: DEVICE_brcm_bcm96348gw-11
+Target-Profile-Name: Generic 96348GW-11
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: brcm,bcm96348gw-11
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for Generic 96348GW-11
+
+
+
+@@
+
+Target-Profile: DEVICE_brcm_bcm96348r
+Target-Profile-Name: Generic 96348R
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: brcm,bcm96348r
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for Generic 96348R
+
+
+
+@@
+
+Target-Profile: DEVICE_brcm_bcm96358vw
+Target-Profile-Name: Generic 96358VW
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: brcm,bcm96358vw
+
+
+Target-Profile-Description:
+Build firmware images for Generic 96358VW
+
+
+
+@@
+
+Target-Profile: DEVICE_brcm_bcm96358vw2
+Target-Profile-Name: Generic 96358VW2
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: brcm,bcm96358vw2
+
+
+Target-Profile-Description:
+Build firmware images for Generic 96358VW2
+
+
+
+@@
+
+Target-Profile: DEVICE_brcm_bcm96368mvngr
+Target-Profile-Name: Generic 96368MVNgr
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: brcm,bcm96368mvngr
+
+
+Target-Profile-Description:
+Build firmware images for Generic 96368MVNgr
+
+
+
+@@
+
+Target-Profile: DEVICE_brcm_bcm96368mvwg
+Target-Profile-Name: Generic 96368MVWG
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: brcm,bcm96368mvwg
+
+
+Target-Profile-Description:
+Build firmware images for Generic 96368MVWG
+
+
+
+@@
+
+Target-Profile: DEVICE_actiontec_r1000h
+Target-Profile-Name: Actiontec R1000H
+Target-Profile-Packages: kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport kmod-brcm-wl nas wlc iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: actiontec,r1000h
+
+
+Target-Profile-Description:
+Build firmware images for Actiontec R1000H
+
+
+
+@@
+
+Target-Profile: DEVICE_adb_a4001n
+Target-Profile-Name: ADB P.DG A4001N
+Target-Profile-Packages: kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: adb,a4001n
+
+
+Target-Profile-Description:
+Build firmware images for ADB P.DG A4001N
+
+
+
+@@
+
+Target-Profile: DEVICE_adb_a4001n1
+Target-Profile-Name: ADB P.DG A4001N1
+Target-Profile-Packages: kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: adb,a4001n1
+
+
+Target-Profile-Description:
+Build firmware images for ADB P.DG A4001N1
+
+
+
+@@
+
+Target-Profile: DEVICE_adb_pdg-a4001n-a-000-1a1-ax
+Target-Profile-Name: ADB P.DG A4001N A-000-1A1-AX
+Target-Profile-Packages: kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: adb,pdg-a4001n-a-000-1a1-ax
+
+
+Target-Profile-Description:
+Build firmware images for ADB P.DG A4001N A-000-1A1-AX
+
+
+
+@@
+
+Target-Profile: DEVICE_adb_pdg-a4101n-a-000-1a1-ae
+Target-Profile-Name: ADB P.DG A4101N A-000-1A1-AE
+Target-Profile-Packages: kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: adb,pdg-a4101n-a-000-1a1-ae
+
+
+Target-Profile-Description:
+Build firmware images for ADB P.DG A4101N A-000-1A1-AE
+
+
+
+@@
+
+Target-Profile: DEVICE_adb_av4202n
+Target-Profile-Name: ADB P.DG AV4202N
+Target-Profile-Packages: kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: adb,av4202n
+
+
+Target-Profile-Description:
+Build firmware images for ADB P.DG AV4202N
+
+
+
+@@
+
+Target-Profile: DEVICE_alcatel_rg100a
+Target-Profile-Name: Alcatel RG100A
+Target-Profile-Packages: kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: alcatel,rg100a
+
+
+Target-Profile-Description:
+Build firmware images for Alcatel RG100A
+
+
+
+@@
+
+Target-Profile: DEVICE_asmax_ar-1004g
+Target-Profile-Name: Asmax AR 1004g
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: asmax,ar-1004g
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for Asmax AR 1004g
+
+
+
+@@
+
+Target-Profile: DEVICE_belkin_f5d7633
+Target-Profile-Name: Belkin F5D7633
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: belkin,f5d7633
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for Belkin F5D7633
+
+
+
+@@
+
+Target-Profile: DEVICE_brcm_bcm96318ref
+Target-Profile-Name: Broadcom BCM96318REF reference board
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport kmod-bcm63xx-udc iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: brcm,bcm96318ref
+
+
+Target-Profile-Description:
+Build firmware images for Broadcom BCM96318REF reference board
+
+
+
+@@
+
+Target-Profile: DEVICE_brcm_bcm96318ref-p300
+Target-Profile-Name: Broadcom BCM96318REF_P300 reference board
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport kmod-bcm63xx-udc iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: brcm,bcm96318ref-p300
+
+
+Target-Profile-Description:
+Build firmware images for Broadcom BCM96318REF_P300 reference board
+
+
+
+@@
+
+Target-Profile: DEVICE_brcm_bcm963268bu-p300
+Target-Profile-Name: Broadcom BCM963268BU_P300 reference board
+Target-Profile-Packages: kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport kmod-bcm63xx-udc 
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: brcm,bcm963268bu-p300
+
+
+Target-Profile-Description:
+Build firmware images for Broadcom BCM963268BU_P300 reference board
+
+
+
+@@
+
+Target-Profile: DEVICE_brcm_bcm963269bhr
+Target-Profile-Name: Broadcom BCM963269BHR reference board
+Target-Profile-Packages: kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport kmod-bcm63xx-udc 
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: brcm,bcm963269bhr
+
+
+Target-Profile-Description:
+Build firmware images for Broadcom BCM963269BHR reference board
+
+
+
+@@
+
+Target-Profile: DEVICE_bt_home-hub-2-a
+Target-Profile-Name: BT Home Hub 2.0 A
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: bt,home-hub-2-a
+
+
+Target-Profile-Description:
+Build firmware images for BT Home Hub 2.0 A
+
+
+
+@@
+
+Target-Profile: DEVICE_bt_voyager-2110
+Target-Profile-Name: BT Voyager 2110
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: bt,voyager-2110
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for BT Voyager 2110
+
+
+
+@@
+
+Target-Profile: DEVICE_bt_voyager-2500v-bb
+Target-Profile-Name: BT Voyager 2500V
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: bt,voyager-2500v-bb
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for BT Voyager 2500V
+
+
+
+@@
+
+Target-Profile: DEVICE_comtrend_ar-5315u
+Target-Profile-Name: Comtrend AR-5315u
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: comtrend,ar-5315u
+
+
+Target-Profile-Description:
+Build firmware images for Comtrend AR-5315u
+
+
+
+@@
+
+Target-Profile: DEVICE_comtrend_ar-5381u
+Target-Profile-Name: Comtrend AR-5381u
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: comtrend,ar-5381u
+
+
+Target-Profile-Description:
+Build firmware images for Comtrend AR-5381u
+
+
+
+@@
+
+Target-Profile: DEVICE_comtrend_ar-5387un
+Target-Profile-Name: Comtrend AR-5387un
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: comtrend,ar-5387un
+
+
+Target-Profile-Description:
+Build firmware images for Comtrend AR-5387un
+
+
+
+@@
+
+Target-Profile: DEVICE_comtrend_ct-536plus
+Target-Profile-Name: Comtrend CT-5621 (Comtrend CT-536+)
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: comtrend,ct-536plus
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for Comtrend CT-536+
+Alternative device titles:
+- Comtrend CT-5621
+
+
+@@
+
+Target-Profile: DEVICE_comtrend_ct-536plus
+Target-Profile-Name: Comtrend CT-536+
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: comtrend,ct-536plus
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for Comtrend CT-536+
+Alternative device titles:
+- Comtrend CT-5621
+
+
+@@
+
+Target-Profile: DEVICE_comtrend_ct-5365
+Target-Profile-Name: Comtrend CT-5365
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: comtrend,ct-5365
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for Comtrend CT-5365
+
+
+
+@@
+
+Target-Profile: DEVICE_comtrend_ct-6373
+Target-Profile-Name: Comtrend CT-6373
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: comtrend,ct-6373
+
+
+Target-Profile-Description:
+Build firmware images for Comtrend CT-6373
+
+
+
+@@
+
+Target-Profile: DEVICE_comtrend_vr-3025u
+Target-Profile-Name: Comtrend VR-3025u
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: comtrend,vr-3025u
+
+
+Target-Profile-Description:
+Build firmware images for Comtrend VR-3025u
+
+
+
+@@
+
+Target-Profile: DEVICE_comtrend_vr-3025un
+Target-Profile-Name: Comtrend VR-3025un
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: comtrend,vr-3025un
+
+
+Target-Profile-Description:
+Build firmware images for Comtrend VR-3025un
+
+
+
+@@
+
+Target-Profile: DEVICE_comtrend_vr-3026e
+Target-Profile-Name: Comtrend VR-3026e
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: comtrend,vr-3026e
+
+
+Target-Profile-Description:
+Build firmware images for Comtrend VR-3026e
+
+
+
+@@
+
+Target-Profile: DEVICE_comtrend_wap-5813n
+Target-Profile-Name: Comtrend WAP-5813n
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: comtrend,wap-5813n
+
+
+Target-Profile-Description:
+Build firmware images for Comtrend WAP-5813n
+
+
+
+@@
+
+Target-Profile: DEVICE_d-link_dsl-2640b-b
+Target-Profile-Name: D-Link DSL-2640B B2
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: d-link,dsl-2640b-b
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for D-Link DSL-2640B B2
+
+
+
+@@
+
+Target-Profile: DEVICE_d-link_dsl-2640u
+Target-Profile-Name: D-Link DSL-2640U/BRU/C (D-Link DSL-2640U C1)
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: d-link,dsl-2640u
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for D-Link DSL-2640U C1
+Alternative device titles:
+- D-Link DSL-2640U/BRU/C
+
+
+@@
+
+Target-Profile: DEVICE_d-link_dsl-2640u
+Target-Profile-Name: D-Link DSL-2640U C1
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: d-link,dsl-2640u
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for D-Link DSL-2640U C1
+Alternative device titles:
+- D-Link DSL-2640U/BRU/C
+
+
+@@
+
+Target-Profile: DEVICE_d-link_dsl-2650u
+Target-Profile-Name: D-Link DSL-2650U
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: d-link,dsl-2650u
+
+
+Target-Profile-Description:
+Build firmware images for D-Link DSL-2650U
+
+
+
+@@
+
+Target-Profile: DEVICE_d-link_dsl-274xb-c2
+Target-Profile-Name: D-Link DSL-2741B C2 (D-Link DSL-2740B C2)
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: d-link,dsl-274xb-c2
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for D-Link DSL-2740B C2
+Alternative device titles:
+- D-Link DSL-2741B C2
+
+
+@@
+
+Target-Profile: DEVICE_d-link_dsl-274xb-c2
+Target-Profile-Name: D-Link DSL-2740B C2
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: d-link,dsl-274xb-c2
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for D-Link DSL-2740B C2
+Alternative device titles:
+- D-Link DSL-2741B C2
+
+
+@@
+
+Target-Profile: DEVICE_d-link_dsl-274xb-c3
+Target-Profile-Name: D-Link DSL-2741B C3 (D-Link DSL-2740B C3)
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: d-link,dsl-274xb-c3
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for D-Link DSL-2740B C3
+Alternative device titles:
+- D-Link DSL-2741B C3
+
+
+@@
+
+Target-Profile: DEVICE_d-link_dsl-274xb-c3
+Target-Profile-Name: D-Link DSL-2740B C3
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: d-link,dsl-274xb-c3
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for D-Link DSL-2740B C3
+Alternative device titles:
+- D-Link DSL-2741B C3
+
+
+@@
+
+Target-Profile: DEVICE_d-link_dsl-274xb-f1
+Target-Profile-Name: D-Link DSL-2741B F1 (D-Link DSL-2740B F1)
+Target-Profile-Packages: kmod-ath9k wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: d-link,dsl-274xb-f1
+
+
+Target-Profile-Description:
+Build firmware images for D-Link DSL-2740B F1
+Alternative device titles:
+- D-Link DSL-2741B F1
+
+
+@@
+
+Target-Profile: DEVICE_d-link_dsl-274xb-f1
+Target-Profile-Name: D-Link DSL-2740B F1
+Target-Profile-Packages: kmod-ath9k wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: d-link,dsl-274xb-f1
+
+
+Target-Profile-Description:
+Build firmware images for D-Link DSL-2740B F1
+Alternative device titles:
+- D-Link DSL-2741B F1
+
+
+@@
+
+Target-Profile: DEVICE_d-link_dsl-2750u-c1
+Target-Profile-Name: D-Link DSL-2750U C1
+Target-Profile-Packages: kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: d-link,dsl-2750u-c1
+
+
+Target-Profile-Description:
+Build firmware images for D-Link DSL-2750U C1
+
+
+
+@@
+
+Target-Profile: DEVICE_d-link_dsl-275xb-d1
+Target-Profile-Name: D-Link DSL-2751 D1 (D-Link DSL-2750B D1)
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: d-link,dsl-275xb-d1
+
+
+Target-Profile-Description:
+Build firmware images for D-Link DSL-2750B D1
+Alternative device titles:
+- D-Link DSL-2751 D1
+
+
+@@
+
+Target-Profile: DEVICE_d-link_dsl-275xb-d1
+Target-Profile-Name: D-Link DSL-2750B D1
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: d-link,dsl-275xb-d1
+
+
+Target-Profile-Description:
+Build firmware images for D-Link DSL-2750B D1
+Alternative device titles:
+- D-Link DSL-2751 D1
+
+
+@@
+
+Target-Profile: DEVICE_d-link_dva-g3810bn-tl
+Target-Profile-Name: D-Link DVA-G3810BN/TL
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: d-link,dva-g3810bn-tl
+
+
+Target-Profile-Description:
+Build firmware images for D-Link DVA-G3810BN/TL
+
+
+
+@@
+
+Target-Profile: DEVICE_davolink_dv-201amr
+Target-Profile-Name: Davolink DV-201AMR
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: davolink,dv-201amr
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for Davolink DV-201AMR
+
+
+
+@@
+
+Target-Profile: DEVICE_dynalink_rta770bw
+Target-Profile-Name: Siemens SE515 (Dynalink RTA770BW)
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: dynalink,rta770bw
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for Dynalink RTA770BW
+Alternative device titles:
+- Siemens SE515
+
+
+@@
+
+Target-Profile: DEVICE_dynalink_rta770bw
+Target-Profile-Name: Dynalink RTA770BW
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: dynalink,rta770bw
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for Dynalink RTA770BW
+Alternative device titles:
+- Siemens SE515
+
+
+@@
+
+Target-Profile: DEVICE_dynalink_rta770w
+Target-Profile-Name: Dynalink RTA770W
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: dynalink,rta770w
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for Dynalink RTA770W
+
+
+
+@@
+
+Target-Profile: DEVICE_dynalink_rta1025w
+Target-Profile-Name: Dynalink RTA1025W
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: dynalink,rta1025w
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for Dynalink RTA1025W
+
+
+
+@@
+
+Target-Profile: DEVICE_dynalink_rta1320
+Target-Profile-Name: Dynalink RTA1320
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: dynalink,rta1320
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for Dynalink RTA1320
+
+
+
+@@
+
+Target-Profile: DEVICE_huawei_echolife-hg520v
+Target-Profile-Name: Huawei EchoLife HG520v
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: huawei,echolife-hg520v
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for Huawei EchoLife HG520v
+
+
+
+@@
+
+Target-Profile: DEVICE_huawei_echolife-hg553
+Target-Profile-Name: Huawei EchoLife HG553
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: huawei,echolife-hg553
+
+
+Target-Profile-Description:
+Build firmware images for Huawei EchoLife HG553
+
+
+
+@@
+
+Target-Profile: DEVICE_huawei_echolife-hg556a-a
+Target-Profile-Name: Huawei EchoLife HG556a A
+Target-Profile-Packages: kmod-ath9k wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: huawei,echolife-hg556a-a
+
+
+Target-Profile-Description:
+Build firmware images for Huawei HG556a version A (Atheros)
+
+
+
+@@
+
+Target-Profile: DEVICE_huawei_echolife-hg556a-b
+Target-Profile-Name: Huawei EchoLife HG556a B
+Target-Profile-Packages: kmod-ath9k wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: huawei,echolife-hg556a-b
+
+
+Target-Profile-Description:
+Build firmware images for Huawei HG556a version B (Atheros)
+
+
+
+@@
+
+Target-Profile: DEVICE_huawei_echolife-hg556a-c
+Target-Profile-Name: Huawei EchoLife HG556a C
+Target-Profile-Packages: kmod-rt2800-pci wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: huawei,echolife-hg556a-c
+
+
+Target-Profile-Description:
+Build firmware images for Huawei HG556a version C (Ralink)
+
+
+
+@@
+
+Target-Profile: DEVICE_huawei_echolife-hg622
+Target-Profile-Name: Huawei EchoLife HG622
+Target-Profile-Packages: kmod-rt2800-pci wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: huawei,echolife-hg622
+
+
+Target-Profile-Description:
+Build firmware images for Huawei EchoLife HG622
+
+
+
+@@
+
+Target-Profile: DEVICE_huawei_echolife-hg655b
+Target-Profile-Name: Huawei EchoLife HG655b
+Target-Profile-Packages: kmod-rt2800-pci wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: huawei,echolife-hg655b
+
+
+Target-Profile-Description:
+Build firmware images for Huawei EchoLife HG655b
+
+
+
+@@
+
+Target-Profile: DEVICE_innacomm_w3400v6
+Target-Profile-Name: Innacomm W3400V6
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: innacomm,w3400v6
+
+
+Target-Profile-Description:
+Build firmware images for Innacomm W3400V6
+
+
+
+@@
+
+Target-Profile: DEVICE_inteno_vg50
+Target-Profile-Name: Inteno VG50 Multi-WAN CPE
+Target-Profile-Packages: kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport 
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: inteno,vg50
+
+
+Target-Profile-Description:
+Build firmware images for Inteno VG50 Multi-WAN CPE
+
+
+
+@@
+
+Target-Profile: DEVICE_inventel_livebox-1
+Target-Profile-Name: Inventel Livebox 1
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: inventel,livebox-1
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for Inventel Livebox 1
+
+
+
+@@
+
+Target-Profile: DEVICE_netgear_cvg834g
+Target-Profile-Name: NETGEAR CVG834G
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: netgear,cvg834g
+
+
+Target-Profile-Description:
+Build firmware images for NETGEAR CVG834G
+
+
+
+@@
+
+Target-Profile: DEVICE_netgear_dg834gt-pn
+Target-Profile-Name: NETGEAR DG834PN (NETGEAR DG834GT)
+Target-Profile-Packages: kmod-ath5k wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: netgear,dg834gt-pn
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for NETGEAR DG834GT
+Alternative device titles:
+- NETGEAR DG834PN
+
+
+@@
+
+Target-Profile: DEVICE_netgear_dg834gt-pn
+Target-Profile-Name: NETGEAR DG834GT
+Target-Profile-Packages: kmod-ath5k wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: netgear,dg834gt-pn
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for NETGEAR DG834GT
+Alternative device titles:
+- NETGEAR DG834PN
+
+
+@@
+
+Target-Profile: DEVICE_netgear_dg834g-v4
+Target-Profile-Name: NETGEAR DG834G v4
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: netgear,dg834g-v4
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for NETGEAR DG834G v4
+
+
+
+@@
+
+Target-Profile: DEVICE_netgear_dgnd3700-v1
+Target-Profile-Name: NETGEAR DGND3700 v1
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: netgear,dgnd3700-v1
+
+
+Target-Profile-Description:
+Build firmware images for NETGEAR DGND3700 v1
+
+
+
+@@
+
+Target-Profile: DEVICE_netgear_dgnd3800b
+Target-Profile-Name: NETGEAR DGND3800B
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: netgear,dgnd3800b
+
+
+Target-Profile-Description:
+Build firmware images for NETGEAR DGND3800B
+
+
+
+@@
+
+Target-Profile: DEVICE_netgear_evg2000
+Target-Profile-Name: NETGEAR EVG2000
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: netgear,evg2000
+
+
+Target-Profile-Description:
+Build firmware images for NETGEAR EVG2000
+
+
+
+@@
+
+Target-Profile: DEVICE_nucom_r5010un-v2
+Target-Profile-Name: NuCom R5010UN v2
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: nucom,r5010un-v2
+
+
+Target-Profile-Description:
+Build firmware images for NuCom R5010UN v2
+
+
+
+@@
+
+Target-Profile: DEVICE_observa_vh4032n
+Target-Profile-Name: Observa VH4032N
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: observa,vh4032n
+
+
+Target-Profile-Description:
+Build firmware images for Observa VH4032N
+
+
+
+@@
+
+Target-Profile: DEVICE_pirelli_a226g
+Target-Profile-Name: Pirelli A226G
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: pirelli,a226g
+
+
+Target-Profile-Description:
+Build firmware images for Pirelli A226G
+
+
+
+@@
+
+Target-Profile: DEVICE_pirelli_a226m
+Target-Profile-Name: Pirelli A226M
+Target-Profile-Packages: kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport 
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: pirelli,a226m
+
+
+Target-Profile-Description:
+Build firmware images for Pirelli A226M
+
+
+
+@@
+
+Target-Profile: DEVICE_pirelli_a226m-fwb
+Target-Profile-Name: Pirelli A226M-FWB
+Target-Profile-Packages: kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport 
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: pirelli,a226m-fwb
+
+
+Target-Profile-Description:
+Build firmware images for Pirelli A226M-FWB
+
+
+
+@@
+
+Target-Profile: DEVICE_pirelli_agpf-s0
+Target-Profile-Name: Pirelli Alice Gate VoIP 2 Plus Wi-Fi AGPF-S0
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: pirelli,agpf-s0
+
+
+Target-Profile-Description:
+Build firmware images for Pirelli Alice Gate VoIP 2 Plus Wi-Fi AGPF-S0
+
+
+
+@@
+
+Target-Profile: DEVICE_sagem_fast-2404
+Target-Profile-Name: Sagemcom F@st 2404
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: sagem,fast-2404
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for Sagemcom F@st 2404
+
+
+
+@@
+
+Target-Profile: DEVICE_sagem_fast-2504n
+Target-Profile-Name: Sagemcom F@st 2504N
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: sagem,fast-2504n
+
+
+Target-Profile-Description:
+Build firmware images for Sagemcom F@st 2504N
+
+
+
+@@
+
+Target-Profile: DEVICE_sagem_fast-2604
+Target-Profile-Name: Sagemcom F@st 2604
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: sagem,fast-2604
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for Sagemcom F@st 2604
+
+
+
+@@
+
+Target-Profile: DEVICE_sagem_fast-2704n
+Target-Profile-Name: Sagemcom F@st 2704N
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: sagem,fast-2704n
+
+
+Target-Profile-Description:
+Build firmware images for Sagemcom F@st 2704N
+
+
+
+@@
+
+Target-Profile: DEVICE_sagem_fast-2704-v2
+Target-Profile-Name: Sagemcom F@st 2704 V2
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: sagem,fast-2704-v2
+
+
+Target-Profile-Description:
+Build firmware images for Sagemcom F@st 2704 V2
+
+
+
+@@
+
+Target-Profile: DEVICE_sercomm_ad1018-nor
+Target-Profile-Name: Sercomm AD1018 SPI flash mod
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: sercomm,ad1018-nor
+
+
+Target-Profile-Description:
+Build firmware images for Sercomm AD1018 SPI flash mod
+
+
+
+@@
+
+Target-Profile: DEVICE_sfr_neufbox-4-sercomm-r0
+Target-Profile-Name: SFR Neufbox 4 Sercomm
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: sfr,neufbox-4-sercomm-r0
+
+
+Target-Profile-Description:
+Build firmware images for SFR Neufbox 4 Sercomm
+
+
+
+@@
+
+Target-Profile: DEVICE_sfr_neufbox-4-foxconn-r1
+Target-Profile-Name: SFR Neufbox 4 Foxconn
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: sfr,neufbox-4-foxconn-r1
+
+
+Target-Profile-Description:
+Build firmware images for SFR Neufbox 4 Foxconn
+
+
+
+@@
+
+Target-Profile: DEVICE_sfr_neufbox-6-sercomm-r0
+Target-Profile-Name: SFR Neufbox 6
+Target-Profile-Packages: kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport 
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: sfr,neufbox-6-sercomm-r0
+
+
+Target-Profile-Description:
+Build firmware images for SFR Neufbox 6
+
+
+
+@@
+
+Target-Profile: DEVICE_sky_sr102
+Target-Profile-Name: SKY SR102
+Target-Profile-Packages: kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport 
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: sky,sr102
+
+
+Target-Profile-Description:
+Build firmware images for SKY SR102
+
+
+
+@@
+
+Target-Profile: DEVICE_t-com_speedport-w-303v
+Target-Profile-Name: T-Com Speedport W 303V
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: t-com,speedport-w-303v
+
+
+Target-Profile-Description:
+Build firmware images for T-Com Speedport W 303V
+
+
+
+@@
+
+Target-Profile: DEVICE_t-com_speedport-w-500v
+Target-Profile-Name: T-Com Speedport W 500V
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: t-com,speedport-w-500v
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for T-Com Speedport W 500V
+
+
+
+@@
+
+Target-Profile: DEVICE_technicolor_tg582n
+Target-Profile-Name: Technicolor TG582n
+Target-Profile-Packages: kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: technicolor,tg582n
+
+
+Target-Profile-Description:
+Build firmware images for Technicolor TG582n
+
+
+
+@@
+
+Target-Profile: DEVICE_technicolor_tg582n-telecom-italia
+Target-Profile-Name: Technicolor TG582n Telecom Italia
+Target-Profile-Packages: kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: technicolor,tg582n-telecom-italia
+
+
+Target-Profile-Description:
+Build firmware images for Technicolor TG582n Telecom Italia
+
+
+
+@@
+
+Target-Profile: DEVICE_tecom_gw6000
+Target-Profile-Name: Tecom GW6000
+Target-Profile-Packages: kmod-brcm-wl nas wlc kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: tecom,gw6000
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for Tecom GW6000
+
+
+
+@@
+
+Target-Profile: DEVICE_tecom_gw6200
+Target-Profile-Name: Tecom GW6200
+Target-Profile-Packages: kmod-brcm-wl nas wlc kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: tecom,gw6200
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for Tecom GW6200
+
+
+
+@@
+
+Target-Profile: DEVICE_telsey_cpva502plus
+Target-Profile-Name: Telsey CPVA502+
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: telsey,cpva502plus
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for Telsey CPVA502+
+
+
+
+@@
+
+Target-Profile: DEVICE_telsey_cpva642
+Target-Profile-Name: Telsey CPVA642-type (CPA-ZNTE60T)
+Target-Profile-Packages: kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport 
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: telsey,cpva642
+
+
+Target-Profile-Description:
+Build firmware images for Telsey CPVA642-type (CPA-ZNTE60T)
+
+
+
+@@
+
+Target-Profile: DEVICE_telsey_magic
+Target-Profile-Name: Telsey MAGIC (Alice W-Gate)
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: telsey,magic
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for Alice W-Gate
+Alternative device titles:
+- Telsey MAGIC
+
+
+@@
+
+Target-Profile: DEVICE_telsey_magic
+Target-Profile-Name: Alice W-Gate
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: telsey,magic
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for Alice W-Gate
+Alternative device titles:
+- Telsey MAGIC
+
+
+@@
+
+Target-Profile: DEVICE_tp-link_td-w8900gb
+Target-Profile-Name: TP-Link TD-W8900GB
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: tp-link,td-w8900gb
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for TP-Link TD-W8900GB
+
+
+
+@@
+
+Target-Profile: DEVICE_usrobotics_usr9108
+Target-Profile-Name: USRobotics USR9108
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: usrobotics,usr9108
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for USRobotics USR9108
+
+
+
+@@
+
+Target-Profile: DEVICE_zyxel_p870hw-51a-v2
+Target-Profile-Name: ZyXEL P870HW-51a v2
+Target-Profile-Packages: kmod-b43 wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: zyxel,p870hw-51a-v2
+
+Target-Profile-Default: n
+Target-Profile-Description:
+Build firmware images for ZyXEL P870HW-51a v2
+
+
+
+@@
+
+Target-Profile: DEVICE_comtrend_vg-8050
+Target-Profile-Name: Comtrend VG-8050
+Target-Profile-Packages:  nand-utils kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: comtrend,vg-8050
+
+
+Target-Profile-Description:
+Build firmware images for Comtrend VG-8050
+
+
+
+@@
+
+Target-Profile: DEVICE_comtrend_vr-3032u
+Target-Profile-Name: Comtrend VR-3032u
+Target-Profile-Packages:  nand-utils kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: comtrend,vr-3032u
+
+
+Target-Profile-Description:
+Build firmware images for Comtrend VR-3032u
+
+
+
+@@
+
+Target-Profile: DEVICE_huawei_hg253s-v2
+Target-Profile-Name: Huawei HG253s v2
+Target-Profile-Packages:  nand-utils kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: huawei,hg253s-v2
+
+
+Target-Profile-Description:
+Build firmware images for Huawei HG253s v2
+
+
+
+@@
+
+Target-Profile: DEVICE_netgear_dgnd3700-v2
+Target-Profile-Name: NETGEAR DGND3700 v2
+Target-Profile-Packages:  nand-utils kmod-b43 wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: netgear,dgnd3700-v2
+
+
+Target-Profile-Description:
+Build firmware images for NETGEAR DGND3700 v2
+
+
+
+@@
+
+Target-Profile: DEVICE_sercomm_ad1018
+Target-Profile-Name: Sercomm AD1018
+Target-Profile-Packages:  nand-utils kmod-b43 wpad-basic-wolfssl kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport iwinfo
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: sercomm,ad1018
+
+
+Target-Profile-Description:
+Build firmware images for Sercomm AD1018
+
+
+
+@@
+
+Target-Profile: DEVICE_sercomm_h500-s-lowi
+Target-Profile-Name: Sercomm H500-s lowi
+Target-Profile-Packages:  nand-utils kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: sercomm,h500-s-lowi
+
+
+Target-Profile-Description:
+Build firmware images for Sercomm H500-s lowi
+
+
+
+@@
+
+Target-Profile: DEVICE_sercomm_h500-s-vfes
+Target-Profile-Name: Sercomm H500-s vfes
+Target-Profile-Packages:  nand-utils kmod-usb2 kmod-usb-ohci kmod-usb-ledtrig-usbport 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: sercomm,h500-s-vfes
+
+
+Target-Profile-Description:
+Build firmware images for Sercomm H500-s vfes
+
+
+
+@@
+
+

@@ -1,0 +1,79 @@
+Source-Makefile: package/network/utils/iwinfo/Makefile
+
+Package: libiwinfo
+Version: 2021-04-30-c45f0b584b4b86f8250f90ea19afca271c114fa2-2.1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libnl-tiny +libuci +libubus +libiwinfo-data
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: libs
+Category: Libraries
+Repository: base
+Title: Generalized Wireless Information Library (iwinfo)
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+Source: libiwinfo-2021-04-30-c45f0b584b4b86f8250f90ea19afca271c114fa2.tar.xz
+License: GPL-2.0
+Type: ipkg
+Description:   Wireless information library with simplified API for nl80211
+  and wext driver interfaces.
+Jo-Philipp Wich <jo@mein.io>
+@@
+
+Package: libiwinfo-lua
+Submenu: Lua
+Version: 2021-04-30-c45f0b584b4b86f8250f90ea19afca271c114fa2-2.1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libiwinfo +liblua
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: lang
+Category: Languages
+Repository: base
+Title: libiwinfo Lua binding
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+Source: libiwinfo-2021-04-30-c45f0b584b4b86f8250f90ea19afca271c114fa2.tar.xz
+License: GPL-2.0
+Type: ipkg
+Description:   This is the Lua binding for the iwinfo library. It provides access to all enabled
+  backends.
+Jo-Philipp Wich <jo@mein.io>
+@@
+
+Package: libiwinfo-data
+Version: 2021-04-30-c45f0b584b4b86f8250f90ea19afca271c114fa2-2.1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: opt
+Category: Extra packages
+Repository: base
+Title: libiwinfo Lua binding
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+Source: libiwinfo-2021-04-30-c45f0b584b4b86f8250f90ea19afca271c114fa2.tar.xz
+License: GPL-2.0
+Type: ipkg
+Hidden: 1
+Description: libiwinfo Lua binding
+Jo-Philipp Wich <jo@mein.io>
+@@
+
+Package: iwinfo
+Version: 2021-04-30-c45f0b584b4b86f8250f90ea19afca271c114fa2-2.1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libiwinfo
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Repository: base
+Title: Generalized Wireless Information utility
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+Source: libiwinfo-2021-04-30-c45f0b584b4b86f8250f90ea19afca271c114fa2.tar.xz
+License: GPL-2.0
+Type: ipkg
+Description:   Command line frontend for the wireless information library.
+Jo-Philipp Wich <jo@mein.io>
+@@
+
+

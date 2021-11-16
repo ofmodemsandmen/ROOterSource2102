@@ -1,0 +1,256 @@
+Source-Makefile: target/linux/kirkwood/Makefile
+Target: kirkwood
+Target-Board: kirkwood
+Target-Name: Marvell Kirkwood
+Target-Arch: arm
+Target-Arch-Packages: arm_xscale
+Target-Features: dt gpio nand pci ramdisk rtc squashfs usb
+Target-Depends: 
+Target-Optimization: -Os -pipe
+CPU-Type: xscale
+Linux-Version: 5.4.143
+Linux-Release: 1
+Linux-Kernel-Arch: arm
+Target-Description:
+
+@@
+Default-Packages: base-files ca-bundle dropbear fstools libc libgcc libustream-wolfssl logd mtd netifd opkg uci uclient-fetch urandom-seed urngd busybox procd dnsmasq firewall ip6tables iptables kmod-ipt-offload odhcp6c odhcpd-ipv6only ppp ppp-mod-pppoe uboot-envtools kmod-usb2 
+Target-Profile: DEVICE_checkpoint_l-50
+Target-Profile-Name: Check Point L-50
+Target-Profile-Packages: kmod-ath9k kmod-gpio-button-hotplug kmod-mvsdio kmod-rtc-s35390a kmod-usb-ledtrig-usbport wpad-basic-wolfssl iwinfo
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: checkpoint,l-50
+
+
+Target-Profile-Description:
+Build firmware images for Check Point L-50
+
+
+
+@@
+
+Target-Profile: DEVICE_cisco_on100
+Target-Profile-Name: Cisco Systems ON100
+Target-Profile-Packages: kmod-mvsdio 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: cisco,on100 on100
+
+
+Target-Profile-Description:
+Build firmware images for Cisco Systems ON100
+
+
+
+@@
+
+Target-Profile: DEVICE_cloudengines_pogoe02
+Target-Profile-Name: Cloud Engines Pogoplug E02
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: cloudengines,pogoe02 pogo_e02
+
+
+Target-Profile-Description:
+Build firmware images for Cloud Engines Pogoplug E02
+
+
+
+@@
+
+Target-Profile: DEVICE_cloudengines_pogoplugv4
+Target-Profile-Name: Cloud Engines Pogoplug V4
+Target-Profile-Packages: kmod-ata-marvell-sata kmod-fs-ext4 kmod-mvsdio kmod-usb3 kmod-gpio-button-hotplug 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: cloudengines,pogoplugv4
+
+
+Target-Profile-Description:
+Build firmware images for Cloud Engines Pogoplug V4
+
+
+
+@@
+
+Target-Profile: DEVICE_iom_iconnect-1.1
+Target-Profile-Name: Iomega Iconnect
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: iom,iconnect-1.1 iconnect
+
+
+Target-Profile-Description:
+Build firmware images for Iomega Iconnect
+
+
+
+@@
+
+Target-Profile: DEVICE_iom_ix2-200
+Target-Profile-Name: Iomega StorCenter ix2-200
+Target-Profile-Packages: kmod-ata-marvell-sata kmod-fs-ext4 kmod-gpio-button-hotplug kmod-hwmon-lm63 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: iom,ix2-200
+
+
+Target-Profile-Description:
+Build firmware images for Iomega StorCenter ix2-200
+
+
+
+@@
+
+Target-Profile: DEVICE_linksys_e4200-v2
+Target-Profile-Name: Linksys E4200 v2
+Target-Profile-Packages: kmod-mwl8k wpad-basic-wolfssl kmod-gpio-button-hotplug iwinfo
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: linksys,e4200-v2 linksys,viper linksys-viper
+
+
+Target-Profile-Description:
+Build firmware images for Linksys E4200 v2
+
+
+
+@@
+
+Target-Profile: DEVICE_linksys_ea3500
+Target-Profile-Name: Linksys EA3500
+Target-Profile-Packages: kmod-mwl8k wpad-basic-wolfssl kmod-gpio-button-hotplug iwinfo
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: linksys,ea3500 linksys,audi linksys-audi
+
+
+Target-Profile-Description:
+Build firmware images for Linksys EA3500
+
+
+
+@@
+
+Target-Profile: DEVICE_linksys_ea4500
+Target-Profile-Name: Linksys EA4500
+Target-Profile-Packages: kmod-mwl8k wpad-basic-wolfssl kmod-gpio-button-hotplug iwinfo
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: linksys,ea4500 linksys,viper linksys-viper
+
+
+Target-Profile-Description:
+Build firmware images for Linksys EA4500
+
+
+
+@@
+
+Target-Profile: DEVICE_raidsonic_ib-nas62x0
+Target-Profile-Name: RaidSonic ICY BOX IB-NAS62x0
+Target-Profile-Packages: kmod-ata-marvell-sata kmod-fs-ext4 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: raidsonic,ib-nas62x0 ib62x0
+
+
+Target-Profile-Description:
+Build firmware images for RaidSonic ICY BOX IB-NAS62x0
+
+
+
+@@
+
+Target-Profile: DEVICE_seagate_blackarmor-nas220
+Target-Profile-Name: Seagate Blackarmor NAS220
+Target-Profile-Packages: kmod-hwmon-adt7475 kmod-fs-ext4 kmod-ata-marvell-sata mdadm kmod-gpio-button-hotplug 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: seagate,blackarmor-nas220
+
+
+Target-Profile-Description:
+Build firmware images for Seagate Blackarmor NAS220
+
+
+
+@@
+
+Target-Profile: DEVICE_seagate_dockstar
+Target-Profile-Name: Seagate FreeAgent Dockstar
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: seagate,dockstar dockstar
+
+
+Target-Profile-Description:
+Build firmware images for Seagate FreeAgent Dockstar
+
+
+
+@@
+
+Target-Profile: DEVICE_seagate_goflexnet
+Target-Profile-Name: Seagate GoFlexNet
+Target-Profile-Packages: kmod-ata-marvell-sata kmod-fs-ext4 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: seagate,goflexnet goflexnet
+
+
+Target-Profile-Description:
+Build firmware images for Seagate GoFlexNet
+
+
+
+@@
+
+Target-Profile: DEVICE_seagate_goflexhome
+Target-Profile-Name: Seagate GoFlexHome
+Target-Profile-Packages: kmod-ata-marvell-sata kmod-fs-ext4 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: seagate,goflexhome goflexhome
+
+
+Target-Profile-Description:
+Build firmware images for Seagate GoFlexHome
+
+
+
+@@
+
+Target-Profile: DEVICE_zyxel_nsa310b
+Target-Profile-Name: ZyXEL NSA310b
+Target-Profile-Packages: kmod-ata-marvell-sata kmod-r8169 kmod-fs-ext4 kmod-gpio-button-hotplug kmod-hwmon-lm85 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: zyxel,nsa310b nsa310b
+
+
+Target-Profile-Description:
+Build firmware images for ZyXEL NSA310b
+
+
+
+@@
+
+Target-Profile: DEVICE_zyxel_nsa310s
+Target-Profile-Name: ZyXEL NSA310S
+Target-Profile-Packages: kmod-ata-marvell-sata kmod-fs-ext4 kmod-gpio-button-hotplug 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: zyxel,nsa310s
+
+
+Target-Profile-Description:
+Build firmware images for ZyXEL NSA310S
+
+
+
+@@
+
+Target-Profile: DEVICE_zyxel_nsa325
+Target-Profile-Name: ZyXEL NSA325 v1/v2
+Target-Profile-Packages: kmod-ata-marvell-sata kmod-fs-ext4 kmod-gpio-button-hotplug kmod-rtc-pcf8563 kmod-usb3 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: zyxel,nsa325 nsa325
+
+
+Target-Profile-Description:
+Build firmware images for ZyXEL NSA325 v1/v2
+
+
+
+@@
+
+

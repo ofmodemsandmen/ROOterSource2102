@@ -1,0 +1,40 @@
+Source-Makefile: package/system/refpolicy/Makefile
+Build-Depends: checkpolicy/host policycoreutils/host
+
+Package: refpolicy
+Version: 2.20200229-3
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: system
+Category: Base system
+Repository: base
+Title: SELinux reference policy
+Maintainer: Thomas Petazzoni <thomas.petazzoni@bootlin.com>
+Source: refpolicy-2.20200229.tar.bz2
+License: GPL-2.0-or-later
+LicenseFiles: COPYING
+Type: ipkg
+Description: 	The SELinux Reference Policy project (refpolicy) is a
+	complete SELinux policy that can be used as the system
+	policy for a variety of systems and used as the basis for
+	creating other policies. Reference Policy was originally
+	based on the NSA example policy, but aims to accomplish many
+	additional goals.
+
+	The current refpolicy does not fully support OpenWRT and
+	needs modifications to work with the default system file
+	layout. These changes should be added as patches to the
+	refpolicy that modify a single SELinux policy.
+
+	The refpolicy works for the most part in permissive
+	mode. Only the basic set of utilities are enabled in the
+	example policy config and some of the pathing in the
+	policies is not correct.  Individual policies would need to
+	be tweaked to get everything functioning properly.
+http://selinuxproject.org/page/Main_Page
+Thomas Petazzoni <thomas.petazzoni@bootlin.com>
+@@
+
+

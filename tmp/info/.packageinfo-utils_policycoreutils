@@ -1,0 +1,339 @@
+Source-Makefile: package/utils/policycoreutils/Makefile
+Build-Depends: BUSYBOX_CONFIG_PAM:libpam gettext-full/host !BUILD_NLS:libiconv !BUILD_NLS:gettext
+Build-Depends/host: libsemanage/host gettext-full/host
+Build-Types: host
+
+Package: policycoreutils
+Menu: 1
+Version: 3.2-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Repository: base
+Title: SELinux policy utility common files
+Maintainer: Thomas Petazzoni <thomas.petazzoni@bootlin.com>
+Source: policycoreutils-3.2.tar.gz
+License: GPL-2.0-or-later
+LicenseFiles: COPYING
+Type: ipkg
+Description: SELinux policy utility common files
+http://selinuxproject.org/page/Main_Page
+Thomas Petazzoni <thomas.petazzoni@bootlin.com>
+@@
+
+Package: policycoreutils-restorecon_xattr
+Version: 3.2-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread policycoreutils +libselinux +libsepol +libaudit +BUILD_NLS:libintl-full
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Repository: base
+Title: SELinux policy utility restorecon_xattr
+Maintainer: Thomas Petazzoni <thomas.petazzoni@bootlin.com>
+Source: policycoreutils-3.2.tar.gz
+License: GPL-2.0-or-later
+LicenseFiles: COPYING
+Type: ipkg
+Description: Policycoreutils is a collection of policy utilities
+(originally the "core" set of utilities needed to use
+SELinux, although it has grown a bit over time).
+
+This package provides the restorecon_xattr utility.
+http://selinuxproject.org/page/Main_Page
+Thomas Petazzoni <thomas.petazzoni@bootlin.com>
+@@
+
+Package: policycoreutils-setfiles
+Version: 3.2-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread policycoreutils +libselinux +libsepol +libaudit +BUILD_NLS:libintl-full
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Repository: base
+Title: SELinux policy utility setfiles
+Maintainer: Thomas Petazzoni <thomas.petazzoni@bootlin.com>
+Source: policycoreutils-3.2.tar.gz
+License: GPL-2.0-or-later
+LicenseFiles: COPYING
+Type: ipkg
+Description: Policycoreutils is a collection of policy utilities
+(originally the "core" set of utilities needed to use
+SELinux, although it has grown a bit over time).
+
+This package provides the setfiles utility.
+http://selinuxproject.org/page/Main_Page
+Thomas Petazzoni <thomas.petazzoni@bootlin.com>
+@@
+
+Package: policycoreutils-newrole
+Version: 3.2-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread policycoreutils +libselinux +libaudit +BUSYBOX_CONFIG_PAM:libpam +BUILD_NLS:libintl-full
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Repository: base
+Title: SELinux policy utility newrole
+Maintainer: Thomas Petazzoni <thomas.petazzoni@bootlin.com>
+Source: policycoreutils-3.2.tar.gz
+License: GPL-2.0-or-later
+LicenseFiles: COPYING
+Type: ipkg
+Description: Policycoreutils is a collection of policy utilities
+(originally the "core" set of utilities needed to use
+SELinux, although it has grown a bit over time).
+
+This package provides the newrole utility.
+http://selinuxproject.org/page/Main_Page
+Thomas Petazzoni <thomas.petazzoni@bootlin.com>
+@@
+
+Package: policycoreutils-secon
+Version: 3.2-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread policycoreutils +libselinux +BUILD_NLS:libintl-full
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Repository: base
+Title: SELinux policy utility secon
+Maintainer: Thomas Petazzoni <thomas.petazzoni@bootlin.com>
+Source: policycoreutils-3.2.tar.gz
+License: GPL-2.0-or-later
+LicenseFiles: COPYING
+Type: ipkg
+Description: Policycoreutils is a collection of policy utilities
+(originally the "core" set of utilities needed to use
+SELinux, although it has grown a bit over time).
+
+This package provides the secon utility.
+http://selinuxproject.org/page/Main_Page
+Thomas Petazzoni <thomas.petazzoni@bootlin.com>
+@@
+
+Package: policycoreutils-sestatus
+Version: 3.2-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread policycoreutils +libselinux +BUILD_NLS:libintl-full
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Repository: base
+Title: SELinux policy utility sestatus
+Maintainer: Thomas Petazzoni <thomas.petazzoni@bootlin.com>
+Source: policycoreutils-3.2.tar.gz
+License: GPL-2.0-or-later
+LicenseFiles: COPYING
+Type: ipkg
+Description: Policycoreutils is a collection of policy utilities
+(originally the "core" set of utilities needed to use
+SELinux, although it has grown a bit over time).
+
+This package provides the sestatus utility.
+http://selinuxproject.org/page/Main_Page
+Thomas Petazzoni <thomas.petazzoni@bootlin.com>
+@@
+
+Package: policycoreutils-fixfiles
+Version: 3.2-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread policycoreutils
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Repository: base
+Title: SELinux policy utility fixfiles
+Maintainer: Thomas Petazzoni <thomas.petazzoni@bootlin.com>
+Source: policycoreutils-3.2.tar.gz
+License: GPL-2.0-or-later
+LicenseFiles: COPYING
+Type: ipkg
+Description: Policycoreutils is a collection of policy utilities
+(originally the "core" set of utilities needed to use
+SELinux, although it has grown a bit over time).
+
+This package provides the fixfiles utility.
+http://selinuxproject.org/page/Main_Page
+Thomas Petazzoni <thomas.petazzoni@bootlin.com>
+@@
+
+Package: policycoreutils-genhomedircon
+Version: 3.2-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread policycoreutils +libsemanage +BUILD_NLS:libintl-full
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Repository: base
+Title: SELinux policy utility genhomedircon
+Maintainer: Thomas Petazzoni <thomas.petazzoni@bootlin.com>
+Source: policycoreutils-3.2.tar.gz
+License: GPL-2.0-or-later
+LicenseFiles: COPYING
+Type: ipkg
+Description: Policycoreutils is a collection of policy utilities
+(originally the "core" set of utilities needed to use
+SELinux, although it has grown a bit over time).
+
+This package provides the genhomedircon utility.
+http://selinuxproject.org/page/Main_Page
+Thomas Petazzoni <thomas.petazzoni@bootlin.com>
+@@
+
+Package: policycoreutils-open_init_pty
+Version: 3.2-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread policycoreutils +BUILD_NLS:libintl-full
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Repository: base
+Title: SELinux policy utility open_init_pty
+Maintainer: Thomas Petazzoni <thomas.petazzoni@bootlin.com>
+Source: policycoreutils-3.2.tar.gz
+License: GPL-2.0-or-later
+LicenseFiles: COPYING
+Type: ipkg
+Description: Policycoreutils is a collection of policy utilities
+(originally the "core" set of utilities needed to use
+SELinux, although it has grown a bit over time).
+
+This package provides the open_init_pty utility.
+http://selinuxproject.org/page/Main_Page
+Thomas Petazzoni <thomas.petazzoni@bootlin.com>
+@@
+
+Package: policycoreutils-run_init
+Version: 3.2-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread policycoreutils +libselinux +libaudit +BUSYBOX_CONFIG_PAM:libpam +BUILD_NLS:libintl-full
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Repository: base
+Title: SELinux policy utility run_init
+Maintainer: Thomas Petazzoni <thomas.petazzoni@bootlin.com>
+Source: policycoreutils-3.2.tar.gz
+License: GPL-2.0-or-later
+LicenseFiles: COPYING
+Type: ipkg
+Description: Policycoreutils is a collection of policy utilities
+(originally the "core" set of utilities needed to use
+SELinux, although it has grown a bit over time).
+
+This package provides the run_init utility.
+http://selinuxproject.org/page/Main_Page
+Thomas Petazzoni <thomas.petazzoni@bootlin.com>
+@@
+
+Package: policycoreutils-semodule
+Version: 3.2-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread policycoreutils +libsemanage +BUILD_NLS:libintl-full
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Repository: base
+Title: SELinux policy utility semodule
+Maintainer: Thomas Petazzoni <thomas.petazzoni@bootlin.com>
+Source: policycoreutils-3.2.tar.gz
+License: GPL-2.0-or-later
+LicenseFiles: COPYING
+Type: ipkg
+Description: Policycoreutils is a collection of policy utilities
+(originally the "core" set of utilities needed to use
+SELinux, although it has grown a bit over time).
+
+This package provides the semodule utility.
+http://selinuxproject.org/page/Main_Page
+Thomas Petazzoni <thomas.petazzoni@bootlin.com>
+@@
+
+Package: policycoreutils-load_policy
+Version: 3.2-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread policycoreutils +libselinux +BUILD_NLS:libintl-full
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Repository: base
+Title: SELinux policy utility load_policy
+Maintainer: Thomas Petazzoni <thomas.petazzoni@bootlin.com>
+Source: policycoreutils-3.2.tar.gz
+License: GPL-2.0-or-later
+LicenseFiles: COPYING
+Type: ipkg
+Description: Policycoreutils is a collection of policy utilities
+(originally the "core" set of utilities needed to use
+SELinux, although it has grown a bit over time).
+
+This package provides the load_policy utility.
+http://selinuxproject.org/page/Main_Page
+Thomas Petazzoni <thomas.petazzoni@bootlin.com>
+@@
+
+Package: policycoreutils-setsebool
+Version: 3.2-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread policycoreutils +libsemanage +BUILD_NLS:libintl-full
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Repository: base
+Title: SELinux policy utility setsebool
+Maintainer: Thomas Petazzoni <thomas.petazzoni@bootlin.com>
+Source: policycoreutils-3.2.tar.gz
+License: GPL-2.0-or-later
+LicenseFiles: COPYING
+Type: ipkg
+Description: Policycoreutils is a collection of policy utilities
+(originally the "core" set of utilities needed to use
+SELinux, although it has grown a bit over time).
+
+This package provides the setsebool utility.
+http://selinuxproject.org/page/Main_Page
+Thomas Petazzoni <thomas.petazzoni@bootlin.com>
+@@
+
+Package: policycoreutils-pp
+Version: 3.2-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread policycoreutils +libsepol +BUILD_NLS:libintl-full
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Repository: base
+Title: SELinux policy utility pp
+Maintainer: Thomas Petazzoni <thomas.petazzoni@bootlin.com>
+Source: policycoreutils-3.2.tar.gz
+License: GPL-2.0-or-later
+LicenseFiles: COPYING
+Type: ipkg
+Description: Policycoreutils is a collection of policy utilities
+(originally the "core" set of utilities needed to use
+SELinux, although it has grown a bit over time).
+
+This package provides the pp utility.
+http://selinuxproject.org/page/Main_Page
+Thomas Petazzoni <thomas.petazzoni@bootlin.com>
+@@
+
+

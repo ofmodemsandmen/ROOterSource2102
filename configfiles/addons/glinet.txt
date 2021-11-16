@@ -1,0 +1,31 @@
+AR150
+	Use web page at
+	http://192.168.8.1/Upgrade.asp
+	
+AR750
+AR300M
+AR750S
+AR300M-Lite
+Mifi
+MT300N
+MT300Nv2
+X750
+XE300
+MT1300
+MT300A
+	Use web page at
+	http://192.168.1.1/index.html?index
+	
+B1300
+	Use Recovery GUI
+	Firmware rename 	- lede-gl-b1300.bin
+	Release reset after Leds blink 3 times
+
+S1300
+	Push reset button and plug in power, wifi led will blink, release button when middle led light on
+	Set ip to 192.168.1.0/24 and use web browser to access http://192.168.1.1
+	Choose file s1300-factory-to-openwrt.img and click “Update Firmware” (Steps 3 will consume about 30 seconds, then):
+	Poweroff router
+	Repeat step 1, 2, and when step 3 choose your compiled openwrt firmware file and update firmware (When update finished, router will reboot automatically)
+	
+	

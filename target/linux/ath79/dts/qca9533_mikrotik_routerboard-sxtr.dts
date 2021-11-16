@@ -1,0 +1,8 @@
+// SPDX-License-Identifier: GPL-2.0-or-later OR MIT
+
+#include "qca9533_mikrotik_routerboard-sxtr.dtsi"
+
+/ {
+	compatible = "mikrotik,routerboard-sxtr", "qca,qca9533";
+	model = "MikroTik RouterBOARD SXTR&R11e";
+};

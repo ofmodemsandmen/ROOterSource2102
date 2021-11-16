@@ -1,0 +1,344 @@
+Source-Makefile: target/linux/ipq806x/Makefile
+Target: ipq806x
+Target-Board: ipq806x
+Target-Name: Qualcomm Atheros IPQ806X
+Target-Arch: arm
+Target-Arch-Packages: arm_cortex-a15_neon-vfpv4
+Target-Features: arm_v7 dt fpu gpio nand pci pcie ramdisk rtc squashfs usb
+Target-Depends: 
+Target-Optimization: -Os -pipe
+CPU-Type: cortex-a15+neon-vfpv4
+Linux-Version: 5.4.143
+Linux-Release: 1
+Linux-Kernel-Arch: arm
+Target-Description:
+
+@@
+Default-Packages: base-files ca-bundle dropbear fstools libc libgcc libustream-wolfssl logd mtd netifd opkg uci uclient-fetch urandom-seed urngd busybox procd dnsmasq firewall ip6tables iptables kmod-ipt-offload odhcp6c odhcpd-ipv6only ppp ppp-mod-pppoe kmod-leds-gpio kmod-gpio-button-hotplug swconfig kmod-ata-ahci kmod-ata-ahci-platform kmod-usb-ohci kmod-usb2 kmod-usb-ledtrig-usbport kmod-phy-qcom-ipq806x-usb kmod-usb3 kmod-usb-dwc3-qcom kmod-ath10k-ct wpad-basic-wolfssl uboot-envtools iwinfo
+Target: ipq806x/generic
+Target-Board: ipq806x
+Target-Name: Generic
+Target-Arch: arm
+Target-Arch-Packages: arm_cortex-a15_neon-vfpv4
+Target-Features: arm_v7 dt fpu gpio nand pci pcie ramdisk rtc squashfs usb
+Target-Depends: 
+Target-Optimization: -Os -pipe
+CPU-Type: cortex-a15+neon-vfpv4
+Linux-Version: 5.4.143
+Linux-Release: 1
+Linux-Kernel-Arch: arm
+Target-Description:
+
+@@
+Default-Packages: base-files ca-bundle dropbear fstools libc libgcc libustream-wolfssl logd mtd netifd opkg uci uclient-fetch urandom-seed urngd busybox procd dnsmasq firewall ip6tables iptables kmod-ipt-offload odhcp6c odhcpd-ipv6only ppp ppp-mod-pppoe kmod-leds-gpio kmod-gpio-button-hotplug swconfig kmod-ata-ahci kmod-ata-ahci-platform kmod-usb-ohci kmod-usb2 kmod-usb-ledtrig-usbport kmod-phy-qcom-ipq806x-usb kmod-usb3 kmod-usb-dwc3-qcom kmod-ath10k-ct wpad-basic-wolfssl uboot-envtools iwinfo
+Target-Profile: DEVICE_asrock_g10
+Target-Profile-Name: ASRock G10
+Target-Profile-Packages: kmod-i2c-gpio ath10k-firmware-qca99x0-ct 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: asrock,g10
+
+
+Target-Profile-Description:
+Build firmware images for ASRock G10
+
+
+
+@@
+
+Target-Profile: DEVICE_buffalo_wxr-2533dhp
+Target-Profile-Name: Buffalo WXR-2533DHP
+Target-Profile-Packages: ath10k-firmware-qca99x0-ct 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: buffalo,wxr-2533dhp
+
+
+Target-Profile-Description:
+Build firmware images for Buffalo WXR-2533DHP
+
+
+
+@@
+
+Target-Profile: DEVICE_compex_wpq864
+Target-Profile-Name: Compex WPQ864
+Target-Profile-Packages: kmod-gpio-beeper 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: compex,wpq864
+
+
+Target-Profile-Description:
+Build firmware images for Compex WPQ864
+
+
+
+@@
+
+Target-Profile: DEVICE_edgecore_ecw5410
+Target-Profile-Name: Edgecore ECW5410
+Target-Profile-Packages: ath10k-firmware-qca9984-ct ipq-wifi-edgecore_ecw5410 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: edgecore,ecw5410
+
+
+Target-Profile-Description:
+Build firmware images for Edgecore ECW5410
+
+
+
+@@
+
+Target-Profile: DEVICE_linksys_ea7500-v1
+Target-Profile-Name: Linksys EA7500 v1
+Target-Profile-Packages: ath10k-firmware-qca99x0-ct 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: linksys,ea7500-v1
+
+
+Target-Profile-Description:
+Build firmware images for Linksys EA7500 v1
+
+
+
+@@
+
+Target-Profile: DEVICE_linksys_ea8500
+Target-Profile-Name: Linksys EA8500
+Target-Profile-Packages: ath10k-firmware-qca99x0-ct 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: linksys,ea8500 ea8500
+
+
+Target-Profile-Description:
+Build firmware images for Linksys EA8500
+
+
+
+@@
+
+Target-Profile: DEVICE_nec_wg2600hp
+Target-Profile-Name: NEC Aterm WG2600HP
+Target-Profile-Packages: ath10k-firmware-qca99x0-ct 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: nec,wg2600hp
+
+
+Target-Profile-Description:
+Build firmware images for NEC Aterm WG2600HP
+
+
+
+@@
+
+Target-Profile: DEVICE_nec_wg2600hp3
+Target-Profile-Name: NEC Platforms Aterm WG2600HP3
+Target-Profile-Packages: -kmod-ata-ahci -kmod-ata-ahci-platform -kmod-usb-ohci -kmod-usb2 -kmod-usb-ledtrig-usbport -kmod-usb-phy-qcom-dwc3 -kmod-usb3 -kmod-usb-dwc3-qcom ath10k-firmware-qca9984-ct ipq-wifi-nec_wg2600hp3 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: nec,wg2600hp3
+
+
+Target-Profile-Description:
+Build firmware images for NEC Platforms Aterm WG2600HP3
+
+
+
+@@
+
+Target-Profile: DEVICE_netgear_d7800
+Target-Profile-Name: NETGEAR Nighthawk X4 D7800
+Target-Profile-Packages: ath10k-firmware-qca99x0-ct 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: netgear,d7800 d7800
+
+
+Target-Profile-Description:
+Build firmware images for NETGEAR Nighthawk X4 D7800
+
+
+
+@@
+
+Target-Profile: DEVICE_netgear_r7500
+Target-Profile-Name: NETGEAR Nighthawk X4 R7500 v1
+Target-Profile-Packages: ath10k-firmware-qca988x-ct 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: netgear,r7500 r7500
+
+
+Target-Profile-Description:
+Build firmware images for NETGEAR Nighthawk X4 R7500 v1
+
+
+
+@@
+
+Target-Profile: DEVICE_netgear_r7500v2
+Target-Profile-Name: NETGEAR Nighthawk X4 R7500 v2
+Target-Profile-Packages: ath10k-firmware-qca99x0-ct ath10k-firmware-qca988x-ct 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: netgear,r7500v2 r7500v2
+
+
+Target-Profile-Description:
+Build firmware images for NETGEAR Nighthawk X4 R7500 v2
+
+
+
+@@
+
+Target-Profile: DEVICE_netgear_r7800
+Target-Profile-Name: NETGEAR Nighthawk X4S R7800
+Target-Profile-Packages: ath10k-firmware-qca9984-ct 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: netgear,r7800 r7800
+
+
+Target-Profile-Description:
+Build firmware images for NETGEAR Nighthawk X4S R7800
+
+
+
+@@
+
+Target-Profile: DEVICE_qcom_ipq8064-ap148
+Target-Profile-Name: Qualcomm AP148 standard
+Target-Profile-Packages: ath10k-firmware-qca99x0-ct 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: qcom,ipq8064-ap148 ap148
+
+
+Target-Profile-Description:
+Build firmware images for Qualcomm AP148 standard
+
+
+
+@@
+
+Target-Profile: DEVICE_qcom_ipq8064-ap148-legacy
+Target-Profile-Name: Qualcomm AP148 legacy
+Target-Profile-Packages: ath10k-firmware-qca99x0-ct 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: qcom,ipq8064-ap148 ap148
+
+
+Target-Profile-Description:
+Build firmware images for Qualcomm AP148 legacy
+
+
+
+@@
+
+Target-Profile: DEVICE_qcom_ipq8064-ap161
+Target-Profile-Name: Qualcomm AP161
+Target-Profile-Packages: ath10k-firmware-qca99x0-ct 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: qcom,ipq8064-ap161
+
+
+Target-Profile-Description:
+Build firmware images for Qualcomm AP161
+
+
+
+@@
+
+Target-Profile: DEVICE_qcom_ipq8064-db149
+Target-Profile-Name: Qualcomm DB149
+Target-Profile-Packages: ath10k-firmware-qca99x0-ct 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: qcom,ipq8064-db149
+
+
+Target-Profile-Description:
+Build firmware images for Qualcomm DB149
+
+
+
+@@
+
+Target-Profile: DEVICE_tplink_ad7200
+Target-Profile-Name: TP-Link Talon AD7200 v1/v2 (TP-Link AD7200 v1/v2)
+Target-Profile-Packages: ath10k-firmware-qca99x0-ct kmod-wil6210 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: tplink,ad7200
+
+
+Target-Profile-Description:
+Build firmware images for TP-Link AD7200 v1/v2
+Alternative device titles:
+- TP-Link Talon AD7200 v1/v2
+
+
+@@
+
+Target-Profile: DEVICE_tplink_ad7200
+Target-Profile-Name: TP-Link AD7200 v1/v2
+Target-Profile-Packages: ath10k-firmware-qca99x0-ct kmod-wil6210 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: tplink,ad7200
+
+
+Target-Profile-Description:
+Build firmware images for TP-Link AD7200 v1/v2
+Alternative device titles:
+- TP-Link Talon AD7200 v1/v2
+
+
+@@
+
+Target-Profile: DEVICE_tplink_c2600
+Target-Profile-Name: TP-Link Archer C2600 v1
+Target-Profile-Packages: ath10k-firmware-qca99x0-ct 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: tplink,c2600 c2600
+
+
+Target-Profile-Description:
+Build firmware images for TP-Link Archer C2600 v1
+
+
+
+@@
+
+Target-Profile: DEVICE_tplink_vr2600v
+Target-Profile-Name: TP-Link Archer VR2600v v1
+Target-Profile-Packages: ath10k-firmware-qca99x0-ct 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: tplink,vr2600v vr2600v
+
+
+Target-Profile-Description:
+Build firmware images for TP-Link Archer VR2600v v1
+
+
+
+@@
+
+Target-Profile: DEVICE_ubnt_unifi-ac-hd
+Target-Profile-Name: Ubiquiti UniFi AC HD
+Target-Profile-Packages: ath10k-firmware-qca9984-ct 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: ubnt,unifi-ac-hd
+
+
+Target-Profile-Description:
+Build firmware images for Ubiquiti UniFi AC HD
+
+
+
+@@
+
+Target-Profile: DEVICE_zyxel_nbg6817
+Target-Profile-Name: ZyXEL NBG6817
+Target-Profile-Packages: ath10k-firmware-qca9984-ct e2fsprogs kmod-fs-ext4 losetup 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: zyxel,nbg6817 nbg6817
+
+
+Target-Profile-Description:
+Build firmware images for ZyXEL NBG6817
+
+
+
+@@
+
+

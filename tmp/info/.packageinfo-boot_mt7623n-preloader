@@ -1,0 +1,37 @@
+Source-Makefile: package/boot/mt7623n-preloader/Makefile
+
+Package: mt7623n-preloader
+Default: y if TARGET_mediatek
+Version: 2020-03-11-b27114e184449a33b5d875fda14198f5e6fee2bb
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_mediatek_mt7623
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: boot
+Category: Boot Loaders
+Title: mt7623n-preloader
+Maintainer: David Woodhouse <dwmw2@infradead.org>
+Source: 
+Type: ipkg
+Description:   Preloader image for mt7623n based boards like Banana Pi R2.
+David Woodhouse <dwmw2@infradead.org>
+@@
+
+Package: mt7622-preloader
+Default: y if TARGET_mediatek
+Version: 2020-03-11-b27114e184449a33b5d875fda14198f5e6fee2bb
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_mediatek_mt7622
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: boot
+Category: Boot Loaders
+Title: mt7622-preloader
+Maintainer: David Woodhouse <dwmw2@infradead.org>
+Source: 
+Type: ipkg
+Description:   Preloader image for mt7622 based boards like Banana Pi R64.
+David Woodhouse <dwmw2@infradead.org>
+@@
+
+

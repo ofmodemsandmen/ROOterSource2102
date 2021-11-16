@@ -1,0 +1,25 @@
+Source-Makefile: package/system/selinux-policy/Makefile
+Build-Depends: secilc/host policycoreutils/host
+
+Package: selinux-policy
+Version: 0.8
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: system
+Category: Base system
+Repository: base
+Title: SELinux security policy for OpenWrt
+Maintainer: Dominick Grift <dominick.grift@defensec.nl>
+Source: selinux-policy-0.8.tar.xz
+License: Unlicense
+LicenseFiles: LICENSE
+Type: ipkg
+Description: 	Basic SELinux Security Policy designed specifically for
+	OpenWrt and written in Common Intermediate Language.
+https://git.defensec.nl/?p=selinux-policy.git;a=summary
+Dominick Grift <dominick.grift@defensec.nl>
+@@
+
+

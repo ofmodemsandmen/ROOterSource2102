@@ -1,0 +1,28 @@
+Source-Makefile: package/utils/bcm4908img/Makefile
+Build-Depends: bcm4908img/host
+Build-Types: host
+
+Package: bcm4908img
+Version: 1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @TARGET_bcm4908
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Base system
+Title: Utility handling BCM4908 images
+Maintainer: Rafał Miłecki <rafal@milecki.pl>
+Source: 
+Type: ipkg
+Description:   CFE bootloader for BCM4908 uses custom image format. It consists of:
+  1. Optional cferom image
+  2. bootfs JFFS2 partition (cferam, kernel, DTB and optional helper files)
+  3. padding
+  4. rootfs simply appended to the bootfs + padding
+  5. tail with checksum and basic device info
+
+  This util allows creating, modifying and extracting from BCM4908 images.
+Rafał Miłecki <rafal@milecki.pl>
+@@
+
+

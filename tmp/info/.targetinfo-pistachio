@@ -1,0 +1,56 @@
+Source-Makefile: target/linux/pistachio/Makefile
+Target: pistachio
+Target-Board: pistachio
+Target-Name: MIPS pistachio
+Target-Arch: mipsel
+Target-Arch-Packages: mipsel_24kc_24kf
+Target-Features: dt fpu gpio mips16 nand squashfs targz usb usbgadget
+Target-Depends: 
+Target-Optimization: -Os -pipe -mno-branch-likely -mips32r2 -mtune=24kc
+CPU-Type: 24kc+24kf
+Linux-Version: 5.4.143
+Linux-Release: 1
+Linux-Kernel-Arch: mips
+Target-Description:
+
+@@
+Default-Packages: base-files ca-bundle dropbear fstools libc libgcc libustream-wolfssl logd mtd netifd opkg uci uclient-fetch urandom-seed urngd busybox procd dnsmasq firewall ip6tables iptables kmod-ipt-offload odhcp6c odhcpd-ipv6only ppp ppp-mod-pppoe kmod-gpio-button-hotplug uboot-envtools 
+Target-Profile: Default
+Target-Profile-Priority: 1
+Target-Profile-Name: Default Profile
+Target-Profile-Packages:  
+Target-Profile-Description:
+	Default package set compatible with most boards.
+@@
+
+Target-Profile: DEVICE_img_creator-ci40
+Target-Profile-Name: Imagination Technologies Marduk board (Imagination Technologies Creator Ci40 (VL-62899))
+Target-Profile-Packages: kmod-tpm-i2c-infineon kmod-ca8210 wpan-tools 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: img,creator-ci40
+
+
+Target-Profile-Description:
+Build firmware images for Imagination Technologies Creator Ci40 (VL-62899)
+Alternative device titles:
+- Imagination Technologies Marduk board
+
+
+@@
+
+Target-Profile: DEVICE_img_creator-ci40
+Target-Profile-Name: Imagination Technologies Creator Ci40 (VL-62899)
+Target-Profile-Packages: kmod-tpm-i2c-infineon kmod-ca8210 wpan-tools 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: img,creator-ci40
+
+
+Target-Profile-Description:
+Build firmware images for Imagination Technologies Creator Ci40 (VL-62899)
+Alternative device titles:
+- Imagination Technologies Marduk board
+
+
+@@
+
+

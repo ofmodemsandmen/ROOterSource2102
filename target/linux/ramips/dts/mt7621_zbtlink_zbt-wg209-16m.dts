@@ -1,0 +1,12 @@
+/dts-v1/;
+
+#include "mt7621_zbtlink_zbt-wg209.dtsi"
+
+/ {
+	compatible = "zbtlink,zbt-wg209-16m", "zbtlink,zbt-wg209", "mediatek,mt7621-soc";
+	model = "ZBT-WG209 (16M)";
+};
+
+&firmware {
+	reg = <0x50000 0xfb0000>;
+};

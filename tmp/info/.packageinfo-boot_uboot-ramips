@@ -1,0 +1,24 @@
+Source-Makefile: package/boot/uboot-ramips/Makefile
+
+Package: u-boot-ravpower_rp-wd009
+Default: y if (TARGET_ramips_mt76x8_Default || TARGET_ramips_mt76x8_DEVICE_ravpower_rp-wd009 || TARGET_DEVICE_ramips_mt76x8_DEVICE_ravpower_rp-wd009)
+Version: 2020.04-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread @!IN_SDK @TARGET_ramips_mt76x8
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Variant: ravpower_rp-wd009
+Section: boot
+Category: Boot Loaders
+Title: U-Boot for RAVPower RP-WD009
+Maintainer: 
+Source: u-boot-2020.04.tar.bz2
+License: GPL-2.0 GPL-2.0+
+LicenseFiles: Licenses/README
+Type: bin
+Description: U-Boot for RAVPower RP-WD009
+http://www.denx.de/wiki/U-Boot
+
+@@
+
+

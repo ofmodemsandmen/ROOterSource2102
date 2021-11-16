@@ -1,0 +1,74 @@
+Source-Makefile: target/linux/zynq/Makefile
+Target: zynq
+Target-Board: zynq
+Target-Name: Xilinx Zynq 7000 SoCs
+Target-Arch: arm
+Target-Arch-Packages: arm_cortex-a9_neon
+Target-Features: arm_v7 boot-part display dt fpu gpio pci rootfs-part rtc squashfs usb usbgadget
+Target-Depends: 
+Target-Optimization: -Os -pipe
+CPU-Type: cortex-a9+neon
+Linux-Version: 5.4.143
+Linux-Release: 1
+Linux-Kernel-Arch: arm
+Target-Description:
+	Build firmware image for Zynq 7000 SoC devices.
+@@
+Default-Packages: base-files ca-bundle dropbear fstools libc libgcc libustream-wolfssl logd mtd netifd opkg uci uclient-fetch urandom-seed urngd busybox procd dnsmasq firewall ip6tables iptables kmod-ipt-offload odhcp6c odhcpd-ipv6only ppp ppp-mod-pppoe uboot-envtools mkf2fs e2fsprogs kmod-usb-storage kmod-fs-msdos 
+Target-Profile: DEVICE_avnet_zynq-zed
+Target-Profile-Name: Avnet ZedBoard
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: avnet,zynq-zed
+
+
+Target-Profile-Description:
+Build firmware images for Avnet ZedBoard
+
+
+
+@@
+
+Target-Profile: DEVICE_digilent_zynq-zybo
+Target-Profile-Name: Digilent Zybo
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: digilent,zynq-zybo
+
+
+Target-Profile-Description:
+Build firmware images for Digilent Zybo
+
+
+
+@@
+
+Target-Profile: DEVICE_digilent_zynq-zybo-z7
+Target-Profile-Name: Digilent Zybo Z7
+Target-Profile-Packages:  
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: digilent,zynq-zybo-z7
+
+
+Target-Profile-Description:
+Build firmware images for Digilent Zybo Z7
+
+
+
+@@
+
+Target-Profile: DEVICE_xlnx_zynq-zc702
+Target-Profile-Name: Xilinx ZC702
+Target-Profile-Packages: kmod-can kmod-can-xilinx-can 
+Target-Profile-hasImageMetadata: 0
+Target-Profile-SupportedDevices: xlnx,zynq-zc702
+
+
+Target-Profile-Description:
+Build firmware images for Xilinx ZC702
+
+
+
+@@
+
+
