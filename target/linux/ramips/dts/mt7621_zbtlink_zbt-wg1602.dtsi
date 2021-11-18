@@ -7,10 +7,11 @@
 	compatible = "zbtlink,zbt-wg1602", "mediatek,mt7621-soc";
 
 	aliases {
-		led-boot = &led_status;
-		led-failsafe = &led_status;
-		led-running = &led_status;
-		led-upgrade = &led_status;
+		led-boot = &led_sm;
+		led-failsafe = &led_sm;
+		led-running = &led_sm;
+		led-upgrade = &led_sm;
+		label-mac-device = &gmac0;
 	};
 
 	chosen {
@@ -18,8 +19,7 @@
 	};
 
 	keys {
-		compatible = "gpio-keys-polled";
-		poll-interval = <20>;
+		compatible = "gpio-keys";
 
 		reset {
 			label = "reset";
@@ -31,24 +31,53 @@
 	leds {
 		compatible = "gpio-leds";
 
-		led_status: status {
-			label = "green:status";
-			gpios = <&gpio 24 GPIO_ACTIVE_LOW>;
+		led_sm: sm {
+			label = "green:sm";
+			gpios = <&gpio 4 GPIO_ACTIVE_LOW>;
 		};
-		signal {
-			label = "green:signal";
-			gpios = <&gpio 7 GPIO_ACTIVE_LOW>;
+
+		4g1 {
+			label = "green:4g1";
+			gpios = <&gpio 10 GPIO_ACTIVE_LOW>;
 		};
-		globe {
-			label = "green:globe";
-			gpios = <&gpio 8 GPIO_ACTIVE_LOW>;
+
+		4g2 {
+			label = "green:4g2";
+			gpios = <&gpio 12 GPIO_ACTIVE_LOW>;
 		};
 	};
-	
-};
 
-&i2c {
-	status = "okay";
+	watchdog {
+		compatible = "linux,wdt-gpio";
+		gpios = <&gpio 3 GPIO_ACTIVE_HIGH>;
+		hw_algo = "toggle";
+		/* hw_margin_ms is actually ~120s but driver limits it to 60s */
+		hw_margin_ms = <60000>;
+		always-running;
+	};
+
+	gpio-export {
+		compatible = "gpio-export";
+		#size-cells = <0>;
+
+		4g1-pwr {
+			gpio-export,name = "4g1-pwr";
+			gpio-export,output = <1>;
+			gpios = <&gpio 8 GPIO_ACTIVE_HIGH>;
+		};
+
+		4g2-pwr {
+			gpio-export,name = "4g2-pwr";
+			gpio-export,output = <1>;
+			gpios = <&gpio 7 GPIO_ACTIVE_HIGH>;
+		};
+
+		ext-usb {
+			gpio-export,name = "ext-usb";
+			gpio-export,output = <1>;
+			gpios = <&gpio 6 GPIO_ACTIVE_LOW>;
+		};
+	};
 };
 
 &sdhci {
@@ -100,22 +129,28 @@
 
 &pcie0 {
 	wifi0: wifi@0,0 {
+		compatible = "pci14c3,7603";
 		reg = <0x0000 0 0 0 0>;
-		mediatek,mtd-eeprom = <&factory 0x8000>;
-		ieee80211-freq-limit = <5000000 6000000>;
+		mediatek,mtd-eeprom = <&factory 0x0000>;
 	};
 };
 
 &pcie1 {
 	wifi1: wifi@0,0 {
+		compatible = "pci14c3,7662";
 		reg = <0x0000 0 0 0 0>;
-		mediatek,mtd-eeprom = <&factory 0x0000>;
-		ieee80211-freq-limit = <2400000 2500000>;
+		mediatek,mtd-eeprom = <&factory 0x8000>;
+		ieee80211-freq-limit = <5000000 6000000>;
+
+		led {
+			led-sources = <2>;
+		};
 	};
 };
 
 &gmac0 {
-	mtd-mac-address = <&factory 0xe000>;
+	nvmem-cells = <&macaddr_factory_e000>;
+	nvmem-cell-names = "mac-address";
 };
 
 &switch0 {
@@ -143,15 +178,29 @@
 		port@4 {
 			status = "okay";
 			label = "wan";
-			mtd-mac-address = <&factory 0xe000>;
-			mtd-mac-address-increment = <1>;
+			nvmem-cells = <&macaddr_factory_e006>;
+			nvmem-cell-names = "mac-address";
 		};
 	};
 };
 
 &state_default {
 	gpio {
-		groups = "wdt", "rgmii2", "jtag", "i2c", "uart1", "uart2", "uart3";
+		groups = "i2c", "rgmii2", "uart2", "wdt";
 		function = "gpio";
+	};
+};
+
+&factory {
+	compatible = "nvmem-cells";
+	#address-cells = <1>;
+	#size-cells = <1>;
+
+	macaddr_factory_e000: macaddr@e000 {
+		reg = <0xe000 0x6>;
+	};
+
+	macaddr_factory_e006: macaddr@e006 {
+		reg = <0xe006 0x6>;
 	};
 };
