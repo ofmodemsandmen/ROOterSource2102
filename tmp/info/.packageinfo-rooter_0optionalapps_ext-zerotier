@@ -1,0 +1,21 @@
+Source-Makefile: package/rooter/0optionalapps/ext-zerotier/Makefile
+
+Package: ext-zerotier
+Submenu: Optional Applications
+Version: 4.500-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +zerotier
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: ROOter
+Repository: base
+Title: Install scripts for Zerotier
+Maintainer: Created by DM/makefile by Cobia@whirlpool
+Source: 
+Type: ipkg
+Description:   Install scripts for Zerotier
+Created by DM/makefile by Cobia@whirlpool
+@@
+
+

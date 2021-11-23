@@ -8,7 +8,7 @@ Target-Features: dt fpu gpio pci pcie ramdisk squashfs usb
 Target-Depends: 
 Target-Optimization: -Os -pipe -mcpu=464fp
 CPU-Type: 464fp
-Linux-Version: 5.4.143
+Linux-Version: 5.4.158
 Linux-Release: 1
 Linux-Kernel-Arch: powerpc
 Target-Description:
@@ -24,7 +24,7 @@ Target-Features: dt fpu gpio nand pci pcie ramdisk rtc squashfs usb
 Target-Depends: 
 Target-Optimization: -Os -pipe -mcpu=464fp
 CPU-Type: 464fp
-Linux-Version: 5.4.143
+Linux-Version: 5.4.158
 Linux-Release: 1
 Linux-Kernel-Arch: powerpc
 Target-Description:
@@ -119,7 +119,7 @@ Target-Features: boot-part dt ext4 fpu gpio pci pcie ramdisk rootfs-part squashf
 Target-Depends: 
 Target-Optimization: -Os -pipe -mcpu=464fp
 CPU-Type: 464fp
-Linux-Version: 5.4.143
+Linux-Version: 5.4.158
 Linux-Release: 1
 Linux-Kernel-Arch: powerpc
 Target-Description:

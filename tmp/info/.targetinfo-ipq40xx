@@ -8,8 +8,8 @@ Target-Features: arm_v7 dt fpu gpio nand pci pcie ramdisk rtc squashfs usb
 Target-Depends: 
 Target-Optimization: -Os -pipe
 CPU-Type: cortex-a7+neon-vfpv4
-Linux-Version: 5.4.143
-Linux-Testing-Version: 5.4.143
+Linux-Version: 5.4.158
+Linux-Testing-Version: 5.4.158
 Linux-Release: 1
 Linux-Kernel-Arch: arm
 Target-Description:
@@ -25,8 +25,8 @@ Target-Features: arm_v7 dt fpu gpio nand pci pcie ramdisk rtc squashfs usb
 Target-Depends: 
 Target-Optimization: -Os -pipe
 CPU-Type: cortex-a7+neon-vfpv4
-Linux-Version: 5.4.143
-Linux-Testing-Version: 5.4.143
+Linux-Version: 5.4.158
+Linux-Testing-Version: 5.4.158
 Linux-Release: 1
 Linux-Kernel-Arch: arm
 Target-Description:
@@ -357,7 +357,7 @@ Build firmware images for EnGenius EAP2200
 
 Target-Profile: DEVICE_engenius_emd1
 Target-Profile-Name: EnGenius EMD1
-Target-Profile-Packages:  
+Target-Profile-Packages: ipq-wifi-engenius_emd1 
 Target-Profile-hasImageMetadata: 1
 Target-Profile-SupportedDevices: engenius,emd1
 
@@ -371,7 +371,7 @@ Build firmware images for EnGenius EMD1
 
 Target-Profile: DEVICE_engenius_emr3500
 Target-Profile-Name: EnGenius EMR3500
-Target-Profile-Packages:  
+Target-Profile-Packages: ipq-wifi-engenius_emr3500 
 Target-Profile-hasImageMetadata: 1
 Target-Profile-SupportedDevices: engenius,emr3500
 
@@ -595,7 +595,7 @@ Build firmware images for OpenMesh A62
 
 Target-Profile: DEVICE_plasmacloud_pa1200
 Target-Profile-Name: Plasma Cloud PA1200
-Target-Profile-Packages: ipq-wifi-plasmacloud-pa1200 
+Target-Profile-Packages: ipq-wifi-plasmacloud_pa1200 
 Target-Profile-hasImageMetadata: 1
 Target-Profile-SupportedDevices: plasmacloud,pa1200
 
@@ -609,7 +609,7 @@ Build firmware images for Plasma Cloud PA1200
 
 Target-Profile: DEVICE_plasmacloud_pa2200
 Target-Profile-Name: Plasma Cloud PA2200
-Target-Profile-Packages: ath10k-firmware-qca9888-ct ipq-wifi-plasmacloud-pa2200 
+Target-Profile-Packages: ath10k-firmware-qca9888-ct ipq-wifi-plasmacloud_pa2200 
 Target-Profile-hasImageMetadata: 1
 Target-Profile-SupportedDevices: plasmacloud,pa2200
 
@@ -728,8 +728,8 @@ Target-Features: arm_v7 dt fpu gpio minor nand pci pcie ramdisk rtc squashfs usb
 Target-Depends: 
 Target-Optimization: -Os -pipe
 CPU-Type: cortex-a7+neon-vfpv4
-Linux-Version: 5.4.143
-Linux-Testing-Version: 5.4.143
+Linux-Version: 5.4.158
+Linux-Testing-Version: 5.4.158
 Linux-Release: 1
 Linux-Kernel-Arch: arm
 Target-Description:

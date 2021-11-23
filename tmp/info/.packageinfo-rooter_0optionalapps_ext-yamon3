@@ -1,0 +1,21 @@
+Source-Makefile: package/rooter/0optionalapps/ext-yamon3/Makefile
+
+Package: ext-yamon3
+Submenu: Optional Applications
+Version: 1.000-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: ROOter
+Repository: base
+Title: Install YAMon 3 Bandwidth Monitor
+Maintainer: Created by DM/makefile by Cobia@whirlpool
+Source: 
+Type: ipkg
+Description:   Helper scripts to install YAMon 3 Bandwidth Monitor on ROOter
+Created by DM/makefile by Cobia@whirlpool
+@@
+
+

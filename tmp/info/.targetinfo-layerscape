@@ -8,7 +8,7 @@ Target-Features: boot-part ext4 fpu gpio nand pcie rootfs-part squashfs ubifs us
 Target-Depends: 
 Target-Optimization: -Os -pipe
 CPU-Type: 
-Linux-Version: 5.4.143
+Linux-Version: 5.4.158
 Linux-Release: 1
 Linux-Kernel-Arch: arm64
 Target-Description:
@@ -24,7 +24,7 @@ Target-Features: boot-part display dt ext4 fpu gpio nand pci pcie rootfs-part rt
 Target-Depends: 
 Target-Optimization: -Os -pipe -mcpu=generic
 CPU-Type: generic
-Linux-Version: 5.4.143
+Linux-Version: 5.4.158
 Linux-Release: 1
 Linux-Kernel-Arch: arm64
 Target-Description:
@@ -250,7 +250,7 @@ Target-Features: arm_v7 boot-part dt ext4 fpu gpio nand pci pcie rootfs-part rtc
 Target-Depends: 
 Target-Optimization: -Os -pipe
 CPU-Type: cortex-a7+neon-vfpv4
-Linux-Version: 5.4.143
+Linux-Version: 5.4.158
 Linux-Release: 1
 Linux-Kernel-Arch: arm
 Target-Description:

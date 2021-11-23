@@ -2,7 +2,7 @@ Source-Makefile: package/libs/libpcap/Makefile
 
 Package: libpcap
 Menu: 1
-Version: 1.9.1-3
+Version: 1.9.1-3.1
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread 
 Conflicts: 
 Menu-Depends: 
@@ -23,6 +23,26 @@ Felix Fietkau <nbd@nbd.name>
 @@
 Config:
 	source "package/libs/libpcap/Config.in"
+@@
+
+Package: rpcapd
+Version: 1.9.1-3.1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libpcap
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Repository: base
+Title: Capture daemon to be controlled by a remote libpcap application
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Source: libpcap-1.9.1.tar.gz
+License: BSD-3-Clause
+LicenseFiles: LICENSE
+Type: ipkg
+Description: Capture daemon to be controlled by a remote libpcap application
+http://www.tcpdump.org/
+Felix Fietkau <nbd@nbd.name>
 @@
 
 

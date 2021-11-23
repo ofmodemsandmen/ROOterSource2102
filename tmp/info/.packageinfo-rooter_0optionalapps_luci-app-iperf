@@ -1,0 +1,21 @@
+Source-Makefile: package/rooter/0optionalapps/luci-app-iperf/Makefile
+
+Package: luci-app-iperf
+Submenu: 3. Applications
+Version: 1.000-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +iperf3-ssl
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: support for Iperf
+Maintainer: Created by DM/makefile by Cobia@whirlpool
+Source: 
+Type: ipkg
+Description:   Helper scripts to enable Iperf
+Created by DM/makefile by Cobia@whirlpool
+@@
+
+

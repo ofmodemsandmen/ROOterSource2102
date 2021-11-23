@@ -1,0 +1,21 @@
+Source-Makefile: package/rooter/0mesh/mesh-mesh/Makefile
+
+Package: mesh-mesh
+Submenu: Mesh Support
+Version: 4.500-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +kmod-batman-adv +alfred +batctl +ip
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: ROOter
+Repository: base
+Title: Install scripts for Mesh Network
+Maintainer: Created by DM/makefile by Cobia@whirlpool
+Source: 
+Type: ipkg
+Description:   Install scripts for Mesh Network
+Created by DM/makefile by Cobia@whirlpool
+@@
+
+

@@ -8,7 +8,7 @@ Target-Features: dt fpu gpio mips16 nand squashfs targz usb usbgadget
 Target-Depends: 
 Target-Optimization: -Os -pipe -mno-branch-likely -mips32r2 -mtune=24kc
 CPU-Type: 24kc+24kf
-Linux-Version: 5.4.143
+Linux-Version: 5.4.158
 Linux-Release: 1
 Linux-Kernel-Arch: mips
 Target-Description:

@@ -57,5 +57,14 @@
 			"type": "view",
 			"path": "firewall/custom"
 		}
+	},
+	
+	"admin/network/firewall/customttl": {
+		"title": "Custom TTL Settings",
+		"order": 55,
+		"action": {
+			"type": "cbi",
+			"path": "firewall/ttlx"
+		}
 	}
 }

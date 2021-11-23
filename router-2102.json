@@ -270,5 +270,39 @@
 		"ext1": "-factory.img",
 		"ext2": "-update.bin",
 		"addons": ["readme.pdf", "factory.txt"]
+	},
+	"WPJ428": {
+		"details": "Compex WPJ428",
+		"type": "1",
+		"build": "2102",
+		"config": ".config_wpj428",
+		"image": "openwrt-ipq40xx-generic-compex_wpj428-squashfs-sysupgrade.bin",	
+		"imagepath": "/ipq40xx/generic/",
+		"mod": "Compex-WPJ428",
+		"ext": "-upgrade.bin",
+		"addons": ["readme.pdf"]
+	},
+	"WRT3200ACM": {
+		"details": "Linksys WRT3200acm",
+		"type": "2",
+		"build": "2102",
+		"config": ".config_wrt3200acm",
+		"image1": "openwrt-mvebu-cortexa9-linksys_wrt3200acm-squashfs-factory.img",
+		"image2": "openwrt-mvebu-cortexa9-linksys_wrt3200acm-squashfs-sysupgrade.bin",
+		"imagepath": "/mvebu/cortexa9/",
+		"mod": "Linksys-WRT3200ACM",
+		"ext1": "-factory.img",
+		"ext2": "-update.bin",
+		"addons": ["readme.pdf", "factory.txt"]
+	},
+	"YOUKUYK1": {
+		"details": "YOUKU YK1",
+		"type": "1",
+		"config": ".config_youkuyk1",
+		"image": "openwrt-ramips-mt7620-youku_yk1-squashfs-sysupgrade.bin",
+		"imagepath": "/ramips/mt7620/",
+		"mod": "YOUKU-YK1",
+		"ext": "-upgrade.bin",
+		"addons": ["readme.pdf", "factory.txt"]
 	}
 }

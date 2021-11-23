@@ -1,0 +1,23 @@
+Source-Makefile: package/rooter/0drivers/rmbim/Makefile
+
+Package: rmbim
+Submenu: Drivers
+Version: 2019-09-11-184b707ddaa0acee84d02e0ffe599cb8b67782bd-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libubox +kmod-usb-net +kmod-usb-net-cdc-mbim +luci-proto-mbim
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: ROOter
+Repository: base
+Title: Control utility for mobile broadband modems
+Maintainer: John Crispin <john@phrozen.org>
+Source: umbim-2019-09-11-184b707ddaa0acee84d02e0ffe599cb8b67782bd.tar.xz
+License: GPLv2
+Type: ipkg
+Description:   rmbim is a command line tool for controlling mobile broadband modems using
+  the MBIM-protocol.
+John Crispin <john@phrozen.org>
+@@
+
+

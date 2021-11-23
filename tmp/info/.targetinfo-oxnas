@@ -8,7 +8,7 @@ Target-Features: dt gpio ramdisk rtc squashfs usb
 Target-Depends: 
 Target-Optimization: -Os -pipe
 CPU-Type: xscale
-Linux-Version: 5.4.143
+Linux-Version: 5.4.158
 Linux-Release: 1
 Linux-Kernel-Arch: arm
 Target-Description:
@@ -24,7 +24,7 @@ Target-Features: dt gpio ramdisk rtc source-only squashfs usb
 Target-Depends: 
 Target-Optimization: -Os -pipe
 CPU-Type: arm926ej-s
-Linux-Version: 5.4.143
+Linux-Version: 5.4.158
 Linux-Release: 1
 Linux-Kernel-Arch: arm
 Target-Description:
@@ -62,7 +62,7 @@ Target-Features: dt gpio nand pci pcie ramdisk rtc squashfs ubifs usb
 Target-Depends: 
 Target-Optimization: -Os -pipe
 CPU-Type: mpcore
-Linux-Version: 5.4.143
+Linux-Version: 5.4.158
 Linux-Release: 1
 Linux-Kernel-Arch: arm
 Target-Description:

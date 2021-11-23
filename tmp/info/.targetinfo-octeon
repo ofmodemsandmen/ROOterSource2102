@@ -8,8 +8,8 @@ Target-Features: dt gpio pci pcie ramdisk squashfs usb
 Target-Depends: 
 Target-Optimization: -Os -pipe -mno-branch-likely -march=octeon+ -mabi=64
 CPU-Type: octeonplus
-Linux-Version: 5.4.143
-Linux-Testing-Version: 5.4.143
+Linux-Version: 5.4.158
+Linux-Testing-Version: 5.4.158
 Linux-Release: 1
 Linux-Kernel-Arch: mips
 Target-Description:

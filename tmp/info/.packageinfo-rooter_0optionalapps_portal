@@ -1,0 +1,25 @@
+Source-Makefile: package/rooter/0optionalapps/portal/Makefile
+
+Package: portal
+Submenu: Optional Applications
+Version: 4.0.3-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libpthread +iptables-mod-ipopt +libmicrohttpd-no-ssl
+Conflicts: nodogsplash2
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: ROOter
+Repository: base
+Title: Open public network gateway daemon
+Maintainer: Moritz Warning <moritzwarning@web.de>
+Source: nodogsplash-4.0.3.tar.gz
+License: GPL-2.0+
+Type: ipkg
+Description: 	Portal is a Captive Portal that offers a simple way to
+	restricte access to the Internet by showing a splash
+	page to the user detailing why Internet is blocked.
+https://github.com/nodogsplash/nodogsplash
+Moritz Warning <moritzwarning@web.de>
+@@
+
+

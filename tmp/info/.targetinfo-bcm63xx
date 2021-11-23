@@ -8,7 +8,7 @@ Target-Features: atm dt gpio pci pcie pcmcia squashfs usb usbgadget
 Target-Depends: 
 Target-Optimization: -Os -pipe -mno-branch-likely -mips32 -mtune=mips32
 CPU-Type: mips32
-Linux-Version: 5.4.143
+Linux-Version: 5.4.158
 Linux-Release: 1
 Linux-Kernel-Arch: mips
 Target-Description:
@@ -34,7 +34,7 @@ Target-Features: atm dt gpio pci pcie pcmcia squashfs usb usbgadget
 Target-Depends: 
 Target-Optimization: -Os -pipe -mno-branch-likely -mips32 -mtune=mips32
 CPU-Type: mips32
-Linux-Version: 5.4.143
+Linux-Version: 5.4.158
 Linux-Release: 1
 Linux-Kernel-Arch: mips
 Target-Description:
@@ -1560,7 +1560,7 @@ Target-Features: atm dt gpio nand pci pcie pcmcia squashfs usb usbgadget
 Target-Depends: 
 Target-Optimization: -Os -pipe -mno-branch-likely -mips32 -mtune=mips32
 CPU-Type: mips32
-Linux-Version: 5.4.143
+Linux-Version: 5.4.158
 Linux-Release: 1
 Linux-Kernel-Arch: mips
 Target-Description:

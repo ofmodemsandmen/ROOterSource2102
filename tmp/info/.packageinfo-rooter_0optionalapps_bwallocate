@@ -1,0 +1,21 @@
+Source-Makefile: package/rooter/0optionalapps/bwallocate/Makefile
+
+Package: bwallocate
+Submenu: Optional Applications
+Version: 4.500-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +ext-throttle
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: ROOter
+Repository: base
+Title: Install scripts for Bandwidth Allocation
+Maintainer: Created by DM/makefile by Cobia@whirlpool
+Source: 
+Type: ipkg
+Description:   Install scripts for Bandwidth Allocation
+Created by DM/makefile by Cobia@whirlpool
+@@
+
+

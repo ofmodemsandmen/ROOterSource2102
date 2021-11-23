@@ -77,7 +77,7 @@
  
  	{ USB_DEVICE(CMOTECH_VENDOR_ID, CMOTECH_PRODUCT_6001) },
  	{ USB_DEVICE(CMOTECH_VENDOR_ID, CMOTECH_PRODUCT_CMU_300) },
-@@ -2063,6 +2078,22 @@
+@@ -2083,6 +2098,22 @@
  	  .driver_info = RSVD(0) | RSVD(1) | RSVD(6) },
  	{ USB_DEVICE(0x0489, 0xe0b5),						/* Foxconn T77W968 ESIM */
  	  .driver_info = RSVD(0) | RSVD(1) | RSVD(6) },
@@ -97,9 +97,9 @@
 +	 .driver_info = RSVD(4) | RSVD(5) },
 +	{ USB_DEVICE_INTERFACE_CLASS(0x161c, 0x9115, 0xff),
 +	 .driver_info = RSVD(4) | RSVD(5) },
+	{ USB_DEVICE_INTERFACE_CLASS(0x0489, 0xe0db, 0xff),			/* Foxconn T99W265 MBIM */
+	  .driver_info = RSVD(3) },
  	{ USB_DEVICE(0x1508, 0x1001),						/* Fibocom NL668 (IOT version) */
- 	  .driver_info = RSVD(4) | RSVD(5) | RSVD(6) },
- 	{ USB_DEVICE(0x2cb7, 0x0104),						/* Fibocom NL678 series */
 @@ -2131,12 +2159,19 @@
  {
  	struct usb_interface_descriptor *iface_desc =
@@ -128,6 +128,7 @@
  	{DEVICE_SWI(0x1199, 0x9090)},	/* Sierra Wireless EM7565 QDL */
  	{DEVICE_SWI(0x1199, 0x9091)},	/* Sierra Wireless EM7565 */
 +	{DEVICE_SWI(0x1199, 0x90b1)},	/* Sierra Wireless EM7511 */
+	{DEVICE_SWI(0x1199, 0x90d2)},	/* Sierra Wireless EM9191 QDL */
  	{DEVICE_SWI(0x413c, 0x81a2)},	/* Dell Wireless 5806 Gobi(TM) 4G LTE Mobile Broadband Card */
  	{DEVICE_SWI(0x413c, 0x81a3)},	/* Dell Wireless 5570 HSPA+ (42Mbps) Mobile Broadband Card */
  	{DEVICE_SWI(0x413c, 0x81a4)},	/* Dell Wireless 5570e HSPA+ (42Mbps) Mobile Broadband Card */

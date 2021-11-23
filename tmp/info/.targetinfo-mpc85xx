@@ -8,7 +8,7 @@ Target-Features: dt gpio pci pcie ramdisk rtc squashfs usb
 Target-Depends: 
 Target-Optimization: -Os -pipe -mcpu=8540
 CPU-Type: 8540
-Linux-Version: 5.4.143
+Linux-Version: 5.4.158
 Linux-Release: 1
 Linux-Kernel-Arch: powerpc
 Target-Description:
@@ -24,7 +24,7 @@ Target-Features: dt gpio nand pci pcie ramdisk rtc squashfs usb
 Target-Depends: 
 Target-Optimization: -Os -pipe -mcpu=8540
 CPU-Type: 8540
-Linux-Version: 5.4.143
+Linux-Version: 5.4.158
 Linux-Release: 1
 Linux-Kernel-Arch: powerpc
 Target-Description:
@@ -76,7 +76,7 @@ Target-Features: dt gpio nand pci pcie ramdisk rtc squashfs usb
 Target-Depends: 
 Target-Optimization: -Os -pipe -mcpu=8540
 CPU-Type: 8540
-Linux-Version: 5.4.143
+Linux-Version: 5.4.158
 Linux-Release: 1
 Linux-Kernel-Arch: powerpc
 Target-Description:
@@ -142,7 +142,7 @@ Target-Features: dt gpio pci pcie ramdisk rtc squashfs usb
 Target-Depends: 
 Target-Optimization: -Os -pipe -mcpu=8540
 CPU-Type: 8540
-Linux-Version: 5.4.143
+Linux-Version: 5.4.158
 Linux-Release: 1
 Linux-Kernel-Arch: powerpc
 Target-Description:

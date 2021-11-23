@@ -2,7 +2,7 @@ Source-Makefile: package/kernel/ath10k-ct/Makefile
 
 Package: kmod-ath10k-ct
 Submenu: Wireless Drivers
-Version: <LINUX_VERSION>+2021-06-03-b44cd7b2e7b0df5995ece18f358d4dfc40834ba1-0
+Version: <LINUX_VERSION>+2021-09-22-e6a7d5b5b834737cd12e357b5efdc2e42d923bf6-0
 Depends: +kmod-mac80211 +kmod-ath +@DRIVER_11N_SUPPORT +@DRIVER_11AC_SUPPORT @PCI_SUPPORT +kmod-hwmon-core
 Conflicts: 
 Menu-Depends: 
@@ -12,7 +12,7 @@ Section: kernel
 Category: Kernel modules
 Title: ath10k-ct driver optimized for CT ath10k firmware
 Maintainer: Ben Greear <greearb@candelatech.com>
-Source: ath10k-ct-2021-06-03-b44cd7b2e7b0df5995ece18f358d4dfc40834ba1.tar.xz
+Source: ath10k-ct-2021-09-22-e6a7d5b5b834737cd12e357b5efdc2e42d923bf6.tar.xz
 License: GPLv2
 Type: ipkg
 Description: ath10k-ct driver optimized for CT ath10k firmware
@@ -28,7 +28,7 @@ Config:
 
 Package: kmod-ath10k-ct-smallbuffers
 Submenu: Wireless Drivers
-Version: <LINUX_VERSION>+2021-06-03-b44cd7b2e7b0df5995ece18f358d4dfc40834ba1-0
+Version: <LINUX_VERSION>+2021-09-22-e6a7d5b5b834737cd12e357b5efdc2e42d923bf6-0
 Depends: +kmod-mac80211 +kmod-ath +@DRIVER_11N_SUPPORT +@DRIVER_11AC_SUPPORT @PCI_SUPPORT +kmod-hwmon-core
 Conflicts: 
 Menu-Depends: 
@@ -38,7 +38,7 @@ Section: kernel
 Category: Kernel modules
 Title: ath10k-ct driver optimized for CT ath10k firmware (small buffers for low-RAM devices)
 Maintainer: Ben Greear <greearb@candelatech.com>
-Source: ath10k-ct-2021-06-03-b44cd7b2e7b0df5995ece18f358d4dfc40834ba1.tar.xz
+Source: ath10k-ct-2021-09-22-e6a7d5b5b834737cd12e357b5efdc2e42d923bf6.tar.xz
 License: GPLv2
 Type: ipkg
 Description: ath10k-ct driver optimized for CT ath10k firmware (small buffers for low-RAM devices)

@@ -1,0 +1,20 @@
+Source-Makefile: package/rooter-builds/ext-arc16/Makefile
+
+Package: ext-arc16
+Version: 1.000-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +luci +ext-rooter-basic +luci-app-mwan3 +luci-app-dnsmasq-ipset +luci-app-ddns +ddns-scripts +luci-app-rootervpn +bwmon +464xlat +ext-theme +luci-theme-argon +argon-config +luci-theme-tomato +ext-material +ext-login +ca-bundle +ca-certificates +luci-app-ksmbd +usb-storage +ext-p910nd +luci-app-sqm +kmod-sched-cake +luci-app-nft-qos +ext-command +ext-speedtest +luci-app-guestwifi +openvpn-easy-rsa +openvpn-openssl +ext-extra +luci-app-hotspot +luci-app-wol +usbmuxd +libusbmuxd-utils +libimobiledevice-utils +kmod-usb-net-ipheth +nano +picocom +wpad +wget +qfirehose
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: ROOter
+Repository: base
+Title: ROOter support for 16meg and larger routers
+Maintainer: Created by DM/makefile by Cobia@whirlpool
+Source: 
+Type: ipkg
+Description:   Helper scripts to enable ROOter on 16meg and larger routers
+Created by DM/makefile by Cobia@whirlpool
+@@
+
+

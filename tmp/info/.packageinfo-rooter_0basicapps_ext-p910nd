@@ -1,0 +1,21 @@
+Source-Makefile: package/rooter/0basicapps/ext-p910nd/Makefile
+
+Package: ext-p910nd
+Submenu: Basic Applications
+Version: 1.000-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +p910nd +kmod-usb-printer +kmod-usb-ohci
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: ROOter
+Repository: base
+Title: Install Print Server
+Maintainer: Created by DM/makefile by Cobia@whirlpool
+Source: 
+Type: ipkg
+Description:   Helper scripts to install print Server
+Created by DM/makefile by Cobia@whirlpool
+@@
+
+

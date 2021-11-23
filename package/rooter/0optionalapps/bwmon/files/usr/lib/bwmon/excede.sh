@@ -15,6 +15,9 @@ if [ $lock = "1" ]; then
 		if [ -z $action ]; then
 			action=0
 		fi
+		if [ -z $action ]; then
+			action=0
+		fi
 		if [ ! -e /usr/lib/throttle/throttle.sh ]; then
 			action=0
 		fi

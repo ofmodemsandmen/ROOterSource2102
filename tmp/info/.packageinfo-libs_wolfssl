@@ -4,7 +4,7 @@ Build-Depends: libtool gettext libiconv
 Package: libwolfssl
 Menu: 1
 Submenu: SSL
-Version: 4.7.0-stable-2
+Version: 4.8.1-stable-0
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +WOLFSSL_HAS_DEVCRYPTO:kmod-cryptodev +WOLFSSL_HAS_AFALG:kmod-crypto-user
 Conflicts: 
 Menu-Depends: 
@@ -14,7 +14,7 @@ Category: Libraries
 Repository: base
 Title: wolfSSL library
 Maintainer: Eneas U de Queiroz <cotequeiroz@gmail.com>
-Source: wolfssl-4.7.0-stable.tar.gz
+Source: wolfssl-4.8.1-stable.tar.gz
 License: GPL-2.0-or-later
 LicenseFiles: LICENSING COPYING
 Type: ipkg

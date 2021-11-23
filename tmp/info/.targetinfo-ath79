@@ -8,8 +8,8 @@ Target-Features: dt gpio mips16 pci ramdisk squashfs usb usbgadget
 Target-Depends: 
 Target-Optimization: -Os -pipe -mno-branch-likely -mips32r2 -mtune=24kc
 CPU-Type: 24kc
-Linux-Version: 5.4.143
-Linux-Testing-Version: 5.4.143
+Linux-Version: 5.4.158
+Linux-Testing-Version: 5.4.158
 Linux-Release: 1
 Linux-Kernel-Arch: mips
 Target-Description:
@@ -25,8 +25,8 @@ Target-Features: dt gpio mips16 pci ramdisk squashfs usb usbgadget
 Target-Depends: 
 Target-Optimization: -Os -pipe -mno-branch-likely -mips32r2 -mtune=24kc
 CPU-Type: 24kc
-Linux-Version: 5.4.143
-Linux-Testing-Version: 5.4.143
+Linux-Version: 5.4.158
+Linux-Testing-Version: 5.4.158
 Linux-Release: 1
 Linux-Kernel-Arch: mips
 Target-Description:
@@ -4069,8 +4069,8 @@ Target-Features: dt gpio minor mips16 nand pci ramdisk squashfs usb usbgadget
 Target-Depends: 
 Target-Optimization: -Os -pipe -mno-branch-likely -mips32r2 -mtune=24kc
 CPU-Type: 24kc
-Linux-Version: 5.4.143
-Linux-Testing-Version: 5.4.143
+Linux-Version: 5.4.158
+Linux-Testing-Version: 5.4.158
 Linux-Release: 1
 Linux-Kernel-Arch: mips
 Target-Description:
@@ -4087,20 +4087,6 @@ Target-Profile-SupportedDevices: mikrotik,routerboard-493g rb-493g
 Target-Profile-Default: n
 Target-Profile-Description:
 Build firmware images for MikroTik RouterBOARD 493G
-
-
-
-@@
-
-Target-Profile: DEVICE_mikrotik_routerboard-912uag-2hpnd
-Target-Profile-Name: MikroTik RouterBOARD 912UAG-2HPnD
-Target-Profile-Packages: nand-utils kmod-usb-ehci kmod-usb2 
-Target-Profile-hasImageMetadata: 1
-Target-Profile-SupportedDevices: mikrotik,routerboard-912uag-2hpnd rb-912uag-2hpnd
-
-Target-Profile-Default: n
-Target-Profile-Description:
-Build firmware images for MikroTik RouterBOARD 912UAG-2HPnD
 
 
 
@@ -4143,6 +4129,20 @@ Target-Profile-SupportedDevices: mikrotik,routerboard-lhg-2nd
 
 Target-Profile-Description:
 Build firmware images for MikroTik RouterBOARD LHG 2nD (LHG 2)
+
+
+
+@@
+
+Target-Profile: DEVICE_mikrotik_routerboard-sxtr
+Target-Profile-Name: MikroTik RouterBOARD SXTR&R11e
+Target-Profile-Packages:  kmod-usb3 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: mikrotik,routerboard-sxtr
+
+
+Target-Profile-Description:
+Build firmware images for MikroTik RouterBOARD SXTR&R11e
 
 
 
@@ -4199,8 +4199,8 @@ Target-Features: dt gpio mips16 nand pci ramdisk squashfs usb usbgadget
 Target-Depends: 
 Target-Optimization: -Os -pipe -mno-branch-likely -mips32r2 -mtune=24kc
 CPU-Type: 24kc
-Linux-Version: 5.4.143
-Linux-Testing-Version: 5.4.143
+Linux-Version: 5.4.158
+Linux-Testing-Version: 5.4.158
 Linux-Release: 1
 Linux-Kernel-Arch: mips
 Target-Description:
@@ -4427,8 +4427,8 @@ Target-Features: dt gpio mips16 pci ramdisk small_flash squashfs usb usbgadget
 Target-Depends: 
 Target-Optimization: -Os -pipe -mno-branch-likely -mips32r2 -mtune=24kc
 CPU-Type: 24kc
-Linux-Version: 5.4.143
-Linux-Testing-Version: 5.4.143
+Linux-Version: 5.4.158
+Linux-Testing-Version: 5.4.158
 Linux-Release: 1
 Linux-Kernel-Arch: mips
 Target-Description:

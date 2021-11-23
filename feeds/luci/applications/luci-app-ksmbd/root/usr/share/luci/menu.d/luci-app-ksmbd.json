@@ -1,6 +1,6 @@
 {
 	"admin/services/ksmbd": {
-		"title": "Network Shares",
+		"title": "KSMBD Network Shares",
 		"action": {
 			"type": "view",
 			"path": "ksmbd"

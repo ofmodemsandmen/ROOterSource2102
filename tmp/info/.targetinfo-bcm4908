@@ -8,8 +8,8 @@ Target-Features: dt gpio nand pci pcie squashfs usb
 Target-Depends: 
 Target-Optimization: -Os -pipe -mcpu=cortex-a53
 CPU-Type: cortex-a53
-Linux-Version: 5.4.143
-Linux-Testing-Version: 5.4.143
+Linux-Version: 5.4.158
+Linux-Testing-Version: 5.4.158
 Linux-Release: 1
 Linux-Kernel-Arch: arm64
 Target-Description:
@@ -25,8 +25,8 @@ Target-Features: dt gpio nand pci pcie squashfs usb
 Target-Depends: 
 Target-Optimization: -Os -pipe -mcpu=cortex-a53
 CPU-Type: cortex-a53
-Linux-Version: 5.4.143
-Linux-Testing-Version: 5.4.143
+Linux-Version: 5.4.158
+Linux-Testing-Version: 5.4.158
 Linux-Release: 1
 Linux-Kernel-Arch: arm64
 Target-Description:

@@ -8,7 +8,7 @@ Target-Features: audio boot-part display ext4 fpu gpio rootfs-part squashfs usb 
 Target-Depends: 
 Target-Optimization: -Os -pipe
 CPU-Type: xscale
-Linux-Version: 5.4.143
+Linux-Version: 5.4.158
 Linux-Release: 1
 Linux-Kernel-Arch: arm
 Target-Description:
@@ -25,7 +25,7 @@ Target-Features: audio boot-part display dt ext4 fpu gpio rootfs-part squashfs u
 Target-Depends: 
 Target-Optimization: -Os -pipe
 CPU-Type: arm1176jzf-s+vfp
-Linux-Version: 5.4.143
+Linux-Version: 5.4.158
 Linux-Release: 1
 Linux-Kernel-Arch: arm
 Target-Description:
@@ -56,7 +56,7 @@ Target-Features: arm_v7 audio boot-part display dt ext4 fpu gpio pci pcie rootfs
 Target-Depends: 
 Target-Optimization: -Os -pipe
 CPU-Type: cortex-a7+neon-vfpv4
-Linux-Version: 5.4.143
+Linux-Version: 5.4.158
 Linux-Release: 1
 Linux-Kernel-Arch: arm
 Target-Description:
@@ -118,7 +118,7 @@ Target-Features: audio boot-part display dt ext4 fpu gpio pci rootfs-part squash
 Target-Depends: 
 Target-Optimization: -Os -pipe -mcpu=cortex-a53
 CPU-Type: cortex-a53
-Linux-Version: 5.4.143
+Linux-Version: 5.4.158
 Linux-Release: 1
 Linux-Kernel-Arch: arm64
 Target-Description:
@@ -165,7 +165,7 @@ Target-Features: audio boot-part display dt ext4 fpu gpio pci pcie rootfs-part s
 Target-Depends: 
 Target-Optimization: -Os -pipe
 CPU-Type: cortex-a72
-Linux-Version: 5.4.143
+Linux-Version: 5.4.158
 Linux-Release: 1
 Linux-Kernel-Arch: arm64
 Target-Description:

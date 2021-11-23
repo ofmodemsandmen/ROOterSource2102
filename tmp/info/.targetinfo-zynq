@@ -8,7 +8,7 @@ Target-Features: arm_v7 boot-part display dt fpu gpio pci rootfs-part rtc squash
 Target-Depends: 
 Target-Optimization: -Os -pipe
 CPU-Type: cortex-a9+neon
-Linux-Version: 5.4.143
+Linux-Version: 5.4.158
 Linux-Release: 1
 Linux-Kernel-Arch: arm
 Target-Description:

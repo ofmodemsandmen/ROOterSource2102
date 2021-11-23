@@ -1,0 +1,21 @@
+Source-Makefile: package/rooter/0themes/luci-theme-tomato/Makefile
+
+Package: luci-theme-tomato
+Submenu: Themes
+Version: 1.000-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: ROOter
+Repository: base
+Title: Install scripts for Tomato theme
+Maintainer: Created by DM/makefile by Cobia@whirlpool
+Source: 
+Type: ipkg
+Description:   Helper scripts to install scripts for Tomato theme
+Created by DM/makefile by Cobia@whirlpool
+@@
+
+

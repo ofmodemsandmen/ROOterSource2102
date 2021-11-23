@@ -8,7 +8,7 @@ Target-Features: dt fpu gpio pci pcie rtc targz usb virtio
 Target-Depends: 
 Target-Optimization: -Os -pipe -mcpu=generic
 CPU-Type: generic
-Linux-Version: 5.4.143
+Linux-Version: 5.4.158
 Linux-Release: 1
 Linux-Kernel-Arch: arm64
 Target-Description:

@@ -8,7 +8,7 @@ Target-Features: display dt gpio usb
 Target-Depends: 
 Target-Optimization: -Os -pipe -matomic -mcpu=archs
 CPU-Type: archs
-Linux-Version: 5.4.143
+Linux-Version: 5.4.158
 Linux-Release: 1
 Linux-Kernel-Arch: arc
 Target-Description:
@@ -24,7 +24,7 @@ Target-Features: display dt ext4 gpio ramdisk usb
 Target-Depends: 
 Target-Optimization: -Os -pipe -matomic -mcpu=archs
 CPU-Type: archs
-Linux-Version: 5.4.143
+Linux-Version: 5.4.158
 Linux-Release: 1
 Linux-Kernel-Arch: arc
 Target-Description:

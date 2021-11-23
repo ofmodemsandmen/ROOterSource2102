@@ -1,0 +1,20 @@
+Source-Makefile: package/rooter-builds/ext-arc/Makefile
+
+Package: ext-arc
+Version: 1.000-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +luci +ext-rooter-basic +luci-app-ddns +ddns-scripts +luci-app-rootervpn +bwmon +464xlat +ext-theme +luci-theme-argon +argon-config +ext-login +luci-theme-tomato +ext-material +ca-bundle +ca-certificates +luci-app-ksmbd +usb-storage +ext-p910nd +luci-app-sqm +kmod-sched-cake +luci-app-nft-qos +ext-command +ext-speedtest +openvpn-easy-rsa +openvpn-openssl +ext-extra +luci-app-hotspot +luci-app-wol +luci-app-guestwifi +usbmuxd +libusbmuxd-utils +libimobiledevice-utils +kmod-usb-net-ipheth +nano +picocom +wpad +wget +qfirehose
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: ROOter
+Repository: base
+Title: ROOter support w/o MWan3 for 16meg and larger routers
+Maintainer: Created by DM/makefile by Cobia@whirlpool
+Source: 
+Type: ipkg
+Description:   Helper scripts to enable ROOter w/o MWan3 on 16meg and larger routers
+Created by DM/makefile by Cobia@whirlpool
+@@
+
+

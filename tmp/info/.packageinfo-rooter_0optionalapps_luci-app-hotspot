@@ -1,0 +1,21 @@
+Source-Makefile: package/rooter/0optionalapps/luci-app-hotspot/Makefile
+
+Package: luci-app-hotspot
+Submenu: 3. Applications
+Version: 1.000-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +iw +iwinfo
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Repository: base
+Title: support for Wifi Hotspot Manager
+Maintainer: Created by DM/makefile by Cobia@whirlpool
+Source: 
+Type: ipkg
+Description:   Helper scripts to enable Wifi Hotspot Manager
+Created by DM/makefile by Cobia@whirlpool
+@@
+
+

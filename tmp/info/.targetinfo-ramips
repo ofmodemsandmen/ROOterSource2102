@@ -8,8 +8,8 @@ Target-Features: gpio squashfs
 Target-Depends: 
 Target-Optimization: -Os -pipe -mno-branch-likely -mips32 -mtune=mips32
 CPU-Type: mips32
-Linux-Version: 5.4.143
-Linux-Testing-Version: 5.4.143
+Linux-Version: 5.4.158
+Linux-Testing-Version: 5.4.158
 Linux-Release: 1
 Linux-Kernel-Arch: mips
 Target-Description:
@@ -25,8 +25,8 @@ Target-Features: dt gpio mips16 pci ramdisk squashfs usb
 Target-Depends: 
 Target-Optimization: -Os -pipe -mno-branch-likely -mips32r2 -mtune=24kc
 CPU-Type: 24kc
-Linux-Version: 5.4.143
-Linux-Testing-Version: 5.4.143
+Linux-Version: 5.4.158
+Linux-Testing-Version: 5.4.158
 Linux-Release: 1
 Linux-Kernel-Arch: mips
 Target-Description:
@@ -1582,8 +1582,8 @@ Target-Features: dt gpio minor mips16 nand pci ramdisk rtc squashfs usb
 Target-Depends: 
 Target-Optimization: -Os -pipe -mno-branch-likely -mips32r2 -mtune=24kc
 CPU-Type: 24kc
-Linux-Version: 5.4.143
-Linux-Testing-Version: 5.4.143
+Linux-Version: 5.4.158
+Linux-Testing-Version: 5.4.158
 Linux-Release: 1
 Linux-Kernel-Arch: mips
 Target-Description:
@@ -1753,6 +1753,20 @@ Target-Profile-SupportedDevices: buffalo,wsr-1166dhp wsr-1166
 
 Target-Profile-Description:
 Build firmware images for Buffalo WSR-1166DHP
+
+
+
+@@
+
+Target-Profile: DEVICE_beeline_smartbox-giga
+Target-Profile-Name: Beeline SmartBox GIGA
+Target-Profile-Packages: kmod-mt7603 kmod-mt7615e kmod-mt7663-firmware-ap kmod-usb3 kmod-usb-ledtrig-usbport uboot-envtools 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: beeline,smartbox-giga
+
+
+Target-Profile-Description:
+Build firmware images for Beeline SmartBox GIGA
 
 
 
@@ -3141,6 +3155,20 @@ Build firmware images for UniElec U7621-06 16M
 
 @@
 
+Target-Profile: DEVICE_dualq_H721-16m
+Target-Profile-Name: DualQ H721 16M
+Target-Profile-Packages: kmod-ata-ahci kmod-sdhci-mt7620 kmod-usb3 -wpad-basic-wolfssl 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: dualq,H721-16m H721-256M-16M dualq,H721-256m-16m
+
+
+Target-Profile-Description:
+Build firmware images for DualQ H721 16M
+
+
+
+@@
+
 Target-Profile: DEVICE_unielec_u7621-06-64m
 Target-Profile-Name: UniElec U7621-06 64M
 Target-Profile-Packages: kmod-ata-ahci kmod-sdhci-mt7620 kmod-usb3 -wpad-basic-wolfssl 
@@ -3381,6 +3409,76 @@ Build firmware images for Youku YK-L2
 
 @@
 
+Target-Profile: DEVICE_zbtlink_zbt-wg209-16m
+Target-Profile-Name: Zbtlink ZBT-WG209 16M
+Target-Profile-Packages: kmod-ata-ahci kmod-sdhci-mt7620 kmod-mt7603 kmod-mt76x2 kmod-usb3 kmod-usb-ledtrig-usbport 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: zbtlink,zbt-wg209-16m zbt-wg209 zbt-wg209-16M
+
+
+Target-Profile-Description:
+Build firmware images for Zbtlink ZBT-WG209 16M
+
+
+
+@@
+
+Target-Profile: DEVICE_zbtlink_zbt-wg259-16m
+Target-Profile-Name: Zbtlink ZBT-WG259 16M
+Target-Profile-Packages: kmod-ata-ahci kmod-sdhci-mt7620 kmod-mt7603 kmod-mt76x2 kmod-usb3 kmod-usb-ledtrig-usbport kmod-mt7615e kmod-mt76 kmod-mt7615-firmware kmod-mt7663-firmware-ap kmod-mt7663-firmware-sta  
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: zbtlink,zbt-wg259-16m zbt-wg259 zbt-wg259-16M
+
+
+Target-Profile-Description:
+Build firmware images for Zbtlink ZBT-WG259 16M
+
+
+
+@@
+
+Target-Profile: DEVICE_zbtlink_zbt-wg1608-16m
+Target-Profile-Name: Zbtlink ZBT-WG1608 16M
+Target-Profile-Packages: kmod-ata-ahci kmod-sdhci-mt7620 kmod-mt7603 kmod-mt76x2 kmod-usb3 kmod-usb-ledtrig-usbport kmod-mt7615e kmod-mt76 kmod-mt7615-firmware kmod-mt7663-firmware-ap kmod-mt7663-firmware-sta  
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: zbtlink,zbt-wg1608-16m zbt-wg1608 zbt-wg1608-16M
+
+
+Target-Profile-Description:
+Build firmware images for Zbtlink ZBT-WG1608 16M
+
+
+
+@@
+
+Target-Profile: DEVICE_zbtlink_zbt-wg1602-16m
+Target-Profile-Name: Zbtlink ZBT-WG1602 16M
+Target-Profile-Packages: kmod-sdhci-mt7620 kmod-mt7603 kmod-mt76x2 kmod-usb3 kmod-usb-ledtrig-usbport 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: zbtlink,zbt-wg1602-16m
+
+
+Target-Profile-Description:
+Build firmware images for Zbtlink ZBT-WG1602 16M
+
+
+
+@@
+
+Target-Profile: DEVICE_mesh_mk01k21
+Target-Profile-Name: Mesh MK01K21 16M
+Target-Profile-Packages: kmod-ata-ahci kmod-sdhci-mt7620 kmod-usb3 kmod-usb-ledtrig-usbport kmod-mt7615e kmod-mt76 kmod-mt7615-firmware kmod-mt7663-firmware-ap kmod-mt7663-firmware-sta  
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: mesh,mk01k21 mk01k21 mesh,mk01k21
+
+
+Target-Profile-Description:
+Build firmware images for Mesh MK01K21 16M
+
+
+
+@@
+
 Target-Profile: DEVICE_zbtlink_zbt-we1326
 Target-Profile-Name: Zbtlink ZBT-WE1326
 Target-Profile-Packages: kmod-mt7603 kmod-mt76x2 kmod-usb3 kmod-sdhci-mt7620 
@@ -3425,13 +3523,27 @@ Build firmware images for Zbtlink ZBT-WG2626
 
 Target-Profile: DEVICE_zbtlink_zbt-wg3526-16m
 Target-Profile-Name: Zbtlink ZBT-WG3526 16M
-Target-Profile-Packages: kmod-ata-ahci kmod-sdhci-mt7620 kmod-mt7603 kmod-mt76x2 kmod-usb3 kmod-usb-ledtrig-usbport 
+Target-Profile-Packages: kmod-ata-ahci kmod-sdhci-mt7620 kmod-mt7603 kmod-mt76x2 kmod-usb3 kmod-usb-ledtrig-usbport kmod-mt7615e kmod-mt76 kmod-mt7615-firmware kmod-mt7663-firmware-ap kmod-mt7663-firmware-sta  
 Target-Profile-hasImageMetadata: 1
 Target-Profile-SupportedDevices: zbtlink,zbt-wg3526-16m zbt-wg3526 zbt-wg3526-16M
 
 
 Target-Profile-Description:
 Build firmware images for Zbtlink ZBT-WG3526 16M
+
+
+
+@@
+
+Target-Profile: DEVICE_zbtlink_zbt-wg827-16m
+Target-Profile-Name: Zbtlink ZBT-WG827 16M
+Target-Profile-Packages: kmod-ata-ahci kmod-sdhci-mt7620 kmod-mt7603 kmod-mt76x2 kmod-usb3 kmod-usb-ledtrig-usbport kmod-mt7615e kmod-mt76 kmod-mt7615-firmware kmod-mt7663-firmware-ap kmod-mt7663-firmware-sta  
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: zbtlink,zbt-wg827-16m zbt-wg827 zbt-wg827-16M
+
+
+Target-Profile-Description:
+Build firmware images for Zbtlink ZBT-WG827 16M
 
 
 
@@ -3502,8 +3614,8 @@ Target-Features: dt gpio mips16 pci ramdisk squashfs usb
 Target-Depends: 
 Target-Optimization: -Os -pipe -mno-branch-likely -mips32r2 -mtune=24kc
 CPU-Type: 24kc
-Linux-Version: 5.4.143
-Linux-Testing-Version: 5.4.143
+Linux-Version: 5.4.158
+Linux-Testing-Version: 5.4.158
 Linux-Release: 1
 Linux-Kernel-Arch: mips
 Target-Description:
@@ -3589,6 +3701,20 @@ Target-Profile-SupportedDevices: cudy,wr1000 wr1000
 
 Target-Profile-Description:
 Build firmware images for Cudy WR1000
+
+
+
+@@
+
+Target-Profile: DEVICE_cudy_lt500
+Target-Profile-Name: Cudy LT500
+Target-Profile-Packages: kmod-mt76x2 
+Target-Profile-hasImageMetadata: 1
+Target-Profile-SupportedDevices: cudy,lt500 lt500
+
+
+Target-Profile-Description:
+Build firmware images for Cudy LT500
 
 
 
@@ -4585,8 +4711,8 @@ Target-Features: dt gpio mips16 pci small_flash squashfs usb
 Target-Depends: 
 Target-Optimization: -Os -pipe -mno-branch-likely -mips32r2 -mtune=24kc
 CPU-Type: 24kc
-Linux-Version: 5.4.143
-Linux-Testing-Version: 5.4.143
+Linux-Version: 5.4.158
+Linux-Testing-Version: 5.4.158
 Linux-Release: 1
 Linux-Kernel-Arch: mips
 Target-Description:
@@ -4714,8 +4840,8 @@ Target-Features: dt gpio mips16 ramdisk small_flash squashfs usb
 Target-Depends: 
 Target-Optimization: -Os -pipe -mno-branch-likely -mips32r2 -mtune=24kc
 CPU-Type: 24kc
-Linux-Version: 5.4.143
-Linux-Testing-Version: 5.4.143
+Linux-Version: 5.4.158
+Linux-Testing-Version: 5.4.158
 Linux-Release: 1
 Linux-Kernel-Arch: mips
 Target-Description:
@@ -6245,8 +6371,8 @@ Target-Features: dt gpio mips16 pci small_flash squashfs usb
 Target-Depends: 
 Target-Optimization: -Os -pipe -mno-branch-likely -mips32r2 -mtune=74kc
 CPU-Type: 74kc
-Linux-Version: 5.4.143
-Linux-Testing-Version: 5.4.143
+Linux-Version: 5.4.158
+Linux-Testing-Version: 5.4.158
 Linux-Release: 1
 Linux-Kernel-Arch: mips
 Target-Description:

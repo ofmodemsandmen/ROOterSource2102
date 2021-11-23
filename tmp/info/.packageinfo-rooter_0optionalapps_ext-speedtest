@@ -1,0 +1,21 @@
+Source-Makefile: package/rooter/0optionalapps/ext-speedtest/Makefile
+
+Package: ext-speedtest
+Submenu: Optional Applications
+Version: 1.000-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +httping +curl +coreutils +coreutils-date
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: ROOter
+Repository: base
+Title: support for SpeedTest.net
+Maintainer: Created by DM/makefile by Cobia@whirlpool
+Source: 
+Type: ipkg
+Description:   Helper scripts to enable SpeedTest.net
+Created by DM/makefile by Cobia@whirlpool
+@@
+
+

@@ -1,0 +1,21 @@
+Source-Makefile: package/rooter/0optionalapps/webconsole/Makefile
+
+Package: webconsole
+Submenu: Optional Applications
+Version: 1.000-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: ROOter
+Repository: base
+Title: Install scripts for Web Console
+Maintainer: Created by DM/makefile by Cobia@whirlpool
+Source: 
+Type: ipkg
+Description:   Helper scripts to install scripts for Web Console
+Created by DM/makefile by Cobia@whirlpool
+@@
+
+

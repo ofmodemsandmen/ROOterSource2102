@@ -3,7 +3,7 @@ Build-Depends: ustream-ssl
 
 Package: uhttpd
 Submenu: Web Servers/Proxies
-Version: 2021-03-21-15346de8d3ba422002496526ee24c62a3601ab8c-1
+Version: 2021-03-21-15346de8d3ba422002496526ee24c62a3601ab8c-2
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +libubox +libblobmsg-json +libjson-script +libjson-c
 Conflicts: 
 Menu-Depends: 
@@ -30,7 +30,7 @@ Config:
 
 Package: uhttpd-mod-lua
 Submenu: Web Servers/Proxies
-Version: 2021-03-21-15346de8d3ba422002496526ee24c62a3601ab8c-1
+Version: 2021-03-21-15346de8d3ba422002496526ee24c62a3601ab8c-2
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread uhttpd +liblua
 Conflicts: 
 Menu-Depends: 
@@ -49,7 +49,7 @@ Felix Fietkau <nbd@nbd.name>
 
 Package: uhttpd-mod-ubus
 Submenu: Web Servers/Proxies
-Version: 2021-03-21-15346de8d3ba422002496526ee24c62a3601ab8c-1
+Version: 2021-03-21-15346de8d3ba422002496526ee24c62a3601ab8c-2
 Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread uhttpd +libubus +libblobmsg-json
 Conflicts: 
 Menu-Depends: 

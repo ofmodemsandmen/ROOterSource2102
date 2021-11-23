@@ -8,7 +8,7 @@ Target-Features: cpiogz dt ext4 fpu gpio pci ramdisk rtc squashfs targz usb virt
 Target-Depends: 
 Target-Optimization: -Os -pipe
 CPU-Type: 
-Linux-Version: 5.4.143
+Linux-Version: 5.4.158
 Linux-Release: 1
 Linux-Kernel-Arch: arm64
 Target-Description:
@@ -24,7 +24,7 @@ Target-Features: arm_v7 cpiogz dt ext4 fpu gpio pci ramdisk rtc squashfs targz u
 Target-Depends: 
 Target-Optimization: -Os -pipe
 CPU-Type: cortex-a15+neon-vfpv4
-Linux-Version: 5.4.143
+Linux-Version: 5.4.158
 Linux-Release: 1
 Linux-Kernel-Arch: arm
 Target-Description:
@@ -40,7 +40,7 @@ Target-Features: cpiogz display dt ext4 fpu gpio pci ramdisk rtc squashfs targz 
 Target-Depends: 
 Target-Optimization: -Os -pipe -mcpu=cortex-a53
 CPU-Type: cortex-a53
-Linux-Version: 5.4.143
+Linux-Version: 5.4.158
 Linux-Release: 1
 Linux-Kernel-Arch: arm64
 Target-Description:

@@ -1,0 +1,21 @@
+Source-Makefile: package/rooter/0mesh/mesh-wpad/Makefile
+
+Package: mesh-wpad
+Submenu: Mesh Support
+Version: 1.000-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +wpad-mesh-openssl
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: ROOter
+Repository: base
+Title: Support for Mesh routing
+Maintainer: Created by DM/makefile by Cobia@whirlpool
+Source: 
+Type: ipkg
+Description:   Helper scripts to install Meshing
+Created by DM/makefile by Cobia@whirlpool
+@@
+
+

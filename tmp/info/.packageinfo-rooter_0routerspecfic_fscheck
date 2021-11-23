@@ -1,0 +1,21 @@
+Source-Makefile: package/rooter/0routerspecfic/fscheck/Makefile
+
+Package: fscheck
+Submenu: Router Specific
+Version: 1.000-1
+Depends: +libc +USE_GLIBC:librt +USE_GLIBC:libpthread +e2fsprogs
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: ROOter
+Repository: base
+Title: Install scripts for FSCheck
+Maintainer: Created by DM/makefile by Cobia@whirlpool
+Source: 
+Type: ipkg
+Description:   Helper scripts to install scripts for FSCheck
+Created by DM/makefile by Cobia@whirlpool
+@@
+
+
