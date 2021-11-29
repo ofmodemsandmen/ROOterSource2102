@@ -304,5 +304,15 @@
 		"mod": "YOUKU-YK1",
 		"ext": "-upgrade.bin",
 		"addons": ["readme.pdf", "factory.txt"]
+	},
+	"WG827": {
+		"details": "ZBT WG827",
+		"type": "1",
+		"config": ".config_wg827",
+		"image": "openwrt-ramips-mt7621-zbtlink_zbt-wg827-16m-squashfs-sysupgrade.bin",
+		"imagepath": "/ramips/mt7621/",
+		"mod": "ZBT-WG827",
+		"ext": "-upgrade.bin",
+		"addons": ["readme.pdf"]
 	}
 }
