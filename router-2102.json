@@ -348,5 +348,18 @@
 				"model": "Mikrotik RBSXTR"
 			}
 		}
+	},
+	"RB760IGS": {
+		"details": "Mikrotik RB760iGS",
+		"type": "2",
+		"build": "2102",
+		"config": ".config_rb760igs",
+		"image1": "openwrt-ramips-mt7621-mikrotik_routerboard-760igs-initramfs-kernel.bin",
+		"image2": "openwrt-ramips-mt7621-mikrotik_routerboard-760igs-squashfs-sysupgrade.bin",
+		"imagepath": "/ramips/mt7621/",
+		"mod": "Mikrotik-RB760iGS",
+		"ext1": "-factory.bin",
+		"ext2": "-update.bin",
+		"addons": ["flash-rbm33.pdf", "tftpd32.chm", "tftpd32.exe", "tftpd32.ini", "readme.pdf"]
 	}
 }
