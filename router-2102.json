@@ -361,5 +361,29 @@
 		"ext1": "-factory.bin",
 		"ext2": "-update.bin",
 		"addons": ["flash-rbm33.pdf", "tftpd32.chm", "tftpd32.exe", "tftpd32.ini", "readme.pdf"]
+	},
+	"WBV8": {
+		"details": "SamKnows WhiteBox V8",
+		"type": "1",
+		"build": "2102",
+		"config": ".config_wbv8",
+		"image": "openwrt-ramips-mt7621-samknows_whitebox-v8-squashfs-sysupgrade.bin",
+		"imagepath": "/ramips/mt7621/",
+		"mod": "SamKnows-WhiteBox-V8",
+		"ext": "-upgrade.bin",
+		"addons": ["readme.pdf"]
+	},
+	"AC85P": {
+		"details": "Asus RT-AC85P",
+		"type": "2",
+		"build": "2102",
+		"config": ".config_ac85p",
+		"image1": "openwrt-ramips-mt7621-asus_rt-ac85p-squashfs-sysupgrade.bin",
+		"image2": "openwrt-ramips-mt7621-asus_rt-ac85p-squashfs-factory.bin",
+		"imagepath": "/ramips/mt7621/",
+		"mod": "Asus-RT-AC85P",
+		"ext1": "-upgrade.bin",
+		"ext2": "-factory.bin",
+		"addons": ["readme.pdf"]
 	}
 }
