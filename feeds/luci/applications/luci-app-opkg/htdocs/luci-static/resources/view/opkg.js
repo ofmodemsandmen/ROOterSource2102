@@ -1017,6 +1017,10 @@ return view.extend({
 			E('style', { 'type': 'text/css' }, [ css ]),
 
 			E('h2', {}, _('Software')),
+			
+			E('h3', {}, _('ROOter will not allow installing kmod packages. Installing a new package that depends on installing a kmod will fail. Updating packages is done at your own risk as doing this to the following packages will alter ROOter.')),
+			
+			E('h3', {}, _('These packages are : luci-app-firewall, luci-app-ksmbd, luci, luci-lib-base, luci-base, luci-compat, luci-mod-status, luci-theme-material, ddns-scripts, mwan3, nft-qos, openvpn, usbmode, procd, dnsmasq, ppp, mac80211, mt76 and boot-envtools')),
 
 			E('div', { 'class': 'controls' }, [
 				E('div', {}, [
