@@ -38,18 +38,19 @@
 		signal1 {
 			label = "green:signal1";
 			gpios = <&gpio 14 GPIO_ACTIVE_LOW>;
-			
+		};	
 		signal2 {
 			label = "green:signal2";
 			gpios = <&gpio 4 GPIO_ACTIVE_LOW>;
-			
+		};	
 		signal3 {
 			label = "green:signal3";
 			gpios = <&gpio 10 GPIO_ACTIVE_LOW>;
-			
+		};	
 		internet {
 			label = "green:internet";
 			gpios = <&gpio 17 GPIO_ACTIVE_LOW>;
+		};
 	};
 	
 	watchdog {
