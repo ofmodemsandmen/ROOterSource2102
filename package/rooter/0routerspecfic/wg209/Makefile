@@ -14,9 +14,6 @@ define Package/wg209
   SECTION:=utils
   CATEGORY:=ROOter
   SUBMENU:=Router Specific
-  DEPENDS:=+kmod-mt7615e +kmod-mt76 +kmod-mt7603 +kmod-mt7615-firmware \
-		+kmod-mt7615e +kmod-mt7663-firmware-ap +kmod-mt7663-firmware-sta \
-		+kmod-mt76x2
   TITLE:=Install scripts for WG209
   PKGARCH:=all
 endef
