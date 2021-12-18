@@ -36,6 +36,15 @@
 			gpios = <&gpio 24 GPIO_ACTIVE_LOW>;
 		};
 	};
+	
+	watchdog {
+		compatible = "linux,wdt-gpio";
+		gpios = <&gpio 3 GPIO_ACTIVE_HIGH>;
+		hw_algo = "toggle";
+		/* hw_margin_ms is actually ~120s but driver limits it to 60s */
+		hw_margin_ms = <60000>;
+		always-running;
+	};
 };
 
 &i2c {
