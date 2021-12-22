@@ -396,5 +396,18 @@
 		"mod": "Cudy-WR1300",
 		"ext": "-upgrade.bin",
 		"addons": ["readme.pdf", "WR1300-factory2openwrt.bin"]
+	},
+	"RB922": {
+		"details": "Mikrotik RB922UAGS",
+		"type": "2",
+		"build": "2102",
+		"config": ".config_rb922",
+		"image1": "openwrt-ath79-mikrotik-mikrotik_routerboard-922uags-5hpacd-initramfs-kernel.bin",
+		"image2": "openwrt-ath79-mikrotik-mikrotik_routerboard-922uags-5hpacd-squashfs-sysupgrade.bin",
+		"imagepath": "/ath79/mikrotik/",
+		"mod": "Mikrotik-RB922UAGS",
+		"ext1": "-factory.bin",
+		"ext2": "-update.bin",
+		"addons": ["flash-rbm33.pdf", "tftpd32.chm", "tftpd32.exe", "tftpd32.ini", "readme.pdf"]
 	}
 }
