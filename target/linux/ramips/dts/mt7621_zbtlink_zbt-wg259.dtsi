@@ -35,6 +35,14 @@
 			label = "green:status";
 			gpios = <&gpio 24 GPIO_ACTIVE_LOW>;
 		};
+		signal {
+			label = "green:signal";
+			gpios = <&gpio 3 GPIO_ACTIVE_LOW>;
+		};
+		globe {
+			label = "green:globe";
+			gpios = <&gpio 4 GPIO_ACTIVE_LOW>;
+		};
 	};
 };
 
