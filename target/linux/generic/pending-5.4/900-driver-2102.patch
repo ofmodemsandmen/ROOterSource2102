@@ -1,6 +1,6 @@
 --- a/drivers/net/usb/qmi_wwan.c
 +++ b/drivers/net/usb/qmi_wwan.c
-@@ -1080,6 +1080,14 @@
+@@ -1080,6 +1080,23 @@
  	{QMI_FIXED_INTF(0x05c6, 0x9021, 1)},
  	{QMI_FIXED_INTF(0x05c6, 0x9022, 2)},
  	{QMI_QUIRK_SET_DTR(0x05c6, 0x9025, 4)},	/* Alcatel-sbell ASB TL131 TDD LTE (China Mobile) */
@@ -12,6 +12,15 @@
 +	{QMI_FIXED_INTF(0x05c6, 0x90db, 2)},
 +	{QMI_FIXED_INTF(0x2dee, 0x4d22, 5)},
 +	{QMI_FIXED_INTF(0x161c, 0x9115, 4)},
++	{QMI_QUIRK_SET_DTR(0x1199, 0x9091, 10)},
++	{QMI_QUIRK_SET_DTR(0x1199, 0x9090, 8)},
++	{QMI_QUIRK_SET_DTR(0x1199, 0x9090, 10)},
++	{QMI_QUIRK_SET_DTR(0x1199, 0x90b1, 8)},
++	{QMI_QUIRK_SET_DTR(0x1199, 0x90b1, 10)},
++	{QMI_QUIRK_SET_DTR(0x1199, 0x90d2, 8)},
++	{QMI_QUIRK_SET_DTR(0x1199, 0x90d2, 10)},
++	{QMI_QUIRK_SET_DTR(0x1199, 0x90d3, 8)},
++	{QMI_QUIRK_SET_DTR(0x1199, 0x90d3, 10)},
  	{QMI_FIXED_INTF(0x05c6, 0x9026, 3)},
  	{QMI_FIXED_INTF(0x05c6, 0x902e, 5)},
  	{QMI_FIXED_INTF(0x05c6, 0x9031, 5)},
