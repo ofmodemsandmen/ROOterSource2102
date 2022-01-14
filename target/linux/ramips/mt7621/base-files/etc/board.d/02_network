@@ -141,6 +141,7 @@ ramips_setup_macs()
 	winstars,ws-wn583a6|\
 	zbtlink,zbt-we1326|\
 	zbtlink,zbt-wg1608-16m|\
+	zbtlink,zbt-wg1608-32m|\
 	zbtlink,zbt-wg209-16m|\
 	zbtlink,zbt-wg259-16m|\
 	zbtlink,zbt-wg827-16m|\

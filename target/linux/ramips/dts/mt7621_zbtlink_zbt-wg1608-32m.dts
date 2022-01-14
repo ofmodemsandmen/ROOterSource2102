@@ -1,0 +1,10 @@
+#include "mt7621_zbtlink_zbt-wg1608.dtsi"
+
+/ {
+	compatible = "zbtlink,zbt-wg1608-32m", "zbtlink,zbt-wg1608", "mediatek,mt7621-soc";
+	model = "Zbtlink ZBT-WG1608 (32M)";
+};
+
+&firmware {
+	reg = <0x50000 0x1fb0000>;
+};
