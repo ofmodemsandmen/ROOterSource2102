@@ -420,5 +420,16 @@
 		"ext1": "-factory.bin",
 		"ext2": "-update.bin",
 		"addons": ["flash-rbm33.pdf", "tftpd32.chm", "tftpd32.exe", "tftpd32.ini", "readme.pdf"]
+	},
+	"U7621-01": {
+		"details": "UniElec U7621-01",
+		"type": "1",
+		"build": "2102",
+		"config": ".config_u7621-01",
+		"image": "openwrt-ramips-mt7621-unielec_u7621-01-16m-squashfs-sysupgrade.bin",
+		"imagepath": "/ramips/mt7621/",
+		"mod": "UniElec-U7621-01",
+		"ext": "-upgrade.bin",
+		"addons": ["readme.pdf", "readmerecovery.txt"]
 	}
 }
