@@ -60,6 +60,21 @@
 		"ext2": "-squashfs.img",
 		"addons": ["readme.pdf"]
 	},
+	"RASPPICM4": {
+		"details": "Raspberry Pi CM4",
+		"type": "3",
+		"build": "2102",
+		"config": ".config_rasppicm4",
+		"image1": "openwrt-bcm27xx-bcm2711-rpi-4-ext4-factory.img.gz",
+		"image2": "openwrt-bcm27xx-bcm2711-rpi-4-ext4-factory.img",
+		"image3": "openwrt-bcm27xx-bcm2711-rpi-4-squashfs-sysupgrade.img.gz",
+		"image4": "openwrt-bcm27xx-bcm2711-rpi-4-squashfs-sysupgrade.img",
+		"imagepath": "/bcm27xx/bcm2711/",
+		"mod": "RaspberryPi-CM4",
+		"ext1": "-ext4.img",
+		"ext2": "-squashfs.img",
+		"addons": ["readme.pdf"]
+	},
 	"SMARTBOXGIGA": {
 		"details": "Beeline SmartBox Giga",
 		"type": "2",
