@@ -12,3 +12,5 @@ include distroconfig.txt
 
 [all]
 # Place your custom settings here.
+#Enable USB
+dtoverlay=dwc2,dr_mode=host
