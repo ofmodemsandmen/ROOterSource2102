@@ -1,11 +1,10 @@
 --- a/drivers/net/usb/qmi_wwan.c
 +++ b/drivers/net/usb/qmi_wwan.c
-@@ -1080,6 +1080,23 @@
+@@ -1080,6 +1080,22 @@
  	{QMI_FIXED_INTF(0x05c6, 0x9021, 1)},
  	{QMI_FIXED_INTF(0x05c6, 0x9022, 2)},
  	{QMI_QUIRK_SET_DTR(0x05c6, 0x9025, 4)},	/* Alcatel-sbell ASB TL131 TDD LTE (China Mobile) */
 +	{QMI_QUIRK_SET_DTR(0x03f0, 0x0857, 1)},
-+	{QMI_QUIRK_SET_DTR(0x1bc7, 0x1900, 1)},	/* LN940 */
 +	{QMI_QUIRK_SET_DTR(0x05c6, 0xf601, 5)},
 +	{QMI_FIXED_INTF(0x413c, 0x81d8, 0)},	/* Foxconn T77W968 LTE */
 +	{QMI_FIXED_INTF(0x1bc7, 0x1910, 0)},	/* LN960 */
