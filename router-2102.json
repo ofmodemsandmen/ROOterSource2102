@@ -54,7 +54,7 @@
 		"image2": "openwrt-bcm27xx-bcm2710-rpi-3-ext4-sysupgrade.img",
 		"image3": "openwrt-bcm27xx-bcm2710-rpi-3-squashfs-sysupgrade.img.gz",
 		"image4": "openwrt-bcm27xx-bcm2710-rpi-3-squashfs-sysupgrade.img",
-		"imagepath": "/bcm27xx/bcm2710/",
+		"imagepath": "/bcm27xx/bcm2710/", 
 		"mod": "RaspberryPi-3",
 		"ext1": "-ext4.img",
 		"ext2": "-squashfs.img",
