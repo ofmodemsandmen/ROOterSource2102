@@ -10,6 +10,9 @@
 # OpenWrt config
 include distroconfig.txt
 
+[cm4]
+dtoverlay=dwc2
+
 [all]
 # Place your custom settings here.
 #Enable USB
