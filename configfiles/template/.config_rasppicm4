@@ -77,6 +77,7 @@ CONFIG_DEFAULT_kmod-nls-cp437=y
 CONFIG_DEFAULT_kmod-nls-iso8859-1=y
 CONFIG_DEFAULT_kmod-sound-arm-bcm2835=y
 CONFIG_DEFAULT_kmod-sound-core=y
+CONFIG_DEFAULT_kmod-usb-dwc2=y
 CONFIG_DEFAULT_kmod-usb-hid=y
 CONFIG_DEFAULT_libc=y
 CONFIG_DEFAULT_libgcc=y
@@ -2502,8 +2503,9 @@ CONFIG_PACKAGE_kmod-sound-arm-bcm2835=y
 # CONFIG_PACKAGE_kmod-usb-atm is not set
 # CONFIG_PACKAGE_kmod-usb-cm109 is not set
 CONFIG_PACKAGE_kmod-usb-core=y
-# CONFIG_PACKAGE_kmod-usb-dwc2 is not set
+CONFIG_PACKAGE_kmod-usb-dwc2=y
 # CONFIG_PACKAGE_kmod-usb-dwc3 is not set
+CONFIG_PACKAGE_kmod-usb-gadget=y
 # CONFIG_PACKAGE_kmod-usb-gadget-cdc-composite is not set
 # CONFIG_PACKAGE_kmod-usb-gadget-ehci-debug is not set
 # CONFIG_PACKAGE_kmod-usb-gadget-eth is not set
@@ -5559,10 +5561,14 @@ CONFIG_PACKAGE_uclient-fetch=y
 #
 # CONFIG_PACKAGE_bwallocate is not set
 # CONFIG_PACKAGE_bwmon is not set
+# CONFIG_PACKAGE_ext-blacklist is not set
+# CONFIG_PACKAGE_ext-blockport is not set
 # CONFIG_PACKAGE_ext-domain is not set
 # CONFIG_PACKAGE_ext-easycwmp is not set
+# CONFIG_PACKAGE_ext-l2tp is not set
 # CONFIG_PACKAGE_ext-menu is not set
 # CONFIG_PACKAGE_ext-mosquitto is not set
+# CONFIG_PACKAGE_ext-rspeedtest is not set
 # CONFIG_PACKAGE_ext-speedtest is not set
 # CONFIG_PACKAGE_ext-texting is not set
 # CONFIG_PACKAGE_ext-throttle is not set
@@ -5595,6 +5601,7 @@ CONFIG_PACKAGE_uclient-fetch=y
 # CONFIG_PACKAGE_ext-ssh is not set
 CONFIG_PACKAGE_fscheck=y
 # CONFIG_PACKAGE_h721 is not set
+# CONFIG_PACKAGE_mk01 is not set
 # CONFIG_PACKAGE_mt1300 is not set
 # CONFIG_PACKAGE_rbm11g is not set
 # CONFIG_PACKAGE_rbm33g is not set
@@ -5606,6 +5613,7 @@ CONFIG_PACKAGE_fscheck=y
 # CONFIG_PACKAGE_wg1602 is not set
 # CONFIG_PACKAGE_wg1608 is not set
 # CONFIG_PACKAGE_wg209 is not set
+# CONFIG_PACKAGE_wg259 is not set
 # CONFIG_PACKAGE_wg827 is not set
 # CONFIG_PACKAGE_wrt1900 is not set
 # end of Router Specific
@@ -5614,6 +5622,7 @@ CONFIG_PACKAGE_fscheck=y
 # Splash Screens
 #
 # CONFIG_PACKAGE_ext-splash is not set
+# CONFIG_PACKAGE_ext-splashconfig is not set
 # CONFIG_PACKAGE_splash is not set
 # CONFIG_PACKAGE_status is not set
 # end of Splash Screens
