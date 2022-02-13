@@ -1779,7 +1779,7 @@ define Device/zyxel_nr7101
   UBINIZE_OPTS := -E 5
   DEVICE_VENDOR := ZyXEL
   DEVICE_MODEL := NR7101
-  DEVICE_PACKAGES := kmod-mt7603 kmod-usb3 uboot-envtools kmod-usb-net-qmi-wwan kmod-usb-serial-option uqmi
+  DEVICE_PACKAGES := kmod-mt7603 kmod-usb3 uboot-envtools 
   KERNEL := $(KERNEL_DTB) | uImage lzma | zytrx-header $$(DEVICE_MODEL) $$(VERSION_DIST)-$$(REVISION)
   KERNEL_INITRAMFS := $(KERNEL_DTB) | uImage lzma | zytrx-header $$(DEVICE_MODEL) 9.99(ABUV.9)$$(VERSION_DIST)-recovery
   KERNEL_INITRAMFS_SUFFIX := -recovery.bin

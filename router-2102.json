@@ -461,5 +461,18 @@
 		"mod": "UniElec-U7621-01",
 		"ext": "-upgrade.bin",
 		"addons": ["readme.pdf", "readmerecovery.txt"]
+	},	
+	"NR7101": {
+		"details": "ZyZEL NR7101",
+		"type": "2",
+		"build": "2102",
+		"config": ".config_nr7101",
+		"image1": "openwrt-ramips-mt7621-zyxel_nr7101-initramfs-recovery.bin",
+		"image2": "openwrt-ramips-mt7621-zyxel_nr7101-squashfs-sysupgrade.bin",
+		"imagepath": "/ramips/mt7621/",
+		"mod": "ZyZEL-NR7101",
+		"ext1": "-recovery.bin",
+		"ext2": "-update.bin",
+		"addons": ["readme.pdf"]
 	}
 }
