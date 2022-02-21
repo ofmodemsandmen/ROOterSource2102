@@ -474,5 +474,16 @@
 		"ext1": "-recovery.bin",
 		"ext2": "-update.bin",
 		"addons": ["readme.pdf"]
+	},
+	"N14": {
+		"details": "Asus RT-N14U",
+		"type": "1",
+		"build": "2102",
+		"config": ".config_n14",
+		"image": "openwrt-ramips-mt7620-asus_rt-n14u-squashfs-sysupgrade.bin",
+		"imagepath": "/ramips/mt7620/",
+		"mod": "Asus-RT-N14U",
+		"ext": "-upgrade.bin",
+		"addons": ["readme.pdf"]
 	}
 }
