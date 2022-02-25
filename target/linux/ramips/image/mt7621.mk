@@ -1679,8 +1679,7 @@ define Device/mesh_mk01k21
   DEVICE_VARIANT := 16M
   DEVICE_PACKAGES := kmod-ata-ahci kmod-sdhci-mt7620 kmod-usb3 \
 		kmod-usb-ledtrig-usbport \
-		kmod-mt7615e kmod-mt76 kmod-mt7615-firmware \
-		kmod-mt7663-firmware-ap kmod-mt7663-firmware-sta 
+		kmod-mt76 kmod-mt7915e
   SUPPORTED_DEVICES += mk01k21 mesh,mk01k21
 endef
 TARGET_DEVICES += mesh_mk01k21
