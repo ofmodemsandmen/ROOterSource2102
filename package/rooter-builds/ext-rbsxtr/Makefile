@@ -16,7 +16,6 @@ define Package/ext-rbsxtr
   DEPENDS:=+luci +luci-compat +ext-rooter-basic \
 		+luci-app-rootervpn +ext-wireguard \
 		+bwmon +464xlat \
-		+ext-material \
 		+ca-bundle +ca-certificates \
 		+luci-app-sqm +kmod-sched-cake \
 		+ext-command +ext-speedtest \
