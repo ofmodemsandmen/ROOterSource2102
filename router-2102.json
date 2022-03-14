@@ -485,5 +485,18 @@
 		"mod": "Asus-RT-N14U",
 		"ext": "-upgrade.bin",
 		"addons": ["readme.pdf"]
+	},
+	"AC65P": {
+		"details": "Asus RT-AC65P",
+		"type": "2",
+		"build": "2102",
+		"config": ".config_ac65p",
+		"image1": "openwrt-ramips-mt7621-asus_rt-ac65p-squashfs-sysupgrade.bin",
+		"image2": "openwrt-ramips-mt7621-asus_rt-ac65p-squashfs-factory.bin",
+		"imagepath": "/ramips/mt7621/",
+		"mod": "Asus-RT-AC65P",
+		"ext1": "-upgrade.bin",
+		"ext2": "-factory.bin",
+		"addons": ["readme.pdf"]
 	}
 }
