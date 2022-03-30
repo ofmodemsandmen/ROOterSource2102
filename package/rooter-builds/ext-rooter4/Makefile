@@ -14,7 +14,7 @@ define Package/ext-rooter4
   SECTION:=utils
   CATEGORY:=ROOter
   DEPENDS:=+luci +ext-rooter-basic \
-		+ca-bundle +ca-certificates +libustream-openssl \
+		+ca-bundle +ca-certificates \
 		+luci-app-sqm +kmod-sched-cake \
 		+luci-app-ddns +ddns-scripts \
 		+ext-command +ext-p910nd +luci-app-guestwifi \
