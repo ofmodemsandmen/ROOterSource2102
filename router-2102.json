@@ -509,5 +509,18 @@
 		"mod": "Gli-AR750S",
 		"ext": "-upgrade.bin",
 		"addons": ["readme.pdf", "glinet.txt"]
+	},
+	"AP1300": {
+		"details": "Gl.iNet AP1300",
+		"type": "2",
+		"build": "2102",
+		"config": ".config_ap1300",
+		"image1": "openwrt-ipq40xx-generic-glinet_gl-ap1300-squashfs-nand-sysupgrade.bin",	
+		"image2": "openwrt-ipq40xx-generic-glinet_gl-ap1300-squashfs-nand-factory.ubi",
+		"imagepath": "/ipq40xx/generic/",
+		"mod": "GL-AP1300",
+		"ext1": "-upgrade.bin",
+		"ext2": "-factory.ubi",
+		"addons": ["readme.pdf", "glinet.txt"]
 	}
 }
