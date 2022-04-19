@@ -18,7 +18,7 @@ define Package/ext-rooterbcm16
 		+luci-app-ddns +ddns-scripts \
 		+luci-app-rootervpn +ext-wireguard \
 		+webconsole +bwmon +464xlat \
-		+ext-theme +luci-theme-argon +argon-config \
+		+ext-theme +luci-theme-argon +luci-theme-argondark \
 		+luci-theme-tomato +ext-login \
 		+ca-bundle +ca-certificates \
 		+luci-app-ksmbd +usb-storage \
