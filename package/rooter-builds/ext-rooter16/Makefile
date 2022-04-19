@@ -20,7 +20,7 @@ define Package/ext-rooter16
 		+bwmon +464xlat \
 		+ext-theme +luci-theme-argon +luci-theme-argondark \
 		+luci-theme-tomato +ext-login \
-		+ca-bundle +ca-certificates \
+		+ca-bundle +ca-certificates +libustream-wolfssl \
 		+luci-app-ksmbd +usb-storage \
 		+ext-p910nd +luci-app-sqm +kmod-sched-cake +luci-app-nft-qos \
 		+ext-command +ext-speedtest +luci-app-guestwifi \
