@@ -133,6 +133,10 @@
 	mtd-mac-address = <&factory 0xe000>;
 };
 
+&sdhci {
+	status = "okay";
+};
+
 &switch0 {
 	ports {
 		port@0 {
