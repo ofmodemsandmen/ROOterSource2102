@@ -522,5 +522,18 @@
 		"ext1": "-upgrade.bin",
 		"ext2": "-factory.ubi",
 		"addons": ["readme.pdf", "glinet.txt"]
+	},
+	"RBD52": {
+		"details": "Mikrotik RBD52U",
+		"type": "2",
+		"build": "1907",
+		"config": ".config_rbd52",
+		"image1": "openwrt-ipq40xx-mikrotik-mikrotik_hap-ac2-initramfs-kernel.bin",
+		"image2": "openwrt-ipq40xx-mikrotik-mikrotik_hap-ac2-squashfs-sysupgrade.bin",
+		"imagepath": "/ipq40xx/mikrotik/",
+		"mod": "Mikrotik-RBD52U",
+		"ext1": "-kernel.bin",
+		"ext2": "-upgrade.bin",
+		"addons": ["flash-rbm33.pdf", "tftpd32.chm", "tftpd32.exe", "tftpd32.ini", "readme.pdf"]
 	}
 }
