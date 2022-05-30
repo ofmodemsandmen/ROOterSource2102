@@ -546,5 +546,31 @@
 		"imagepath": "/sunxi/cortexa7/",
 		"mod": "OrangePi-PC",
 		"addons": ["readme.pdf"]
+	},
+	"EA6350V3": {
+		"details": "Linksys EA6350v3",
+		"type": "2",
+		"build": "2102",
+		"config": ".config_ea6350v3",
+		"image1": "openwrt-ipq40xx-generic-linksys_ea6350v3-squashfs-factory.bin",	
+		"image2": "openwrt-ipq40xx-generic-linksys_ea6350v3-squashfs-sysupgrade.bin",
+		"imagepath": "/ipq40xx/generic/",
+		"mod": "Linksys-EA6350v3",
+		"ext1": "-factory.bin",
+		"ext2": "-upgrade.bin",
+		"addons": ["readme.pdf"]
+	},
+	"EA7500V2": {
+		"details": "Linksys EA7500v2",
+		"type": "2",
+		"build": "2102",
+		"config": ".config_ea7500v2",
+		"image1": "openwrt-ramips-mt7621-linksys_ea7500-v2-squashfs-sysupgrade.bin",
+		"image2": "openwrt-ramips-mt7621-linksys_ea7500-v2-squashfs-factory.bin",
+		"imagepath": "/ramips/mt7621/",
+		"mod": "Linksys-EA7500v2",
+		"ext1": "-upgrade.bin",
+		"ext2": "-factory.bin",
+		"addons": ["readme.pdf"]
 	}
 }
