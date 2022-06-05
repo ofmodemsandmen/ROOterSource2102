@@ -572,5 +572,18 @@
 		"ext1": "-upgrade.bin",
 		"ext2": "-factory.bin",
 		"addons": ["readme.pdf"]
+	},
+	"EA8100V1": {
+		"details": "Linksys EA8100v1",
+		"type": "2",
+		"build": "2102",
+		"config": ".config_ea8100v1",
+		"image1": "openwrt-ramips-mt7621-linksys_ea8100-v1-squashfs-sysupgrade.bin",
+		"image2": "openwrt-ramips-mt7621-linksys_ea8100-v1-squashfs-factory.bin",
+		"imagepath": "/ramips/mt7621/",
+		"mod": "Linksys-EA8100v1",
+		"ext1": "-upgrade.bin",
+		"ext2": "-factory.bin",
+		"addons": ["readme.pdf"]
 	}
 }
