@@ -313,6 +313,7 @@ telit_type() {
 }
 
 fibocom_type() {
+	NETMODE=""
 	idPP=${idP:1:1}
 	if [ "$idPP" = "1" ]; then
 		ATCMDD="AT+GTRAT?"
@@ -331,7 +332,6 @@ fibocom_type() {
 				* )
 					NETMODE="1" ;;
 			esac
-			uci set modem.modem$CURRMODEM.modemtype="9"
 		fi
 	else
 		ATCMDD="AT+XACT?"
@@ -353,9 +353,26 @@ fibocom_type() {
 			* )
 				NETMODE="6" ;;
 			esac
-			uci set modem.modem$CURRMODEM.modemtype="9"
+
 		fi
 	fi
+	if [ -z "$NETMODE" ]; then
+		ATCMDD="AT+WS46?"
+		OX=$($ROOTER/gcom/gcom-locked "$COMMPORT" "run-at.gcom" "$CURRMODEM" "$ATCMDD")
+		MRAT=$(echo $OX | grep -o "[0-9]\{2\}")
+		MRAT=${MRAT: -2}
+		case $MRAT in
+			"12" )
+				NETMODE="3" ;;
+			"22" )
+				NETMODE="5" ;;
+			"28" )
+				NETMODE="7" ;;
+			* )
+				NETMODE="1" ;;
+		esac
+	fi
+	uci set modem.modem$CURRMODEM.modemtype="9"
 	uci set modem.modem$CURRMODEM.netmode=$NETMODE
 	uci commit modem
 }
@@ -432,7 +449,7 @@ case $idV in
 "2c7c" )
 	quectel_type
 	;;
-"2cb7"|"8087" )
+"2cb7"|"1508"|"8087" )
 	fibocom_type
 	;;
 "2dee" )

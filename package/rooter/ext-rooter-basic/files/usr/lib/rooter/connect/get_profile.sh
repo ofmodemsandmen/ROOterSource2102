@@ -207,10 +207,15 @@ do_custom() {
 					fi
 					uci set modem.modeminfo$CURRMODEM.pdptype=$pdptype
 					config_get ttl $1 ttl
-					if [ -z $ttl ]; then
+					if [ -z "$ttl" ]; then
 						ttl="0"
 					fi
-					uci set modem.modeminfo$CURRMODEM.ttl=$ttl
+					uci set modem.modeminfo$CURRMODEM.ttl="$ttl"
+					config_get hostless $1 hostless
+					if [ -z "$hostless" ]; then
+						hostless="0"
+					fi
+					uci set modem.modeminfo$CURRMODEM.hostless="$hostless"
 
 					[ -n "$apn" ] || log "This profile has no APN configured !!!"
 
@@ -311,10 +316,15 @@ if [ $MATCH = 0 ]; then
 	fi
 	uci set modem.modeminfo$CURRMODEM.pdptype=$pdp
 	ttl=$(uci -q get profile.default.ttl)
-	if [ -z $ttl ]; then
+	if [ -z "$ttl" ]; then
 		ttl="0"
 	fi
-	uci set modem.modeminfo$CURRMODEM.ttl=$ttl
+	uci set modem.modeminfo$CURRMODEM.ttl="$ttl"
+	hostless=$(uci -q get profile.default.hostless)
+	if [ -z "$hostless" ]; then
+		hostless="0"
+	fi
+	uci set modem.modeminfo$CURRMODEM.hostless="$hostless"
 
 	alive=$(uci get profile.default.alive)
 	uci delete modem.pinginfo$CURRMODEM

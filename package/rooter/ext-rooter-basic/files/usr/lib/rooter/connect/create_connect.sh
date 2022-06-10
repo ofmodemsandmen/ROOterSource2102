@@ -417,18 +417,7 @@ if [ ! -z "$RECON" ]; then
 	CPORT=$(uci -q get modem.modem$CURRMODEM.commport)
 	WWANX=$(uci -q get modem.modem$CURRMODEM.wwan)
 	WDMNX=$(uci -q get modem.modem$CURRMODEM.wdm)
-
-	case $PROT in
-	"3"|"30" )
-		TIMEOUT=10
-		#$ROOTER/mbim/mbim_connect.lua stop wwan$WWANX cdc-wdm$WDMNX $CURRMODEM &
-		#handle_timeout "$!"
-		;;
-	* )
-		$ROOTER/gcom/gcom-locked "/dev/ttyUSB$CPORT" "reset.gcom" "$CURRMODEM"
-		;;
-	esac
-
+	$ROOTER/gcom/gcom-locked "/dev/ttyUSB$CPORT" "reset.gcom" "$CURRMODEM"
 else
 
 	DELAY=$(uci -q get modem.modem$CURRMODEM.delay)
@@ -518,7 +507,7 @@ uci commit modem.modem$CURRMODEM
 			get_tty 03
 		else
 			if [ $idV = 2c7c ]; then
-				QUEIF2="0121 0125 0306 0296 0512 0620 0800"
+				QUEIF2="0121 0125 0306 0296 0512 0620 0800 030b"
 				if [[ $(echo "$QUEIF2" | grep -o -i "$idP") ]]; then
 					TPORT=2
 				fi
@@ -582,7 +571,7 @@ uci commit modem.modem$CURRMODEM
 				if [ -n "$CPORT" ]; then
 					uci set modem.modem$CURRMODEM.proto="30"
 				fi
-				log "MBIM Comm Port : /dev/ttyUSB$CPORT"
+				log "Modem $CURRMODEM MBIM Comm Port : /dev/ttyUSB$CPORT"
 			else
 				chkT77
 				if [ $T77 -eq 1 ]; then
@@ -594,8 +583,16 @@ uci commit modem.modem$CURRMODEM
 							get_tty_fix 2
 							mbimcport
 						;;
-						"1bc7"|"03f0" )
+						"03f0" )
 							get_tty 02
+							mbimcport
+						;;
+						"1bc7" )
+							if [ "$idP" = "1041" ]; then
+								get_tty 07
+							else
+								get_tty 02
+							fi
 							mbimcport
 						;;
 						"2cb7" )
@@ -608,7 +605,7 @@ uci commit modem.modem$CURRMODEM
 
 							uci set modem.modem$CURRMODEM.commport=$CPORT
 							uci set modem.modem$CURRMODEM.proto="30"
-							log "Modem $CURRMODEM Fibocom MBIM Comm Port : /dev/ttyUSB$CPORT"
+							log "Modem $CURRMODEM MBIM Comm Port : /dev/ttyUSB$CPORT"
 						;;
 						* )
 							uci set modem.modem$CURRMODEM.commport=""
@@ -697,11 +694,25 @@ if $QUECTEL; then
 		pc=$(uci -q get custom.bandlock.pci)
 		ear1=$(uci -q get custom.bandlock.earfcn1)
 		pc1=$(uci -q get custom.bandlock.pci1)
-		if [ $ear1 = "0" -o $pc1 = "0" ]; then
-			earcnt="1,"$ear","$pc
-		else
-			earcnt="2,"$ear","$pc","$ear1","$pc1
+		ear2=$(uci -q get custom.bandlock.earfcn2)
+		pc2=$(uci -q get custom.bandlock.pci2)
+		ear3=$(uci -q get custom.bandlock.earfcn3)
+		pc3=$(uci -q get custom.bandlock.pci3)
+		cnt=1
+		earcnt=$ear","$pc
+		if [ $ear1 != "0" -a $pc1 != "0" ]; then
+			earcnt=$earcnt","$ear1","$pc1
+			let cnt=cnt+1
 		fi
+		if [ $ear2 != "0" -a $pc2 != "0" ]; then
+			earcnt=$earcnt","$ear2","$pc2
+			let cnt=cnt+1
+		fi
+		if [ $ear3 != "0" -a $pc3 != "0" ]; then
+			earcnt=$earcnt","$ear3","$pc3
+			let cnt=cnt+1
+		fi
+		earcnt=$cnt","$earcnt
 		ATCMDD="at+qnwlock=\"common/4g\""
 		OX=$($ROOTER/gcom/gcom-locked "/dev/ttyUSB$CPORT" "run-at.gcom" "$CURRMODEM" "$ATCMDD")
 		if `echo $OX | grep "ERROR" 1>/dev/null 2>&1`
@@ -811,12 +822,10 @@ if [ -n "$CHKPORT" ]; then
 	fi
 
 	ttl=$(uci -q get modem.modeminfo$CURRMODEM.ttl)
-	if [ -z $ttl ]; then
-		ttl=0
+	if [ -z "$ttl" ]; then
+		ttl="0"
 	fi
-	#if [ $ttl -ne 0 ]; then
-		$ROOTER/connect/handlettl.sh $CURRMODEM "$ttl"
-	#fi
+	$ROOTER/connect/handlettl.sh $CURRMODEM "$ttl"
 
 	if [ -e $ROOTER/changedevice.sh ]; then
 		$ROOTER/changedevice.sh $ifname
@@ -1195,6 +1204,8 @@ while [ 1 -lt 6 ]; do
 	esac
 
 	if [ $BRK = 1 ]; then
+		ATCMDD="AT+COPS=0"
+		OX=$($ROOTER/gcom/gcom-locked "/dev/ttyUSB$CPORT" "run-at.gcom" "$CURRMODEM" "$ATCMDD")
 		$ROOTER/log/logger "Retry Connection with Modem #$CURRMODEM"
 		log "Retry Connection"
 		sleep 10

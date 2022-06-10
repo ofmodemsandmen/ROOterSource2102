@@ -243,7 +243,7 @@ var backflg = "0";
 		var r = document.getElementById("pass").value;
 		if ( r == "" )
 		{
-			document.getElementById("exflag").innerHTML="Internal";
+			document.getElementById("exflag").innerHTML="<%:Internal%>";
 			document.getElementById("exflag").style.fontWeight = "bold" ;
 			document.getElementById("exflag").style.fontSize = "large" ;
 			r = "0";
@@ -254,9 +254,9 @@ var backflg = "0";
 			mntl = r.length;
 			if ( mnti == -1 || mntl < 6 )
 			{
-				alert("Invalid External Path. Reverting to Internal.");
+				alert("<%:Invalid External Path. Reverting to Internal.%>");
 				r = "0";
-				document.getElementById("exflag").innerHTML="Internal";
+				document.getElementById("exflag").innerHTML="<%:Internal%>";
 				document.getElementById("exflag").style.fontWeight = "bold" ;
 				document.getElementById("exflag").style.fontSize = "large" ;
 			}
@@ -364,7 +364,7 @@ var backflg = "0";
 	function applyb(btn)
 	{
 		bspd=document.getElementById("bwinter").value;
-		document.getElementById("attxt").value=bspd;
+		//document.getElementById("attxt").value=bspd;
 		XHR.get('<%=luci.dispatcher.build_url("admin", "nlbw", "change_backup")%>',
 			{ set: bspd },
 			function()
@@ -401,7 +401,7 @@ var backflg = "0";
 	}
     </style>
 </head>
-<fieldset class="cbi-section" id="cbi-mod">
+<fieldset class="cbi-section" id="cbi-modx">
 	<legend><%:Configuration%></legend>
 		
 	<table style="visibility:hidden" width="700" border="0" id="atpass">
@@ -527,7 +527,7 @@ var backflg = "0";
 </fieldset>	
 
 <fieldset class="cbi-section" id="cbi-mod">
-	<legend>Report</legend>
+	<legend><%:Report%></legend>
 	<table border="0" id="report">
 		<tr>
 			<td width="343" ><div align="right"><strong><%:Number of Days in Reporting Period : %></strong></div></td>

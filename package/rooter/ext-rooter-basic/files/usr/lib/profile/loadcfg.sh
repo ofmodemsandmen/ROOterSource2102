@@ -5,7 +5,7 @@ log() {
 	logger -t "Load" "$@"
 }
 
-profile=$1
+profile=$(cat /tmp/profilename)
 valid=$(echo "$profile" | grep "**Profile**")
 if [ ! -z "$valid" ]; then
 	echo "$profile" > /tmp/profile
