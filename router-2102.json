@@ -585,5 +585,21 @@
 		"ext1": "-upgrade.bin",
 		"ext2": "-factory.bin",
 		"addons": ["readme.pdf"]
+	},
+	"WE826WD": {
+		"details": "ZBT WE826-WD",
+		"type": "1",
+		"build": "2102",
+		"config": ".config_we826wd",
+		"image": "openwrt-ramips-mt7620-zbtlink_zbt-we826-16m-squashfs-sysupgrade.bin",
+		"imagepath": "/ramips/mt7620/",
+		"mod": "ZBT-WE826WD",
+		"ext": "-upgrade.bin",
+		"addons": ["readme.pdf", "readmerecovery.txt"],
+		"custom": {
+			"name": {
+				"model": "ZBT WE826-WD"
+			}
+		}
 	}
 }
