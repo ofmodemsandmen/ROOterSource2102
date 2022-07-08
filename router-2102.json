@@ -601,5 +601,31 @@
 				"model": "ZBT WE826-WD"
 			}
 		}
+	},
+	"WNDR4300": {
+		"details": "Netgear WNDR4300v1",
+		"type": "2",
+		"build": "2102",
+		"config": ".config_wndr4300",
+		"image1": "openwrt-ath79-nand-netgear_wndr4300-squashfs-factory.img",
+		"image2": "openwrt-ath79-nand-netgear_wndr4300-squashfs-sysupgrade.bin",
+		"imagepath": "/ath79/nand/",
+		"mod": "Netgear-WNDR4300v1",
+		"ext1": "-upgrade.bin",
+		"ext2": "-factory.img",
+		"addons": ["readme.pdf", "readmerecovery.txt"]
+	},
+	"WNDR3700V4": {
+		"details": "Netgear WNDR3700-V4",
+		"type": "2",
+		"build": "2102",
+		"config": ".config_wndr3700v4",
+		"image1": "openwrt-ath79-nand-netgear_wndr3700-v4-squashfs-factory.img",
+		"image2": "openwrt-ath79-nand-netgear_wndr3700-v4-squashfs-sysupgrade.bin",
+		"imagepath": "/ath79/nand/",
+		"mod": "Netgear-WNDR3700-V4",
+		"ext1": "-factory.img",
+		"ext2": "-update.bin",
+		"addons": ["readme.pdf", "factory.txt"]
 	}
 }
