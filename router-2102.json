@@ -640,5 +640,18 @@
 		"ext2": "-upgrade.bin",
 		"ext1": "-factory.bin",
 		"addons": ["readme.pdf"]
+	},
+	"WAPR": {
+		"details": "Mikrotik RBwAPR-2nD",
+		"type": "2",
+		"build": "2102",
+		"config": ".config_wapr",
+		"image1": "openwrt-ath79-mikrotik-mikrotik_routerboard-wapr-2nd-initramfs-kernel.bin",
+		"image2": "openwrt-ath79-mikrotik-mikrotik_routerboard-wapr-2nd-squashfs-sysupgrade.bin",
+		"imagepath": "/ath79/mikrotik/",
+		"mod": "Mikrotik-RBwAPR-2nD",
+		"ext1": "-kernel.bin",
+		"ext2": "-update.bin",
+		"addons": ["readme.pdf"]
 	}
 }
