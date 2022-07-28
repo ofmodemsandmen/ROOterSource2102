@@ -653,5 +653,18 @@
 		"ext1": "-kernel.bin",
 		"ext2": "-update.bin",
 		"addons": ["readme.pdf"]
+	},
+	"L50": {
+		"details": "CheckPoint L-50",
+		"type": "2",
+		"build": "2102",
+		"config": ".config_l50",
+		"image2": "openwrt-kirkwood-checkpoint_l-50-squashfs-sysupgrade.bin",
+		"image1": "openwrt-kirkwood-checkpoint_l-50-initramfs-uImage",
+		"imagepath": "/kirkwood/generic/",
+		"mod": "CheckPoint-L-50",
+		"ext1": "-initramfs-uImage",
+		"ext2": "-upgrade.bin",
+		"addons": ["readme.pdf"]
 	}
 }
