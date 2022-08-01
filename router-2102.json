@@ -36,12 +36,12 @@
 	},
 	"OMNIA": {
 		"details": "Turris Omnia",
-		"type": "4",
+		"type": "1",
 		"build": "2102",
 		"config": ".config_omnia",
-		"image1": "openwrt-mvebu-cortexa9-cznic_turris-omnia-sysupgrade.img.gz",
-		"image2": "openwrt-mvebu-cortexa9-cznic_turris-omnia-sysupgrade.img",
+		"image": "openwrt-mvebu-cortexa9-cznic_turris-omnia-sysupgrade.img.gz",
 		"imagepath": "/mvebu/cortexa9/",
+		"ext": "-upgrade.img.gz",
 		"mod": "Turris-Omnia",
 		"addons": ["readme.pdf", "turris-omnia-initramfs.tar.gz", "turris.txt"]
 	},
@@ -473,7 +473,7 @@
 		"mod": "ZyZEL-NR7101",
 		"ext1": "-recovery.bin",
 		"ext2": "-update.bin",
-		"addons": ["readme.pdf"]
+		"addons": ["readme.pdf", "Zyxel_NR7101_Install_Guide_V2.zip"]
 	},
 	"N14": {
 		"details": "Asus RT-N14U",
