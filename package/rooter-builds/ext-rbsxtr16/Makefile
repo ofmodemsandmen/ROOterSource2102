@@ -21,7 +21,7 @@ define Package/ext-rbsxtr
 		+ext-command +ext-speedtest \
 		+openvpn-easy-rsa +openvpn-openssl \
 		+ext-extra \
-		+nano +picocom +wget
+		+nano +picocom +wget +webconsole
   TITLE:=ROOter support for RBSXTR routers
   PKGARCH:=all
 endef

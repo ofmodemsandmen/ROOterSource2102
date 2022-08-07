@@ -17,7 +17,7 @@ define Package/ext-rooter16
 		+luci-app-mwan3 +luci-app-dnsmasq-ipset \
 		+luci-app-ddns +ddns-scripts \
 		+luci-app-rootervpn +ext-wireguard \
-		+bwmon +464xlat \
+		+bwmon +464xlat +webconsole \
 		+ext-theme +luci-theme-argon +luci-theme-argondark \
 		+luci-theme-tomato +ext-login \
 		+ca-bundle +ca-certificates +libustream-wolfssl \
@@ -27,6 +27,7 @@ define Package/ext-rooter16
 		+openvpn-easy-rsa +openvpn-openssl \
 		+ext-extra +luci-app-hotspot +luci-app-wol \
 		+usbmuxd +libusbmuxd-utils +libimobiledevice-utils +kmod-usb-net-ipheth \
+		+qlog +luci-ssl +usbutils +openssl-util +irqbalance +ext-splashconfig \
 		+nano +picocom +wpad +wget +qfirehose +luci-app-vpnbypass
   TITLE:=ROOter support for 16meg and larger routers
   PKGARCH:=all

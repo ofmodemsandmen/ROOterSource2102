@@ -16,7 +16,7 @@ define Package/ext-rooter-lite
   DEPENDS:=+luci +ext-rooter-basic \
 		+luci-app-ddns +ddns-scripts \
 		+luci-app-rootervpn +ext-wireguard \
-		+bwmon +464xlat \
+		+bwmon +464xlat +webconsole \
 		+ext-theme +luci-theme-argon +luci-theme-argondark +ext-login \
 		+luci-theme-tomato \
 		+ca-bundle +ca-certificates +libustream-wolfssl \
@@ -26,6 +26,7 @@ define Package/ext-rooter-lite
 		+openvpn-easy-rsa +openvpn-openssl \
 		+ext-extra +luci-app-hotspot +luci-app-wol +luci-app-guestwifi \
 		+usbmuxd +libusbmuxd-utils +libimobiledevice-utils +kmod-usb-net-ipheth \
+		+qlog +luci-ssl +usbutils +openssl-util +irqbalance +ext-splashconfig \
 		+nano +picocom +wpad +wget +qfirehose +luci-app-vpnbypass 
   TITLE:=ROOter support w/o MWan3 for 16meg and larger routers
   PKGARCH:=all
