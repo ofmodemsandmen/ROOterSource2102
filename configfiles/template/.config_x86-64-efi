@@ -155,7 +155,7 @@ CONFIG_TARGET_IMAGES_GZIP=y
 # Image Options
 #
 CONFIG_TARGET_KERNEL_PARTSIZE=16
-CONFIG_TARGET_ROOTFS_PARTSIZE=256
+CONFIG_TARGET_ROOTFS_PARTSIZE=2000
 CONFIG_TARGET_ROOTFS_PARTNAME=""
 # end of Target Images
 
@@ -2273,7 +2273,7 @@ CONFIG_PACKAGE_kmod-iavf=m
 # CONFIG_PACKAGE_kmod-ifb is not set
 CONFIG_PACKAGE_kmod-igb=y
 # CONFIG_PACKAGE_kmod-igbvf is not set
-CONFIG_PACKAGE_kmod-igc=m
+CONFIG_PACKAGE_kmod-igc=y
 # CONFIG_PACKAGE_kmod-ixgbe is not set
 # CONFIG_PACKAGE_kmod-ixgbevf is not set
 CONFIG_PACKAGE_kmod-libphy=y
@@ -4291,7 +4291,6 @@ CONFIG_PACKAGE_luci-app-opkg=y
 #
 # CONFIG_PACKAGE_luci-theme-argon is not set
 # CONFIG_PACKAGE_luci-theme-bootstrap is not set
-CONFIG_PACKAGE_luci-theme-material=y
 # CONFIG_PACKAGE_luci-theme-openwrt is not set
 # CONFIG_PACKAGE_luci-theme-openwrt-2020 is not set
 # end of 4. Themes
@@ -5469,6 +5468,7 @@ CONFIG_PACKAGE_ppp-mod-pppoe=y
 # CONFIG_PACKAGE_softflowd is not set
 # CONFIG_PACKAGE_soloscli is not set
 # CONFIG_PACKAGE_speedtest-netperf is not set
+# CONFIG_PACKAGE_speedtestpp is not set
 # CONFIG_PACKAGE_spoofer is not set
 # CONFIG_PACKAGE_static-neighbor-reports is not set
 # CONFIG_PACKAGE_stunnel is not set
@@ -5554,9 +5554,10 @@ CONFIG_PACKAGE_uclient-fetch=y
 # CONFIG_PACKAGE_ext-blockport is not set
 # CONFIG_PACKAGE_ext-domain is not set
 # CONFIG_PACKAGE_ext-easycwmp is not set
-# CONFIG_PACKAGE_ext-menu is not set
+# CONFIG_PACKAGE_ext-l2tp is not set
 # CONFIG_PACKAGE_ext-mosquitto is not set
 # CONFIG_PACKAGE_ext-rspeedtest is not set
+# CONFIG_PACKAGE_ext-simplegps is not set
 # CONFIG_PACKAGE_ext-speedtest is not set
 # CONFIG_PACKAGE_ext-texting is not set
 # CONFIG_PACKAGE_ext-throttle is not set
@@ -5564,6 +5565,7 @@ CONFIG_PACKAGE_uclient-fetch=y
 # CONFIG_PACKAGE_ext-yamon3 is not set
 # CONFIG_PACKAGE_ext-zerotier is not set
 # CONFIG_PACKAGE_extramenu is not set
+# CONFIG_PACKAGE_l2tp is not set
 # CONFIG_PACKAGE_pingtest is not set
 # CONFIG_PACKAGE_portal is not set
 # CONFIG_PACKAGE_qfirehose is not set
@@ -5592,6 +5594,7 @@ CONFIG_PACKAGE_uclient-fetch=y
 # CONFIG_PACKAGE_h721 is not set
 # CONFIG_PACKAGE_mk01 is not set
 # CONFIG_PACKAGE_mt1300 is not set
+# CONFIG_PACKAGE_nex5 is not set
 # CONFIG_PACKAGE_rbm11g is not set
 # CONFIG_PACKAGE_rbm33g is not set
 # CONFIG_PACKAGE_rbsxtr is not set
@@ -5603,8 +5606,10 @@ CONFIG_PACKAGE_uclient-fetch=y
 # CONFIG_PACKAGE_wg1608 is not set
 # CONFIG_PACKAGE_wg209 is not set
 # CONFIG_PACKAGE_wg259 is not set
+# CONFIG_PACKAGE_wg3526 is not set
 # CONFIG_PACKAGE_wg827 is not set
 # CONFIG_PACKAGE_wrt1900 is not set
+# CONFIG_PACKAGE_x750 is not set
 # end of Router Specific
 
 #
@@ -5621,9 +5626,10 @@ CONFIG_PACKAGE_uclient-fetch=y
 #
 # CONFIG_PACKAGE_argon-config is not set
 # CONFIG_PACKAGE_ext-login is not set
-# CONFIG_PACKAGE_ext-material is not set
 # CONFIG_PACKAGE_ext-theme is not set
-# CONFIG_PACKAGE_luci-theme-infinity is not set
+# CONFIG_PACKAGE_luci-theme-argondark is not set
+CONFIG_PACKAGE_luci-theme-material=y
+# CONFIG_PACKAGE_luci-theme-materialgrey is not set
 # CONFIG_PACKAGE_luci-theme-tomato is not set
 # end of Themes
 
@@ -5637,6 +5643,8 @@ CONFIG_PACKAGE_extra-wifi=y
 # CONFIG_PACKAGE_ext-arc16 is not set
 # CONFIG_PACKAGE_ext-customx is not set
 # CONFIG_PACKAGE_ext-customx16 is not set
+# CONFIG_PACKAGE_ext-huasifei is not set
+# CONFIG_PACKAGE_ext-huasifei16 is not set
 # CONFIG_PACKAGE_ext-ltefix is not set
 # CONFIG_PACKAGE_ext-ltefix16 is not set
 # CONFIG_PACKAGE_ext-rbsxtr is not set
