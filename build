@@ -101,6 +101,24 @@ buldimage() {
 					temp1=$(jshon -e "$model_up" -e package  < $routersjson)
 					temp="${temp1%\"}"
 					model_build="${temp#\"}"
+				fi
+				
+				model_pre=""
+				fnd=$(echo "$model_list" | grep "prescript")
+				if [ ! -z "$fnd" ]; then
+					temp1=$(jshon -e "$model_up" -e prescript  < $routersjson)
+					temp="${temp1%\"}"
+					model_pre="${temp#\"}"
+					model_pre=$(echo $model_pre | sed 's!\\!!g')
+				fi
+				
+				model_post=""
+				fnd=$(echo "$model_list" | grep "postscript")
+				if [ ! -z "$fnd" ]; then
+					temp1=$(jshon -e "$model_up" -e postscript  < $routersjson)
+					temp="${temp1%\"}"
+					model_post="${temp#\"}"
+					model_post=$(echo $model_post | sed 's!\\!!g')
 				fi			
 				
 				model_addons=""
@@ -431,6 +449,10 @@ buldimage() {
 
 	if [ ! -z "$file_list" ]; then
 		cp -r $file_list* ./files
+	fi
+	
+	if [ ! -z "$model_pre" ]; then
+		"."$model_pre
 	fi
 
 	case $model_type in
@@ -792,6 +814,9 @@ cmd=$1
 
 if [ -z $cmd ]; then
 	buldimage $1 $2 $3
+	if [ ! -z "$model_post" ]; then
+		"."$model_post
+	fi
 else
 	if [ $cmd = "ALL" ]; then
 		start=$2
@@ -836,6 +861,9 @@ else
 				done < alllist.txt
 			else
 				buldimage $1 $2 $3
+				if [ ! -z "$model_post" ]; then
+					"."$model_post
+				fi
 			fi
 		fi
 	fi
