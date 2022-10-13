@@ -5674,7 +5674,7 @@ CONFIG_PACKAGE_uclient-fetch=y
 # CONFIG_PACKAGE_vpnpolicy is not set
 # CONFIG_PACKAGE_we826 is not set
 # CONFIG_PACKAGE_we826q is not set
-# CONFIG_PACKAGE_wg1602 is not set
+CONFIG_PACKAGE_wg1602=y
 # CONFIG_PACKAGE_wg1608 is not set
 # CONFIG_PACKAGE_wg209 is not set
 # CONFIG_PACKAGE_wg827 is not set
