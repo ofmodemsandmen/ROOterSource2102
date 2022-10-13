@@ -30,19 +30,19 @@ TARGET_DEVICES += zbtlink_zbt-wg1602-16m
 
 cmd=$1
 
-dts="/image/mt7621.mk"
-cp -f ./$dts ./$dts".bk"
-sed /"#start1602"/,/"#end1602"/d ./$dts".bk" > ./$dts
+dts="./target/linux/ramips/image/mt7621.mk"
+cp -f $dts $dts".bk"
+sed /"#start1602"/,/"#end1602"/d $dts".bk" > $dts
 if [ "$cmd" = "16" ]; then
-	echo "$OX16" >> ./$dts
+	echo "$OX16" >> $dts
 else
 	if [ "$cmd" = "32" ]; then
-		echo "$OX32" >> ./$dts
+		echo "$OX32" >> $dts
 	fi
 fi 
-rm -f ./$dts".bk"
+rm -f $dts".bk"
 
-dts="./dts/mt7621_zbtlink_zbt-wg1602-16m.dts"
+dts="./target/linux/ramips/dts/mt7621_zbtlink_zbt-wg1602-16m.dts"
 if [ "$cmd" = "16" ]; then
 	sed -i -e "s!reg = <0x50000 0x1fb0000>;!reg = <0x50000 0xfb0000>;!g" $dts
 else
