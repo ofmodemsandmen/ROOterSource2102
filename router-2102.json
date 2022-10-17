@@ -431,7 +431,7 @@
 		"imagepath": "/ramips/mt7621/",
 		"mod": "ZBT-WG827",
 		"ext": "-upgrade.bin",
-		"addons": ["readme.pdf"]
+		"addons": ["readme.pdf", "Important-wg827-Flash.pdf"]
 	},
 	"LHGHB": {
 		"details": "Mikrotik LHG-HB",
