@@ -315,20 +315,6 @@
 		"mod": "x86-Generic",
 		"addons": ["readme.pdf"]
 	},
-	"WR1045": {
-		"details": "TP-Link WR1045ND",
-		"type": "2",
-		"build": "2102",
-		"flash": "8",
-		"config": ".config_wr1045",
-		"image1": "openwrt-ath79-generic-tplink_tl-wr1045nd-v2-squashfs-sysupgrade.bin",
-		"image2": "openwrt-ath79-generic-tplink_tl-wr1045nd-v2-squashfs-factory.bin",
-		"imagepath": "/ath79/generic/",
-		"mod": "TP-Link-Archer-WR1045ND",
-		"ext1": "-upgrade.bin",
-		"ext2": "-factory.bin",
-		"addons": ["readme.pdf"]
-	},
 	"NANOR2S": {
 		"details": "NanoPi R2S",
 		"type": "4",
