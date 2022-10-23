@@ -781,5 +781,32 @@
 			},
 			"files": "/huasifei/files1/"	
 		}
+	},
+	"HUA1208": {
+		"details": "Huasifei WS1208",
+		"type": "1",
+		"package": "ext-huasifei",
+		"config": ".config_hua1208",
+		"image": "openwrt-ramips-mt7621-zbtlink_zbt-wg3526-16m-squashfs-sysupgrade.bin",
+		"imagepath": "/ramips/mt7621/",
+		"mod": "Huasifei-WS1208",
+		"ext": "-upgrade.bin",
+		"custom": {
+			"name": {
+				"model": "WS1208",
+				"hostname": "WS1208"
+			},
+			"wifi": {
+				"SSID2G": "wifi-2.4g",
+				"SSID5G": "wifi-5.8g",
+				"Password": "12345678"
+			},
+			"image": {
+				"Material": "hua.png",
+				"Argon": "hua.png",
+				"Tomato": "hua.png"
+			},
+			"files": "/huasifei/files/"	
+		}
 	}
 }
