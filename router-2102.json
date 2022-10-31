@@ -786,7 +786,7 @@
 		"details": "Huasifei WS1208",
 		"type": "1",
 		"package": "ext-huasifei",
-		"config": ".config_hua1208",
+		"config": ".config_wg3526",
 		"image": "openwrt-ramips-mt7621-zbtlink_zbt-wg3526-16m-squashfs-sysupgrade.bin",
 		"imagepath": "/ramips/mt7621/",
 		"mod": "Huasifei-WS1208",
