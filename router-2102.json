@@ -753,7 +753,13 @@
 		"imagepath": "/ramips/mt7621/",
 		"mod": "ZBT-WG1602-32M",
 		"ext": "-upgrade.bin",
-		"addons": ["readme.pdf", "readmerecovery.txt"]
+		"addons": ["readme.pdf", "readmerecovery.txt"],
+		"custom": {
+			"name": {
+				"model": "ZBT WG1602-32M",
+				"hostname": "ROOter"
+			}
+		}
 	},
 	"HUA1208V2": {
 		"details": "Huasifei WS1208V2",

@@ -1,0 +1,53 @@
+--- a/drivers/net/ethernet/mediatek/mtk_offload.c
++++ b/drivers/net/ethernet/mediatek/mtk_offload.c
+@@ -46,6 +46,38 @@ mtk_offload_prepare_v4(struct mtk_eth *e
+ 	return 0;
+ }
+ 
++static int
++mtk_offload_prepare_v6(struct mtk_eth *eth, struct mtk_foe_entry *entry,
++		       struct flow_offload_tuple *s_tuple,
++		       struct flow_offload_tuple *d_tuple,
++		       struct flow_offload_hw_path *src,
++		       struct flow_offload_hw_path *dest)
++{
++	int dest_port = 1;
++
++	if (dest->dev == eth->netdev[1])
++	    dest_port = 2;
++
++	mtk_foe_entry_prepare(entry, MTK_PPE_PKT_TYPE_IPV6_ROUTE_5T, s_tuple->l4proto,
++			      dest_port, dest->eth_src, dest->eth_dest);
++	mtk_foe_entry_set_ipv6_tuple(entry, 
++				     s_tuple->src_v6.s6_addr32, s_tuple->src_port,
++				     s_tuple->dst_v6.s6_addr32, s_tuple->dst_port);
++	
++				     
++				     
++
++	if (dest->flags & FLOW_OFFLOAD_PATH_PPPOE)
++		mtk_foe_entry_set_pppoe(entry, dest->pppoe_sid);
++
++	if (dest->flags & FLOW_OFFLOAD_PATH_VLAN)
++		mtk_foe_entry_set_vlan(entry, dest->vlan_id);
++
++	if (dest->flags & FLOW_OFFLOAD_PATH_DSA)
++		mtk_foe_entry_set_dsa(entry, dest->dsa_port);
++
++	return 0;
++}
+ int mtk_flow_offload_add(struct mtk_eth *eth,
+ 			 enum flow_offload_type type,
+ 			 struct flow_offload *flow,
+@@ -79,6 +111,11 @@ int mtk_flow_offload_add(struct mtk_eth
+ 		    mtk_offload_prepare_v4(eth, &reply, rtuple, otuple, dest, src))
+ 			return -EINVAL;
+ 		break;
++	case AF_INET6:
++		if (mtk_offload_prepare_v6(eth, &orig, otuple, rtuple, src, dest) ||
++		    mtk_offload_prepare_v6(eth, &reply, rtuple, otuple, dest, src))
++			return -EINVAL;
++		break;
+ 	default:
+ 		return -EINVAL;
+ 	}
