@@ -814,5 +814,31 @@
 			},
 			"files": "/huasifei/files/"	
 		}
+	},
+	"DIR882A1": {
+		"details": "D-Link DIR-882 A1",
+		"type": "2",
+		"build": "2102",
+		"config": ".config_dir882a1",
+		"image1": "openwrt-ramips-mt7621-dlink_dir-882-a1-squashfs-sysupgrade.bin",
+		"image2": "openwrt-ramips-mt7621-dlink_dir-882-a1-squashfs-factory.bin",
+		"imagepath": "/ramips/mt7621/",
+		"mod": "D-Link-DIR-882-A1",
+		"ext1": "-upgrade.bin",
+		"ext2": "-factory.bin",
+		"addons": ["readme.pdf", "archer.txt"]
+	},
+	"DIR882R1": {
+		"details": "D-Link DIR-882 R1",
+		"type": "2",
+		"build": "2102",
+		"config": ".config_dir882r1",
+		"image1": "openwrt-ramips-mt7621-dlink_dir-882-r1-squashfs-sysupgrade.bin",
+		"image2": "openwrt-ramips-mt7621-dlink_dir-882-r1-squashfs-factory.bin",
+		"imagepath": "/ramips/mt7621/",
+		"mod": "D-Link-DIR-882-R1",
+		"ext1": "-upgrade.bin",
+		"ext2": "-factory.bin",
+		"addons": ["readme.pdf", "archer.txt"]
 	}
 }
