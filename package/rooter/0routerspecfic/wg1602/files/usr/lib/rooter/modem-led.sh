@@ -12,9 +12,8 @@ log "$COMMD $DEV"
 if [ $DEV = "1-2" ]; then
 	case $COMMD in
 		"0" )
-			echo timer > /sys/class/leds/green:4g1/trigger
-			echo 0  > /sys/class/leds/green:4g1/delay_on
-			echo 1000  > /sys/class/leds/green:4g1/delay_off
+			echo none > /sys/class/leds/green:4g1/trigger
+			echo 0  > /sys/class/leds/green:4g1/brightness
 			;;
 		"1" )
 			echo timer > /sys/class/leds/green:4g1/trigger
@@ -35,14 +34,12 @@ if [ $DEV = "1-2" ]; then
 			echo none > /sys/class/leds/green:4g1/trigger
 			echo 1  > /sys/class/leds/green:4g1/brightness
 			;;
-			;;
 	esac
 else
 	case $COMMD in
 		"0" )
-			echo timer > /sys/class/leds/green:4g2/trigger
-			echo 0  > /sys/class/leds/green:4g2/delay_on
-			echo 1000  > /sys/class/leds/green:4g2/delay_off
+			echo none > /sys/class/leds/green:4g2/trigger
+			echo 0  > /sys/class/leds/green:4g2/brightness
 			;;
 		"1" )
 			echo timer > /sys/class/leds/green:4g2/trigger
