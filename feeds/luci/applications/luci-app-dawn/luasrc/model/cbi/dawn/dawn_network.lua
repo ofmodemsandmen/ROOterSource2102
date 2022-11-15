@@ -33,21 +33,21 @@ function s.render(self, sid)
 							<td class="td" style="vertical-align: top;">
 								<table class="table" id="ap-<%= mac %>">
 									<tr class="tr table-titles">
-										<th class="th">Hostname</th>
-										<th class="th">Interface</th>
-										<th class="th">MAC</th>
-										<th class="th">Utilization</th>
-										<th class="th">Frequency</th>
-										<th class="th">Stations</th>
-										<th class="th">HT Sup</th>
-										<th class="th">VHT Sup</th>
+										<th class="th"><%:Hostname%></th>
+										<th class="th"><%:Interface%></th>
+										<th class="th"><%:MAC%></th>
+										<th class="th"><%:Utilization%></th>
+										<th class="th"><%:Frequency%></th>
+										<th class="th"><%:Stations%></th>
+										<th class="th"><%:HT Sup%></th>
+										<th class="th"><%:VHT Sup%></th>
 									</tr>
 									<tr class="tr">
 										<td class="td"><%= xml.pcdata(data.hostname) %></td>
 										<td class="td"><%= xml.pcdata(data.iface) %></td>
 										<td class="td"><%= mac %></td>
 										<td class="td"><%= "%.2f" %(data.channel_utilization / 2.55) %> %</td>
-										<td class="td"><%= "%.3f" %( data.freq / 1000 ) %> GHz (Channel: <%= "%d" %( status.frequency_to_channel(data.freq) ) %>)</td>
+										<td class="td"><%= "%.3f" %( data.freq / 1000 ) %> <%:GHz (Channel:%> <%= "%d" %( status.frequency_to_channel(data.freq) ) %>)</td>
 										<td class="td"><%= "%d" % data.num_sta %></td>
 										<td class="td"><%= (data.ht_support == true) and "available" or "not available" %></td>
 										<td class="td"><%= (data.vht_support == true) and "available" or "not available" %></td>
@@ -57,10 +57,10 @@ function s.render(self, sid)
 							<td class="td" style="vertical-align: top;">
 								<table class="table" id="clients-<%= mac %>">
 									<tr class="tr table-titles">
-										<th class="th">MAC</th>
-										<th class="th">HT</th>
-										<th class="th">VHT</th>
-										<th class="th">Signal</th>
+										<th class="th"><%:MAC%></th>
+										<th class="th"><%:HT%></th>
+										<th class="th"><%:VHT%></th>
+										<th class="th"><%:Signal%></th>
 									</tr>
 									<%
 										local mac2, data2
