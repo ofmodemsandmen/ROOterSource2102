@@ -1,4 +1,4 @@
-m = Map("dawn", "Network Overview", translate("Network Overview"))
+m = Map("dawn", translate("Network Overview"), translate("Network Overview"))
 m.pageaction = false
 
 s = m:section(NamedSection, "__networkoverview__")
@@ -22,8 +22,8 @@ function s.render(self, sid)
 				<h3>SSID: <%= xml.pcdata(name) %></h3>
 				<table class="table" id=network_overview_main">
 					<tr class="tr table-titles">
-						<th class="th">AP</th>
-						<th class="th">Clients</th>
+						<th class="th"><%:AP%></th>
+						<th class="th"><%:Clients%></th>
 					</tr>
 					<%
 						local mac, data

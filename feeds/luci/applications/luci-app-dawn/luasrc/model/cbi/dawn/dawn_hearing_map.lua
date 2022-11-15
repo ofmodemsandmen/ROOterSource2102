@@ -1,4 +1,4 @@
-m = Map("dawn", "Hearing Map", translate("Hearing Map"))
+m = Map("dawn", translate("Hearing Map"), translate("Hearing Map"))
 m.pageaction = false
 
 s = m:section(NamedSection, "__hearingmap__")
@@ -16,7 +16,7 @@ function s.render(self, sid)
 			for name, macs in pairs(stat) do
 		%>
 			<div class="cbi-section-node">
-				<h3>SSID: <%= xml.pcdata(name) %></h3>
+				<h3><%:SSID: %><%= xml.pcdata(name) %></h3>
 				<table class="table" id="dawn_hearing_map">
 					<tr class="tr table-titles">
 						<th class="th"><%:Client MAC%></th>
