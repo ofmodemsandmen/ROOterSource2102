@@ -12,6 +12,9 @@ log "$COMMD $DEV"
 if [ $DEV = "1-2" ]; then
 	case $COMMD in
 		"0" )
+			uci -q delete system.4G1
+			uci commit system
+			/etc/init.d/led restart
 			echo none > /sys/class/leds/green:4g1/trigger
 			echo 0  > /sys/class/leds/green:4g1/brightness
 			;;
@@ -32,7 +35,16 @@ if [ $DEV = "1-2" ]; then
 			;;
 		"4" )
 			echo none > /sys/class/leds/green:4g1/trigger
-			echo 1  > /sys/class/leds/green:4g1/brightness
+			echo 0  > /sys/class/leds/green:4g1/brightness
+			INTER=$(uci get modem.modem$CURRMODEM.interface)
+			uci set system.4G1=led
+			uci set system.4G1.name="4G1"
+			uci set system.4G1.sysfs="green:4g1"
+			uci set system.4G1.trigger="netdev"
+			uci set system.4G1.dev="$INTER"
+			uci set system.4G1.mode="link tx rx"
+			uci commit system
+			/etc/init.d/led restart
 			;;
 	esac
 else
@@ -40,6 +52,9 @@ else
 		"0" )
 			echo none > /sys/class/leds/green:4g2/trigger
 			echo 0  > /sys/class/leds/green:4g2/brightness
+			uci -q delete system.4G2
+			uci commit system
+			/etc/init.d/led restart
 			;;
 		"1" )
 			echo timer > /sys/class/leds/green:4g2/trigger
@@ -58,7 +73,16 @@ else
 			;;
 		"4" )
 			echo none > /sys/class/leds/green:4g2/trigger
-			echo 1  > /sys/class/leds/green:4g2/brightness
+			echo 0  > /sys/class/leds/green:4g2/brightness
+			INTER=$(uci get modem.modem$CURRMODEM.interface)
+			uci set system.4G2=led
+			uci set system.4G2.name="4G2"
+			uci set system.4G2.sysfs="green:4g2"
+			uci set system.4G2.trigger="netdev"
+			uci set system.4G2.dev="$INTER"
+			uci set system.4G2.mode="link tx rx"
+			uci commit system
+			/etc/init.d/led restart
 			;;
 	esac
 
