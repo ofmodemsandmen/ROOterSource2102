@@ -8,8 +8,8 @@ CURRMODEM=$1
 COMMD=$2
 
 DEV=$(uci get modem.modem$CURRMODEM.device)
-log "$COMMD $DEV"
-if [ $DEV = "1-2" ]; then
+
+if [ $DEV = "1-1" ]; then
 	case $COMMD in
 		"0" )
 			uci -q delete system.4G1
@@ -29,11 +29,6 @@ if [ $DEV = "1-2" ]; then
 			echo 200  > /sys/class/leds/green:4g1/delay_off
 			;;
 		"3" )
-			echo timer > /sys/class/leds/green:4g1/trigger
-			echo 1000  > /sys/class/leds/green:4g1/delay_on
-			echo 0  > /sys/class/leds/green:4g1/delay_off
-			;;
-		"4" )
 			echo none > /sys/class/leds/green:4g1/trigger
 			echo 0  > /sys/class/leds/green:4g1/brightness
 			INTER=$(uci get modem.modem$CURRMODEM.interface)
@@ -50,11 +45,11 @@ if [ $DEV = "1-2" ]; then
 else
 	case $COMMD in
 		"0" )
-			echo none > /sys/class/leds/green:4g2/trigger
-			echo 0  > /sys/class/leds/green:4g2/brightness
 			uci -q delete system.4G2
 			uci commit system
 			/etc/init.d/led restart
+			echo none > /sys/class/leds/green:4g2/trigger
+			echo 0  > /sys/class/leds/green:4g2/brightness
 			;;
 		"1" )
 			echo timer > /sys/class/leds/green:4g2/trigger
@@ -67,11 +62,6 @@ else
 			echo 200  > /sys/class/leds/green:4g2/delay_off
 			;;
 		"3" )
-			echo timer > /sys/class/leds/green:4g2/trigger
-			echo 1000  > /sys/class/leds/green:4g2/delay_on
-			echo 0  > /sys/class/leds/green:4g2/delay_off
-			;;
-		"4" )
 			echo none > /sys/class/leds/green:4g2/trigger
 			echo 0  > /sys/class/leds/green:4g2/brightness
 			INTER=$(uci get modem.modem$CURRMODEM.interface)
