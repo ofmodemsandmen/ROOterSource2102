@@ -8,8 +8,10 @@ CURRMODEM=$1
 COMMD=$2
 
 DEV=$(uci get modem.modem$CURRMODEM.device)
-
-if [ $DEV = "1-1" ]; then
+if [ $COMMD -lt 4 ]; then
+	log "$COMMD $DEV"
+fi
+if [ $DEV = "1-2" ]; then
 	case $COMMD in
 		"0" )
 			uci -q delete system.4G1
