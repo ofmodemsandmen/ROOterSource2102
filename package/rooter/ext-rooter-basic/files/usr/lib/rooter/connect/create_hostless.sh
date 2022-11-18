@@ -695,7 +695,8 @@ if [ $SP -gt 0 ]; then
 	fi
 fi
 
-CLB=$(uci -q get modem.modeminfo$CURRMODEM.lb)
+#CLB=$(uci -q get modem.modeminfo$CURRMODEM.lb)
+CLB=1
 if [ -e /etc/config/mwan3 ]; then
 	ENB=$(uci -q get mwan3.wan$INTER.enabled)
 	if [ ! -z "$ENB" ]; then
