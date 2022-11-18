@@ -371,6 +371,11 @@ if [ $SP -gt 0 ]; then
 		uci commit modem
 	fi
 fi
+	
+if [ -e $ROOTER/modem-led.sh ]; then
+	$ROOTER/modem-led.sh $CURRMODEM 2
+fi
+
 $ROOTER/common/gettype.sh $CURRMODEM
 $ROOTER/connect/get_profile.sh $CURRMODEM
 if [ -e $ROOTER/simlock.sh ]; then
@@ -623,6 +628,10 @@ fi
 uci set modem.modem$CURRMODEM.ip=$wan_ip
 uci commit modem
 
+if [ -e $ROOTER/modem-led.sh ]; then
+	$ROOTER/modem-led.sh $CURRMODEM 3
+fi
+		
 $ROOTER/log/logger "HostlessModem #$CURRMODEM Connected with IP $wan_ip"
 
 PROT=5
