@@ -840,5 +840,18 @@
 		"ext1": "-upgrade.bin",
 		"ext2": "-factory.bin",
 		"addons": ["readme.pdf", "archer.txt"]
+	},
+	"RBM33G": {
+		"details": "Mikrotik RBM33G",
+		"type": "2",
+		"build": "2102",
+		"config": ".config_rbm33g",
+		"image1": "openwrt-ramips-mt7621-mikrotik_routerboard-m33g-initramfs-kernel.bin",
+		"image2": "openwrt-ramips-mt7621-mikrotik_routerboard-m33g-squashfs-sysupgrade.bin",
+		"imagepath": "/ramips/mt7621/",
+		"mod": "Mikrotik-RBM33G",
+		"ext1": "-factory.bin",
+		"ext2": "-update.bin",
+		"addons": ["flash-rbm33.pdf", "tftpd32.chm", "tftpd32.exe", "tftpd32.ini", "readme.pdf"]
 	}
 }
