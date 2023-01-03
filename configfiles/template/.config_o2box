@@ -7,7 +7,7 @@ CONFIG_HAVE_DOT_CONFIG=y
 # CONFIG_TARGET_sunxi is not set
 # CONFIG_TARGET_apm821xx is not set
 # CONFIG_TARGET_ath25 is not set
-CONFIG_TARGET_ath79=y
+# CONFIG_TARGET_ath79 is not set
 # CONFIG_TARGET_bcm27xx is not set
 # CONFIG_TARGET_bcm53xx is not set
 # CONFIG_TARGET_bcm47xx is not set
@@ -18,7 +18,7 @@ CONFIG_TARGET_ath79=y
 # CONFIG_TARGET_mpc85xx is not set
 # CONFIG_TARGET_imx6 is not set
 # CONFIG_TARGET_mxs is not set
-# CONFIG_TARGET_lantiq is not set
+CONFIG_TARGET_lantiq=y
 # CONFIG_TARGET_malta is not set
 # CONFIG_TARGET_pistachio is not set
 # CONFIG_TARGET_mvebu is not set
@@ -41,31 +41,43 @@ CONFIG_TARGET_ath79=y
 # CONFIG_TARGET_uml is not set
 # CONFIG_TARGET_zynq is not set
 # CONFIG_TARGET_x86 is not set
-# CONFIG_TARGET_ath79_generic is not set
-# CONFIG_TARGET_ath79_mikrotik is not set
-CONFIG_TARGET_ath79_nand=y
-# CONFIG_TARGET_ath79_tiny is not set
+CONFIG_TARGET_lantiq_xrx200=y
+# CONFIG_TARGET_lantiq_xway is not set
+# CONFIG_TARGET_lantiq_xway_legacy is not set
+# CONFIG_TARGET_lantiq_falcon is not set
+# CONFIG_TARGET_lantiq_ase is not set
 # CONFIG_TARGET_MULTI_PROFILE is not set
-# CONFIG_TARGET_ath79_nand_DEVICE_8dev_rambutan is not set
-# CONFIG_TARGET_ath79_nand_DEVICE_aerohive_hiveap-121 is not set
-# CONFIG_TARGET_ath79_nand_DEVICE_domywifi_dw33d is not set
-# CONFIG_TARGET_ath79_nand_DEVICE_glinet_gl-ar300m-nand is not set
-# CONFIG_TARGET_ath79_nand_DEVICE_glinet_gl-ar300m-nor is not set
-# CONFIG_TARGET_ath79_nand_DEVICE_glinet_gl-ar750s-nor-nand is not set
-# CONFIG_TARGET_ath79_nand_DEVICE_glinet_gl-ar750s-nor is not set
-# CONFIG_TARGET_ath79_nand_DEVICE_glinet_gl-e750 is not set
-CONFIG_TARGET_ath79_nand_DEVICE_netgear_wndr3700-v4=y
-# CONFIG_TARGET_ath79_nand_DEVICE_netgear_wndr4300 is not set
-# CONFIG_TARGET_ath79_nand_DEVICE_netgear_wndr4300sw is not set
-# CONFIG_TARGET_ath79_nand_DEVICE_netgear_wndr4300tn is not set
-# CONFIG_TARGET_ath79_nand_DEVICE_netgear_wndr4300-v2 is not set
-# CONFIG_TARGET_ath79_nand_DEVICE_netgear_wndr4500-v3 is not set
-# CONFIG_TARGET_ath79_nand_DEVICE_zyxel_nbg6716 is not set
+# CONFIG_TARGET_lantiq_xrx200_Default is not set
+# CONFIG_TARGET_lantiq_xrx200_DEVICE_avm_fritz3370-rev2-hynix is not set
+# CONFIG_TARGET_lantiq_xrx200_DEVICE_avm_fritz3370-rev2-micron is not set
+# CONFIG_TARGET_lantiq_xrx200_DEVICE_avm_fritz7360sl is not set
+# CONFIG_TARGET_lantiq_xrx200_DEVICE_avm_fritz7360-v2 is not set
+# CONFIG_TARGET_lantiq_xrx200_DEVICE_avm_fritz7362sl is not set
+# CONFIG_TARGET_lantiq_xrx200_DEVICE_avm_fritz7412 is not set
+# CONFIG_TARGET_lantiq_xrx200_DEVICE_avm_fritz7430 is not set
+# CONFIG_TARGET_lantiq_xrx200_DEVICE_alphanetworks_asl56026 is not set
+# CONFIG_TARGET_lantiq_xrx200_DEVICE_arcadyan_arv7519rw22 is not set
+# CONFIG_TARGET_lantiq_xrx200_DEVICE_arcadyan_vgv7510kw22-brn is not set
+CONFIG_TARGET_lantiq_xrx200_DEVICE_arcadyan_vgv7510kw22-nor=y
+# CONFIG_TARGET_lantiq_xrx200_DEVICE_arcadyan_vgv7519-brn is not set
+# CONFIG_TARGET_lantiq_xrx200_DEVICE_arcadyan_vgv7519-nor is not set
+# CONFIG_TARGET_lantiq_xrx200_DEVICE_arcadyan_vg3503j is not set
+# CONFIG_TARGET_lantiq_xrx200_DEVICE_bt_homehub-v5a is not set
+# CONFIG_TARGET_lantiq_xrx200_DEVICE_buffalo_wbmr-300hpd is not set
+# CONFIG_TARGET_lantiq_xrx200_DEVICE_lantiq_easy80920-nand is not set
+# CONFIG_TARGET_lantiq_xrx200_DEVICE_lantiq_easy80920-nor is not set
+# CONFIG_TARGET_lantiq_xrx200_DEVICE_netgear_dm200 is not set
+# CONFIG_TARGET_lantiq_xrx200_DEVICE_tplink_vr200 is not set
+# CONFIG_TARGET_lantiq_xrx200_DEVICE_tplink_vr200v is not set
+# CONFIG_TARGET_lantiq_xrx200_DEVICE_tplink_tdw8970 is not set
+# CONFIG_TARGET_lantiq_xrx200_DEVICE_tplink_tdw8980 is not set
+# CONFIG_TARGET_lantiq_xrx200_DEVICE_zyxel_p-2812hnu-f1 is not set
+# CONFIG_TARGET_lantiq_xrx200_DEVICE_zyxel_p-2812hnu-f3 is not set
 CONFIG_HAS_SUBTARGETS=y
 CONFIG_HAS_DEVICES=y
-CONFIG_TARGET_BOARD="ath79"
-CONFIG_TARGET_SUBTARGET="nand"
-CONFIG_TARGET_PROFILE="DEVICE_netgear_wndr3700-v4"
+CONFIG_TARGET_BOARD="lantiq"
+CONFIG_TARGET_SUBTARGET="xrx200"
+CONFIG_TARGET_PROFILE="DEVICE_arcadyan_vgv7510kw22-nor"
 CONFIG_TARGET_ARCH_PACKAGES="mips_24kc"
 CONFIG_DEFAULT_TARGET_OPTIMIZATION="-Os -pipe -mno-branch-likely -mips32r2 -mtune=24kc"
 CONFIG_CPU_TYPE="24kc"
@@ -75,30 +87,40 @@ CONFIG_DEFAULT_busybox=y
 CONFIG_DEFAULT_ca-bundle=y
 CONFIG_DEFAULT_dnsmasq=y
 CONFIG_DEFAULT_dropbear=y
+CONFIG_DEFAULT_dsl-vrx200-firmware-xdsl-a=y
+CONFIG_DEFAULT_dsl-vrx200-firmware-xdsl-b-patch=y
 CONFIG_DEFAULT_firewall=y
 CONFIG_DEFAULT_fstools=y
 CONFIG_DEFAULT_ip6tables=y
 CONFIG_DEFAULT_iptables=y
 CONFIG_DEFAULT_iwinfo=y
-CONFIG_DEFAULT_kmod-ath9k=y
 CONFIG_DEFAULT_kmod-gpio-button-hotplug=y
 CONFIG_DEFAULT_kmod-ipt-offload=y
-CONFIG_DEFAULT_kmod-usb-ledtrig-usbport=y
-CONFIG_DEFAULT_kmod-usb2=y
+CONFIG_DEFAULT_kmod-leds-gpio=y
+CONFIG_DEFAULT_kmod-ltq-atm-vr9=y
+CONFIG_DEFAULT_kmod-ltq-ptm-vr9=y
+CONFIG_DEFAULT_kmod-ltq-tapi=y
+CONFIG_DEFAULT_kmod-ltq-vdsl-vr9=y
+CONFIG_DEFAULT_kmod-ltq-vdsl-vr9-mei=y
+CONFIG_DEFAULT_kmod-ltq-vmmc=y
+CONFIG_DEFAULT_kmod-rt2800-pci=y
+CONFIG_DEFAULT_kmod-usb-dwc2=y
 CONFIG_DEFAULT_libc=y
 CONFIG_DEFAULT_libgcc=y
 CONFIG_DEFAULT_libustream-wolfssl=y
 CONFIG_DEFAULT_logd=y
+CONFIG_DEFAULT_ltq-vdsl-app=y
+CONFIG_DEFAULT_ltq-vdsl-vr9-vectoring-fw-installer=y
 CONFIG_DEFAULT_mtd=y
 CONFIG_DEFAULT_netifd=y
 CONFIG_DEFAULT_odhcp6c=y
 CONFIG_DEFAULT_odhcpd-ipv6only=y
 CONFIG_DEFAULT_opkg=y
 CONFIG_DEFAULT_ppp=y
+CONFIG_DEFAULT_ppp-mod-pppoa=y
 CONFIG_DEFAULT_ppp-mod-pppoe=y
 CONFIG_DEFAULT_procd=y
 CONFIG_DEFAULT_swconfig=y
-CONFIG_DEFAULT_uboot-envtools=y
 CONFIG_DEFAULT_uci=y
 CONFIG_DEFAULT_uclient-fetch=y
 CONFIG_DEFAULT_urandom-seed=y
@@ -107,8 +129,8 @@ CONFIG_DEFAULT_wpad-basic-wolfssl=y
 CONFIG_AUDIO_SUPPORT=y
 CONFIG_GPIO_SUPPORT=y
 CONFIG_PCI_SUPPORT=y
+CONFIG_PCIE_SUPPORT=y
 CONFIG_USB_SUPPORT=y
-CONFIG_USB_GADGET_SUPPORT=y
 CONFIG_BIG_ENDIAN=y
 CONFIG_USES_DEVICETREE=y
 CONFIG_USES_INITRAMFS=y
@@ -122,10 +144,10 @@ CONFIG_ARCH="mips"
 # Target Images
 #
 CONFIG_TARGET_ROOTFS_INITRAMFS=y
-CONFIG_TARGET_INITRAMFS_COMPRESSION_NONE=y
+# CONFIG_TARGET_INITRAMFS_COMPRESSION_NONE is not set
 # CONFIG_TARGET_INITRAMFS_COMPRESSION_GZIP is not set
 # CONFIG_TARGET_INITRAMFS_COMPRESSION_BZIP2 is not set
-# CONFIG_TARGET_INITRAMFS_COMPRESSION_LZMA is not set
+CONFIG_TARGET_INITRAMFS_COMPRESSION_LZMA=y
 # CONFIG_TARGET_INITRAMFS_COMPRESSION_LZO is not set
 # CONFIG_TARGET_INITRAMFS_COMPRESSION_LZ4 is not set
 # CONFIG_TARGET_INITRAMFS_COMPRESSION_XZ is not set
@@ -1518,13 +1540,12 @@ CONFIG_PACKAGE_libc=y
 CONFIG_PACKAGE_libgcc=y
 # CONFIG_PACKAGE_libgomp is not set
 CONFIG_PACKAGE_libpthread=y
-# CONFIG_PACKAGE_librt is not set
+CONFIG_PACKAGE_librt=y
 # CONFIG_PACKAGE_libstdcpp is not set
 CONFIG_PACKAGE_logd=y
 CONFIG_PACKAGE_mtd=y
 CONFIG_PACKAGE_netifd=y
 # CONFIG_PACKAGE_nft-qos is not set
-# CONFIG_PACKAGE_nvram is not set
 # CONFIG_PACKAGE_om-watchdog is not set
 CONFIG_PACKAGE_openwrt-keyring=y
 CONFIG_PACKAGE_opkg=y
@@ -1638,6 +1659,18 @@ CONFIG_ZABBIX_POSTGRESQL=y
 #
 # Boot Loaders
 #
+# CONFIG_PACKAGE_u-boot-bthomehubv5a_ram is not set
+# CONFIG_PACKAGE_u-boot-easy80920_nor is not set
+# CONFIG_PACKAGE_u-boot-easy80920_ram is not set
+# CONFIG_PACKAGE_u-boot-fb3370_eva is not set
+# CONFIG_PACKAGE_u-boot-fb3370_ram is not set
+# CONFIG_PACKAGE_u-boot-p2812hnufx_ram is not set
+CONFIG_PACKAGE_u-boot-vgv7510kw22_brn=y
+CONFIG_PACKAGE_u-boot-vgv7510kw22_nor=y
+CONFIG_PACKAGE_u-boot-vgv7510kw22_ram=y
+# CONFIG_PACKAGE_u-boot-vgv7519_brn is not set
+# CONFIG_PACKAGE_u-boot-vgv7519_nor is not set
+# CONFIG_PACKAGE_u-boot-vgv7519_ram is not set
 # end of Boot Loaders
 
 #
@@ -1765,6 +1798,10 @@ CONFIG_PACKAGE_libiwinfo-data=y
 # CONFIG_PACKAGE_cypress-firmware-4373-usb is not set
 # CONFIG_PACKAGE_cypress-firmware-54591-pcie is not set
 # CONFIG_PACKAGE_cypress-firmware-89459-pcie is not set
+CONFIG_PACKAGE_dsl-vrx200-firmware-xdsl-a=y
+# CONFIG_PACKAGE_dsl-vrx200-firmware-xdsl-a-patch is not set
+# CONFIG_PACKAGE_dsl-vrx200-firmware-xdsl-b is not set
+CONFIG_PACKAGE_dsl-vrx200-firmware-xdsl-b-patch=y
 # CONFIG_PACKAGE_e100-firmware is not set
 # CONFIG_PACKAGE_edgeport-firmware is not set
 # CONFIG_PACKAGE_eip197-mini-firmware is not set
@@ -1807,7 +1844,7 @@ CONFIG_PACKAGE_libiwinfo-data=y
 # CONFIG_PACKAGE_r8169-firmware is not set
 # CONFIG_PACKAGE_radeon-firmware is not set
 # CONFIG_PACKAGE_rs9113-firmware is not set
-# CONFIG_PACKAGE_rt2800-pci-firmware is not set
+CONFIG_PACKAGE_rt2800-pci-firmware=y
 # CONFIG_PACKAGE_rt2800-usb-firmware is not set
 # CONFIG_PACKAGE_rt61-pci-firmware is not set
 # CONFIG_PACKAGE_rt73-usb-firmware is not set
@@ -1951,6 +1988,7 @@ CONFIG_PACKAGE_wireless-regdb=y
 # CONFIG_PACKAGE_kmod-crypto-xcbc is not set
 # CONFIG_PACKAGE_kmod-crypto-xts is not set
 # CONFIG_PACKAGE_kmod-cryptodev is not set
+# CONFIG_PACKAGE_kmod-ltq-deu-vr9 is not set
 # end of Cryptographic API modules
 
 #
@@ -2106,9 +2144,8 @@ CONFIG_PACKAGE_wireless-regdb=y
 #
 # LED modules
 #
-# CONFIG_PACKAGE_kmod-leds-gpio is not set
+CONFIG_PACKAGE_kmod-leds-gpio=y
 # CONFIG_PACKAGE_kmod-leds-pca963x is not set
-# CONFIG_PACKAGE_kmod-leds-reset is not set
 # CONFIG_PACKAGE_kmod-ledtrig-activity is not set
 # CONFIG_PACKAGE_kmod-ledtrig-gpio is not set
 # CONFIG_PACKAGE_kmod-ledtrig-oneshot is not set
@@ -2128,6 +2165,7 @@ CONFIG_PACKAGE_kmod-lib-crc-ccitt=y
 # CONFIG_PACKAGE_kmod-lib-lz4 is not set
 # CONFIG_PACKAGE_kmod-lib-textsearch is not set
 # CONFIG_PACKAGE_kmod-lib-zstd is not set
+CONFIG_PACKAGE_kmod-ltq-ifxos=y
 # end of Libraries
 
 #
@@ -2268,6 +2306,7 @@ CONFIG_PACKAGE_kmod-nf-reject6=y
 # CONFIG_PACKAGE_kmod-dummy is not set
 # CONFIG_PACKAGE_kmod-e100 is not set
 # CONFIG_PACKAGE_kmod-e1000 is not set
+# CONFIG_PACKAGE_kmod-e1000e is not set
 # CONFIG_PACKAGE_kmod-et131x is not set
 # CONFIG_PACKAGE_kmod-ethoc is not set
 # CONFIG_PACKAGE_kmod-forcedeth is not set
@@ -2281,6 +2320,10 @@ CONFIG_PACKAGE_kmod-nf-reject6=y
 # CONFIG_PACKAGE_kmod-ixgbe is not set
 # CONFIG_PACKAGE_kmod-ixgbevf is not set
 # CONFIG_PACKAGE_kmod-libphy is not set
+CONFIG_PACKAGE_kmod-ltq-atm-vr9=y
+CONFIG_PACKAGE_kmod-ltq-ptm-vr9=y
+CONFIG_PACKAGE_kmod-ltq-vdsl-vr9=y
+CONFIG_PACKAGE_kmod-ltq-vdsl-vr9-mei=y
 # CONFIG_PACKAGE_kmod-macvlan is not set
 # CONFIG_PACKAGE_kmod-mdio-gpio is not set
 # CONFIG_PACKAGE_kmod-mii is not set
@@ -2326,7 +2369,8 @@ CONFIG_PACKAGE_kmod-nf-reject6=y
 #
 # Network Support
 #
-# CONFIG_PACKAGE_kmod-atm is not set
+CONFIG_PACKAGE_kmod-atm=y
+# CONFIG_PACKAGE_kmod-atmtcp is not set
 # CONFIG_PACKAGE_kmod-ax25 is not set
 # CONFIG_PACKAGE_kmod-batman-adv is not set
 # CONFIG_PACKAGE_kmod-bonding is not set
@@ -2339,6 +2383,7 @@ CONFIG_PACKAGE_kmod-nf-reject6=y
 # CONFIG_PACKAGE_kmod-gre6 is not set
 # CONFIG_PACKAGE_kmod-ip6-tunnel is not set
 # CONFIG_PACKAGE_kmod-ipip is not set
+# CONFIG_PACKAGE_kmod-ipoa is not set
 # CONFIG_PACKAGE_kmod-ipsec is not set
 # CONFIG_PACKAGE_kmod-iptunnel6 is not set
 # CONFIG_PACKAGE_kmod-isdn4linux is not set
@@ -2364,7 +2409,7 @@ CONFIG_PACKAGE_kmod-nf-reject6=y
 CONFIG_PACKAGE_kmod-ppp=y
 # CONFIG_PACKAGE_kmod-mppe is not set
 # CONFIG_PACKAGE_kmod-ppp-synctty is not set
-# CONFIG_PACKAGE_kmod-pppoa is not set
+CONFIG_PACKAGE_kmod-pppoa=y
 CONFIG_PACKAGE_kmod-pppoe=y
 # CONFIG_PACKAGE_kmod-pppol2tp is not set
 CONFIG_PACKAGE_kmod-pppox=y
@@ -2403,14 +2448,13 @@ CONFIG_PACKAGE_kmod-slhc=y
 # CONFIG_PACKAGE_kmod-btmrvl is not set
 # CONFIG_PACKAGE_kmod-button-hotplug is not set
 # CONFIG_PACKAGE_kmod-echo is not set
-# CONFIG_PACKAGE_kmod-eeprom-93cx6 is not set
+CONFIG_PACKAGE_kmod-eeprom-93cx6=y
 # CONFIG_PACKAGE_kmod-eeprom-at24 is not set
 # CONFIG_PACKAGE_kmod-eeprom-at25 is not set
 # CONFIG_PACKAGE_kmod-gpio-beeper is not set
 CONFIG_PACKAGE_kmod-gpio-button-hotplug=y
 # CONFIG_PACKAGE_kmod-gpio-dev is not set
 # CONFIG_PACKAGE_kmod-gpio-mcp23s08 is not set
-# CONFIG_PACKAGE_kmod-gpio-nxp-74hc153 is not set
 # CONFIG_PACKAGE_kmod-gpio-nxp-74hc164 is not set
 # CONFIG_PACKAGE_kmod-gpio-pca953x is not set
 # CONFIG_PACKAGE_kmod-gpio-pcf857x is not set
@@ -2480,25 +2524,15 @@ CONFIG_PACKAGE_kmod-gpio-button-hotplug=y
 # USB Support
 #
 # CONFIG_PACKAGE_kmod-chaoskey is not set
-CONFIG_PACKAGE_kmod-phy-ath79-usb=y
 # CONFIG_PACKAGE_kmod-usb-acm is not set
 # CONFIG_PACKAGE_kmod-usb-atm is not set
-# CONFIG_PACKAGE_kmod-usb-chipidea is not set
-# CONFIG_PACKAGE_kmod-usb-chipidea2 is not set
 # CONFIG_PACKAGE_kmod-usb-cm109 is not set
 CONFIG_PACKAGE_kmod-usb-core=y
-# CONFIG_PACKAGE_kmod-usb-dwc2 is not set
+CONFIG_PACKAGE_kmod-usb-dwc2=y
 # CONFIG_PACKAGE_kmod-usb-dwc3 is not set
-CONFIG_PACKAGE_kmod-usb-ehci=y
-# CONFIG_PACKAGE_kmod-usb-gadget-cdc-composite is not set
-# CONFIG_PACKAGE_kmod-usb-gadget-ehci-debug is not set
-# CONFIG_PACKAGE_kmod-usb-gadget-eth is not set
-# CONFIG_PACKAGE_kmod-usb-gadget-hid is not set
-# CONFIG_PACKAGE_kmod-usb-gadget-mass-storage is not set
-# CONFIG_PACKAGE_kmod-usb-gadget-serial is not set
 # CONFIG_PACKAGE_kmod-usb-hid is not set
 # CONFIG_PACKAGE_kmod-usb-hid-cp2112 is not set
-CONFIG_PACKAGE_kmod-usb-ledtrig-usbport=y
+# CONFIG_PACKAGE_kmod-usb-ledtrig-usbport is not set
 # CONFIG_PACKAGE_kmod-usb-net is not set
 # CONFIG_PACKAGE_kmod-usb-net-aqc111 is not set
 # CONFIG_PACKAGE_kmod-usb-net-asix is not set
@@ -2524,7 +2558,6 @@ CONFIG_PACKAGE_kmod-usb-ledtrig-usbport=y
 # CONFIG_PACKAGE_kmod-usb-net-sierrawireless is not set
 # CONFIG_PACKAGE_kmod-usb-net-smsc95xx is not set
 # CONFIG_PACKAGE_kmod-usb-net-sr9700 is not set
-# CONFIG_PACKAGE_kmod-usb-net2280 is not set
 # CONFIG_PACKAGE_kmod-usb-ohci is not set
 # CONFIG_PACKAGE_kmod-usb-ohci-pci is not set
 # CONFIG_PACKAGE_kmod-usb-printer is not set
@@ -2556,7 +2589,7 @@ CONFIG_PACKAGE_kmod-usb-ledtrig-usbport=y
 # CONFIG_PACKAGE_kmod-usb-uhci is not set
 # CONFIG_PACKAGE_kmod-usb-wdm is not set
 # CONFIG_PACKAGE_kmod-usb-yealink is not set
-CONFIG_PACKAGE_kmod-usb2=y
+# CONFIG_PACKAGE_kmod-usb2 is not set
 # CONFIG_PACKAGE_kmod-usb2-pci is not set
 # CONFIG_PACKAGE_kmod-usb3 is not set
 # CONFIG_PACKAGE_kmod-usbip is not set
@@ -2580,6 +2613,22 @@ CONFIG_PACKAGE_kmod-usb2=y
 # Voice over IP
 #
 # CONFIG_PACKAGE_kmod-dahdi is not set
+CONFIG_PACKAGE_kmod-ltq-tapi=y
+# CONFIG_VOICE_CPE_TAPI_FAX is not set
+CONFIG_VOICE_CPE_TAPI_CID=y
+CONFIG_VOICE_CPE_TAPI_LT_GR909=y
+# CONFIG_VOICE_CPE_TAPI_DECT is not set
+CONFIG_VOICE_CPE_TAPI_KPI=y
+CONFIG_VOICE_CPE_TAPI_QOS=y
+CONFIG_VOICE_CPE_TAPI_STATISTICS=y
+# CONFIG_VOICE_CPE_TAPI_METERING is not set
+# CONFIG_VOICE_CPE_TAPI_HDLC is not set
+CONFIG_VOICE_CPE_TAPI_TRACES=y
+CONFIG_VOICE_CPE_TAPI_LINUX_HOTPLUG=y
+CONFIG_PACKAGE_kmod-ltq-vmmc=y
+CONFIG_VOICE_CPE_VMMC_WITH_DEVICE_VR9=y
+# CONFIG_VOICE_CPE_VMMC_DISABLE_DECT_NIBBLE_SWAP is not set
+CONFIG_VOICE_CPE_VMMC_MPS_HISTORY_SIZE=128
 # end of Voice over IP
 
 #
@@ -2607,23 +2656,14 @@ CONFIG_PACKAGE_kmod-usb2=y
 #
 # CONFIG_PACKAGE_kmod-adm8211 is not set
 # CONFIG_PACKAGE_kmod-ar5523 is not set
-CONFIG_PACKAGE_kmod-ath=y
-CONFIG_ATH_USER_REGD=y
-# CONFIG_PACKAGE_ATH_DEBUG is not set
-CONFIG_PACKAGE_ATH_DFS=y
-# CONFIG_PACKAGE_ATH_DYNACK is not set
+# CONFIG_PACKAGE_kmod-ath is not set
 # CONFIG_PACKAGE_kmod-ath10k is not set
 # CONFIG_PACKAGE_kmod-ath10k-ct is not set
 # CONFIG_PACKAGE_kmod-ath10k-ct-smallbuffers is not set
 # CONFIG_PACKAGE_kmod-ath5k is not set
 # CONFIG_PACKAGE_kmod-ath6kl-sdio is not set
 # CONFIG_PACKAGE_kmod-ath6kl-usb is not set
-CONFIG_PACKAGE_kmod-ath9k=y
-# CONFIG_ATH9K_HWRNG is not set
-# CONFIG_ATH9K_SUPPORT_PCOEM is not set
-# CONFIG_ATH9K_TX99 is not set
-CONFIG_ATH9K_UBNTHSR=y
-CONFIG_PACKAGE_kmod-ath9k-common=y
+# CONFIG_PACKAGE_kmod-ath9k is not set
 # CONFIG_PACKAGE_kmod-ath9k-htc is not set
 # CONFIG_PACKAGE_kmod-b43 is not set
 # CONFIG_PACKAGE_kmod-b43legacy is not set
@@ -2679,9 +2719,15 @@ CONFIG_PACKAGE_MAC80211_MESH=y
 # CONFIG_PACKAGE_kmod-rt2400-pci is not set
 # CONFIG_PACKAGE_kmod-rt2500-pci is not set
 # CONFIG_PACKAGE_kmod-rt2500-usb is not set
-# CONFIG_PACKAGE_kmod-rt2800-pci is not set
+CONFIG_PACKAGE_kmod-rt2800-lib=y
+CONFIG_PACKAGE_kmod-rt2800-mmio=y
+CONFIG_PACKAGE_kmod-rt2800-pci=y
 # CONFIG_PACKAGE_kmod-rt2800-usb is not set
-# CONFIG_PACKAGE_kmod-rt2x00-lib is not set
+CONFIG_PACKAGE_kmod-rt2x00-lib=y
+# CONFIG_PACKAGE_RT2X00_LIB_DEBUGFS is not set
+# CONFIG_PACKAGE_RT2X00_DEBUG is not set
+CONFIG_PACKAGE_kmod-rt2x00-mmio=y
+CONFIG_PACKAGE_kmod-rt2x00-pci=y
 # CONFIG_PACKAGE_kmod-rt61-pci is not set
 # CONFIG_PACKAGE_kmod-rt73-usb is not set
 # CONFIG_PACKAGE_kmod-rtl8180 is not set
@@ -3086,7 +3132,7 @@ CONFIG_PACKAGE_lua=y
 #
 # Compression
 #
-# CONFIG_PACKAGE_libbz2 is not set
+CONFIG_PACKAGE_libbz2=y
 # CONFIG_PACKAGE_liblz4 is not set
 # CONFIG_PACKAGE_liblzma is not set
 # CONFIG_PACKAGE_libunrar is not set
@@ -4042,7 +4088,7 @@ CONFIG_PACKAGE_libustream-wolfssl=y
 # CONFIG_PACKAGE_libyubikey is not set
 # CONFIG_PACKAGE_libzmq-curve is not set
 # CONFIG_PACKAGE_libzmq-nc is not set
-# CONFIG_PACKAGE_linux-atm is not set
+CONFIG_PACKAGE_linux-atm=y
 # CONFIG_PACKAGE_lmdb is not set
 # CONFIG_PACKAGE_log4cplus is not set
 # CONFIG_PACKAGE_loudmouth is not set
@@ -4798,7 +4844,7 @@ CONFIG_PACKAGE_iptables=y
 # CONFIG_PACKAGE_atm-tools is not set
 # CONFIG_PACKAGE_atm-ttcp_atm is not set
 # CONFIG_PACKAGE_atm-zeppelin is not set
-# CONFIG_PACKAGE_br2684ctl is not set
+CONFIG_PACKAGE_br2684ctl=y
 # end of Linux ATM tools
 
 #
@@ -5029,6 +5075,7 @@ CONFIG_OPENLDAP_DEBUG=y
 #
 # Telephony Lantiq
 #
+# CONFIG_PACKAGE_asterisk-chan-lantiq is not set
 # end of Telephony Lantiq
 
 #
@@ -5320,6 +5367,10 @@ CONFIG_PACKAGE_iw=y
 # CONFIG_PACKAGE_libipset is not set
 # CONFIG_PACKAGE_libndp is not set
 # CONFIG_PACKAGE_linknx is not set
+CONFIG_PACKAGE_ltq-dsl-base=y
+CONFIG_PACKAGE_ltq-vdsl-app=y
+# CONFIG_PACKAGE_ltq-vdsl-mei-test is not set
+CONFIG_PACKAGE_ltq-vdsl-vr9-vectoring-fw-installer=y
 # CONFIG_PACKAGE_lynx is not set
 # CONFIG_PACKAGE_mac-telnet-client is not set
 # CONFIG_PACKAGE_mac-telnet-discover is not set
@@ -5388,7 +5439,7 @@ CONFIG_PACKAGE_odhcpd_ipv6only_ext_cer_id=0
 # CONFIG_PACKAGE_port-mirroring is not set
 CONFIG_PACKAGE_ppp=y
 # CONFIG_PACKAGE_ppp-mod-passwordfd is not set
-# CONFIG_PACKAGE_ppp-mod-pppoa is not set
+CONFIG_PACKAGE_ppp-mod-pppoa=y
 CONFIG_PACKAGE_ppp-mod-pppoe=y
 # CONFIG_PACKAGE_ppp-mod-pppol2tp is not set
 # CONFIG_PACKAGE_ppp-mod-pptp is not set
@@ -5671,8 +5722,7 @@ CONFIG_PACKAGE_luci-theme-material=y
 # Boot Loaders
 #
 # CONFIG_PACKAGE_fconfig is not set
-# CONFIG_PACKAGE_rbcfg is not set
-CONFIG_PACKAGE_uboot-envtools=y
+# CONFIG_PACKAGE_uboot-envtools is not set
 # end of Boot Loaders
 
 #
@@ -5975,7 +6025,7 @@ CONFIG_PACKAGE_uboot-envtools=y
 # CONFIG_PACKAGE_bonniexx is not set
 # CONFIG_PACKAGE_bottlerocket is not set
 # CONFIG_PACKAGE_bsdiff is not set
-# CONFIG_PACKAGE_bspatch is not set
+CONFIG_PACKAGE_bspatch=y
 # CONFIG_PACKAGE_byobu is not set
 # CONFIG_PACKAGE_byobu-utils is not set
 # CONFIG_PACKAGE_cache-domains-mbedtls is not set
