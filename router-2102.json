@@ -853,5 +853,16 @@
 		"ext1": "-factory.bin",
 		"ext2": "-update.bin",
 		"addons": ["flash-rbm33.pdf", "tftpd32.chm", "tftpd32.exe", "tftpd32.ini", "readme.pdf"]
+	},
+	"N56UB1": {
+		"details": "Asus RT-N56U B1",
+		"type": "1",
+		"build": "2102",
+		"config": ".config_n56ub1",
+		"image": "openwrt-ramips-mt7621-asus_rt-n56u-b1-squashfs-sysupgrade.bin",
+		"imagepath": "/ramips/mt7621/",
+		"mod": "Asus-RT-N56U-B1",
+		"ext": "-upgrade.bin",
+		"addons": ["readme.pdf", "readmerecovery.txt"]
 	}
 }
