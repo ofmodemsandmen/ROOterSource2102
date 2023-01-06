@@ -1065,7 +1065,7 @@
 		"type": "1",
 		"build": "2102",
 		"config": ".config_u7621-06",
-		"image": "openwrt-ramips-mt7621-unielec_u7621-06-64m-squashfs-sysupgrade.bin",
+		"image": "openwrt-ramips-mt7621-unielec_u7621-06-16m-squashfs-sysupgrade.bin",
 		"imagepath": "/ramips/mt7621/",
 		"mod": "UniElec-U7621-06",
 		"ext": "-upgrade.bin",
