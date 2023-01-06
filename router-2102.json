@@ -738,6 +738,19 @@
 		"ext2": "-upgrade.bin",
 		"addons": ["readme.pdf", "factory.txt"]
 	},
+	"R7800": {
+		"details": "Netgear R7800",
+		"type": "2",
+		"build": "2102",
+		"config": ".config_r7800",
+		"image1": "openwrt-ipq806x-generic-netgear_r7800-squashfs-factory.img",
+		"image2": "openwrt-ipq806x-generic-netgear_r7800-squashfs-sysupgrade.bin",
+		"imagepath": "/ipq806x/generic/",
+		"mod": "Netgear-R7800",
+		"ext1": "-factory.img",
+		"ext2": "-update.bin",
+		"addons": ["readme.pdf", "tftp.txt"]
+	},
 	"R8000": {
 		"details": "Netgear R8000",
 		"type": "1",
