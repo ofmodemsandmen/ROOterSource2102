@@ -671,8 +671,8 @@
 		"type": "4",
 		"build": "2102",
 		"config": ".config_orangep",
-		"image1": "openwrt-sunxi-cortexa7-sun8i-h3-orangepi-plus-ext4-sdcard.img.gz",
-		"image2": "openwrt-sunxi-cortexa7-sun8i-h3-orangepi-plus-ext4-sdcard.img",
+		"image1": "openwrt-sunxi-cortexa7-xunlong_orangepi-plus-ext4-sdcard.img.gz",
+		"image2": "openwrt-sunxi-cortexa7-xunlong_orangepi-plus-ext4-sdcard.img",
 		"imagepath": "/sunxi/cortexa7/",
 		"mod": "OrangePi-Plus",
 		"addons": ["readme.pdf"]
