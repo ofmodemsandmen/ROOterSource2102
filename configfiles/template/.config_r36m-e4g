@@ -200,7 +200,6 @@ CONFIG_DEFAULT_swconfig=y
 CONFIG_DEFAULT_uboot-envtools=y
 CONFIG_DEFAULT_uci=y
 CONFIG_DEFAULT_uclient-fetch=y
-CONFIG_DEFAULT_uqmi=y
 CONFIG_DEFAULT_urandom-seed=y
 CONFIG_DEFAULT_urngd=y
 CONFIG_DEFAULT_wpad-basic-wolfssl=y
@@ -5188,7 +5187,7 @@ CONFIG_OPENLDAP_DEBUG=y
 # CONFIG_PACKAGE_comgt-directip is not set
 # CONFIG_PACKAGE_comgt-ncm is not set
 # CONFIG_PACKAGE_umbim is not set
-CONFIG_PACKAGE_uqmi=y
+# CONFIG_PACKAGE_uqmi is not set
 # end of WWAN
 
 #
