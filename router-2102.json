@@ -401,6 +401,19 @@
 		"ext": "-upgrade.bin",
 		"addons": ["readme.pdf", "readmerecovery.txt"]
 	},
+	"HC5962": {
+		"details": "HiWiFi HC5962",
+		"type": "2",
+		"build": "2102",
+		"config": ".config_hc5962",
+		"image1": "openwrt-ramips-mt7621-hiwifi_hc5962-squashfs-sysupgrade.bin",
+		"image2": "openwrt-ramips-mt7621-hiwifi_hc5962-squashfs-factory.bin",
+		"imagepath": "/ramips/mt7621/",
+		"mod": "HiWiFi-HC5962",
+		"ext1": "-upgrade.bin",
+		"ext2": "-factory.bin",
+		"addons": ["readme.pdf", "factory.txt"]
+	},
 	"HUA1208": {
 		"details": "Huasifei WS1208",
 		"type": "1",
