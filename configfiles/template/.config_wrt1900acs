@@ -5586,7 +5586,7 @@ CONFIG_PACKAGE_uclient-fetch=y
 # CONFIG_PACKAGE_wg259 is not set
 # CONFIG_PACKAGE_wg3526 is not set
 # CONFIG_PACKAGE_wg827 is not set
-CONFIG_PACKAGE_wrt1900=y
+# CONFIG_PACKAGE_wrt1900 is not set
 # CONFIG_PACKAGE_x750 is not set
 # end of Router Specific
 
@@ -5608,6 +5608,7 @@ CONFIG_PACKAGE_wrt1900=y
 CONFIG_PACKAGE_luci-theme-material=y
 # CONFIG_PACKAGE_luci-theme-materialgrey is not set
 # CONFIG_PACKAGE_luci-theme-tomato is not set
+# CONFIG_PACKAGE_theme-data is not set
 # end of Themes
 
 #
