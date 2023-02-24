@@ -929,7 +929,7 @@ endef
 define Device/mikrotik_routerboard-750gr3
   $(Device/MikroTik)
   DEVICE_MODEL := RouterBOARD 750Gr3
-  DEVICE_PACKAGES += -wpad-basic-wolfssl
+  DEVICE_PACKAGES += -wpad-basic-wolfssl kmod-usb3 kmod-usb2 kmod-usb-ohci kmod-sdhci-mt7620
   SUPPORTED_DEVICES += mikrotik,rb750gr3
 endef
 TARGET_DEVICES += mikrotik_routerboard-750gr3
@@ -937,14 +937,14 @@ TARGET_DEVICES += mikrotik_routerboard-750gr3
 define Device/mikrotik_routerboard-760igs
   $(Device/MikroTik)
   DEVICE_MODEL := RouterBOARD 760iGS
-  DEVICE_PACKAGES += kmod-sfp -wpad-basic-wolfssl
+  DEVICE_PACKAGES += kmod-sfp -wpad-basic-wolfssl kmod-usb3 kmod-usb2 kmod-usb-ohci kmod-sdhci-mt7620
 endef
 TARGET_DEVICES += mikrotik_routerboard-760igs
 
 define Device/mikrotik_routerboard-m11g
   $(Device/MikroTik)
   DEVICE_MODEL := RouterBOARD M11G
-  DEVICE_PACKAGES := -wpad-basic-wolfssl
+  DEVICE_PACKAGES := -wpad-basic-wolfssl kmod-usb3 kmod-usb2 kmod-usb-ohci kmod-sdhci-mt7620
   SUPPORTED_DEVICES += mikrotik,rbm11g
 endef
 TARGET_DEVICES += mikrotik_routerboard-m11g
@@ -952,7 +952,7 @@ TARGET_DEVICES += mikrotik_routerboard-m11g
 define Device/mikrotik_routerboard-m33g
   $(Device/MikroTik)
   DEVICE_MODEL := RouterBOARD M33G
-  DEVICE_PACKAGES := -wpad-basic-wolfssl
+  DEVICE_PACKAGES := -wpad-basic-wolfssl kmod-usb3 kmod-usb2 kmod-usb-ohci kmod-sdhci-mt7620
   SUPPORTED_DEVICES += mikrotik,rbm33g
 endef
 TARGET_DEVICES += mikrotik_routerboard-m33g
