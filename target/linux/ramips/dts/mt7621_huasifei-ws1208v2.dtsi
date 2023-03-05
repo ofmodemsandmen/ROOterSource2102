@@ -97,6 +97,18 @@
 				label = "factory";
 				reg = <0x40000 0x10000>;
 				read-only;
+				
+				compatible = "nvmem-cells";
+				#address-cells = <1>;
+				#size-cells = <1>;
+
+				macaddr_factory_e000: macaddr@e000 {
+					reg = <0xe000 0x6>;
+				};
+
+				macaddr_factory_e006: macaddr@e006 {
+					reg = <0xe006 0x6>;
+				};
 			};
 
 			firmware: partition@50000 {
@@ -132,8 +144,24 @@
 	};
 };
 
-&ethernet {
-	mtd-mac-address = <&factory 0xe000>;
+&gmac0 {
+	nvmem-cells = <&macaddr_factory_e000>;
+	nvmem-cell-names = "mac-address";
+};
+
+&gmac1 {
+	status = "okay";
+	label = "wan";
+	phy-handle = <&ethphy4>;
+
+	nvmem-cells = <&macaddr_factory_e006>;
+	nvmem-cell-names = "mac-address";
+};
+
+&mdio {
+	ethphy4: ethernet-phy@4 {
+		reg = <4>;
+	};
 };
 
 &switch0 {
@@ -158,19 +186,13 @@
 			label = "lan4";
 		};
 
-		port@4 {
-			status = "okay";
-			label = "wan";
-			mtd-mac-address = <&factory 0xe000>;
-			mtd-mac-address-increment = <1>;
-		};
 	};
 };
 
 &pinctrl {
 	state_default: pinctrl0 {
 		gpio {
-			ralink,group = "wdt", "rgmii2", "jtag", "mdio", "ic2", "uart1", "uart2", "uart3";
+			ralink,group = "wdt", "jtag", "mdio", "ic2", "uart1", "uart2", "uart3";
 			ralink,function = "gpio";
 		};
 	};
