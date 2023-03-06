@@ -1,0 +1,12 @@
+/dts-v1/;
+
+#include "mt7621_huasifei-ws1218.dtsi"
+
+/ {
+	compatible = "huasifei,huasifei-ws118", "huasifei,huasifei-ws1218", "mediatek,mt7621-soc";
+	model = "Huasifei-WS1218";
+};
+
+&firmware {
+	reg = <0x50000 0xfb0000>;
+};

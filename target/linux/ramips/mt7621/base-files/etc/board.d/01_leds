@@ -115,6 +115,7 @@ xiaomi,redmi-router-ac2100)
 youhua,wr1200js)
 	ucidef_set_led_netdev "internet" "INTERNET" "green:wan" "wan"
 	;;
+huasifei,huasifei-ws1218)|\
 huasifei,huasifei-ws1208v2)
 	ucidef_set_led_wlan "wlan2g" "wlan2g" "$boardname:wifi24" "phy0tpt"
 	ucidef_set_led_netdev "wwan0" "wwan0" "$boardname:green:4g5g" "wwan0" "link tx rx"

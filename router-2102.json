@@ -468,6 +468,33 @@
 			"files": "/huasifei/files1/"	
 		}
 	},
+	"HUA1218": {
+		"details": "Huasifei WS1218",
+		"type": "1",
+		"package": "ext-huasifei",
+		"config": ".config_hua1218",
+		"image": "openwrt-ramips-mt7621-huasifei-ws1218-squashfs-sysupgrade.bin",
+		"imagepath": "/ramips/mt7621/",
+		"mod": "Huasifei-WS1218",
+		"ext": "-upgrade.bin",
+		"custom": {
+			"name": {
+				"model": "WS1218",
+				"hostname": "WS1218"
+			},
+			"wifi": {
+				"SSID2G": "wifi-2.4g",
+				"SSID5G": "wifi-5.8g",
+				"Password": "12345678"
+			},
+			"image": {
+				"Material": "hua.png",
+				"Argon": "hua.png",
+				"Tomato": "hua.png"
+			},
+			"files": "/huasifei/files18/"	
+		}
+	},
 	"KEENXII": {
 		"details": "ZyXEL Keenetic Extra II",
 		"type": "2",

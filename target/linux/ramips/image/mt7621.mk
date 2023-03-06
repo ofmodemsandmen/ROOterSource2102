@@ -1814,6 +1814,20 @@ define Device/huasifei-ws1208v2
 endef
 TARGET_DEVICES += huasifei-ws1208v2
 
+define Device/huasifei-ws1218
+  $(Device/dsa-migration)
+  SUPPORTED_DEVICES += huasifei-ws1218
+  IMAGE_SIZE := 16064k
+  DEVICE_VENDOR := Huasifei
+  DEVICE_MODEL := WS1218
+  DEVICE_VARIANT := 16M
+  DEVICE_PACKAGES := \
+	kmod-ata-core kmod-ata-ahci kmod-sdhci-mt7620 kmod-mt7603 kmod-mt76x2 \
+	kmod-usb3 kmod-usb-ledtrig-usbport wpad
+endef
+TARGET_DEVICES += huasifei-ws1218
+
+
 #start1602
 define Device/zbtlink_zbt-wg1602-16m
   $(Device/dsa-migration)
@@ -1822,8 +1836,10 @@ define Device/zbtlink_zbt-wg1602-16m
   DEVICE_VENDOR := Zbtlink
   DEVICE_MODEL := ZBT-WG1602
   DEVICE_VARIANT := 16M
-  DEVICE_PACKAGES := kmod-sdhci-mt7620 kmod-mt7603 kmod-mt76x2 kmod-usb3 \
-	kmod-usb-ledtrig-usbport
+  DEVICE_PACKAGES := kmod-sdhci-mt7620 kmod-mt7603 kmod-usb3 \
+	kmod-usb-ledtrig-usbport \
+	kmod-mt7615e kmod-mt76 kmod-mt7615-firmware \
+	kmod-mt7663-firmware-ap kmod-mt7663-firmware-sta 
 endef
 TARGET_DEVICES += zbtlink_zbt-wg1602-16m
 #end1602
