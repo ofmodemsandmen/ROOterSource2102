@@ -1823,7 +1823,7 @@ define Device/huasifei-ws1218
   DEVICE_VARIANT := 16M
   DEVICE_PACKAGES := \
 	kmod-ata-core kmod-ata-ahci kmod-sdhci-mt7620\
-	kmod-usb3 kmod-usb-ledtrig-usbport wpad  \
+	kmod-usb3 kmod-usb-ledtrig-usbport wpad kmod-mt7603 \
 	kmod-mt7615e kmod-mt76 kmod-mt7615-firmware \
 	kmod-mt7663-firmware-ap kmod-mt7663-firmware-sta 
 endef
