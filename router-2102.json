@@ -1206,6 +1206,17 @@
 		"ext": "-upgrade.bin",
 		"addons": ["readme.pdf", "readmerecovery.txt"]
 	},
+	"WG827": {
+		"details": "ZBT WG827",
+		"type": "1",
+		"build": "2102",
+		"config": ".config_wg827",
+		"image": "openwrt-ramips-mt7621-zbtlink_zbt-wg827-16m-squashfs-sysupgrade.bin",
+		"imagepath": "/ramips/mt7621/",
+		"mod": "ZBT-WG827",
+		"ext": "-upgrade.bin",
+		"addons": ["readme.pdf", "Important-wg827-Flash.pdf"]
+	},
 	"WG1602": {
 		"details": "ZBT WG1602",
 		"type": "1",
