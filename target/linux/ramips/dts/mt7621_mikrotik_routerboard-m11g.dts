@@ -1,4 +1,4 @@
-#include "mt7621_mikrotik.dtsi"
+#include "mt7621_mikrotik.dtsi" 
 
 / {
 	compatible = "mikrotik,routerboard-m11g", "mediatek,mt7621-soc";
