@@ -378,6 +378,17 @@
 		"ext2": "-factory.bin",
 		"addons": ["readme.pdf", "factory.txt"]
 	},
+	"EA9500": {
+		"details": "Linksys EA9500v1",
+		"type": "1",
+		"build": "2102",
+		"config": ".config_ea9500",
+		"image": "openwrt-bcm53xx-generic-linksys_ea9500-squashfs.trx",
+		"imagepath": "/bcm53xx/generic/",
+		"mod": "Linksys-EA9500v1",
+		"ext": "-upgrade.bin",
+		"addons": ["readme.pdf", "factory.txt"]
+	},
 	"GLMIFI": {
 		"details": "Gl.iNet Mifi",
 		"type": "1",
