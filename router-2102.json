@@ -1279,8 +1279,8 @@
 		"image2": "openwrt-ath79-nand-netgear_wndr4300-squashfs-sysupgrade.bin",
 		"imagepath": "/ath79/nand/",
 		"mod": "Netgear-WNDR4300v1",
-		"ext1": "-upgrade.bin",
-		"ext2": "-factory.img",
+		"ext2": "-upgrade.bin",
+		"ext1": "-factory.img",
 		"addons": ["readme.pdf", "readmerecovery.txt"]
 	},
 	"WNDR3700": {
