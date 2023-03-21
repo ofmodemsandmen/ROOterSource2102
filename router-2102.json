@@ -44,7 +44,7 @@
 		"build": "2102",
 		"config": ".config_apu2c4",
 		"image1": "openwrt-x86-64-generic-squashfs-combined.img.gz",
-		"image2": "openwrt-x86-64-generic-combined-squashfs.img",
+		"image2": "openwrt-x86-64-generic-squashfs-combined.img",
 		"imagepath": "/x86/64/",
 		"mod": "APU2C4",
 		"addons": ["readme.pdf", "readmeSD.txt"]
