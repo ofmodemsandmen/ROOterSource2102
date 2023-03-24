@@ -13,7 +13,7 @@ include $(INCLUDE_DIR)/package.mk
 define Package/ext-rooterbcm16
   SECTION:=utils
   CATEGORY:=ROOter
-  DEPENDS:=+luci +ext-rooter-basic \
+  DEPENDS:=+luci +ext-rooter-basic +ext-logo \
 		+luci-app-mwan3 +luci-app-dnsmasq-ipset \
 		+luci-app-ddns +ddns-scripts \
 		+luci-app-rootervpn +ext-wireguard \

@@ -13,7 +13,7 @@ include $(INCLUDE_DIR)/package.mk
 define Package/ext-rooter4
   SECTION:=utils
   CATEGORY:=ROOter
-  DEPENDS:=+luci +ext-rooter-basic \
+  DEPENDS:=+luci +ext-rooter-basic +ext-logo \
 		+ca-bundle +ca-certificates \
 		+luci-app-sqm +kmod-sched-cake \
 		+luci-app-ddns +ddns-scripts \
