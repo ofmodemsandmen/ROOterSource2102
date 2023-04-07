@@ -1,0 +1,42 @@
+diff --git a/Makefile b/Makefile
+index 3b40445..68bd2ff 100644
+--- a/Makefile
++++ b/Makefile
+@@ -1344,14 +1344,28 @@ ifeq ($(CONFIG_PLATFORM_I386_PC), y)
+ ifeq ($(CONFIG_CONCURRENT_MODE), y)
+ EXTRA_CFLAGS += -DCONFIG_CONCURRENT_MODE
+ endif
++ifdef EXT_EXTRA_CFLAGS
++EXTRA_CFLAGS += $(EXT_EXTRA_CFLAGS)
++else
+ EXTRA_CFLAGS += -DCONFIG_LITTLE_ENDIAN
+ EXTRA_CFLAGS += -DCONFIG_IOCTL_CFG80211 -DRTW_USE_CFG80211_STA_EVENT
++endif
++ifndef ARCH
+ SUBARCH := $(shell uname -m | sed -e s/i.86/i386/)
+ ARCH ?= $(SUBARCH)
++endif
++ifndef CROSS_COMPILE
+ CROSS_COMPILE ?=
++endif
++ifndef KVER
+ KVER  := $(shell uname -r)
++endif
++ifndef KSRC
+ KSRC := /lib/modules/$(KVER)/build
++endif
++ifndef MODDESTDIR
+ MODDESTDIR := /lib/modules/$(KVER)/kernel/drivers/net/wireless/
++endif
+ INSTALL_PREFIX :=
+ STAGINGMODDIR := /lib/modules/$(KVER)/kernel/drivers/staging
+ endif
+@@ -2485,7 +2499,7 @@ ifeq ($(CONFIG_RTL8723B), y)
+ $(MODULE_NAME)-$(CONFIG_MP_INCLUDED)+= core/rtw_bt_mp.o
+ endif
+ 
+-obj-$(CONFIG_RTL8822BU) := $(MODULE_NAME).o
++obj-m := $(MODULE_NAME).o
+ 
+ else
+ 
