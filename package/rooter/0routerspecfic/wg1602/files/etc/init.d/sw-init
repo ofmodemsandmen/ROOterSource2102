@@ -10,6 +10,6 @@ log() {
 
 start_service()
 {
-	log "WG1602 USB Hub switch to USB3.0 infterface"
-	echo 0 > /sys/class/gpio/ext-usb/value
+	usb=$(uci -q get usb.usb.usb)
+	echo "$usb" > /sys/class/gpio/ext-usb/value
 }

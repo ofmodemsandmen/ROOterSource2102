@@ -1,0 +1,92 @@
+<%
+
+function showicon(lck)
+	if lck == 0 then
+		return resource .. "/icons/off.png"
+	else
+		return resource .. "/icons/on.png"
+	end
+end
+
+
+-%>
+
+<%+header%>
+
+<script type="text/javascript" src="<%=resource%>/xhr.js"></script>
+<script type="text/javascript">//<![CDATA[
+	var usb;
+	
+	XHR.get('<%=luci.dispatcher.build_url("admin", "system", "getusb")%>',
+			null,
+			function(x, rv)
+			{
+				usb = rv.usb;
+				if ( usb == "0" )
+				{
+					document.getElementById('dual').src = "<%=showicon(1)%>";
+					document.getElementById('usb').src = "<%=showicon(0)%>";
+				}
+				else
+				{
+					document.getElementById('dual').src = "<%=showicon(0)%>";
+					document.getElementById('usb').src = "<%=showicon(1)%>";
+				}
+			}
+		);
+		
+		function dual()
+		{
+			if ( usb == 0 )
+			{
+				document.getElementById('dual').src = "<%=showicon(0)%>";
+				document.getElementById('usb').src = "<%=showicon(1)%>";
+				usb = 1;
+			}
+			else
+			{
+				document.getElementById('dual').src = "<%=showicon(1)%>";
+				document.getElementById('usb').src = "<%=showicon(0)%>";
+				usb = "0";
+			}
+			XHR.get('<%=luci.dispatcher.build_url("admin", "system", "setusb")%>',
+				{ set: usb },
+				function(x, rv)
+				{
+				}
+			);
+		}
+		
+//]]></script>
+
+<head>
+	<link rel="stylesheet" href="<%=resource%>/buttons/buttons.css">
+</head>
+
+<h2><a id="content" name="content"><%:USB Configuration%></a></h2>
+<div class="cbi-map-descr"><%:Configure Router for 2 PCie interfaces or 1 PCie interface and USB port%></div>
+
+
+<table border="0">
+	<tr>
+		<td width="10%">&nbsp;</td>
+		<td width="10%">&nbsp;</td>
+		<td width="80%">&nbsp;</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td>
+			<input type="image" id="dual" src="<%=showicon(0)%>" onclick="return dual()">
+		</td>
+		<td style="text-align:left;font-size:25px;">Two PCie Interfaces</td>
+	</tr>
+		<tr>
+		<td>&nbsp;</td>
+		<td>
+	  		<input type="image" id="usb" src="<%=showicon(1)%>" onclick="return dual()">
+		</td>
+		<td style="text-align:left;font-size:25px;">One PCie Interface and USB Port</td>
+	</tr>
+</table>
+
+<%+footer%>
