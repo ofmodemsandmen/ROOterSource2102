@@ -1254,7 +1254,7 @@
 		"imagepath": "/ramips/mt7621/",
 		"mod": "ZBT-WG1602",
 		"ext": "-upgrade.bin",
-		"addons": ["readme.pdf", "readmerecovery.txt"]
+		"addons": ["readme.pdf", "readmerecovery.txt", "usb-configuration.txt"]
 	},
 	"WG160232": {
 		"details": "ZBT WG1602-32M",

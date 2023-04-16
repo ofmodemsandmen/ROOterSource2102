@@ -1,0 +1,7 @@
+The WG1602 can have either 2 internal PCie interfaces or
+a single internal PCie interface and the external USB port.
+It can not have all three together.
+
+By default the firmware is set to have 2 internal PCie interfaces
+and no USB port. This can be changed by going to System->USB Configuration
+and selecting which set up you want.
