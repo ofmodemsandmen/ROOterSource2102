@@ -17,12 +17,6 @@
 		bootargs = "console=ttyS0,115200";
 	};
 	
-	palmbus: palmbus@1E000000 {
-		i2c@900 {
-			status = "okay";
-		};
-	};
-
 	keys {
 		compatible = "gpio-keys-polled";
 		poll-interval = <20>;
@@ -115,7 +109,9 @@
 	wifi@0,0 {
 		compatible = "pci14c3,7603";
 		reg = <0x0000 0 0 0 0>;
-		mediatek,mtd-eeprom = <&factory 0x0000>;
+		mediatek,mtd-eeprom = <&factory 0x0028>;
+		nvmem-cells = <&macaddr_config_0028>;
+		nvmem-cell-names = "mac-address";
 	};
 };
 
@@ -123,7 +119,10 @@
 	wifi@0,0 {
 		compatible = "pci14c3,7662";
 		reg = <0x0000 0 0 0 0>;
-		mediatek,mtd-eeprom = <&factory 0x8000>;
+		mediatek,mtd-eeprom = <&factory 0x002E>;
+		nvmem-cells = <&macaddr_config_0028>;
+		nvmem-cell-names = "mac-address";
+		mac-address-increment = <1>;
 		ieee80211-freq-limit = <5000000 6000000>;
 
 		led {
@@ -133,7 +132,13 @@
 };
 
 &ethernet {
-	mtd-mac-address = <&factory 0xe000>;
+	pinctrl-0 = <&mdio_pins>, <&rgmii1_pins>;
+};
+
+&gmac0 {
+	nvmem-cells = <&macaddr_factory_004>;
+	nvmem-cell-names = "mac-address";
+	mac-address-increment = <2>;
 };
 
 &switch0 {
@@ -161,8 +166,9 @@
 		port@4 {
 			status = "okay";
 			label = "wan";
-			mtd-mac-address = <&factory 0xe000>;
-			mtd-mac-address-increment = <1>;
+			nvmem-cells = <&macaddr_factory_004>;
+			nvmem-cell-names = "mac-address";
+			mac-address-increment = <3>;
 		};
 	};
 };
@@ -173,5 +179,19 @@
 			ralink,group = "wdt", "rgmii2", "jtag", "mdio", "ic2", "uart1", "uart2", "uart3";
 			ralink,function = "gpio";
 		};
+	};
+};
+
+&factory {
+	compatible = "nvmem-cells";
+	#address-cells = <1>;
+	#size-cells = <1>;
+
+	macaddr_factory_004: macaddr@004 {
+		reg = <0x004 0x6>;
+	};
+	
+	macaddr_config_0028: macaddr@0028 {
+		reg = <0x0004 0x6>;
 	};
 };
