@@ -165,7 +165,7 @@
 
 &state_default {
 	gpio {
-		groups = "wdt", "rgmii2", "i2c";
+		groups = "wdt", "rgmii2", "i2c", "jtag";
 		function = "gpio";
 	};
 };
