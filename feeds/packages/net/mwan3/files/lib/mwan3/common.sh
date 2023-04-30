@@ -5,6 +5,7 @@ IP6="ip -6"
 SCRIPTNAME="$(basename "$0")"
 
 MWAN3_STATUS_DIR="/var/run/mwan3"
+MWAN3_STATUS_IPTABLES_LOG_DIR="${MWAN3_STATUS_DIR}/iptables_log"
 MWAN3TRACK_STATUS_DIR="/var/run/mwan3track"
 
 MWAN3_INTERFACE_MAX=""
@@ -20,6 +21,12 @@ MAX_SLEEP=$(((1<<31)-1))
 
 command -v ip6tables > /dev/null
 NO_IPV6=$?
+
+IPS="ipset"
+IPT4="iptables -t mangle -w"
+IPT6="ip6tables -t mangle -w"
+IPT4R="iptables-restore -T mangle -w -n"
+IPT6R="ip6tables-restore -T mangle -w -n"
 
 LOG()
 {
@@ -112,6 +119,7 @@ mwan3_init()
 	config_load mwan3
 
 	[ -d $MWAN3_STATUS_DIR ] || mkdir -p $MWAN3_STATUS_DIR/iface_state
+	[ -d "$MWAN3_STATUS_IPTABLES_LOG_DIR" ] || mkdir -p "$MWAN3_STATUS_IPTABLES_LOG_DIR"
 
 	# mwan3's MARKing mask (at least 3 bits should be set)
 	if [ -e "${MWAN3_STATUS_DIR}/mmx_mask" ]; then
@@ -132,7 +140,7 @@ mwan3_init()
 	# remove "linkdown", expiry and source based routing modifiers from route lines
 	config_get_bool source_routing globals source_routing 0
 	[ $source_routing -eq 1 ] && unset source_routing
-	MWAN3_ROUTE_LINE_EXP="s/linkdown //; s/expires [0-9]\+sec//; s/error [0-9]\+//; ${source_routing:+s/default\(.*\) from [^ ]*/default\1/;} p"
+	MWAN3_ROUTE_LINE_EXP="s/offload//; s/linkdown //; s/expires [0-9]\+sec//; s/error [0-9]\+//; ${source_routing:+s/default\(.*\) from [^ ]*/default\1/;} p"
 
 	# mark mask constants
 	bitcnt=$(mwan3_count_one_bits MMX_MASK)
