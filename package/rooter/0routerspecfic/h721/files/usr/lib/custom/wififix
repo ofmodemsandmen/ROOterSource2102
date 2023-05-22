@@ -5,6 +5,8 @@ log() {
 	modlog "Custom Ping Test " "$@"
 }
 
+exit 0
+
 count_radio() {
 	local config=$1
 	local channel
