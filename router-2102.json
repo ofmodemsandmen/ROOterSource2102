@@ -953,29 +953,25 @@
 	},
 	"RB750GR3": {
 		"details": "Mikrotik RB750Gr3",
-		"type": "2",
+		"type": "1",
 		"build": "2102",
 		"config": ".config_rb750gr3",
-		"image1": "openwrt-ramips-mt7621-mikrotik_routerboard-750gr3-initramfs-kernel.bin",
-		"image2": "openwrt-ramips-mt7621-mikrotik_routerboard-750gr3-squashfs-sysupgrade.bin",
+		"image": "openwrt-ramips-mt7621-mikrotik_routerboard-750gr3-squashfs-sysupgrade.bin",
 		"imagepath": "/ramips/mt7621/",
 		"mod": "Mikrotik-RB750GR3",
-		"ext1": "-factory.bin",
-		"ext2": "-update.bin",
-		"addons": ["flash-rbm33.pdf", "tftpd32.chm", "tftpd32.exe", "tftpd32.ini", "readme.pdf"]
+		"ext": "-update.bin",
+		"addons": ["flash-rbm33.pdf", "tftpd32.chm", "tftpd32.exe", "tftpd32.ini", "readme.pdf", "750gr3-initramfs-kernel.bin"]
 	},
 	"RB760IGS": {
 		"details": "Mikrotik RB760iGS",
-		"type": "2",
+		"type": "1",
 		"build": "2102",
 		"config": ".config_rb760igs",
-		"image1": "openwrt-ramips-mt7621-mikrotik_routerboard-760igs-initramfs-kernel.bin",
-		"image2": "openwrt-ramips-mt7621-mikrotik_routerboard-760igs-squashfs-sysupgrade.bin",
+		"image": "openwrt-ramips-mt7621-mikrotik_routerboard-760igs-squashfs-sysupgrade.bin",
 		"imagepath": "/ramips/mt7621/",
 		"mod": "Mikrotik-RB760iGS",
-		"ext1": "-factory.bin",
-		"ext2": "-update.bin",
-		"addons": ["flash-rbm33.pdf", "tftpd32.chm", "tftpd32.exe", "tftpd32.ini", "readme.pdf"]
+		"ext": "-update.bin",
+		"addons": ["flash-rbm33.pdf", "tftpd32.chm", "tftpd32.exe", "tftpd32.ini", "readme.pdf", "760igs-initramfs-kernel.bin"]
 	},
 	"RB922": {
 		"details": "Mikrotik RB922UAGS",
