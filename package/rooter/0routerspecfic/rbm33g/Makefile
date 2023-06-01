@@ -14,6 +14,7 @@ define Package/rbm33g
   SECTION:=utils
   CATEGORY:=ROOter
   SUBMENU:=Router Specific
+  DEPENDS:=+kmod-usb3
   TITLE:=Install scripts for RBM33G
   PKGARCH:=all
 endef
