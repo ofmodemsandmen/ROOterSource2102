@@ -1,7 +1,7 @@
 #!/bin/sh /etc/rc.common
 # Copyright (C) 2013 OpenWrt.org
 
-START=90
+START=58
 USE_PROCD=1
 
 log() {
@@ -16,6 +16,9 @@ start_service()
 		uci set wireless.radio0.htmode=HT20
 		uci set wireless.radio0.channel=3
 		uci set wireless.radio0.legacy_rates=0
+		ssid=$(uci -q get wireless.default_radio0.ssid)
+		ssid=$(echo "$ssid" | sed "s/5G/2G/g")
+		uci set wireless.default_radio0.ssid="$ssid"
 		uci commit wireless
 		wifi reload
 		echo "0" > /etc/mt1300
