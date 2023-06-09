@@ -566,17 +566,6 @@
 			}
 		}
 	},
-	"MT1300": {
-		"details": "Gl.iNet MT1300",
-		"type": "1",
-		"build": "2102",
-		"config": ".config_mt1300",
-		"image": "openwrt-ramips-mt7621-glinet_gl-mt1300-squashfs-sysupgrade.bin",
-		"imagepath": "/ramips/mt7621/",
-		"mod": "Gl.iNet-MT1300",
-		"ext": "-upgrade.bin",
-		"addons": ["readme.pdf", "glinet.txt"]
-	},
 	"MT300A": {
 		"details": "Gl.iNet MT300A",
 		"type": "1",
