@@ -108,14 +108,14 @@
 
 &pcie0 {
 	wifi0: wifi@0,0 {
-		compatible = "mediatek,mt76";
+		//compatible = "mediatek,mt76";
 		mtd-mac-address = <&factory 0x0c00>;
 	};
 };
 
 &pcie1 {
 	wifi1: wifi@0,0 {
-		compatible = "mediatek,mt76";
+		//compatible = "mediatek,mt76";
 		mtd-mac-address = <&factory 0x0c00>;
 	};
 };
