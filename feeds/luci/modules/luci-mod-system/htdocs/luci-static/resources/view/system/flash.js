@@ -250,7 +250,7 @@ return view.extend({
 					]));
 					opts.keep[0].disabled = true;
 				} else {
-					opts.keep[0].checked = true;
+					opts.keep[0].checked = false;
 
 					if (has_rootfs_data) {
 						body.push(E('p', {}, E('label', { 'class': 'btn' }, [
