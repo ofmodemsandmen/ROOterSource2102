@@ -803,7 +803,7 @@ return view.extend({
 				'load': L.bind(this.setupCharts, this)
 			}),
 
-			E('h2', [ _('Netlink Bandwidth Monitor') ]),
+			E('h2', [ _('Usage Statistics') ]),
 			this.renderPeriods(),
 
 			E('div', [
@@ -847,9 +847,9 @@ return view.extend({
 					]),
 					E('div', { 'class': 'right' }, [
 						E('button', {
-							'class': 'cbi-button',
+							'class': 'cbi-button cbi-button-add',
 							'click': ui.createHandlerFn(this, 'handleCommit')
-							}, _('Force reload…')
+							}, _('Refresh Statistics…')
 						)
 					])
 				]),
@@ -893,9 +893,9 @@ return view.extend({
 					]),
 					E('div', { 'class': 'right' }, [
 						E('button', {
-							'class': 'cbi-button',
+							'class': 'cbi-button-add',
 							'click': ui.createHandlerFn(this, 'handleCommit')
-							}, _('Force reload…')
+							}, _('Refresh Statistics…')
 						)
 					])
 				]),
@@ -940,9 +940,9 @@ return view.extend({
 					]),
 					E('div', { 'class': 'right' }, [
 						E('button', {
-							'class': 'cbi-button',
+							'class': 'cbi-button-add',
 							'click': ui.createHandlerFn(this, 'handleCommit')
-							}, _('Force reload…')
+							}, _('Refresh Statistics…')
 						)
 					])
 				]),

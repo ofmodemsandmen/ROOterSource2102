@@ -1,19 +1,18 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-03-04 13:50+0000\n"
-"Last-Translator: Said Zakaria <said.zakaria@gmail.com>\n"
-"Language-Team: Arabic <https://hosted.weblate.org/projects/openwrt/"
-"luciapplicationsnlbwmon/ar/>\n"
-"Language: ar\n"
+"PO-Revision-Date: 2021-11-16 17:38+0000\n"
+"Last-Translator: drax red <drax@outlook.dk>\n"
+"Language-Team: Danish <https://hosted.weblate.org/projects/openwrt/"
+"luciapplicationsnlbwmon/da/>\n"
+"Language: da\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
-"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
-"X-Generator: Weblate 4.5.1-dev\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.9.1-dev\n"
 
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/display.js:538
 msgid "%d IPv4-only hosts"
-msgstr ""
+msgstr "%d Værter, der kun er iPv4"
 
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/display.js:545
 msgid "%d IPv6-only hosts"
@@ -121,7 +120,7 @@ msgstr ""
 
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:60
 msgid "Advanced Settings"
-msgstr "إعدادات متقدمة"
+msgstr "Avancerede indstillinger"
 
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/display.js:881
 msgid "Application"
@@ -133,7 +132,7 @@ msgstr ""
 
 #: applications/luci-app-nlbwmon/root/usr/share/luci/menu.d/luci-app-nlbwmon.json:34
 msgid "Backup"
-msgstr "نسخ احتياطي"
+msgstr "Backup"
 
 #: applications/luci-app-nlbwmon/root/usr/share/luci/menu.d/luci-app-nlbwmon.json:3
 msgid "Bandwidth Monitor"
@@ -156,7 +155,7 @@ msgstr ""
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/display.js:890
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/display.js:937
 msgid "Collecting data..."
-msgstr "جمع البيانات..."
+msgstr "Indsamler data..."
 
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:157
 msgid "Commit interval"
@@ -168,7 +167,7 @@ msgstr ""
 
 #: applications/luci-app-nlbwmon/root/usr/share/luci/menu.d/luci-app-nlbwmon.json:25
 msgid "Configuration"
-msgstr "إعدادات"
+msgstr "Konfiguration"
 
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/display.js:603
 msgid "Conn."
@@ -177,7 +176,7 @@ msgstr ""
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/display.js:836
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/display.js:882
 msgid "Connections"
-msgstr "روابط"
+msgstr "Forbindelser"
 
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/display.js:818
 msgid "Connections / Host"
@@ -185,7 +184,7 @@ msgstr ""
 
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:169
 msgid "Database directory"
-msgstr ""
+msgstr "Databasemappe"
 
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:170
 msgid ""
@@ -206,7 +205,7 @@ msgstr ""
 
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/backup.js:24
 msgid "Dismiss"
-msgstr "إلغاء"
+msgstr "Afvis"
 
 #: applications/luci-app-nlbwmon/root/usr/share/luci/menu.d/luci-app-nlbwmon.json:16
 msgid "Display"
@@ -223,7 +222,7 @@ msgstr ""
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/display.js:586
 msgctxt "Traffic counter"
 msgid "Download"
-msgstr "تنزيل"
+msgstr ""
 
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/display.js:837
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/display.js:883
@@ -297,7 +296,7 @@ msgstr ""
 
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:59
 msgid "General Settings"
-msgstr "الاعدادات العامة"
+msgstr "Generelle indstillinger"
 
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/backup.js:64
 msgid "Generate Backup"
@@ -322,7 +321,7 @@ msgstr ""
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/display.js:834
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/display.js:927
 msgid "Host"
-msgstr "ضيف"
+msgstr "Vært"
 
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/display.js:595
 msgid "Hostname: <big id=\"bubble-hostname\">example.org</big>"
@@ -420,7 +419,7 @@ msgstr ""
 
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/display.js:339
 msgid "Protocol"
-msgstr "بروتوكول"
+msgstr "Protokol"
 
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:61
 msgid "Protocol Mapping"
@@ -443,7 +442,7 @@ msgstr ""
 
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/backup.js:57
 msgid "Restore"
-msgstr "إعادة"
+msgstr "Gendan"
 
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/backup.js:52
 msgid "Restore Database Backup"
@@ -459,7 +458,7 @@ msgstr ""
 
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/display.js:334
 msgid "Source IP"
-msgstr ""
+msgstr "Kilde IP"
 
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:96
 msgid "Start date"
@@ -512,7 +511,7 @@ msgstr ""
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/display.js:590
 msgctxt "Traffic counter"
 msgid "Upload"
-msgstr "تحميل"
+msgstr ""
 
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/display.js:839
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/display.js:885
@@ -536,7 +535,7 @@ msgstr ""
 
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:75
 msgid "Warning"
-msgstr "تحذير"
+msgstr "Advarsel"
 
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:152
 msgid ""

@@ -48,7 +48,7 @@ return view.extend({
 
 	render: function(hostname) {
 		return E([], [
-			E('h2', [ _('Netlink Bandwidth Monitor - Backup / Restore') ]),
+			E('h2', [ _('Backup / Restore') ]),
 			E('h5', [ _('Restore Database Backup') ]),
 			E('p', [
 				E('button', {

@@ -1,14 +1,14 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-11-14 12:48+0000\n"
-"Last-Translator: David Elie-Dit-Cosaque <david.elieditcosaque@gmail.com>\n"
+"PO-Revision-Date: 2022-02-02 16:56+0000\n"
+"Last-Translator: ButterflyOfFire <ButterflyOfFire@protonmail.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/openwrt/"
 "luciapplicationsnlbwmon/fr/>\n"
 "Language: fr\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.4-dev\n"
+"X-Generator: Weblate 4.11-dev\n"
 
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/display.js:538
 msgid "%d IPv4-only hosts"
@@ -20,7 +20,7 @@ msgstr "%d hôtes IPv6 uniquement"
 
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/display.js:552
 msgid "%d dual-stack hosts"
-msgstr ""
+msgstr "%d hôtes double-pile"
 
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/display.js:114
 msgid "%s and %s"
@@ -42,36 +42,36 @@ msgstr "-7 - Redémarrer une semaine avant la fin du mois"
 msgid "1 - Restart every 1st of month"
 msgstr "1 - Redémarrez tous les 1er du mois"
 
-#: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:158
+#: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:161
 msgid "10m - frequent commits at the expense of flash wear"
 msgstr ""
 "10m - sauvegardes fréquentes au détriment de l'usure de la mémoire flash"
 
-#: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:157
+#: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:160
 msgid "12h - compromise between risk of data loss and flash wear"
 msgstr ""
 "12h - compromis entre le risque de perte de données et l'usure de la mémoire "
 "flash"
 
-#: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:156
+#: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:159
 msgid "24h - least flash wear at the expense of data loss risk"
 msgstr ""
 "24h - usure de la mémoire flash minimale mais risque plus élevé de perte de "
 "données"
 
-#: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:163
+#: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:166
 msgid "30s - refresh twice per minute for reasonably current stats"
 msgstr ""
 "30s - rafraîchissement deux fois par minutes pour des statistiques "
 "raisonnablement mises a jours"
 
-#: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:164
+#: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:167
 msgid "5m - rarely refresh to avoid frequently clearing conntrack counters"
 msgstr ""
 "5m - rafraîchissement long pour éviter de vider les compteurs conntrack "
 "souvent"
 
-#: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:159
+#: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:162
 msgid "60s - commit minutely, useful for non-flash storage"
 msgstr ""
 "60s - sauvegarde toutes les minutes, utile pour les medium de stockages non "
@@ -79,23 +79,23 @@ msgstr ""
 
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/display.js:827
 msgid "<big id=\"conn-total\">0</big> connections"
-msgstr ""
+msgstr "<big id=\"conn-total\">0</big> connexions"
 
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/display.js:824
 msgid "<big id=\"host-total\">0</big> hosts"
-msgstr ""
+msgstr "<big id=\"host-total\">0</big> hôtes"
 
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/display.js:917
 msgid "<big id=\"ipv6-hosts\">0%</big> IPv6 support rate among hosts"
-msgstr ""
+msgstr "<big id=\"ipv6-hosts\">0%</big> Taux de support IPv6 parmi les hôtes"
 
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/display.js:919
 msgid "<big id=\"ipv6-rx\">0B</big> total IPv6 download"
-msgstr ""
+msgstr "<big id=\"ipv6-rx\">0B</big> téléchargement IPv6 total"
 
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/display.js:918
 msgid "<big id=\"ipv6-share\">0%</big> of the total traffic is IPv6"
-msgstr ""
+msgstr "<big id=\"ipv6-share\">0%</big> du traffic total est en IPv6"
 
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/display.js:920
 msgid "<big id=\"ipv6-tx\">0B</big> total IPv6 upload"
@@ -168,11 +168,11 @@ msgstr ""
 msgid "Collecting data..."
 msgstr "Récupération des données…"
 
-#: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:154
+#: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:157
 msgid "Commit interval"
 msgstr ""
 
-#: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:148
+#: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:151
 msgid "Compress database"
 msgstr ""
 
@@ -193,11 +193,11 @@ msgstr ""
 msgid "Connections / Host"
 msgstr ""
 
-#: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:166
+#: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:169
 msgid "Database directory"
 msgstr "Répertoire de la base de données"
 
-#: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:167
+#: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:170
 msgid ""
 "Database storage directory. One file per accounting period will be placed "
 "into this directory."
@@ -205,7 +205,7 @@ msgstr ""
 
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:72
 msgid "Day of month"
-msgstr ""
+msgstr "Jour du mois"
 
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:84
 msgid ""
@@ -311,7 +311,7 @@ msgstr "Paramètres généraux"
 
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/backup.js:64
 msgid "Generate Backup"
-msgstr ""
+msgstr "Générer une sauvegarde"
 
 #: applications/luci-app-nlbwmon/root/usr/share/rpcd/acl.d/luci-app-nlbwmon.json:3
 msgid "Grant UCI access for luci-app-nlbwmon"
@@ -336,7 +336,7 @@ msgstr "Hôte"
 
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/display.js:595
 msgid "Hostname: <big id=\"bubble-hostname\">example.org</big>"
-msgstr ""
+msgstr "Nom d’hôte : <big id=\"bubble-hostname\">example.org</big>"
 
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/display.js:504
 msgid "IPv4"
@@ -351,33 +351,33 @@ msgstr ""
 msgid "IPv6"
 msgstr "IPv6"
 
-#: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:108
+#: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:111
 msgid "Interval"
-msgstr ""
+msgstr "Intervalle"
 
-#: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:155
+#: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:158
 msgid ""
 "Interval at which the temporary in-memory database is committed to the "
 "persistent database directory."
 msgstr ""
 
-#: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:162
+#: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:165
 msgid ""
 "Interval at which traffic counters of still established connections are "
 "refreshed from netlink information."
 msgstr ""
 
-#: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:109
+#: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:112
 msgid "Length of accounting interval in days."
 msgstr ""
 
-#: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:120
+#: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:123
 msgid "Local interfaces"
-msgstr ""
+msgstr "Interfaces locales"
 
-#: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:129
+#: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:132
 msgid "Local subnets"
-msgstr ""
+msgstr "Sous-réseaux locaux"
 
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/display.js:835
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/display.js:928
@@ -388,11 +388,11 @@ msgstr "MAC"
 msgid "Malformed data received"
 msgstr "Donnée corrompu recu"
 
-#: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:141
+#: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:144
 msgid "Maximum entries"
 msgstr ""
 
-#: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:152
+#: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:155
 msgid ""
 "Maximum number of accounting periods to keep, use zero to keep databases "
 "forever."
@@ -416,15 +416,15 @@ msgstr ""
 msgid "No data recorded yet."
 msgstr ""
 
-#: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:121
+#: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:124
 msgid "Only conntrack streams from or to any of these networks are counted."
 msgstr ""
 
-#: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:130
+#: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:133
 msgid "Only conntrack streams from or to any of these subnets are counted."
 msgstr ""
 
-#: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:144
+#: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:147
 msgid "Preallocate database"
 msgstr ""
 
@@ -443,8 +443,12 @@ msgid ""
 "number and the third column is the name of the mapped protocol."
 msgstr ""
 
-#: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:161
+#: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:164
 msgid "Refresh interval"
+msgstr "Intervalle d’actualisation"
+
+#: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:106
+msgid "Require a valid date in the form \"YYYY-MM-DD\""
 msgstr ""
 
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/backup.js:57
@@ -475,7 +479,7 @@ msgstr ""
 msgid "Start date of the first accounting period, e.g. begin of ISP contract."
 msgstr ""
 
-#: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:151
+#: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:154
 msgid "Stored periods"
 msgstr ""
 
@@ -489,7 +493,7 @@ msgstr ""
 msgid "The following database files have been restored:"
 msgstr "Les fichiers de base de données suivants ont été restaurés :"
 
-#: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:142
+#: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:145
 msgid ""
 "The maximum amount of entries that should be put into the database, setting "
 "the limit to 0 will allow databases to grow indefinitely."
@@ -497,11 +501,11 @@ msgstr ""
 
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/display.js:813
 msgid "Traffic / Host"
-msgstr ""
+msgstr "Trafic / Hôte"
 
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/display.js:810
 msgid "Traffic Distribution"
-msgstr ""
+msgstr "Distribution du trafic"
 
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/display.js:92
 msgid "Unable to fetch traffic statistic data: %s"
@@ -544,14 +548,14 @@ msgstr ""
 msgid "Warning"
 msgstr "Avertissement"
 
-#: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:149
+#: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:152
 msgid ""
 "Whether to gzip compress archive databases. Compressing the database files "
 "makes accessing old data slightly slower but helps to reduce storage "
 "requirements."
 msgstr ""
 
-#: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:145
+#: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/config.js:148
 msgid ""
 "Whether to preallocate the maximum possible database size in memory. This is "
 "mainly useful for memory constrained systems which might not be able to "
@@ -570,4 +574,4 @@ msgstr ""
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/display.js:628
 #: applications/luci-app-nlbwmon/htdocs/luci-static/resources/view/nlbw/display.js:633
 msgid "other"
-msgstr ""
+msgstr "autre"
