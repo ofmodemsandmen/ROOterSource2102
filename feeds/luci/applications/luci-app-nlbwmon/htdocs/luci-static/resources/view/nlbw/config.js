@@ -50,7 +50,7 @@ return view.extend({
 		var m, s, o;
 
 		m = new form.Map('nlbwmon', _('Usage Configuration'),
-			_('Configure usage data'));
+			_('Configure Usage Statistics'));
 
 		s = m.section(form.TypedSection, 'nlbwmon');
 		s.anonymous = true;
