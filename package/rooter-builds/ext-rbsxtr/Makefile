@@ -13,7 +13,7 @@ include $(INCLUDE_DIR)/package.mk
 define Package/ext-rbsxtr
   SECTION:=utils
   CATEGORY:=ROOter
-  DEPENDS:=+luci +luci-compat +ext-rooter-basic \
+  DEPENDS:=+luci +luci-compat +ext-rooter-basic +ext-logo \
 		+luci-app-rootervpn +ext-wireguard \
 		+bwmon +464xlat \
 		+ca-bundle +ca-certificates +libustream-wolfssl \
