@@ -24,5 +24,13 @@ start() {
 		uci set bwmon.backup.day='0'
 		uci commit bwmon
 	fi
+	if [ -e /usr/lib/bwmon/luci-app-nlbwmonon.json ]; then
+		enb=$(uci -q get nlbwmon.nlbwmon.enabled)
+		if [ "$enb" = "1" ]; then
+			cp /usr/lib/bwmon/luci-app-nlbwmonon.json /usr/share/luci/menu.d/luci-app-nlbwmon.json
+		else
+			cp /usr/lib/bwmon/luci-app-nlbwmonoff.json /usr/share/luci/menu.d/luci-app-nlbwmon.json
+		fi
+	fi
 	/usr/lib/bwmon/bwmon.sh &
 }
