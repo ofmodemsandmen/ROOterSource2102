@@ -49,6 +49,9 @@ ramips_setup_interfaces()
 	xiaomi,mi-router-4a-gigabit)
 		ucidef_set_interfaces_lan_wan "lan1 lan2" "wan"
 		;;
+	dualq-h721-256m-16m)
+		ucidef_set_interfaces_lan "lan1 lan2 lan3 lan4"
+		;;
 	gnubee,gb-pc1|\
 	gnubee,gb-pc2)
 		ucidef_set_interface_lan "lan1 lan2"

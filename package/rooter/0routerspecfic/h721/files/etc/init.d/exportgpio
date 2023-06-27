@@ -12,4 +12,9 @@ start_service()
 {
 	log "H761 Gpio Setup"
 	/etc/exportgpio.sh &
+	if [ ! -e /etc/firstreboot ]; then
+		echo "0" > /etc/firstreboot
+		sleep 5
+		reboot -f
+	fi
 }
