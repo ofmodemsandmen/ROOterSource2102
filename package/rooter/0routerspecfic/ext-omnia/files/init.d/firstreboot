@@ -1,0 +1,18 @@
+#!/bin/sh /etc/rc.common
+# Copyright (C) 2013 OpenWrt.org 
+
+START=95
+USE_PROCD=1
+
+log() {
+	logger -t "Reboot" "$@"
+}
+
+start_service()
+{
+	if [ ! -e /etc/firstreboot ]; then
+		echo "0" > /etc/firstreboot
+		sleep 5
+		reboot -f
+	fi
+}
