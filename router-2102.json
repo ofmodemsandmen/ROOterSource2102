@@ -419,14 +419,14 @@
 		"ext": "-upgrade.bin",
 		"addons": ["readme.pdf", "GL-MIFI-flash.bin", "glinet.txt"]
 	},
-	"H721": {
-		"details": "DualQ H721",
+	"H721-2102": {
+		"details": "DualQ H721-2102",
 		"type": "1",
 		"build": "2102",
 		"config": ".config_h721",
 		"image": "openwrt-ramips-mt7621-dualq_H721-16m-squashfs-sysupgrade.bin",
 		"imagepath": "/ramips/mt7621/",
-		"mod": "DualQ-H721",
+		"mod": "DualQ-H721-2102",
 		"ext": "-upgrade.bin",
 		"addons": ["readme.pdf", "readmerecovery.txt"]
 	},
@@ -444,13 +444,13 @@
 		"addons": ["readme.pdf", "factory.txt"]
 	},
 	"HUA1208": {
-		"details": "Huasifei WS1208",
+		"details": "Huasifei WS1208v1",
 		"type": "1",
 		"package": "ext-huasifei",
 		"config": ".config_hua1208",
 		"image": "openwrt-ramips-mt7621-zbtlink_zbt-wg3526-16m-squashfs-sysupgrade.bin",
 		"imagepath": "/ramips/mt7621/",
-		"mod": "Huasifei-WS1208",
+		"mod": "Huasifei-WS1208V1",
 		"ext": "-upgrade.bin",
 		"custom": {
 			"name": {
@@ -468,33 +468,6 @@
 				"Tomato": "hua.png"
 			},
 			"files": "/huasifei/files/"	
-		}
-	},
-	"HUA1208V2": {
-		"details": "Huasifei WS1208V2",
-		"type": "1",
-		"package": "ext-huasifei",
-		"config": ".config_hua1208v2",
-		"image": "openwrt-ramips-mt7621-huasifei-ws1208v2-squashfs-sysupgrade.bin",
-		"imagepath": "/ramips/mt7621/",
-		"mod": "Huasifei-WS1208V2",
-		"ext": "-upgrade.bin",
-		"custom": {
-			"name": {
-				"model": "WS1208V2",
-				"hostname": "WS1208V2"
-			},
-			"wifi": {
-				"SSID2G": "wifi-2.4g",
-				"SSID5G": "wifi-5.8g",
-				"Password": "12345678"
-			},
-			"image": {
-				"Material": "hua.png",
-				"Argon": "hua.png",
-				"Tomato": "hua.png"
-			},
-			"files": "/huasifei/files1/"	
 		}
 	},
 	"HUA1218": {
@@ -797,19 +770,6 @@
 		"ext1": "-factory.img",
 		"ext2": "-update.bin",
 		"addons": ["readme.pdf", "tftp.txt"]
-	},
-	"R8000": {
-		"details": "Netgear R8000",
-		"type": "1",
-		"build": "2102",
-		"config": ".config_r8000",
-		"prescript": "/package/network/utils/iwinfo/iwinfo.sh old",
-		"postscript": "/package/network/utils/iwinfo/iwinfo.sh new",
-		"image": "openwrt-bcm53xx-generic-netgear_r8000-squashfs.chk",
-		"imagepath": "/bcm53xx/generic/",
-		"mod": "Netgear-R8000",
-		"ext": "-upgrade.chk",
-		"addons": ["readme.pdf", "factory.txt"]
 	},
 	"RASPPI": {
 		"details": "Raspberry Pi",
@@ -1252,20 +1212,20 @@
 		"ext": "-upgrade.bin",
 		"addons": ["readme.pdf", "Important-wg827-Flash.pdf"]
 	},
-	"WG1602": {
-		"details": "ZBT WG1602",
+	"WG1602-16": {
+		"details": "ZBT WG1602-16",
 		"type": "1",
 		"build": "2102",
 		"config": ".config_wg1602",
 		"prescript": "/target/linux/ramips/wg1602.sh 16",
 		"image": "openwrt-ramips-mt7621-zbtlink_zbt-wg1602-16m-squashfs-sysupgrade.bin",
 		"imagepath": "/ramips/mt7621/",
-		"mod": "ZBT-WG1602",
+		"mod": "ZBT-WG1602-16",
 		"ext": "-upgrade.bin",
 		"addons": ["readme.pdf", "readmerecovery.txt", "usb-configuration.txt"]
 	},
-	"WG160232": {
-		"details": "ZBT WG1602-32M",
+	"WG160232-2102": {
+		"details": "ZBT WG1602-32M-2102",
 		"type": "1",
 		"build": "2102",
 		"config": ".config_wg1602",
@@ -1273,7 +1233,7 @@
 		"postscript": "/target/linux/ramips/wg1602.sh 16",
 		"image": "openwrt-ramips-mt7621-zbtlink_zbt-wg1602-16m-squashfs-sysupgrade.bin",
 		"imagepath": "/ramips/mt7621/",
-		"mod": "ZBT-WG1602-32M",
+		"mod": "ZBT-WG1602-32M-2102",
 		"ext": "-upgrade.bin",
 		"addons": ["readme.pdf", "readmerecovery.txt"],
 		"custom": {
