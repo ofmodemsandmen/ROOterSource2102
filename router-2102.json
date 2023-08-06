@@ -561,6 +561,18 @@
 		"ext": "-upgrade.bin",
 		"addons": ["readme.pdf", "glinet.txt"]
 	},
+	"MT300NV2": {
+		"details": "Gl.iNet MT300NV2",
+		"type": "1",
+		"build": "2102",
+		"config": ".config_mt300nv2",
+		"image": "openwrt-ramips-mt76x8-glinet_gl-mt300n-v2-squashfs-sysupgrade.bin",
+		"imagepath": "/ramips/mt76x8/",
+		"mod": "GL-MT300N-V2",
+		"ext": "-upgrade.bin",
+		"addons": ["readme.pdf", "glinet.txt"]
+	}
+},
 	"MV1000": {
 		"details": "Gl.iNet MV1000",
 		"type": "4",

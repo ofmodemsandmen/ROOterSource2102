@@ -28,7 +28,7 @@ define Package/ext-rooter-lite
 		+usbmuxd +libusbmuxd-utils +libimobiledevice-utils +kmod-usb-net-ipheth \
 		+qlog +luci-ssl +usbutils +openssl-util +irqbalance +ext-splashconfig \
 		+nano +picocom +wpad-openssl +wget +qfirehose +luci-app-vpnbypass +ext-simplegps 
-  TITLE:=ROOter support w/o MWan3 for 16meg and larger routers
+  TITLE:=ROOter support w/o MWan3 for 16meg and larger routers 
   PKGARCH:=all
 endef
 
