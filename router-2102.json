@@ -571,8 +571,7 @@
 		"mod": "GL-MT300N-V2",
 		"ext": "-upgrade.bin",
 		"addons": ["readme.pdf", "glinet.txt"]
-	}
-},
+	},
 	"MV1000": {
 		"details": "Gl.iNet MV1000",
 		"type": "4",
