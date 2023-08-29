@@ -1,0 +1,35 @@
+{
+	"admin/network/switch": {
+		"title": "Switch",
+		"order": 20,
+		"action": {
+			"type": "view",
+			"path": "network/switch"
+		},
+		"depends": {
+			"acl": [ "luci-mod-network-config" ],
+			"fs": { "/sbin/swconfig": "executable" },
+			"uci": { "network": { "@switch": true } }
+		}
+	},
+
+	"admin/network/remote_addr/*": {
+		"action": {
+			"type": "call",
+			"module": "luci.controller.admin.network",
+			"function": "remote_addr"
+		}
+	},
+
+	"admin/network/network": {
+		"title": "Interfaces",
+		"order": 10,
+		"action": {
+			"type": "view",
+			"path": "network/interfaces"
+		},
+		"depends": {
+			"acl": [ "luci-mod-network-config" ]
+		}
+	}
+}

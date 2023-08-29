@@ -1,0 +1,236 @@
+{
+	"MASTER1608": {
+		"details": "ZBT WG1608",
+		"type": "1",
+		"build": "2203",
+		"package": "ext-mesh-master",
+		"config": ".config_wg1608",
+		"image": "openwrt-ramips-mt7621-zbtlink_zbt-wg1608-16m-squashfs-sysupgrade.bin",
+		"imagepath": "/ramips/mt7621/",
+		"mod": "Mesh-Master-WG1608",
+		"ext": "-upgrade.bin",
+		"addons": ["readme.pdf"],
+		"custom": {
+			"wifi": {
+				"SSID2G": "Mesh 2G",
+				"SSID5G": "Mesh 5G",
+				"Password": "rooter2017"
+			},
+			"image": {
+				"Material": "header.png",
+				"Argon": "rosy.png",
+				"Tomato": "rosy.png"
+			},
+			"name": {
+				"model": "Mesh Master WG1608",
+				"hostname": "Mesh Master"
+			},
+			"files": "/Mesh/files-master/"
+		}
+	},
+	"NODE1608": {
+		"details": "ZBT WG1608",
+		"type": "1",
+		"build": "2203",
+		"package": "ext-mesh-node",
+		"config": ".config_wg1608",
+		"image": "openwrt-ramips-mt7621-zbtlink_zbt-wg1608-16m-squashfs-sysupgrade.bin",
+		"imagepath": "/ramips/mt7621/",
+		"mod": "Mesh-Node-WG1608",
+		"ext": "-upgrade.bin",
+		"addons": ["readme.pdf"],
+		"custom": {
+			"wifi": {
+				"SSID2G": "Mesh 2G",
+				"SSID5G": "Mesh 5G",
+				"Password": "rooter2017"
+			},
+			"image": {
+				"Material": "header.png",
+				"Argon": "rosy.png",
+				"Tomato": "rosy.png"
+			},
+			"name": {
+				"model": "Mesh Node WG1608",
+				"hostname": "Mesh Node"
+			},
+			"files": "/Mesh/files-node/"
+		}
+	},
+	"NODE3526": {
+		"details": "ZBT WG3526",
+		"type": "1",
+		"build": "2203",
+		"package": "ext-mesh-node",
+		"config": ".config_wg3526",
+		"image": "openwrt-ramips-mt7621-zbtlink_zbt-wg3526-16m-squashfs-sysupgrade.bin",
+		"imagepath": "/ramips/mt7621/",
+		"mod": "Mesh-Node-WG3526",
+		"ext": "-upgrade.bin",
+		"addons": ["readme.pdf"],
+		"custom": {
+			"wifi": {
+				"SSID2G": "Mesh 2G",
+				"SSID5G": "Mesh 5G",
+				"Password": "rooter2017"
+			},
+			"image": {
+				"Material": "header.png",
+				"Argon": "rosy.png",
+				"Tomato": "rosy.png"
+			},
+			"name": {
+				"model": "Mesh Node WG3526",
+				"hostname": "Mesh Node"
+			},
+			"files": "/Mesh/files-node/"
+		}
+	},
+	"NODEX750": {
+		"details": "X750",
+		"type": "1",
+		"build": "2203",
+		"package": "ext-mesh-node",
+		"config": ".config_x750",
+		"image": "openwrt-ath79-generic-glinet_gl-x750-squashfs-sysupgrade.bin",
+		"imagepath": "/ath79/generic/",
+		"mod": "Mesh-Node-x750",
+		"ext": "-upgrade.bin",
+		"addons": ["readme.pdf"],
+		"custom": {
+			"wifi": {
+				"SSID2G": "Mesh 2G",
+				"SSID5G": "Mesh 5G",
+				"Password": "rooter2017"
+			},
+			"image": {
+				"Material": "header.png",
+				"Argon": "rosy.png",
+				"Tomato": "rosy.png"
+			},
+			"name": {
+				"model": "Mesh Node X750",
+				"hostname": "Mesh Node"
+			},
+			"files": "/Mesh/files-node/"
+		}
+	},
+	"NODE750S": {
+		"details": "AR750S",
+		"type": "1",
+		"build": "2203",
+		"package": "ext-mesh-node",
+		"config": ".config_ar750s",
+		"image": "openwrt-ath79-nand-glinet_gl-ar750s-nor-squashfs-sysupgrade.bin",
+		"imagepath": "/ath79/nand/",
+		"mod": "Mesh-Node-AR750S",
+		"ext": "-upgrade.bin",
+		"addons": ["readme.pdf"],
+		"custom": {
+			"wifi": {
+				"SSID2G": "Mesh 2G",
+				"SSID5G": "Mesh 5G",
+				"Password": "rooter2017"
+			},
+			"image": {
+				"Material": "header.png",
+				"Argon": "rosy.png",
+				"Tomato": "rosy.png"
+			},
+			"name": {
+				"model": "Mesh Node AR750S",
+				"hostname": "Mesh Node"
+			},
+			"files": "/Mesh/files-node/"
+		}
+	},
+	"NODE6220": {
+		"details": "R6220",
+		"type": "2",
+		"build": "2102",
+		"package": "ext-mesh-node",
+		"config": ".config_r6220",
+		"image1": "openwrt-ramips-mt7621-netgear_r6220-squashfs-factory.img",
+		"image2": "openwrt-ramips-mt7621-netgear_r6220-squashfs-sysupgrade.bin",
+		"imagepath": "/ramips/mt7621/",
+		"mod": "Mesh-Node-R6220",
+		"ext1": "-factory.img",
+		"ext2": "-upgrade.bin",
+		"addons": ["readme.pdf"],
+		"custom": {
+			"wifi": {
+				"SSID2G": "Mesh 2G",
+				"SSID5G": "Mesh 5G",
+				"Password": "rooter2017"
+			},
+			"image": {
+				"Material": "header.png",
+				"Argon": "rosy.png",
+				"Tomato": "rosy.png"
+			},
+			"name": {
+				"model": "Mesh Node R6220",
+				"hostname": "Mesh Node"
+			},
+			"files": "/Mesh/files-node/"
+		}
+	},
+	"MASTER1602": {
+		"details": "ZBT WG1602",
+		"type": "1",
+		"build": "2102",
+		"package": "ext-mesh-master",
+		"config": ".config_wg1602",
+		"image": "openwrt-ramips-mt7621-zbtlink_zbt-wg1602-16m-squashfs-sysupgrade.bin",
+		"imagepath": "/ramips/mt7621/",
+		"mod": "Mesh-Master-WG1602",
+		"ext": "-upgrade.bin",
+		"addons": ["readme.pdf"],
+		"custom": {
+			"wifi": {
+				"SSID2G": "Mesh 2G",
+				"SSID5G": "Mesh 5G",
+				"Password": "rooter2017"
+			},
+			"image": {
+				"Material": "header.png",
+				"Argon": "rosy.png",
+				"Tomato": "rosy.png"
+			},
+			"name": {
+				"model": "Mesh Master WG1602",
+				"hostname": "Mesh Master"
+			},
+			"files": "/Mesh/files-master/"
+		}
+	},
+	"NODE750": {
+		"details": "AR750",
+		"type": "1",
+		"build": "2203",
+		"package": "ext-mesh-node",
+		"config": ".config_ar750",
+		"image": "openwrt-ath79-generic-glinet_gl-ar750-squashfs-sysupgrade.bin",
+		"imagepath": "/ath79/generic/",
+		"mod": "Mesh-Node-AR750S",
+		"ext": "-upgrade.bin",
+		"addons": ["readme.pdf"],
+		"custom": {
+			"wifi": {
+				"SSID2G": "Mesh 2G",
+				"SSID5G": "Mesh 5G",
+				"Password": "rooter2017"
+			},
+			"image": {
+				"Material": "header.png",
+				"Argon": "rosy.png",
+				"Tomato": "rosy.png"
+			},
+			"name": {
+				"model": "Mesh Node AR750",
+				"hostname": "Mesh Node"
+			},
+			"files": "/Mesh/files-node/"
+		}
+	}
+}
