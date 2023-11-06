@@ -172,7 +172,7 @@
 
 &state_default {
 	gpio {
-		groups = "wdt", "rgmii2";
+		groups = "i2c", "wdt", "uart2", "jtag";
 		function = "gpio";
 	};
 };
