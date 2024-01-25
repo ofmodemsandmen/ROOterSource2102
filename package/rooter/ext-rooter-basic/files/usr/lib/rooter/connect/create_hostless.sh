@@ -170,9 +170,21 @@ get_tty_fix() {
 get_ip() {
 	ATCMDD="AT+CGPIAF=1,1,1,0;+CGPADDR"
 	OX=$($ROOTER/gcom/gcom-locked "/dev/ttyUSB$CPORT" "run-at.gcom" "$CURRMODEM" "$ATCMDD")
-	OX=$(echo "$OX" | grep "^+CGPADDR: $CID," | cut -d'"' -f2)
-	ip4=$(echo $OX | cut -d, -f1 | grep "\.")
-	ip6=$(echo $OX | cut -d, -f2 | grep ":")
+	OX=$(echo "$OX" | grep "^+CGPADDR: $CID,")
+	first=$(echo "$OX" | cut -d, -f2 | tr -d \")
+	is6=$(echo "$first" | grep ":")
+	if [ ! -z "$is6" ]; then
+		ip4=""
+		ip6=$first
+	else
+		ip6=""
+		ip4=$first
+		sec=$(echo "$OX" | cut -d, -f3 | tr -d \")
+		is6=$(echo "$sec" | grep ":")
+		if [ ! -z "$is6" ]; then
+			ip6=$sec
+		fi
+	fi
 	log "IP address(es) obtained: $ip4 $ip6"
 }
 
@@ -349,6 +361,9 @@ if [ $SP -gt 0 ]; then
 		fi
 		$ROOTER/connect/bandmask $CURRMODEM 1
 		uci commit modem
+		if [ -e /usr/lib/rooter/connect/mhi2usb.sh ]; then
+			/usr/lib/rooter/connect/mhi2usb.sh $CURRMODEM
+		fi
 	fi
 
 
