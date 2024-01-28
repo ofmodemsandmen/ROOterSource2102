@@ -44,7 +44,6 @@ check_apn() {
 	fi
 	ATCMDD="AT+CGDCONT=?"
 	OX=$($ROOTER/gcom/gcom-locked "$COMMPORT" "run-at.gcom" "$CURRMODEM" "$ATCMDD")
-
 	[ "$PDPT" = "0" ] && PDPT=""
 	for PDP in "$PDPT" IPV4V6; do
 		if [[ "$(echo $OX | grep -o "$PDP")" ]]; then
@@ -75,6 +74,7 @@ check_apn() {
 	if [ "$CGDCONT" == "$CID,\"$IPVAR\",\"$NAPN\",$IPCG,0,0,1" ]; then
 		if [ -z "$(echo $OX | grep -o "+CFUN: 1")" ]; then
 			OX=$($ROOTER/gcom/gcom-locked "$COMMPORT" "run-at.gcom" "$CURRMODEM" "AT+CFUN=1")
+			log "$OX"
 		fi
 	else
 		ATCMDD="AT+CGDCONT=$CID,\"$IPVAR\",\"$NAPN\",,0,0,1"
@@ -214,9 +214,10 @@ addv6() {
 	uci set network.wan$INTER"_6"._orig_ifname="@wan$INTER"
 	uci set network.wan$INTER"_6"._orig_bridge='false'
 	uci set network.wan$INTER"_6".proto='dhcpv6'
-	uci set network.wan$INTER"_6".ifname="$ifname"
+	uci set network.wan$INTER"_6".$ifname1="@wan$INTER"
 	uci set network.wan$INTER"_6".reqaddress='try'
 	uci set network.wan$INTER"_6".reqprefix='auto'
+
 	uci commit network
 	ifup wan$INTER"_6"
 }
