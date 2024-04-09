@@ -41,7 +41,7 @@ define Package/speedtestcpp/description
   lesser depends.
 endef
 
-TARGET_CXXFLAGS += --std=c++23 -fPIC
+TARGET_CXXFLAGS += --std=c++20 -fPIC
 
 define Build/Configure
 endef
