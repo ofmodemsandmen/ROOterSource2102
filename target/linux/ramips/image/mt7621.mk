@@ -1827,6 +1827,19 @@ define Device/huasifei-ws1218
 endef
 TARGET_DEVICES += huasifei-ws1218
 
+define Device/huasifei_mt7621dtu
+  $(Device/dsa-migration)
+  $(Device/uimage-lzma-loader)
+  IMAGE_SIZE := 16064k
+  DEVICE_VENDOR := Huasifei
+  DEVICE_MODEL := MT7621DTU
+  DEVICE_VARIANT := 16M
+  DEVICE_PACKAGES := kmod-ata-ahci kmod-sdhci-mt7620 \
+	kmod-usb3 kmod-usb-ledtrig-usbport
+  SUPPORTED_DEVICES += huasifei_mt7621dtu
+endef
+TARGET_DEVICES += huasifei_mt7621dtu
+
 
 #start1602
 define Device/zbtlink_zbt-wg1602-16m

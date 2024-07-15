@@ -1,0 +1,10 @@
+#include "mt7621_huasifei_mt7621dtu.dtsi"
+
+/ {
+	compatible = "huasifei,mt7621dtu", "huasifei,mt7621dtu", "mediatek,mt7621-soc";
+	model = "Huasifei MT7621-DTU";
+};
+
+&firmware {
+	reg = <0x50000 0xfb0000>;
+};

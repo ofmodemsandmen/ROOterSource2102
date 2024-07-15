@@ -574,6 +574,33 @@
 		"ext": "-upgrade.bin",
 		"addons": ["readme.pdf", "glinet.txt"]
 	},
+	"MT7621DTU": {
+		"details": "Huasifei MT7621 DTU",
+		"type": "1",
+		"package": "ext-huasifei",
+		"config": ".config_mt7621dtu",
+		"image": "openwrt-ramips-mt7621-huasifei_mt7621dtu-squashfs-sysupgrade.bin",
+		"imagepath": "/ramips/mt7621/",
+		"mod": "Huasifei-MT7621-DTU",
+		"ext": "-upgrade.bin",
+		"custom": {
+			"name": {
+				"model": "MT7621 DTU",
+				"hostname": "MT7621 DTU"
+			},
+			"wifi": {
+				"SSID2G": "wifi-2.4g",
+				"SSID5G": "wifi-5.8g",
+				"Password": "12345678"
+			},
+			"image": {
+				"Material": "hua.png",
+				"Argon": "hua.png",
+				"Tomato": "hua.png"
+			},
+			"files": "/huasifei/filesdtu/"	
+		}
+	},
 	"MV1000": {
 		"details": "Gl.iNet MV1000",
 		"type": "4",
