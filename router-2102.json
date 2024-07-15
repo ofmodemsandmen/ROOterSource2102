@@ -577,7 +577,7 @@
 	"MT7621DTU": {
 		"details": "Huasifei MT7621 DTU",
 		"type": "1",
-		"package": "ext-huasifei",
+		"package": "ext-nowifiusb",
 		"config": ".config_mt7621dtu",
 		"image": "openwrt-ramips-mt7621-huasifei_mt7621dtu-squashfs-sysupgrade.bin",
 		"imagepath": "/ramips/mt7621/",
