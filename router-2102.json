@@ -1213,6 +1213,19 @@
 		"ext2": "-update.bin",
 		"addons": ["readme.pdf", "factory.txt"]
 	},
+	"WNR2200": {
+		"details": "Netgear WNR2200",
+		"type": "2",
+		"build": "2102",
+		"config": ".config_wnr2200",
+		"image1": "openwrt-ath79-generic-netgear_wnr2200-16m-squashfs-sysupgrade.bin",
+		"image2": "openwrt-ath79-generic-netgear_wnr2200-16m-squashfs-factory.img",
+		"imagepath": "/ath79/generic/",
+		"mod": "Netgear-WNR2200",
+		"ext1": "-upgrade.bin",
+		"ext2": "-factory.img",
+		"addons": ["readme.pdf"]
+	},
 	"WNDR3800": {
 		"details": "Netgear WNDR3800",
 		"type": "2",
