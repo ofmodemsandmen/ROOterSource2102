@@ -1110,17 +1110,6 @@
 		"ext": "-upgrade.bin",
 		"addons": ["readme.pdf", "readmerecovery.txt"]
 	},
-	"WG259": {
-		"details": "ZBT WG259",
-		"type": "1",
-		"build": "2102",
-		"config": ".config_wg259",
-		"image": "openwrt-ramips-mt7621-zbtlink_zbt-wg259-16m-squashfs-sysupgrade.bin",
-		"imagepath": "/ramips/mt7621/",
-		"mod": "ZBT-WG259",
-		"ext": "-upgrade.bin",
-		"addons": ["readme.pdf", "readmerecovery.txt"]
-	},
 	"WG827": {
 		"details": "ZBT WG827",
 		"type": "1",
@@ -1131,18 +1120,6 @@
 		"mod": "ZBT-WG827",
 		"ext": "-upgrade.bin",
 		"addons": ["readme.pdf", "Important-wg827-Flash.pdf"]
-	},
-	"WG1602-16": {
-		"details": "ZBT WG1602-16",
-		"type": "1",
-		"build": "2102",
-		"config": ".config_wg1602",
-		"prescript": "/target/linux/ramips/wg1602.sh 16",
-		"image": "openwrt-ramips-mt7621-zbtlink_zbt-wg1602-16m-squashfs-sysupgrade.bin",
-		"imagepath": "/ramips/mt7621/",
-		"mod": "ZBT-WG1602-16",
-		"ext": "-upgrade.bin",
-		"addons": ["readme.pdf", "readmerecovery.txt", "usb-configuration.txt"]
 	},
 	"WG160232-2102": {
 		"details": "ZBT WG1602-32M-2102",
