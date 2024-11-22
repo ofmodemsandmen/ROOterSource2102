@@ -169,6 +169,9 @@ return view.extend({
 		o.value('1', _('%d second').format('1'));
 		for (var i = 2; i <= 10; i++)
 			o.value(String(i), _('%d seconds').format(i));
+		o.value('15', _('%d seconds').format('15'));
+		o.value('20', _('%d seconds').format('20'));
+		o.value('25', _('%d seconds').format('25'));
 		o.modalonly = true;
 
 		o = s.option(form.ListValue, 'interval', _('Ping interval'));
