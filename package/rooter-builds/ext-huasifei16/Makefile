@@ -14,7 +14,7 @@ define Package/ext-huasifei16
   SECTION:=utils
   CATEGORY:=ROOter
   DEPENDS:=+ext-huasifei \
-  		+luci-app-mwan3 +luci-app-dnsmasq-ipset
+  		+luci-app-mwan3 +luci-app-dnsmasq-ipset +ext-multimodem
   TITLE:=ROOter support w/o MWan3 for Huasifei
   PKGARCH:=all
 endef
