@@ -7,7 +7,7 @@
 initscript=/etc/init.d/mwan3
 . /lib/functions/procd.sh
 
-
+ 
 SCRIPTNAME="mwan3-hotplug"
 [ "$ACTION" = "ifup" ] || [ "$ACTION" = "ifdown" ] || [ "$ACTION" = "connected" ] || [ "$ACTION" = "disconnected" ] || exit 1
 [ -n "$INTERFACE" ] || exit 2

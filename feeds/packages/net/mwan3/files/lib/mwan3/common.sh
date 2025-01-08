@@ -7,7 +7,7 @@ SCRIPTNAME="$(basename "$0")"
 MWAN3_STATUS_DIR="/var/run/mwan3"
 MWAN3_STATUS_IPTABLES_LOG_DIR="${MWAN3_STATUS_DIR}/iptables_log"
 MWAN3TRACK_STATUS_DIR="/var/run/mwan3track"
-
+ 
 MWAN3_INTERFACE_MAX=""
 
 MMX_MASK=""
@@ -107,7 +107,7 @@ mwan3_get_mwan3track_status()
 			tracking="down"
 		fi
 	else
-		tracking="not enabled"
+		tracking="disabled"
 	fi
 	echo "$tracking"
 }
