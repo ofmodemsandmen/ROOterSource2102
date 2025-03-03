@@ -21,6 +21,10 @@ B1300
 	Firmware rename 	- lede-gl-b1300.bin
 	Release reset after Leds blink 3 times
 
+A1300
+	Use Recovery GUI
+	with UBI firmware file
+
 S1300
 	Push reset button and plug in power, wifi led will blink, release button when middle led light on
 	Set ip to 192.168.1.0/24 and use web browser to access http://192.168.1.1
