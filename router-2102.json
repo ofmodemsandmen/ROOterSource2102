@@ -601,17 +601,6 @@
 			"files": "/huasifei/filesdtu/"	
 		}
 	},
-	"MV1000": {
-		"details": "Gl.iNet MV1000",
-		"type": "4",
-		"build": "2102",
-		"config": ".config_mv1000",
-		"image1": "openwrt-mvebu-cortexa53-glinet_gl-mv1000-squashfs-sdcard.img.gz",
-		"image2": "openwrt-mvebu-cortexa53-glinet_gl-mv1000-squashfs-sdcard.img",
-		"imagepath": "/mvebu/cortexa53/",
-		"mod": "Gl.iNet-MV1000",
-		"addons": ["readme.pdf"]
-	},
 	"N14": {
 		"details": "Asus RT-N14U",
 		"type": "1",
