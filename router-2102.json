@@ -1140,19 +1140,6 @@
 		"ext": "-upgrade.bin",
 		"addons": ["readme.pdf", "readmerecovery.txt"]
 	},
-	"WNDR4300": {
-		"details": "Netgear WNDR4300v1",
-		"type": "2",
-		"build": "2102",
-		"config": ".config_wndr4300",
-		"image1": "openwrt-ath79-nand-netgear_wndr4300-squashfs-factory.img",
-		"image2": "openwrt-ath79-nand-netgear_wndr4300-squashfs-sysupgrade.bin",
-		"imagepath": "/ath79/nand/",
-		"mod": "Netgear-WNDR4300v1",
-		"ext2": "-upgrade.bin",
-		"ext1": "-factory.img",
-		"addons": ["readme.pdf", "readmerecovery.txt"]
-	},
 	"WNDR3700": {
 		"details": "Netgear WNDR3700-V2",
 		"type": "2",
