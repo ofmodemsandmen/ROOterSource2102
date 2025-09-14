@@ -1736,8 +1736,7 @@ define Device/zbtlink_zbt-wg827-16m
   DEVICE_VARIANT := 16M
   DEVICE_PACKAGES := kmod-ata-ahci kmod-sdhci-mt7620 kmod-mt7603 kmod-mt76x2 \
 	kmod-usb3 kmod-usb-ledtrig-usbport \
-	kmod-mt7615e kmod-mt76 kmod-mt7615-firmware \
-	kmod-mt7663-firmware-ap kmod-mt7663-firmware-sta 
+	kmod-mt76
   SUPPORTED_DEVICES += zbt-wg827 zbt-wg827-16M
 endef
 TARGET_DEVICES += zbtlink_zbt-wg827-16m
