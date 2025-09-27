@@ -693,21 +693,6 @@
 		"mod": "Turris-Omnia-2102",
 		"addons": ["readme.pdf", "turris-omnia-initramfs.tar.gz", "turris.txt"]
 	},
-	"ORANGE0P": {
-		"details": "OrangePi Zero Plus",
-		"type": "3",
-		"build": "2102",
-		"config": ".config_orange0p",
-		"image1": "openwrt-sunxi-cortexa53-xunlong_orangepi-zero-plus-ext4-sdcard.img.gz",
-		"image2": "openwrt-sunxi-cortexa53-xunlong_orangepi-zero-plus-ext4-sdcard.img",
-		"image3": "openwrt-sunxi-cortexa53-xunlong_orangepi-zero-plus-squashfs-sdcard.img.gz",
-		"image4": "openwrt-sunxi-cortexa53-xunlong_orangepi-zero-plus-squashfs-sdcard.img",
-		"imagepath": "/sunxi/cortexa53/",
-		"mod": "OrangePi-Zero-Plus",
-		"ext1": "-ext4.img",
-		"ext2": "-squashfs.img",
-		"addons": ["readme.pdf"]
-	},
 	"ORANGEPC": {
 		"details": "OrangePi PC",
 		"type": "4",
