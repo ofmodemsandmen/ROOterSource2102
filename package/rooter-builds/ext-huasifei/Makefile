@@ -14,7 +14,7 @@ define Package/ext-huasifei
   SECTION:=utils
   CATEGORY:=ROOter
   DEPENDS:=+luci +ext-rooter-basic +pingtest +ext-blacklist +ext-blockport \
-  		+extramenu +ext-domain \
+  		+extramenu +ext-domain +ext-multimodem \
 		+luci-app-ddns +ddns-scripts \
 		+luci-app-rootervpn +ext-wireguard \
 		+webconsole +bwmon +464xlat \
