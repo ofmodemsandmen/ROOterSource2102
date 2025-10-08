@@ -1168,6 +1168,19 @@
 		"ext2": "-factory.img",
 		"addons": ["readme.pdf"]
 	},
+	"WNDR3700V5": {
+		"details": "Netgear WNDR3700v5",
+		"type": "2",
+		"build": "2102",
+		"config": ".config_wndr3700v5",
+		"image1": "openwrt-ramips-mt7621-netgear_wndr3700-v5-squashfs-sysupgrade.bin",
+		"image2": "openwrt-ramips-mt7621-netgear_wndr3700-v5-squashfs-factory.img",
+		"imagepath": "/ramips/mt7621/",
+		"mod": "Netgear-WNDR3700v5",
+		"ext1": "-upgrade.bin",
+		"ext2": "-factory.bin",
+		"addons": ["readme.pdf"]
+	},
 	"WNDR3800": {
 		"details": "Netgear WNDR3800",
 		"type": "2",
